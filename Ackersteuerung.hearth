@@ -38,21 +38,25 @@ class extends HearthSymbol {
 </script>
     </svg>
    </symbol>
-   <symbol category="Landwirtschaft/Kulturen-Beete" location-type="field" name="Beetgruppe-4x5" norm-standard="IEC 62424" uuid="616abc53-c45b-574e-89d7-e02e23724ce1" version="0.1.172">
+   <symbol category="Landwirtschaft/Kulturen-Beete" location-type="field" name="Beetgruppe-4x5" norm-standard="IEC 62424" uuid="616abc53-c45b-574e-89d7-e02e23724ce1" version="0.1.180">
     <hearth:properties xmlns:hearth="https://forgeiec.io/hearth/1.0">
      <hearth:property xmlns:hearth="https://forgeiec.io/hearth/1.0" default="#7f9c6b" key="wegfarbe" label="Wegfarbe" type="color"/>
      <hearth:property xmlns:hearth="https://forgeiec.io/hearth/1.0" default="50" key="alpha" label="Bewässerung Deckung %" type="number"/>
+     <hearth:property xmlns:hearth="https://forgeiec.io/hearth/1.0" default="#f6d32d" key="ledcolor" label="LED-Farbe" type="color"/>
     </hearth:properties>
     <hearth:connectors xmlns:hearth="https://forgeiec.io/hearth/1.0">
      <hearth:connector xmlns:hearth="https://forgeiec.io/hearth/1.0" dir="in" length="13" name="valve_1" role="wasser_1" type="bool"/>
      <hearth:connector xmlns:hearth="https://forgeiec.io/hearth/1.0" dir="in" length="13" name="valve_2" role="wasser_2" type="bool"/>
      <hearth:connector xmlns:hearth="https://forgeiec.io/hearth/1.0" dir="out" length="13" name="taster_2" role="flaeche_2" type="bool"/>
+     <hearth:connector xmlns:hearth="https://forgeiec.io/hearth/1.0" dir="in" length="13" name="led_1" role="led_1" type="bool"/>
+     <hearth:connector xmlns:hearth="https://forgeiec.io/hearth/1.0" dir="in" length="13" name="led_2" role="led_2" type="bool"/>
      <hearth:connector xmlns:hearth="https://forgeiec.io/hearth/1.0" dir="out" length="13" name="taster_1" role="flaeche_1" type="bool"/>
     </hearth:connectors>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 199 2290" hearth:element="hearth-beetgruppe-4x5" hearth:format-version="1.0" hearth:visible="true" xmlns:hearth="https://forgeiec.io/hearth/1.0">
      <style xmlns="http://www.w3.org/2000/svg">
 :root {
   --wegfarbe: #7f9c6b;
+  --ledcolor: #f6d32d;
 }
 </style>
      <g xmlns="http://www.w3.org/2000/svg" id="5c3e4007-15a1-49a4-b311-1453ee8c39c3" hearth:layer="background" hearth:layer-name="background" xmlns:hearth="https://forgeiec.io/hearth/1.0">
@@ -100,6 +104,14 @@ class extends HearthSymbol {
        <line xmlns="http://www.w3.org/2000/svg" stroke="#5a5a5a" stroke-width="1.5" x1="212" x2="199" y1="1760" y2="1760"/>
        <circle xmlns="http://www.w3.org/2000/svg" cx="212" cy="1760" fill="#e74c3c" r="3" stroke="#ffffff" stroke-width="1"/>
       </g>
+      <g xmlns="http://www.w3.org/2000/svg" class="hearth-connector" id="4b7ec35f-c206-4832-bb12-dcfd92e226ec" hearth:connector="led_1" hearth:dir="in" hearth:editor-only="true" xmlns:hearth="https://forgeiec.io/hearth/1.0">
+       <line xmlns="http://www.w3.org/2000/svg" stroke="#5a5a5a" stroke-width="1.5" x1="-13" x2="0" y1="640" y2="640"/>
+       <circle xmlns="http://www.w3.org/2000/svg" cx="-13" cy="640" fill="#3498db" r="3" stroke="#ffffff" stroke-width="1"/>
+      </g>
+      <g xmlns="http://www.w3.org/2000/svg" class="hearth-connector" id="b4dad354-d9cf-4b71-b69c-fe68c2350715" hearth:connector="led_2" hearth:dir="in" hearth:editor-only="true" xmlns:hearth="https://forgeiec.io/hearth/1.0">
+       <line xmlns="http://www.w3.org/2000/svg" stroke="#5a5a5a" stroke-width="1.5" x1="-13" x2="0" y1="1870" y2="1870"/>
+       <circle xmlns="http://www.w3.org/2000/svg" cx="-13" cy="1870" fill="#3498db" r="3" stroke="#ffffff" stroke-width="1"/>
+      </g>
       <g xmlns="http://www.w3.org/2000/svg" class="hearth-connector" id="ec6e08ae-c4bb-4da0-96ce-f63ac158228f" hearth:connector="taster_1" hearth:dir="out" hearth:editor-only="true" xmlns:hearth="https://forgeiec.io/hearth/1.0">
        <line xmlns="http://www.w3.org/2000/svg" stroke="#5a5a5a" stroke-width="1.5" x1="212" x2="199" y1="530" y2="530"/>
        <circle xmlns="http://www.w3.org/2000/svg" cx="212" cy="530" fill="#e74c3c" r="3" stroke="#ffffff" stroke-width="1"/>
@@ -110,6 +122,12 @@ class extends HearthSymbol {
       <rect xmlns="http://www.w3.org/2000/svg" data-role="wasser_2" fill="#2f7fbf" height="480" id="9d144ce8-b109-4048-b88c-bec566ed4a5e" stroke="#000000" stroke-width="1" width="199" x="0" y="1230"/>
       <rect xmlns="http://www.w3.org/2000/svg" data-role="wasser_1" fill="#2f7fbf" height="480" id="d82bd69b-16fb-437a-b4a5-ec4a4e103e09" stroke="#000000" stroke-width="1" width="199" x="0" y="0"/>
       <rect xmlns="http://www.w3.org/2000/svg" data-role="wasser_1" fill="#2f7fbf" height="480" id="9df6274f-e124-4608-8c86-539997617f11" stroke="#000000" stroke-width="1" width="199" x="0" y="580"/>
+     </g>
+     <g xmlns="http://www.w3.org/2000/svg" id="3d50c9e4-a4b8-470f-bd39-979e9af00c4a" hearth:layer="actions" hearth:layer-name="Leuchte" xmlns:hearth="https://forgeiec.io/hearth/1.0">
+      <rect xmlns="http://www.w3.org/2000/svg" data-role="led_1" fill="none" height="474" id="070b3443-028e-43ba-a8db-e58cf1537340" stroke="var(--ledcolor)" stroke-width="6" width="193" x="3" y="3"/>
+      <rect xmlns="http://www.w3.org/2000/svg" data-role="led_1" fill="none" height="474" id="9dfdc16b-2206-4b10-92cb-a4e478aa7465" stroke="var(--ledcolor)" stroke-width="6" width="193" x="3" y="583"/>
+      <rect xmlns="http://www.w3.org/2000/svg" data-role="led_2" fill="none" height="474" id="472461e6-e78b-498b-b214-d3536c8e23ad" stroke="var(--ledcolor)" stroke-width="6" width="193" x="3" y="1233"/>
+      <rect xmlns="http://www.w3.org/2000/svg" data-role="led_2" fill="none" height="474" id="8d5c103e-be5c-4ad6-8e44-fd46889f0f41" stroke="var(--ledcolor)" stroke-width="6" width="193" x="3" y="1813"/>
      </g>
      <g xmlns="http://www.w3.org/2000/svg" id="6fd91dca-096b-48f7-893d-b224f9ecf092" hearth:layer="edit" hearth:layer-name="Bedienung" xmlns:hearth="https://forgeiec.io/hearth/1.0">
       <rect xmlns="http://www.w3.org/2000/svg" data-role="flaeche_2" fill="#000000" fill-opacity="0" height="480" id="91aed069-edba-4308-a3ec-9cad4b343907" stroke="#26a269" stroke-width="1" width="199" x="0" y="1810"/>
@@ -169,18 +187,52 @@ class extends HearthSymbol {
 // als gleichnamige CSS-Variable an die Gruppe, VOR dem Anlauf der Klasse. Damit
 // gilt derselbe Wert im Entwurf und auf der Anlage, und die Vorgabe aus dem
 // `&lt;style>` bleibt der Rueckfall.
+//
+// ── THE ILLUMINATED PUSHBUTTON, ONE PER HALF ────────────────────────────────
+//
+// `led_1`/`led_2` (in) are the lamps of the two Leuchtdrucktaster, `taster_1`/
+// `taster_2` (out) their contacts — the lamp reaches exactly as far as the
+// valve and the hit area beside it, which is the whole point of the split.
+//
+// Each lamp is an OUTLINE around a block: two shapes per role, as `wasser_1`
+// and `wasser_2` already are, so roleAll() reaches both halves of a half. The
+// colour has one source, the CSS variable on the element
+// (`stroke="var(--ledcolor)"`); the class never recolours it, for the reason
+// spelled out above.
+//
+// ── THE PRESS IS READ IN ONE PLACE ──────────────────────────────────────────
+//
+// The outline lights the moment the operator presses, without waiting for the
+// plant to answer. A second `pointerdown` listener on the hit area would read
+// the same press twice, and the two readings drift apart the first time the hit
+// areas are cut differently — which is exactly what happened here when one hit
+// rectangle became one per half.
+//
+// So the press comes from the signal the symbol ALREADY reports: `emit()` is
+// the one gate every out-connector passes through, and `wireMomentary()` calls
+// it on press and on release.
+//
+// Each lamp then shows `led OR pressed` for ITS half. Releasing hands the lamp
+// back to `led` alone. `wireMomentary` is called without a contact-type key,
+// so 1 means pressed; give this symbol an NC property one day and the echo must
+// read the press from that property too.
 class extends HearthSymbol {
   onInit() {
     this.applyPercent('wasser_1', 'fill-opacity', 'alpha');
     this.applyPercent('wasser_2', 'fill-opacity', 'alpha');
     this.setVisible('wasser_1', 0);              // trocken, bis das Ventil etwas sagt
     this.setVisible('wasser_2', 0);
+    this.lit1 = false; this.pressed1 = false;    // upper half: plant, and finger
+    this.lit2 = false; this.pressed2 = false;    // lower half
+    this.showLamps();                            // dark until one of them speaks
     this.wireMomentary('flaeche_1', 'taster_1'); // Trefferflaeche der oberen Haelfte
     this.wireMomentary('flaeche_2', 'taster_2'); // … der unteren
   }
   onAttr(name, val) {
     if (name === 'valve_1') this.setVisible('wasser_1', val);
     if (name === 'valve_2') this.setVisible('wasser_2', val);
+    if (name === 'led_1') { this.lit1 = this.truthy(val); this.showLamps(); }
+    if (name === 'led_2') { this.lit2 = this.truthy(val); this.showLamps(); }
     // Die Deckung darf sich auch NACH dem Anlauf aendern — sonst wirkte eine
     // Aenderung im Inspektor erst beim naechsten Laden.
     if (name === 'alpha') {
@@ -188,22 +240,37 @@ class extends HearthSymbol {
       this.applyPercent('wasser_2', 'fill-opacity', 'alpha');
     }
   }
+  /// The contact this symbol reports IS the press it echoes — one signal, one
+  /// place. Everything else passing through emit() is handed straight on.
+  emit(name, value) {
+    super.emit(name, value);
+    if (name === 'taster_1') { this.pressed1 = this.truthy(value); this.showLamps(); }
+    if (name === 'taster_2') { this.pressed2 = this.truthy(value); this.showLamps(); }
+  }
+  /// The plant's answer, or the finger on the glass — per half.
+  showLamps() {
+    this.setVisible('led_1', this.lit1 || this.pressed1);
+    this.setVisible('led_2', this.lit2 || this.pressed2);
+  }
 }</script>
     </svg>
    </symbol>
-   <symbol location-type="field" name="Beetgruppe" norm-standard="IEC 62424" uuid="9316a334-6903-5e4a-8599-e3fb6e2adbc9" version="0.1.181">
+   <symbol location-type="field" name="Beetgruppe" norm-standard="IEC 62424" uuid="9316a334-6903-5e4a-8599-e3fb6e2adbc9" version="0.1.187">
     <hearth:properties xmlns:hearth="https://forgeiec.io/hearth/1.0">
      <hearth:property xmlns:hearth="https://forgeiec.io/hearth/1.0" default="#7f9c6b" key="wegfarbe" label="Wegfarbe" type="color"/>
      <hearth:property xmlns:hearth="https://forgeiec.io/hearth/1.0" default="50" key="alpha" label="Bewässerung Deckung %" type="number"/>
+     <hearth:property xmlns:hearth="https://forgeiec.io/hearth/1.0" default="#f6d32d" key="ledcolor" label="LED-Farbe" type="color"/>
     </hearth:properties>
     <hearth:connectors xmlns:hearth="https://forgeiec.io/hearth/1.0">
      <hearth:connector xmlns:hearth="https://forgeiec.io/hearth/1.0" dir="in" length="13" name="valve" role="wasser" type="bool"/>
      <hearth:connector xmlns:hearth="https://forgeiec.io/hearth/1.0" dir="out" length="13" name="taster" role="flaeche" type="bool"/>
+     <hearth:connector xmlns:hearth="https://forgeiec.io/hearth/1.0" dir="in" length="13" name="led" role="led" type="bool"/>
     </hearth:connectors>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 374 1060" hearth:element="hearth-beetgruppe" hearth:format-version="1.0" hearth:visible="true" xmlns:hearth="https://forgeiec.io/hearth/1.0">
      <style xmlns="http://www.w3.org/2000/svg">
 :root {
   --wegfarbe: #7f9c6b;
+  --ledcolor: #f6d32d;
 }
 </style>
      <g xmlns="http://www.w3.org/2000/svg" id="87dde53c-1fd9-4e9f-a59a-8610eaa389ad" hearth:layer="background" hearth:layer-name="background" xmlns:hearth="https://forgeiec.io/hearth/1.0">
@@ -243,10 +310,18 @@ class extends HearthSymbol {
        <line xmlns="http://www.w3.org/2000/svg" stroke="#5a5a5a" stroke-width="1.5" x1="389" x2="376" y1="530" y2="530"/>
        <circle xmlns="http://www.w3.org/2000/svg" cx="389" cy="530" fill="#e74c3c" r="3" stroke="#ffffff" stroke-width="1"/>
       </g>
+      <g xmlns="http://www.w3.org/2000/svg" class="hearth-connector" id="c41a1608-592a-40d7-9e18-7aaf19d5ce5f" hearth:connector="led" hearth:dir="in" hearth:editor-only="true" xmlns:hearth="https://forgeiec.io/hearth/1.0">
+       <line xmlns="http://www.w3.org/2000/svg" stroke="#5a5a5a" stroke-width="1.5" x1="-13" x2="0" y1="640" y2="640"/>
+       <circle xmlns="http://www.w3.org/2000/svg" cx="-13" cy="640" fill="#3498db" r="3" stroke="#ffffff" stroke-width="1"/>
+      </g>
      </g>
      <g xmlns="http://www.w3.org/2000/svg" id="7f03050d-8770-4bc4-a094-86bd8bde0c04" hearth:layer="actions" hearth:layer-name="Wasser" xmlns:hearth="https://forgeiec.io/hearth/1.0">
       <rect xmlns="http://www.w3.org/2000/svg" data-role="wasser" fill="#2f7fbf" height="480" id="2caac626-9c2a-48f5-804a-d0c9c8920337" stroke="#000000" stroke-width="1" width="374" x="0" y="0"/>
       <rect xmlns="http://www.w3.org/2000/svg" data-role="wasser" fill="#2f7fbf" height="480" id="ae400c62-a697-4e32-98b0-dc5a8d62e362" stroke="#000000" stroke-width="1" width="374" x="0" y="580"/>
+     </g>
+     <g xmlns="http://www.w3.org/2000/svg" id="2113f588-509c-4319-8c1a-9b84cd159740" hearth:layer="actions" hearth:layer-name="Leuchte" xmlns:hearth="https://forgeiec.io/hearth/1.0">
+      <rect xmlns="http://www.w3.org/2000/svg" data-role="led" fill="none" height="474" id="7639d1b1-1093-44e8-ba2b-83fb1ac5709d" stroke="var(--ledcolor)" stroke-width="6" width="368" x="3" y="3"/>
+      <rect xmlns="http://www.w3.org/2000/svg" data-role="led" fill="none" height="474" id="c5d274f3-c615-4e97-b691-89c56cb801d7" stroke="var(--ledcolor)" stroke-width="6" width="368" x="3" y="583"/>
      </g>
      <g xmlns="http://www.w3.org/2000/svg" id="60c4f9c8-c2bb-4b7d-9a62-57aa6568eba0" hearth:layer="edit" hearth:layer-name="Bedienung" xmlns:hearth="https://forgeiec.io/hearth/1.0">
       <rect xmlns="http://www.w3.org/2000/svg" data-role="flaeche" fill="#000000" fill-opacity="0" height="480" id="afce0302-f326-46f6-8749-eb24fb40ffcd" stroke="#26a269" stroke-width="1" width="374" x="0" y="580"/>
@@ -297,17 +372,66 @@ class extends HearthSymbol {
 // gleichnamige CSS-Variable an die Gruppe, VOR dem Anlauf der Klasse. Damit
 // gilt derselbe Wert im Entwurf und auf der Anlage, und die Vorgabe aus dem
 // `&lt;style>` bleibt der Rueckfall.
+//
+// ── THE ILLUMINATED PUSHBUTTON: ONE LAMP, ONE CONTACT ───────────────────────
+//
+// `led` (in) is the lamp of the Leuchtdrucktaster, `taster` (out) its contact —
+// one of each for the whole group, the same reach as the single valve.
+//
+// The lamp is drawn as an OUTLINE around a block: two shapes, ONE role, so
+// roleAll() reaches both — the same lesson as `wasser`. Its colour has one
+// source, the CSS variable on the element (`stroke="var(--ledcolor)"`); the
+// class never recolours it, for the reason spelled out above.
+//
+// Why this is not a §2b visibility rule: that table maps ONE port value to one
+// state. The lamp here has TWO sources — see below — and a rule could only ever
+// see one of them.
+//
+// ── THE PRESS IS READ IN ONE PLACE ──────────────────────────────────────────
+//
+// The outline must light the moment the operator presses, without waiting for
+// the plant to answer. The obvious way — a second `pointerdown` listener on the
+// hit area — would read the very same press a second time, and the two readings
+// drift apart the first time the hit areas are cut differently. That already
+// happened once here, when the single hit rectangle became one per block.
+//
+// So the press is taken from the signal the symbol ALREADY reports. `emit()` is
+// the one gate every out-connector passes through, and `wireMomentary()` calls
+// it on press and on release. Observing it there needs no second listener and
+// cannot disagree with what the plant is being told.
+//
+// The lamp then shows `led OR pressed`: the plant's answer, plus the local echo
+// while the finger is down. Releasing hands the lamp back to `led` alone, so a
+// press that changes nothing leaves no lit outline behind.
+//
+// One condition on that: `wireMomentary` is called WITHOUT a contact-type key,
+// so 1 means pressed. Give this symbol an NC property one day and the echo must
+// read the press from that property too, not from the emitted value.
 class extends HearthSymbol {
   onInit() {
     this.applyPercent('wasser', 'fill-opacity', 'alpha');
     this.setVisible('wasser', 0);          // trocken, bis das Ventil etwas sagt
+    this.lit = false;                      // last value of the `led` connector
+    this.pressed = false;                  // finger down on a hit area
+    this.showLamp();                       // dark until one of the two speaks
     this.wireMomentary('flaeche', 'taster'); // Trefferflaeche ueber dem GANZEN Symbol
   }
   onAttr(name, val) {
     if (name === 'valve') this.setVisible('wasser', val);
+    if (name === 'led') { this.lit = this.truthy(val); this.showLamp(); }
     // Die Deckung darf sich auch NACH dem Anlauf aendern — sonst wirkte eine
     // Aenderung im Inspektor erst beim naechsten Laden.
     if (name === 'alpha') this.applyPercent('wasser', 'fill-opacity', 'alpha');
+  }
+  /// The contact this symbol reports IS the press it echoes — one signal, one
+  /// place. Everything else passing through emit() is handed straight on.
+  emit(name, value) {
+    super.emit(name, value);
+    if (name === 'taster') { this.pressed = this.truthy(value); this.showLamp(); }
+  }
+  /// The plant's answer, or the finger on the glass.
+  showLamp() {
+    this.setVisible('led', this.lit || this.pressed);
   }
 }</script>
     </svg>
@@ -480,19 +604,22 @@ class extends HearthSymbol {
 }</script>
     </svg>
    </symbol>
-   <symbol category="Kulturen/Beete" location-type="field" name="Randbeet" norm-standard="IEC 62424" uuid="bf3c59e4-d8d5-4dd5-bcc3-13984dbe1dce" version="0.1.14">
+   <symbol category="Kulturen/Beete" location-type="field" name="Randbeet" norm-standard="IEC 62424" uuid="bf3c59e4-d8d5-4dd5-bcc3-13984dbe1dce" version="0.1.22">
     <hearth:properties xmlns:hearth="https://forgeiec.io/hearth/1.0">
      <hearth:property xmlns:hearth="https://forgeiec.io/hearth/1.0" default="50" key="alpha" label="Bewässerung Deckung %" type="number"/>
      <hearth:property xmlns:hearth="https://forgeiec.io/hearth/1.0" default="#7f9c6b" key="wegfarbe" label="Wegfarbe" type="color"/>
+     <hearth:property xmlns:hearth="https://forgeiec.io/hearth/1.0" default="#f6d32d" key="ledcolor" label="LED-Farbe" type="color"/>
     </hearth:properties>
     <hearth:connectors xmlns:hearth="https://forgeiec.io/hearth/1.0">
      <hearth:connector xmlns:hearth="https://forgeiec.io/hearth/1.0" dir="in" length="13" name="valve" role="wasser" type="bool"/>
      <hearth:connector xmlns:hearth="https://forgeiec.io/hearth/1.0" dir="out" length="13" name="taster" role="flaeche" type="bool"/>
+     <hearth:connector xmlns:hearth="https://forgeiec.io/hearth/1.0" dir="in" length="13" name="led" role="led" type="bool"/>
     </hearth:connectors>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 374 1060" hearth:element="hearth-randbeet" hearth:format-version="1.0" hearth:visible="true" xmlns:hearth="https://forgeiec.io/hearth/1.0">
      <style xmlns="http://www.w3.org/2000/svg">
 :root {
   --wegfarbe: #7f9c6b;
+  --ledcolor: #f6d32d;
 }
 </style>
      <g xmlns="http://www.w3.org/2000/svg" id="017031ab-d787-48f8-ac4a-b0d89226bebb" hearth:layer="background" hearth:layer-name="Background" hearth:locked="true" xmlns:hearth="https://forgeiec.io/hearth/1.0"/>
@@ -510,8 +637,16 @@ class extends HearthSymbol {
        <line xmlns="http://www.w3.org/2000/svg" stroke="#5a5a5a" stroke-width="1.5" x1="387" x2="374" y1="530" y2="530"/>
        <circle xmlns="http://www.w3.org/2000/svg" cx="387" cy="530" fill="#e74c3c" r="3" stroke="#ffffff" stroke-width="1"/>
       </g>
+      <g xmlns="http://www.w3.org/2000/svg" class="hearth-connector" id="af0f55d5-05a2-4aaa-b579-8f037647b77a" hearth:connector="led" hearth:dir="in" hearth:editor-only="true" xmlns:hearth="https://forgeiec.io/hearth/1.0">
+       <line xmlns="http://www.w3.org/2000/svg" stroke="#5a5a5a" stroke-width="1.5" x1="38" x2="51" y1="640" y2="640"/>
+       <circle xmlns="http://www.w3.org/2000/svg" cx="38" cy="640" fill="#3498db" r="3" stroke="#ffffff" stroke-width="1"/>
+      </g>
       <path xmlns="http://www.w3.org/2000/svg" d="M 102 0 L 374 0 L 374 480 L 56 480 Z" data-role="wasser" fill="#2f7fbf" id="99e88b9a-a562-48de-af01-ec195fe7bdac" stroke="none"/>
       <path xmlns="http://www.w3.org/2000/svg" d="M 46 580 L 374 580 L 374 1060 L 0 1060 Z" data-role="wasser" fill="#2f7fbf" id="00d450fe-2e8a-4506-be90-6828b9776182" stroke="none"/>
+     </g>
+     <g xmlns="http://www.w3.org/2000/svg" id="d191e7cc-b04e-4b39-90a8-df009c7101c9" hearth:layer="actions" hearth:layer-name="Leuchte" xmlns:hearth="https://forgeiec.io/hearth/1.0">
+      <path xmlns="http://www.w3.org/2000/svg" d="M 104.7 3 L 371 3 L 371 477 L 59.3 477 Z" data-role="led" fill="none" id="f66d9d50-6717-4a79-88e2-935e35f5b9cd" stroke="var(--ledcolor)" stroke-width="6"/>
+      <path xmlns="http://www.w3.org/2000/svg" d="M 48.7 583 L 371 583 L 371 1057 L 3.3 1057 Z" data-role="led" fill="none" id="a2ae8ac9-a5a7-4a34-acc9-42a69b24edb9" stroke="var(--ledcolor)" stroke-width="6"/>
      </g>
      <g xmlns="http://www.w3.org/2000/svg" id="a3539f06-6732-4e9e-95bc-25b9cf0ffa30" hearth:layer="edit" hearth:layer-name="Edit" xmlns:hearth="https://forgeiec.io/hearth/1.0">
       <path xmlns="http://www.w3.org/2000/svg" d="M 102 0 L 374 0 L 374 480 L 56 480 Z" data-role="flaeche" fill="#000000" fill-opacity="0" id="a7229685-6ff7-49f2-b28d-77b809fbce19" stroke="#26a269" stroke-width="1"/>
@@ -520,10 +655,11 @@ class extends HearthSymbol {
      <script xmlns="http://www.w3.org/2000/svg" type="text/javascript">// Randbeet — die schraeg zulaufende Beerenflaeche am linken Feldrand.
 //
 // SIE IST KEIN SCHMUCK, SONDERN ANLAGE. Sie wird bewaessert wie jede
-// Beetgruppe, also traegt sie dieselben zwei Signale: EIN Ventil fuer die
-// Flaeche (valve, herein) und die Handtaste des Bedieners (taster, hinaus).
-// Vorher lag dort eine freie Zeichnung — sichtbar, aber ohne Anschluss; wer
-// sie bewaessern wollte, hatte nichts, woran er es haette binden koennen.
+// Beetgruppe, also traegt sie dieselben Signale: EIN Ventil fuer die
+// Flaeche (valve, herein), die Handtaste des Bedieners (taster, hinaus) und
+// die Leuchte seines Drucktasters (led, herein). Vorher lag dort eine freie
+// Zeichnung — sichtbar, aber ohne Anschluss; wer sie bewaessern wollte, hatte
+// nichts, woran er es haette binden koennen.
 //
 // DIE SCHRAEGE KANTE ist der Grund fuer ein eigenes Symbol. Das Feld endet
 // links am Randband, und das Band laeuft schraeg; eine rechteckige Beetgruppe
@@ -538,446 +674,487 @@ class extends HearthSymbol {
 // neunte Stelle im Fuellwert. Qt-SVG kennt `#RRGGBBAA` nicht und malte die
 // Flaeche schwarz — dieselbe Datei zeigte im Browser Blau und in der Kachel
 // der Bibliothek einen Klotz.
+//
+// ── THE ILLUMINATED PUSHBUTTON ──────────────────────────────────────────────
+//
+// `led` (in) is the lamp, `taster` (out) the contact — one of each for the
+// whole bed, the same reach as the single valve.
+//
+// The lamp is an OUTLINE around each of the two blocks: two shapes, ONE role,
+// so roleAll() reaches both. They are TRAPEZOIDS, not rectangles — they trace
+// the blocks themselves, set 3 units inward so a 6-wide stroke stays inside
+// the viewBox. An upright rectangle would sit across the slanted edge that
+// this symbol exists for. The colour has one source, the CSS variable on the
+// element (`stroke="var(--ledcolor)"`); the class never recolours it.
+//
+// ── THE PRESS IS READ IN ONE PLACE ──────────────────────────────────────────
+//
+// The outline lights the moment the operator presses, without waiting for the
+// plant to answer. A second `pointerdown` listener on the hit area would read
+// the same press twice, and the two readings drift apart the first time the hit
+// areas are cut differently.
+//
+// So the press comes from the signal the symbol ALREADY reports: `emit()` is
+// the one gate every out-connector passes through, and `wireMomentary()` calls
+// it on press and on release.
+//
+// The lamp then shows `led OR pressed`: the plant's answer, plus the local echo
+// while the finger is down. Releasing hands the lamp back to `led` alone.
+// `wireMomentary` is called without a contact-type key, so 1 means pressed.
 class extends HearthSymbol {
   onInit() {
     this.applyPercent('wasser', 'fill-opacity', 'alpha');
     this.setVisible('wasser', 0);            // trocken, bis das Ventil etwas sagt
+    this.lit = false;                        // last value of the `led` connector
+    this.pressed = false;                    // finger down on the hit area
+    this.showLamp();                         // dark until one of the two speaks
     this.wireMomentary('flaeche', 'taster'); // Trefferflaeche ueber der GANZEN Flaeche
   }
   onAttr(name, val) {
     if (name === 'valve') this.setVisible('wasser', val);
+    if (name === 'led') { this.lit = this.truthy(val); this.showLamp(); }
     // Die Deckung darf sich auch NACH dem Anlauf aendern — sonst wirkte eine
     // Aenderung im Inspektor erst beim naechsten Laden.
     if (name === 'alpha') this.applyPercent('wasser', 'fill-opacity', 'alpha');
+  }
+  /// The contact this symbol reports IS the press it echoes — one signal, one
+  /// place. Everything else passing through emit() is handed straight on.
+  emit(name, value) {
+    super.emit(name, value);
+    if (name === 'taster') { this.pressed = this.truthy(value); this.showLamp(); }
+  }
+  /// The plant's answer, or the finger on the glass.
+  showLamp() {
+    this.setVisible('led', this.lit || this.pressed);
   }
 }</script>
     </svg>
    </symbol>
    <symbol author="ForgeIEC" category="screensaver" description="Sonnige Wiese mit wehendem Gras und ziehenden Wolken." name="Sommerwiese" uuid="6b1d7d4e-2b6a-4a3b-9c0f-1e4d7a2c5f01" version="0.2.0">
-    <svg hearth:element="hearth-screensaver" hearth:format-version="1.0" hearth:visible="true" preserveAspectRatio="xMidYMid slice" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg" xmlns:hearth="https://forgeiec.io/hearth/1.0">
-     <metadata>
-      <hearth:widget>
-       <hearth:name>Sommerwiese</hearth:name>
-       <hearth:version>0.2.0</hearth:version>
-       <hearth:category>screensaver</hearth:category>
-       <hearth:description>Sonnige Wiese mit wehendem Gras und ziehenden Wolken.</hearth:description>
-       <hearth:location-type>software</hearth:location-type>
+    <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" viewBox="0 0 1920 1080" hearth:element="hearth-screensaver" hearth:format-version="1.0" hearth:visible="true" xmlns:hearth="https://forgeiec.io/hearth/1.0">
+     <metadata xmlns="http://www.w3.org/2000/svg">
+      <hearth:widget xmlns:hearth="https://forgeiec.io/hearth/1.0">
+       <hearth:name xmlns:hearth="https://forgeiec.io/hearth/1.0">Sommerwiese</hearth:name>
+       <hearth:version xmlns:hearth="https://forgeiec.io/hearth/1.0">0.2.0</hearth:version>
+       <hearth:category xmlns:hearth="https://forgeiec.io/hearth/1.0">screensaver</hearth:category>
+       <hearth:description xmlns:hearth="https://forgeiec.io/hearth/1.0">Sonnige Wiese mit wehendem Gras und ziehenden Wolken.</hearth:description>
+       <hearth:location-type xmlns:hearth="https://forgeiec.io/hearth/1.0">software</hearth:location-type>
       </hearth:widget>
      </metadata>
-     <g hearth:layer="background" hearth:layer-name="Background" hearth:locked="true" id="b73768db-081f-4198-8929-38e6ebc442f8"/>
-     <g hearth:layer="content" hearth:layer-name="Content" id="de5593d1-fc56-4642-bedb-ba64847a0a6e">
-      <g>
-       <animateTransform attributeName="transform" dur="47s" repeatCount="indefinite" type="translate" values="-80 0;80 0;-80 0"/>
-       <g>
-        <animateTransform attributeName="transform" dur="37s" repeatCount="indefinite" type="translate" values="0 -56;0 56;0 -56"/>
-        <defs>
-         <linearGradient id="sky" x1="0" x2="0" y1="0" y2="1">
-          <stop offset="0%" stop-color="#79c4ee"/>
-          <stop offset="65%" stop-color="#cdeeff"/>
-          <stop offset="100%" stop-color="#e9f8df"/>
+     <g xmlns="http://www.w3.org/2000/svg" id="b73768db-081f-4198-8929-38e6ebc442f8" hearth:layer="background" hearth:layer-name="Background" hearth:locked="true" xmlns:hearth="https://forgeiec.io/hearth/1.0"/>
+     <g xmlns="http://www.w3.org/2000/svg" id="de5593d1-fc56-4642-bedb-ba64847a0a6e" hearth:layer="content" hearth:layer-name="Content" xmlns:hearth="https://forgeiec.io/hearth/1.0">
+      <g xmlns="http://www.w3.org/2000/svg">
+       <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" dur="47s" repeatCount="indefinite" type="translate" values="-80 0;80 0;-80 0"/>
+       <g xmlns="http://www.w3.org/2000/svg">
+        <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" dur="37s" repeatCount="indefinite" type="translate" values="0 -56;0 56;0 -56"/>
+        <defs xmlns="http://www.w3.org/2000/svg">
+         <linearGradient xmlns="http://www.w3.org/2000/svg" id="sky" x1="0" x2="0" y1="0" y2="1">
+          <stop xmlns="http://www.w3.org/2000/svg" offset="0%" stop-color="#79c4ee"/>
+          <stop xmlns="http://www.w3.org/2000/svg" offset="65%" stop-color="#cdeeff"/>
+          <stop xmlns="http://www.w3.org/2000/svg" offset="100%" stop-color="#e9f8df"/>
          </linearGradient>
-         <linearGradient id="grd" x1="0" x2="0" y1="0" y2="1">
-          <stop offset="0%" stop-color="#74c24f"/>
-          <stop offset="100%" stop-color="#327f25"/>
+         <linearGradient xmlns="http://www.w3.org/2000/svg" id="grd" x1="0" x2="0" y1="0" y2="1">
+          <stop xmlns="http://www.w3.org/2000/svg" offset="0%" stop-color="#74c24f"/>
+          <stop xmlns="http://www.w3.org/2000/svg" offset="100%" stop-color="#327f25"/>
          </linearGradient>
         </defs>
-        <rect fill="url(#sky)" height="1400" width="2240" x="-160" y="-160"/>
-        <g>
-         <animateTransform attributeName="transform" dur="90s" repeatCount="indefinite" type="translate" values="-140 40;140 -40;-140 40"/>
-         <circle cx="1500" cy="235" fill="#fff6c2" opacity="0.35" r="185">
-          <animate attributeName="r" dur="8s" repeatCount="indefinite" values="185;205;185"/>
+        <rect xmlns="http://www.w3.org/2000/svg" fill="url(#sky)" height="1400" width="2240" x="-160" y="-160"/>
+        <g xmlns="http://www.w3.org/2000/svg">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" dur="90s" repeatCount="indefinite" type="translate" values="-140 40;140 -40;-140 40"/>
+         <circle xmlns="http://www.w3.org/2000/svg" cx="1500" cy="235" fill="#fff6c2" opacity="0.35" r="185">
+          <animate xmlns="http://www.w3.org/2000/svg" attributeName="r" dur="8s" repeatCount="indefinite" values="185;205;185"/>
          </circle>
-         <circle cx="1500" cy="235" fill="#fff3a8" r="110"/>
+         <circle xmlns="http://www.w3.org/2000/svg" cx="1500" cy="235" fill="#fff3a8" r="110"/>
         </g>
-        <g>
-         <animateTransform attributeName="transform" begin="-3.0s" dur="62.8s" repeatCount="indefinite" type="translate" values="-420 0;2340 0"/>
-         <g fill="#ffffff" opacity="0.92" transform="translate(0 235) scale(1.45)">
-          <ellipse cx="0" cy="0" rx="90" ry="46"/>
-          <ellipse cx="70" cy="14" rx="70" ry="40"/>
-          <ellipse cx="-70" cy="16" rx="64" ry="34"/>
-          <ellipse cx="10" cy="-30" rx="60" ry="40"/>
+        <g xmlns="http://www.w3.org/2000/svg">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-3.0s" dur="62.8s" repeatCount="indefinite" type="translate" values="-420 0;2340 0"/>
+         <g xmlns="http://www.w3.org/2000/svg" fill="#ffffff" opacity="0.92" transform="translate(0 235) scale(1.45)">
+          <ellipse xmlns="http://www.w3.org/2000/svg" cx="0" cy="0" rx="90" ry="46"/>
+          <ellipse xmlns="http://www.w3.org/2000/svg" cx="70" cy="14" rx="70" ry="40"/>
+          <ellipse xmlns="http://www.w3.org/2000/svg" cx="-70" cy="16" rx="64" ry="34"/>
+          <ellipse xmlns="http://www.w3.org/2000/svg" cx="10" cy="-30" rx="60" ry="40"/>
          </g>
         </g>
-        <g>
-         <animateTransform attributeName="transform" begin="-64.8s" dur="71.2s" repeatCount="indefinite" type="translate" values="-420 0;2340 0"/>
-         <g fill="#ffffff" opacity="0.92" transform="translate(0 344) scale(0.68)">
-          <ellipse cx="0" cy="0" rx="90" ry="46"/>
-          <ellipse cx="70" cy="14" rx="70" ry="40"/>
-          <ellipse cx="-70" cy="16" rx="64" ry="34"/>
-          <ellipse cx="10" cy="-30" rx="60" ry="40"/>
+        <g xmlns="http://www.w3.org/2000/svg">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-64.8s" dur="71.2s" repeatCount="indefinite" type="translate" values="-420 0;2340 0"/>
+         <g xmlns="http://www.w3.org/2000/svg" fill="#ffffff" opacity="0.92" transform="translate(0 344) scale(0.68)">
+          <ellipse xmlns="http://www.w3.org/2000/svg" cx="0" cy="0" rx="90" ry="46"/>
+          <ellipse xmlns="http://www.w3.org/2000/svg" cx="70" cy="14" rx="70" ry="40"/>
+          <ellipse xmlns="http://www.w3.org/2000/svg" cx="-70" cy="16" rx="64" ry="34"/>
+          <ellipse xmlns="http://www.w3.org/2000/svg" cx="10" cy="-30" rx="60" ry="40"/>
          </g>
         </g>
-        <g>
-         <animateTransform attributeName="transform" begin="-4.5s" dur="64.5s" repeatCount="indefinite" type="translate" values="-420 0;2340 0"/>
-         <g fill="#ffffff" opacity="0.92" transform="translate(0 179) scale(0.63)">
-          <ellipse cx="0" cy="0" rx="90" ry="46"/>
-          <ellipse cx="70" cy="14" rx="70" ry="40"/>
-          <ellipse cx="-70" cy="16" rx="64" ry="34"/>
-          <ellipse cx="10" cy="-30" rx="60" ry="40"/>
+        <g xmlns="http://www.w3.org/2000/svg">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-4.5s" dur="64.5s" repeatCount="indefinite" type="translate" values="-420 0;2340 0"/>
+         <g xmlns="http://www.w3.org/2000/svg" fill="#ffffff" opacity="0.92" transform="translate(0 179) scale(0.63)">
+          <ellipse xmlns="http://www.w3.org/2000/svg" cx="0" cy="0" rx="90" ry="46"/>
+          <ellipse xmlns="http://www.w3.org/2000/svg" cx="70" cy="14" rx="70" ry="40"/>
+          <ellipse xmlns="http://www.w3.org/2000/svg" cx="-70" cy="16" rx="64" ry="34"/>
+          <ellipse xmlns="http://www.w3.org/2000/svg" cx="10" cy="-30" rx="60" ry="40"/>
          </g>
         </g>
-        <g>
-         <animateTransform attributeName="transform" begin="-27.0s" dur="47.7s" repeatCount="indefinite" type="translate" values="-420 0;2340 0"/>
-         <g fill="#ffffff" opacity="0.92" transform="translate(0 116) scale(1.1)">
-          <ellipse cx="0" cy="0" rx="90" ry="46"/>
-          <ellipse cx="70" cy="14" rx="70" ry="40"/>
-          <ellipse cx="-70" cy="16" rx="64" ry="34"/>
-          <ellipse cx="10" cy="-30" rx="60" ry="40"/>
+        <g xmlns="http://www.w3.org/2000/svg">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-27.0s" dur="47.7s" repeatCount="indefinite" type="translate" values="-420 0;2340 0"/>
+         <g xmlns="http://www.w3.org/2000/svg" fill="#ffffff" opacity="0.92" transform="translate(0 116) scale(1.1)">
+          <ellipse xmlns="http://www.w3.org/2000/svg" cx="0" cy="0" rx="90" ry="46"/>
+          <ellipse xmlns="http://www.w3.org/2000/svg" cx="70" cy="14" rx="70" ry="40"/>
+          <ellipse xmlns="http://www.w3.org/2000/svg" cx="-70" cy="16" rx="64" ry="34"/>
+          <ellipse xmlns="http://www.w3.org/2000/svg" cx="10" cy="-30" rx="60" ry="40"/>
          </g>
         </g>
-        <g>
-         <animateTransform attributeName="transform" begin="-4.4s" dur="71.2s" repeatCount="indefinite" type="translate" values="-420 0;2340 0"/>
-         <g fill="#ffffff" opacity="0.92" transform="translate(0 184) scale(1.17)">
-          <ellipse cx="0" cy="0" rx="90" ry="46"/>
-          <ellipse cx="70" cy="14" rx="70" ry="40"/>
-          <ellipse cx="-70" cy="16" rx="64" ry="34"/>
-          <ellipse cx="10" cy="-30" rx="60" ry="40"/>
+        <g xmlns="http://www.w3.org/2000/svg">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-4.4s" dur="71.2s" repeatCount="indefinite" type="translate" values="-420 0;2340 0"/>
+         <g xmlns="http://www.w3.org/2000/svg" fill="#ffffff" opacity="0.92" transform="translate(0 184) scale(1.17)">
+          <ellipse xmlns="http://www.w3.org/2000/svg" cx="0" cy="0" rx="90" ry="46"/>
+          <ellipse xmlns="http://www.w3.org/2000/svg" cx="70" cy="14" rx="70" ry="40"/>
+          <ellipse xmlns="http://www.w3.org/2000/svg" cx="-70" cy="16" rx="64" ry="34"/>
+          <ellipse xmlns="http://www.w3.org/2000/svg" cx="10" cy="-30" rx="60" ry="40"/>
          </g>
         </g>
-        <rect fill="url(#grd)" height="585" width="2240" x="-160" y="815"/>
-        <path d="M-160 1240 Q-191 1130 -199 1019" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="5">
-         <animateTransform attributeName="transform" begin="-2.7s" dur="3.1s" repeatCount="indefinite" type="rotate" values="-4 -160 1240;4 -160 1240;-4 -160 1240"/>
+        <rect xmlns="http://www.w3.org/2000/svg" fill="url(#grd)" height="585" width="2240" x="-160" y="815"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M-160 1240 Q-191 1130 -199 1019" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="5">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-2.7s" dur="3.1s" repeatCount="indefinite" type="rotate" values="-4 -160 1240;4 -160 1240;-4 -160 1240"/>
         </path>
-        <path d="M-140 1240 Q-146 1162 -116 1084" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="4">
-         <animateTransform attributeName="transform" begin="-2.6s" dur="4.7s" repeatCount="indefinite" type="rotate" values="-4 -140 1240;4 -140 1240;-4 -140 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M-140 1240 Q-146 1162 -116 1084" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="4">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-2.6s" dur="4.7s" repeatCount="indefinite" type="rotate" values="-4 -140 1240;4 -140 1240;-4 -140 1240"/>
         </path>
-        <path d="M-120 1240 Q-138 1156 -118 1072" fill="none" stroke="#3f9b3a" stroke-linecap="round" stroke-width="6">
-         <animateTransform attributeName="transform" begin="-0.3s" dur="4.6s" repeatCount="indefinite" type="rotate" values="-4 -120 1240;4 -120 1240;-4 -120 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M-120 1240 Q-138 1156 -118 1072" fill="none" stroke="#3f9b3a" stroke-linecap="round" stroke-width="6">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-0.3s" dur="4.6s" repeatCount="indefinite" type="rotate" values="-4 -120 1240;4 -120 1240;-4 -120 1240"/>
         </path>
-        <path d="M-100 1240 Q-73 1154 -82 1068" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="6">
-         <animateTransform attributeName="transform" begin="-3.6s" dur="4.6s" repeatCount="indefinite" type="rotate" values="-4 -100 1240;4 -100 1240;-4 -100 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M-100 1240 Q-73 1154 -82 1068" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="6">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-3.6s" dur="4.6s" repeatCount="indefinite" type="rotate" values="-4 -100 1240;4 -100 1240;-4 -100 1240"/>
         </path>
-        <path d="M-80 1240 Q-86 1122 -79 1004" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="4">
-         <animateTransform attributeName="transform" begin="-0.7s" dur="3.7s" repeatCount="indefinite" type="rotate" values="-4 -80 1240;4 -80 1240;-4 -80 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M-80 1240 Q-86 1122 -79 1004" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="4">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-0.7s" dur="3.7s" repeatCount="indefinite" type="rotate" values="-4 -80 1240;4 -80 1240;-4 -80 1240"/>
         </path>
-        <path d="M-60 1240 Q-43 1142 -38 1044" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="6">
-         <animateTransform attributeName="transform" begin="-4.1s" dur="5.6s" repeatCount="indefinite" type="rotate" values="-4 -60 1240;4 -60 1240;-4 -60 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M-60 1240 Q-43 1142 -38 1044" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="6">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-4.1s" dur="5.6s" repeatCount="indefinite" type="rotate" values="-4 -60 1240;4 -60 1240;-4 -60 1240"/>
         </path>
-        <path d="M-40 1240 Q-48 1171 -70 1102" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="5">
-         <animateTransform attributeName="transform" begin="-3.3s" dur="4.3s" repeatCount="indefinite" type="rotate" values="-4 -40 1240;4 -40 1240;-4 -40 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M-40 1240 Q-48 1171 -70 1102" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="5">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-3.3s" dur="4.3s" repeatCount="indefinite" type="rotate" values="-4 -40 1240;4 -40 1240;-4 -40 1240"/>
         </path>
-        <path d="M-20 1240 Q-23 1127 -60 1013" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="5">
-         <animateTransform attributeName="transform" begin="-1.8s" dur="3.2s" repeatCount="indefinite" type="rotate" values="-4 -20 1240;4 -20 1240;-4 -20 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M-20 1240 Q-23 1127 -60 1013" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="5">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-1.8s" dur="3.2s" repeatCount="indefinite" type="rotate" values="-4 -20 1240;4 -20 1240;-4 -20 1240"/>
         </path>
-        <path d="M0 1240 Q21 1136 31 1031" fill="none" stroke="#3f9b3a" stroke-linecap="round" stroke-width="5">
-         <animateTransform attributeName="transform" begin="-2.1s" dur="4.7s" repeatCount="indefinite" type="rotate" values="-4 0 1240;4 0 1240;-4 0 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M0 1240 Q21 1136 31 1031" fill="none" stroke="#3f9b3a" stroke-linecap="round" stroke-width="5">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-2.1s" dur="4.7s" repeatCount="indefinite" type="rotate" values="-4 0 1240;4 0 1240;-4 0 1240"/>
         </path>
-        <path d="M20 1240 Q59 1120 64 999" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="6">
-         <animateTransform attributeName="transform" begin="-2.3s" dur="3.2s" repeatCount="indefinite" type="rotate" values="-4 20 1240;4 20 1240;-4 20 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M20 1240 Q59 1120 64 999" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="6">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-2.3s" dur="3.2s" repeatCount="indefinite" type="rotate" values="-4 20 1240;4 20 1240;-4 20 1240"/>
         </path>
-        <path d="M40 1240 Q55 1123 31 1006" fill="none" stroke="#3f9b3a" stroke-linecap="round" stroke-width="5">
-         <animateTransform attributeName="transform" begin="-2.8s" dur="4.2s" repeatCount="indefinite" type="rotate" values="-4 40 1240;4 40 1240;-4 40 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M40 1240 Q55 1123 31 1006" fill="none" stroke="#3f9b3a" stroke-linecap="round" stroke-width="5">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-2.8s" dur="4.2s" repeatCount="indefinite" type="rotate" values="-4 40 1240;4 40 1240;-4 40 1240"/>
         </path>
-        <path d="M60 1240 Q62 1135 36 1030" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="4">
-         <animateTransform attributeName="transform" begin="-0.2s" dur="3.4s" repeatCount="indefinite" type="rotate" values="-4 60 1240;4 60 1240;-4 60 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M60 1240 Q62 1135 36 1030" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="4">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-0.2s" dur="3.4s" repeatCount="indefinite" type="rotate" values="-4 60 1240;4 60 1240;-4 60 1240"/>
         </path>
-        <path d="M80 1240 Q82 1149 85 1057" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="5">
-         <animateTransform attributeName="transform" begin="-2.9s" dur="5.8s" repeatCount="indefinite" type="rotate" values="-4 80 1240;4 80 1240;-4 80 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M80 1240 Q82 1149 85 1057" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="5">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-2.9s" dur="5.8s" repeatCount="indefinite" type="rotate" values="-4 80 1240;4 80 1240;-4 80 1240"/>
         </path>
-        <path d="M100 1240 Q104 1129 125 1018" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="6">
-         <animateTransform attributeName="transform" begin="-4.7s" dur="5.7s" repeatCount="indefinite" type="rotate" values="-4 100 1240;4 100 1240;-4 100 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M100 1240 Q104 1129 125 1018" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="6">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-4.7s" dur="5.7s" repeatCount="indefinite" type="rotate" values="-4 100 1240;4 100 1240;-4 100 1240"/>
         </path>
-        <path d="M120 1240 Q138 1127 120 1014" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="4">
-         <animateTransform attributeName="transform" begin="-5.5s" dur="5.7s" repeatCount="indefinite" type="rotate" values="-4 120 1240;4 120 1240;-4 120 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M120 1240 Q138 1127 120 1014" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="4">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-5.5s" dur="5.7s" repeatCount="indefinite" type="rotate" values="-4 120 1240;4 120 1240;-4 120 1240"/>
         </path>
-        <path d="M140 1240 Q116 1158 114 1075" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="5">
-         <animateTransform attributeName="transform" begin="-0.1s" dur="5.0s" repeatCount="indefinite" type="rotate" values="-4 140 1240;4 140 1240;-4 140 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M140 1240 Q116 1158 114 1075" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="5">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-0.1s" dur="5.0s" repeatCount="indefinite" type="rotate" values="-4 140 1240;4 140 1240;-4 140 1240"/>
         </path>
-        <path d="M160 1240 Q121 1144 115 1048" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="4">
-         <animateTransform attributeName="transform" begin="-1.6s" dur="4.3s" repeatCount="indefinite" type="rotate" values="-4 160 1240;4 160 1240;-4 160 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M160 1240 Q121 1144 115 1048" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="4">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-1.6s" dur="4.3s" repeatCount="indefinite" type="rotate" values="-4 160 1240;4 160 1240;-4 160 1240"/>
         </path>
-        <path d="M180 1240 Q210 1174 193 1107" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="5">
-         <animateTransform attributeName="transform" begin="-4.0s" dur="5.9s" repeatCount="indefinite" type="rotate" values="-4 180 1240;4 180 1240;-4 180 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M180 1240 Q210 1174 193 1107" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="5">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-4.0s" dur="5.9s" repeatCount="indefinite" type="rotate" values="-4 180 1240;4 180 1240;-4 180 1240"/>
         </path>
-        <path d="M200 1240 Q183 1129 205 1018" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="4">
-         <animateTransform attributeName="transform" begin="-1.8s" dur="4.4s" repeatCount="indefinite" type="rotate" values="-4 200 1240;4 200 1240;-4 200 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M200 1240 Q183 1129 205 1018" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="4">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-1.8s" dur="4.4s" repeatCount="indefinite" type="rotate" values="-4 200 1240;4 200 1240;-4 200 1240"/>
         </path>
-        <path d="M220 1240 Q210 1154 231 1067" fill="none" stroke="#3f9b3a" stroke-linecap="round" stroke-width="4">
-         <animateTransform attributeName="transform" begin="-2.0s" dur="3.3s" repeatCount="indefinite" type="rotate" values="-4 220 1240;4 220 1240;-4 220 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M220 1240 Q210 1154 231 1067" fill="none" stroke="#3f9b3a" stroke-linecap="round" stroke-width="4">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-2.0s" dur="3.3s" repeatCount="indefinite" type="rotate" values="-4 220 1240;4 220 1240;-4 220 1240"/>
         </path>
-        <path d="M240 1240 Q232 1161 263 1082" fill="none" stroke="#3f9b3a" stroke-linecap="round" stroke-width="4">
-         <animateTransform attributeName="transform" begin="-3.6s" dur="5.8s" repeatCount="indefinite" type="rotate" values="-4 240 1240;4 240 1240;-4 240 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M240 1240 Q232 1161 263 1082" fill="none" stroke="#3f9b3a" stroke-linecap="round" stroke-width="4">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-3.6s" dur="5.8s" repeatCount="indefinite" type="rotate" values="-4 240 1240;4 240 1240;-4 240 1240"/>
         </path>
-        <path d="M260 1240 Q262 1132 234 1024" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="5">
-         <animateTransform attributeName="transform" begin="-1.3s" dur="3.8s" repeatCount="indefinite" type="rotate" values="-4 260 1240;4 260 1240;-4 260 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M260 1240 Q262 1132 234 1024" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="5">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-1.3s" dur="3.8s" repeatCount="indefinite" type="rotate" values="-4 260 1240;4 260 1240;-4 260 1240"/>
         </path>
-        <path d="M280 1240 Q270 1165 249 1089" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="5">
-         <animateTransform attributeName="transform" begin="-2.8s" dur="6.0s" repeatCount="indefinite" type="rotate" values="-4 280 1240;4 280 1240;-4 280 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M280 1240 Q270 1165 249 1089" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="5">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-2.8s" dur="6.0s" repeatCount="indefinite" type="rotate" values="-4 280 1240;4 280 1240;-4 280 1240"/>
         </path>
-        <path d="M300 1240 Q267 1170 273 1099" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="6">
-         <animateTransform attributeName="transform" begin="-3.8s" dur="5.2s" repeatCount="indefinite" type="rotate" values="-4 300 1240;4 300 1240;-4 300 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M300 1240 Q267 1170 273 1099" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="6">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-3.8s" dur="5.2s" repeatCount="indefinite" type="rotate" values="-4 300 1240;4 300 1240;-4 300 1240"/>
         </path>
-        <path d="M320 1240 Q306 1160 341 1079" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="4">
-         <animateTransform attributeName="transform" begin="-3.4s" dur="3.6s" repeatCount="indefinite" type="rotate" values="-4 320 1240;4 320 1240;-4 320 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M320 1240 Q306 1160 341 1079" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="4">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-3.4s" dur="3.6s" repeatCount="indefinite" type="rotate" values="-4 320 1240;4 320 1240;-4 320 1240"/>
         </path>
-        <path d="M340 1240 Q345 1177 362 1114" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="6">
-         <animateTransform attributeName="transform" begin="-5.1s" dur="5.9s" repeatCount="indefinite" type="rotate" values="-4 340 1240;4 340 1240;-4 340 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M340 1240 Q345 1177 362 1114" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="6">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-5.1s" dur="5.9s" repeatCount="indefinite" type="rotate" values="-4 340 1240;4 340 1240;-4 340 1240"/>
         </path>
-        <path d="M360 1240 Q345 1134 336 1027" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="6">
-         <animateTransform attributeName="transform" begin="-2.8s" dur="5.3s" repeatCount="indefinite" type="rotate" values="-4 360 1240;4 360 1240;-4 360 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M360 1240 Q345 1134 336 1027" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="6">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-2.8s" dur="5.3s" repeatCount="indefinite" type="rotate" values="-4 360 1240;4 360 1240;-4 360 1240"/>
         </path>
-        <path d="M380 1240 Q421 1152 413 1063" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="5">
-         <animateTransform attributeName="transform" begin="-5.1s" dur="6.0s" repeatCount="indefinite" type="rotate" values="-4 380 1240;4 380 1240;-4 380 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M380 1240 Q421 1152 413 1063" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="5">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-5.1s" dur="6.0s" repeatCount="indefinite" type="rotate" values="-4 380 1240;4 380 1240;-4 380 1240"/>
         </path>
-        <path d="M400 1240 Q398 1151 380 1062" fill="none" stroke="#3f9b3a" stroke-linecap="round" stroke-width="5">
-         <animateTransform attributeName="transform" begin="-3.3s" dur="4.5s" repeatCount="indefinite" type="rotate" values="-4 400 1240;4 400 1240;-4 400 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M400 1240 Q398 1151 380 1062" fill="none" stroke="#3f9b3a" stroke-linecap="round" stroke-width="5">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-3.3s" dur="4.5s" repeatCount="indefinite" type="rotate" values="-4 400 1240;4 400 1240;-4 400 1240"/>
         </path>
-        <path d="M420 1240 Q401 1120 408 1000" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="6">
-         <animateTransform attributeName="transform" begin="-4.9s" dur="5.1s" repeatCount="indefinite" type="rotate" values="-4 420 1240;4 420 1240;-4 420 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M420 1240 Q401 1120 408 1000" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="6">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-4.9s" dur="5.1s" repeatCount="indefinite" type="rotate" values="-4 420 1240;4 420 1240;-4 420 1240"/>
         </path>
-        <path d="M440 1240 Q420 1136 441 1031" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="5">
-         <animateTransform attributeName="transform" begin="-0.8s" dur="3.7s" repeatCount="indefinite" type="rotate" values="-4 440 1240;4 440 1240;-4 440 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M440 1240 Q420 1136 441 1031" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="5">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-0.8s" dur="3.7s" repeatCount="indefinite" type="rotate" values="-4 440 1240;4 440 1240;-4 440 1240"/>
         </path>
-        <path d="M460 1240 Q482 1154 476 1068" fill="none" stroke="#3f9b3a" stroke-linecap="round" stroke-width="5">
-         <animateTransform attributeName="transform" begin="-3.7s" dur="6.0s" repeatCount="indefinite" type="rotate" values="-4 460 1240;4 460 1240;-4 460 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M460 1240 Q482 1154 476 1068" fill="none" stroke="#3f9b3a" stroke-linecap="round" stroke-width="5">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-3.7s" dur="6.0s" repeatCount="indefinite" type="rotate" values="-4 460 1240;4 460 1240;-4 460 1240"/>
         </path>
-        <path d="M480 1240 Q478 1136 517 1032" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="6">
-         <animateTransform attributeName="transform" begin="-0.7s" dur="5.5s" repeatCount="indefinite" type="rotate" values="-4 480 1240;4 480 1240;-4 480 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M480 1240 Q478 1136 517 1032" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="6">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-0.7s" dur="5.5s" repeatCount="indefinite" type="rotate" values="-4 480 1240;4 480 1240;-4 480 1240"/>
         </path>
-        <path d="M500 1240 Q494 1155 516 1069" fill="none" stroke="#3f9b3a" stroke-linecap="round" stroke-width="6">
-         <animateTransform attributeName="transform" begin="-2.7s" dur="4.3s" repeatCount="indefinite" type="rotate" values="-4 500 1240;4 500 1240;-4 500 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M500 1240 Q494 1155 516 1069" fill="none" stroke="#3f9b3a" stroke-linecap="round" stroke-width="6">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-2.7s" dur="4.3s" repeatCount="indefinite" type="rotate" values="-4 500 1240;4 500 1240;-4 500 1240"/>
         </path>
-        <path d="M520 1240 Q527 1130 534 1019" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="4">
-         <animateTransform attributeName="transform" begin="-0.4s" dur="5.2s" repeatCount="indefinite" type="rotate" values="-4 520 1240;4 520 1240;-4 520 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M520 1240 Q527 1130 534 1019" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="4">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-0.4s" dur="5.2s" repeatCount="indefinite" type="rotate" values="-4 520 1240;4 520 1240;-4 520 1240"/>
         </path>
-        <path d="M540 1240 Q503 1164 498 1088" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="6">
-         <animateTransform attributeName="transform" begin="-2.2s" dur="4.8s" repeatCount="indefinite" type="rotate" values="-4 540 1240;4 540 1240;-4 540 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M540 1240 Q503 1164 498 1088" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="6">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-2.2s" dur="4.8s" repeatCount="indefinite" type="rotate" values="-4 540 1240;4 540 1240;-4 540 1240"/>
         </path>
-        <path d="M560 1240 Q576 1120 599 999" fill="none" stroke="#3f9b3a" stroke-linecap="round" stroke-width="4">
-         <animateTransform attributeName="transform" begin="-1.9s" dur="3.5s" repeatCount="indefinite" type="rotate" values="-4 560 1240;4 560 1240;-4 560 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M560 1240 Q576 1120 599 999" fill="none" stroke="#3f9b3a" stroke-linecap="round" stroke-width="4">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-1.9s" dur="3.5s" repeatCount="indefinite" type="rotate" values="-4 560 1240;4 560 1240;-4 560 1240"/>
         </path>
-        <path d="M580 1240 Q613 1167 602 1094" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="4">
-         <animateTransform attributeName="transform" begin="-2.5s" dur="5.8s" repeatCount="indefinite" type="rotate" values="-4 580 1240;4 580 1240;-4 580 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M580 1240 Q613 1167 602 1094" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="4">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-2.5s" dur="5.8s" repeatCount="indefinite" type="rotate" values="-4 580 1240;4 580 1240;-4 580 1240"/>
         </path>
-        <path d="M600 1240 Q581 1177 587 1113" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="5">
-         <animateTransform attributeName="transform" begin="-0.9s" dur="3.9s" repeatCount="indefinite" type="rotate" values="-4 600 1240;4 600 1240;-4 600 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M600 1240 Q581 1177 587 1113" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="5">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-0.9s" dur="3.9s" repeatCount="indefinite" type="rotate" values="-4 600 1240;4 600 1240;-4 600 1240"/>
         </path>
-        <path d="M620 1240 Q583 1127 591 1013" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="6">
-         <animateTransform attributeName="transform" begin="-2.0s" dur="5.7s" repeatCount="indefinite" type="rotate" values="-4 620 1240;4 620 1240;-4 620 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M620 1240 Q583 1127 591 1013" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="6">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-2.0s" dur="5.7s" repeatCount="indefinite" type="rotate" values="-4 620 1240;4 620 1240;-4 620 1240"/>
         </path>
-        <path d="M640 1240 Q632 1127 659 1013" fill="none" stroke="#3f9b3a" stroke-linecap="round" stroke-width="5">
-         <animateTransform attributeName="transform" begin="-2.4s" dur="4.6s" repeatCount="indefinite" type="rotate" values="-4 640 1240;4 640 1240;-4 640 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M640 1240 Q632 1127 659 1013" fill="none" stroke="#3f9b3a" stroke-linecap="round" stroke-width="5">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-2.4s" dur="4.6s" repeatCount="indefinite" type="rotate" values="-4 640 1240;4 640 1240;-4 640 1240"/>
         </path>
-        <path d="M660 1240 Q651 1157 692 1074" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="5">
-         <animateTransform attributeName="transform" begin="-0.8s" dur="5.3s" repeatCount="indefinite" type="rotate" values="-4 660 1240;4 660 1240;-4 660 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M660 1240 Q651 1157 692 1074" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="5">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-0.8s" dur="5.3s" repeatCount="indefinite" type="rotate" values="-4 660 1240;4 660 1240;-4 660 1240"/>
         </path>
-        <path d="M680 1240 Q671 1165 706 1090" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="4">
-         <animateTransform attributeName="transform" begin="-2.1s" dur="4.0s" repeatCount="indefinite" type="rotate" values="-4 680 1240;4 680 1240;-4 680 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M680 1240 Q671 1165 706 1090" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="4">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-2.1s" dur="4.0s" repeatCount="indefinite" type="rotate" values="-4 680 1240;4 680 1240;-4 680 1240"/>
         </path>
-        <path d="M700 1240 Q680 1173 686 1106" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="6">
-         <animateTransform attributeName="transform" begin="-2.9s" dur="3.8s" repeatCount="indefinite" type="rotate" values="-4 700 1240;4 700 1240;-4 700 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M700 1240 Q680 1173 686 1106" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="6">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-2.9s" dur="3.8s" repeatCount="indefinite" type="rotate" values="-4 700 1240;4 700 1240;-4 700 1240"/>
         </path>
-        <path d="M720 1240 Q704 1177 683 1113" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="6">
-         <animateTransform attributeName="transform" begin="-3.9s" dur="4.0s" repeatCount="indefinite" type="rotate" values="-4 720 1240;4 720 1240;-4 720 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M720 1240 Q704 1177 683 1113" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="6">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-3.9s" dur="4.0s" repeatCount="indefinite" type="rotate" values="-4 720 1240;4 720 1240;-4 720 1240"/>
         </path>
-        <path d="M740 1240 Q753 1145 752 1050" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="6">
-         <animateTransform attributeName="transform" begin="-2.2s" dur="4.6s" repeatCount="indefinite" type="rotate" values="-4 740 1240;4 740 1240;-4 740 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M740 1240 Q753 1145 752 1050" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="6">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-2.2s" dur="4.6s" repeatCount="indefinite" type="rotate" values="-4 740 1240;4 740 1240;-4 740 1240"/>
         </path>
-        <path d="M760 1240 Q760 1147 786 1054" fill="none" stroke="#3f9b3a" stroke-linecap="round" stroke-width="5">
-         <animateTransform attributeName="transform" begin="-0.8s" dur="5.5s" repeatCount="indefinite" type="rotate" values="-4 760 1240;4 760 1240;-4 760 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M760 1240 Q760 1147 786 1054" fill="none" stroke="#3f9b3a" stroke-linecap="round" stroke-width="5">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-0.8s" dur="5.5s" repeatCount="indefinite" type="rotate" values="-4 760 1240;4 760 1240;-4 760 1240"/>
         </path>
-        <path d="M780 1240 Q756 1124 775 1007" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="6">
-         <animateTransform attributeName="transform" begin="-2.1s" dur="5.0s" repeatCount="indefinite" type="rotate" values="-4 780 1240;4 780 1240;-4 780 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M780 1240 Q756 1124 775 1007" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="6">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-2.1s" dur="5.0s" repeatCount="indefinite" type="rotate" values="-4 780 1240;4 780 1240;-4 780 1240"/>
         </path>
-        <path d="M800 1240 Q809 1142 770 1043" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="4">
-         <animateTransform attributeName="transform" begin="-2.5s" dur="3.5s" repeatCount="indefinite" type="rotate" values="-4 800 1240;4 800 1240;-4 800 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M800 1240 Q809 1142 770 1043" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="4">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-2.5s" dur="3.5s" repeatCount="indefinite" type="rotate" values="-4 800 1240;4 800 1240;-4 800 1240"/>
         </path>
-        <path d="M820 1240 Q810 1148 792 1056" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="5">
-         <animateTransform attributeName="transform" begin="-3.5s" dur="3.7s" repeatCount="indefinite" type="rotate" values="-4 820 1240;4 820 1240;-4 820 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M820 1240 Q810 1148 792 1056" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="5">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-3.5s" dur="3.7s" repeatCount="indefinite" type="rotate" values="-4 820 1240;4 820 1240;-4 820 1240"/>
         </path>
-        <path d="M840 1240 Q849 1160 880 1079" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="5">
-         <animateTransform attributeName="transform" begin="-1.5s" dur="3.5s" repeatCount="indefinite" type="rotate" values="-4 840 1240;4 840 1240;-4 840 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M840 1240 Q849 1160 880 1079" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="5">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-1.5s" dur="3.5s" repeatCount="indefinite" type="rotate" values="-4 840 1240;4 840 1240;-4 840 1240"/>
         </path>
-        <path d="M860 1240 Q847 1127 840 1013" fill="none" stroke="#3f9b3a" stroke-linecap="round" stroke-width="5">
-         <animateTransform attributeName="transform" begin="-2.9s" dur="4.0s" repeatCount="indefinite" type="rotate" values="-4 860 1240;4 860 1240;-4 860 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M860 1240 Q847 1127 840 1013" fill="none" stroke="#3f9b3a" stroke-linecap="round" stroke-width="5">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-2.9s" dur="4.0s" repeatCount="indefinite" type="rotate" values="-4 860 1240;4 860 1240;-4 860 1240"/>
         </path>
-        <path d="M880 1240 Q905 1122 891 1003" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="6">
-         <animateTransform attributeName="transform" begin="-1.0s" dur="3.1s" repeatCount="indefinite" type="rotate" values="-4 880 1240;4 880 1240;-4 880 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M880 1240 Q905 1122 891 1003" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="6">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-1.0s" dur="3.1s" repeatCount="indefinite" type="rotate" values="-4 880 1240;4 880 1240;-4 880 1240"/>
         </path>
-        <path d="M900 1240 Q909 1172 869 1104" fill="none" stroke="#3f9b3a" stroke-linecap="round" stroke-width="5">
-         <animateTransform attributeName="transform" begin="-3.2s" dur="3.7s" repeatCount="indefinite" type="rotate" values="-4 900 1240;4 900 1240;-4 900 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M900 1240 Q909 1172 869 1104" fill="none" stroke="#3f9b3a" stroke-linecap="round" stroke-width="5">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-3.2s" dur="3.7s" repeatCount="indefinite" type="rotate" values="-4 900 1240;4 900 1240;-4 900 1240"/>
         </path>
-        <path d="M920 1240 Q924 1146 880 1051" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="6">
-         <animateTransform attributeName="transform" begin="-2.6s" dur="3.5s" repeatCount="indefinite" type="rotate" values="-4 920 1240;4 920 1240;-4 920 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M920 1240 Q924 1146 880 1051" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="6">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-2.6s" dur="3.5s" repeatCount="indefinite" type="rotate" values="-4 920 1240;4 920 1240;-4 920 1240"/>
         </path>
-        <path d="M940 1240 Q927 1147 946 1054" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="6">
-         <animateTransform attributeName="transform" begin="-2.4s" dur="4.6s" repeatCount="indefinite" type="rotate" values="-4 940 1240;4 940 1240;-4 940 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M940 1240 Q927 1147 946 1054" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="6">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-2.4s" dur="4.6s" repeatCount="indefinite" type="rotate" values="-4 940 1240;4 940 1240;-4 940 1240"/>
         </path>
-        <path d="M960 1240 Q935 1139 926 1037" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="4">
-         <animateTransform attributeName="transform" begin="-2.2s" dur="3.2s" repeatCount="indefinite" type="rotate" values="-4 960 1240;4 960 1240;-4 960 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M960 1240 Q935 1139 926 1037" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="4">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-2.2s" dur="3.2s" repeatCount="indefinite" type="rotate" values="-4 960 1240;4 960 1240;-4 960 1240"/>
         </path>
-        <path d="M980 1240 Q973 1146 937 1052" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="4">
-         <animateTransform attributeName="transform" begin="-0.9s" dur="3.3s" repeatCount="indefinite" type="rotate" values="-4 980 1240;4 980 1240;-4 980 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M980 1240 Q973 1146 937 1052" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="4">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-0.9s" dur="3.3s" repeatCount="indefinite" type="rotate" values="-4 980 1240;4 980 1240;-4 980 1240"/>
         </path>
-        <path d="M1000 1240 Q989 1147 970 1053" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="5">
-         <animateTransform attributeName="transform" begin="-3.0s" dur="3.0s" repeatCount="indefinite" type="rotate" values="-4 1000 1240;4 1000 1240;-4 1000 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M1000 1240 Q989 1147 970 1053" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="5">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-3.0s" dur="3.0s" repeatCount="indefinite" type="rotate" values="-4 1000 1240;4 1000 1240;-4 1000 1240"/>
         </path>
-        <path d="M1020 1240 Q1008 1164 980 1087" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="5">
-         <animateTransform attributeName="transform" begin="-4.8s" dur="5.1s" repeatCount="indefinite" type="rotate" values="-4 1020 1240;4 1020 1240;-4 1020 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M1020 1240 Q1008 1164 980 1087" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="5">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-4.8s" dur="5.1s" repeatCount="indefinite" type="rotate" values="-4 1020 1240;4 1020 1240;-4 1020 1240"/>
         </path>
-        <path d="M1040 1240 Q1016 1174 1018 1108" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="5">
-         <animateTransform attributeName="transform" begin="-3.6s" dur="5.8s" repeatCount="indefinite" type="rotate" values="-4 1040 1240;4 1040 1240;-4 1040 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M1040 1240 Q1016 1174 1018 1108" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="5">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-3.6s" dur="5.8s" repeatCount="indefinite" type="rotate" values="-4 1040 1240;4 1040 1240;-4 1040 1240"/>
         </path>
-        <path d="M1060 1240 Q1087 1123 1079 1006" fill="none" stroke="#3f9b3a" stroke-linecap="round" stroke-width="5">
-         <animateTransform attributeName="transform" begin="-1.2s" dur="3.5s" repeatCount="indefinite" type="rotate" values="-4 1060 1240;4 1060 1240;-4 1060 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M1060 1240 Q1087 1123 1079 1006" fill="none" stroke="#3f9b3a" stroke-linecap="round" stroke-width="5">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-1.2s" dur="3.5s" repeatCount="indefinite" type="rotate" values="-4 1060 1240;4 1060 1240;-4 1060 1240"/>
         </path>
-        <path d="M1080 1240 Q1034 1176 1036 1111" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="6">
-         <animateTransform attributeName="transform" begin="-2.9s" dur="5.2s" repeatCount="indefinite" type="rotate" values="-4 1080 1240;4 1080 1240;-4 1080 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M1080 1240 Q1034 1176 1036 1111" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="6">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-2.9s" dur="5.2s" repeatCount="indefinite" type="rotate" values="-4 1080 1240;4 1080 1240;-4 1080 1240"/>
         </path>
-        <path d="M1100 1240 Q1096 1120 1086 999" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="6">
-         <animateTransform attributeName="transform" begin="-2.7s" dur="3.3s" repeatCount="indefinite" type="rotate" values="-4 1100 1240;4 1100 1240;-4 1100 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M1100 1240 Q1096 1120 1086 999" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="6">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-2.7s" dur="3.3s" repeatCount="indefinite" type="rotate" values="-4 1100 1240;4 1100 1240;-4 1100 1240"/>
         </path>
-        <path d="M1120 1240 Q1132 1117 1144 994" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="4">
-         <animateTransform attributeName="transform" begin="-1.8s" dur="5.9s" repeatCount="indefinite" type="rotate" values="-4 1120 1240;4 1120 1240;-4 1120 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M1120 1240 Q1132 1117 1144 994" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="4">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-1.8s" dur="5.9s" repeatCount="indefinite" type="rotate" values="-4 1120 1240;4 1120 1240;-4 1120 1240"/>
         </path>
-        <path d="M1140 1240 Q1150 1137 1120 1033" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="4">
-         <animateTransform attributeName="transform" begin="-0.7s" dur="5.2s" repeatCount="indefinite" type="rotate" values="-4 1140 1240;4 1140 1240;-4 1140 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M1140 1240 Q1150 1137 1120 1033" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="4">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-0.7s" dur="5.2s" repeatCount="indefinite" type="rotate" values="-4 1140 1240;4 1140 1240;-4 1140 1240"/>
         </path>
-        <path d="M1160 1240 Q1117 1164 1116 1087" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="4">
-         <animateTransform attributeName="transform" begin="-4.3s" dur="4.9s" repeatCount="indefinite" type="rotate" values="-4 1160 1240;4 1160 1240;-4 1160 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M1160 1240 Q1117 1164 1116 1087" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="4">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-4.3s" dur="4.9s" repeatCount="indefinite" type="rotate" values="-4 1160 1240;4 1160 1240;-4 1160 1240"/>
         </path>
-        <path d="M1180 1240 Q1179 1173 1145 1106" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="6">
-         <animateTransform attributeName="transform" begin="-4.8s" dur="5.5s" repeatCount="indefinite" type="rotate" values="-4 1180 1240;4 1180 1240;-4 1180 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M1180 1240 Q1179 1173 1145 1106" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="6">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-4.8s" dur="5.5s" repeatCount="indefinite" type="rotate" values="-4 1180 1240;4 1180 1240;-4 1180 1240"/>
         </path>
-        <path d="M1200 1240 Q1214 1149 1243 1058" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="5">
-         <animateTransform attributeName="transform" begin="-0.6s" dur="3.1s" repeatCount="indefinite" type="rotate" values="-4 1200 1240;4 1200 1240;-4 1200 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M1200 1240 Q1214 1149 1243 1058" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="5">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-0.6s" dur="3.1s" repeatCount="indefinite" type="rotate" values="-4 1200 1240;4 1200 1240;-4 1200 1240"/>
         </path>
-        <path d="M1220 1240 Q1212 1180 1208 1120" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="4">
-         <animateTransform attributeName="transform" begin="-5.7s" dur="5.9s" repeatCount="indefinite" type="rotate" values="-4 1220 1240;4 1220 1240;-4 1220 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M1220 1240 Q1212 1180 1208 1120" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="4">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-5.7s" dur="5.9s" repeatCount="indefinite" type="rotate" values="-4 1220 1240;4 1220 1240;-4 1220 1240"/>
         </path>
-        <path d="M1240 1240 Q1225 1176 1234 1112" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="4">
-         <animateTransform attributeName="transform" begin="-0.0s" dur="4.1s" repeatCount="indefinite" type="rotate" values="-4 1240 1240;4 1240 1240;-4 1240 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M1240 1240 Q1225 1176 1234 1112" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="4">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-0.0s" dur="4.1s" repeatCount="indefinite" type="rotate" values="-4 1240 1240;4 1240 1240;-4 1240 1240"/>
         </path>
-        <path d="M1260 1240 Q1262 1120 1250 999" fill="none" stroke="#3f9b3a" stroke-linecap="round" stroke-width="4">
-         <animateTransform attributeName="transform" begin="-1.2s" dur="5.0s" repeatCount="indefinite" type="rotate" values="-4 1260 1240;4 1260 1240;-4 1260 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M1260 1240 Q1262 1120 1250 999" fill="none" stroke="#3f9b3a" stroke-linecap="round" stroke-width="4">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-1.2s" dur="5.0s" repeatCount="indefinite" type="rotate" values="-4 1260 1240;4 1260 1240;-4 1260 1240"/>
         </path>
-        <path d="M1280 1240 Q1247 1147 1246 1053" fill="none" stroke="#3f9b3a" stroke-linecap="round" stroke-width="5">
-         <animateTransform attributeName="transform" begin="-0.2s" dur="4.2s" repeatCount="indefinite" type="rotate" values="-4 1280 1240;4 1280 1240;-4 1280 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M1280 1240 Q1247 1147 1246 1053" fill="none" stroke="#3f9b3a" stroke-linecap="round" stroke-width="5">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-0.2s" dur="4.2s" repeatCount="indefinite" type="rotate" values="-4 1280 1240;4 1280 1240;-4 1280 1240"/>
         </path>
-        <path d="M1300 1240 Q1306 1142 1335 1043" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="6">
-         <animateTransform attributeName="transform" begin="-3.2s" dur="3.3s" repeatCount="indefinite" type="rotate" values="-4 1300 1240;4 1300 1240;-4 1300 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M1300 1240 Q1306 1142 1335 1043" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="6">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-3.2s" dur="3.3s" repeatCount="indefinite" type="rotate" values="-4 1300 1240;4 1300 1240;-4 1300 1240"/>
         </path>
-        <path d="M1320 1240 Q1339 1131 1316 1021" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="4">
-         <animateTransform attributeName="transform" begin="-0.9s" dur="6.0s" repeatCount="indefinite" type="rotate" values="-4 1320 1240;4 1320 1240;-4 1320 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M1320 1240 Q1339 1131 1316 1021" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="4">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-0.9s" dur="6.0s" repeatCount="indefinite" type="rotate" values="-4 1320 1240;4 1320 1240;-4 1320 1240"/>
         </path>
-        <path d="M1340 1240 Q1369 1126 1384 1011" fill="none" stroke="#3f9b3a" stroke-linecap="round" stroke-width="6">
-         <animateTransform attributeName="transform" begin="-1.8s" dur="3.4s" repeatCount="indefinite" type="rotate" values="-4 1340 1240;4 1340 1240;-4 1340 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M1340 1240 Q1369 1126 1384 1011" fill="none" stroke="#3f9b3a" stroke-linecap="round" stroke-width="6">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-1.8s" dur="3.4s" repeatCount="indefinite" type="rotate" values="-4 1340 1240;4 1340 1240;-4 1340 1240"/>
         </path>
-        <path d="M1360 1240 Q1318 1151 1325 1062" fill="none" stroke="#3f9b3a" stroke-linecap="round" stroke-width="5">
-         <animateTransform attributeName="transform" begin="-2.0s" dur="3.1s" repeatCount="indefinite" type="rotate" values="-4 1360 1240;4 1360 1240;-4 1360 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M1360 1240 Q1318 1151 1325 1062" fill="none" stroke="#3f9b3a" stroke-linecap="round" stroke-width="5">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-2.0s" dur="3.1s" repeatCount="indefinite" type="rotate" values="-4 1360 1240;4 1360 1240;-4 1360 1240"/>
         </path>
-        <path d="M1380 1240 Q1371 1123 1406 1005" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="5">
-         <animateTransform attributeName="transform" begin="-3.1s" dur="4.9s" repeatCount="indefinite" type="rotate" values="-4 1380 1240;4 1380 1240;-4 1380 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M1380 1240 Q1371 1123 1406 1005" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="5">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-3.1s" dur="4.9s" repeatCount="indefinite" type="rotate" values="-4 1380 1240;4 1380 1240;-4 1380 1240"/>
         </path>
-        <path d="M1400 1240 Q1381 1147 1355 1053" fill="none" stroke="#3f9b3a" stroke-linecap="round" stroke-width="6">
-         <animateTransform attributeName="transform" begin="-4.0s" dur="5.4s" repeatCount="indefinite" type="rotate" values="-4 1400 1240;4 1400 1240;-4 1400 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M1400 1240 Q1381 1147 1355 1053" fill="none" stroke="#3f9b3a" stroke-linecap="round" stroke-width="6">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-4.0s" dur="5.4s" repeatCount="indefinite" type="rotate" values="-4 1400 1240;4 1400 1240;-4 1400 1240"/>
         </path>
-        <path d="M1420 1240 Q1418 1172 1435 1104" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="6">
-         <animateTransform attributeName="transform" begin="-4.6s" dur="5.4s" repeatCount="indefinite" type="rotate" values="-4 1420 1240;4 1420 1240;-4 1420 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M1420 1240 Q1418 1172 1435 1104" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="6">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-4.6s" dur="5.4s" repeatCount="indefinite" type="rotate" values="-4 1420 1240;4 1420 1240;-4 1420 1240"/>
         </path>
-        <path d="M1440 1240 Q1454 1154 1424 1068" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="4">
-         <animateTransform attributeName="transform" begin="-2.3s" dur="4.9s" repeatCount="indefinite" type="rotate" values="-4 1440 1240;4 1440 1240;-4 1440 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M1440 1240 Q1454 1154 1424 1068" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="4">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-2.3s" dur="4.9s" repeatCount="indefinite" type="rotate" values="-4 1440 1240;4 1440 1240;-4 1440 1240"/>
         </path>
-        <path d="M1460 1240 Q1474 1119 1502 998" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="4">
-         <animateTransform attributeName="transform" begin="-3.3s" dur="5.3s" repeatCount="indefinite" type="rotate" values="-4 1460 1240;4 1460 1240;-4 1460 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M1460 1240 Q1474 1119 1502 998" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="4">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-3.3s" dur="5.3s" repeatCount="indefinite" type="rotate" values="-4 1460 1240;4 1460 1240;-4 1460 1240"/>
         </path>
-        <path d="M1480 1240 Q1469 1162 1477 1083" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="4">
-         <animateTransform attributeName="transform" begin="-3.5s" dur="5.0s" repeatCount="indefinite" type="rotate" values="-4 1480 1240;4 1480 1240;-4 1480 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M1480 1240 Q1469 1162 1477 1083" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="4">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-3.5s" dur="5.0s" repeatCount="indefinite" type="rotate" values="-4 1480 1240;4 1480 1240;-4 1480 1240"/>
         </path>
-        <path d="M1500 1240 Q1487 1119 1462 997" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="6">
-         <animateTransform attributeName="transform" begin="-2.6s" dur="3.8s" repeatCount="indefinite" type="rotate" values="-4 1500 1240;4 1500 1240;-4 1500 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M1500 1240 Q1487 1119 1462 997" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="6">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-2.6s" dur="3.8s" repeatCount="indefinite" type="rotate" values="-4 1500 1240;4 1500 1240;-4 1500 1240"/>
         </path>
-        <path d="M1520 1240 Q1536 1118 1512 995" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="4">
-         <animateTransform attributeName="transform" begin="-2.1s" dur="4.5s" repeatCount="indefinite" type="rotate" values="-4 1520 1240;4 1520 1240;-4 1520 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M1520 1240 Q1536 1118 1512 995" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="4">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-2.1s" dur="4.5s" repeatCount="indefinite" type="rotate" values="-4 1520 1240;4 1520 1240;-4 1520 1240"/>
         </path>
-        <path d="M1540 1240 Q1517 1155 1534 1069" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="4">
-         <animateTransform attributeName="transform" begin="-0.1s" dur="5.8s" repeatCount="indefinite" type="rotate" values="-4 1540 1240;4 1540 1240;-4 1540 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M1540 1240 Q1517 1155 1534 1069" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="4">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-0.1s" dur="5.8s" repeatCount="indefinite" type="rotate" values="-4 1540 1240;4 1540 1240;-4 1540 1240"/>
         </path>
-        <path d="M1560 1240 Q1558 1116 1572 991" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="4">
-         <animateTransform attributeName="transform" begin="-3.8s" dur="4.2s" repeatCount="indefinite" type="rotate" values="-4 1560 1240;4 1560 1240;-4 1560 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M1560 1240 Q1558 1116 1572 991" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="4">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-3.8s" dur="4.2s" repeatCount="indefinite" type="rotate" values="-4 1560 1240;4 1560 1240;-4 1560 1240"/>
         </path>
-        <path d="M1580 1240 Q1588 1169 1553 1097" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="6">
-         <animateTransform attributeName="transform" begin="-4.4s" dur="4.6s" repeatCount="indefinite" type="rotate" values="-4 1580 1240;4 1580 1240;-4 1580 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M1580 1240 Q1588 1169 1553 1097" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="6">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-4.4s" dur="4.6s" repeatCount="indefinite" type="rotate" values="-4 1580 1240;4 1580 1240;-4 1580 1240"/>
         </path>
-        <path d="M1600 1240 Q1577 1115 1590 990" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="5">
-         <animateTransform attributeName="transform" begin="-1.2s" dur="5.1s" repeatCount="indefinite" type="rotate" values="-4 1600 1240;4 1600 1240;-4 1600 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M1600 1240 Q1577 1115 1590 990" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="5">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-1.2s" dur="5.1s" repeatCount="indefinite" type="rotate" values="-4 1600 1240;4 1600 1240;-4 1600 1240"/>
         </path>
-        <path d="M1620 1240 Q1582 1177 1595 1114" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="5">
-         <animateTransform attributeName="transform" begin="-4.0s" dur="5.8s" repeatCount="indefinite" type="rotate" values="-4 1620 1240;4 1620 1240;-4 1620 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M1620 1240 Q1582 1177 1595 1114" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="5">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-4.0s" dur="5.8s" repeatCount="indefinite" type="rotate" values="-4 1620 1240;4 1620 1240;-4 1620 1240"/>
         </path>
-        <path d="M1640 1240 Q1641 1162 1648 1084" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="4">
-         <animateTransform attributeName="transform" begin="-0.5s" dur="4.1s" repeatCount="indefinite" type="rotate" values="-4 1640 1240;4 1640 1240;-4 1640 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M1640 1240 Q1641 1162 1648 1084" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="4">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-0.5s" dur="4.1s" repeatCount="indefinite" type="rotate" values="-4 1640 1240;4 1640 1240;-4 1640 1240"/>
         </path>
-        <path d="M1660 1240 Q1659 1139 1658 1037" fill="none" stroke="#3f9b3a" stroke-linecap="round" stroke-width="6">
-         <animateTransform attributeName="transform" begin="-3.1s" dur="3.4s" repeatCount="indefinite" type="rotate" values="-4 1660 1240;4 1660 1240;-4 1660 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M1660 1240 Q1659 1139 1658 1037" fill="none" stroke="#3f9b3a" stroke-linecap="round" stroke-width="6">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-3.1s" dur="3.4s" repeatCount="indefinite" type="rotate" values="-4 1660 1240;4 1660 1240;-4 1660 1240"/>
         </path>
-        <path d="M1680 1240 Q1671 1143 1667 1046" fill="none" stroke="#3f9b3a" stroke-linecap="round" stroke-width="5">
-         <animateTransform attributeName="transform" begin="-1.2s" dur="3.2s" repeatCount="indefinite" type="rotate" values="-4 1680 1240;4 1680 1240;-4 1680 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M1680 1240 Q1671 1143 1667 1046" fill="none" stroke="#3f9b3a" stroke-linecap="round" stroke-width="5">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-1.2s" dur="3.2s" repeatCount="indefinite" type="rotate" values="-4 1680 1240;4 1680 1240;-4 1680 1240"/>
         </path>
-        <path d="M1700 1240 Q1673 1126 1690 1011" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="6">
-         <animateTransform attributeName="transform" begin="-0.2s" dur="3.8s" repeatCount="indefinite" type="rotate" values="-4 1700 1240;4 1700 1240;-4 1700 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M1700 1240 Q1673 1126 1690 1011" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="6">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-0.2s" dur="3.8s" repeatCount="indefinite" type="rotate" values="-4 1700 1240;4 1700 1240;-4 1700 1240"/>
         </path>
-        <path d="M1720 1240 Q1705 1161 1706 1082" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="5">
-         <animateTransform attributeName="transform" begin="-1.4s" dur="4.3s" repeatCount="indefinite" type="rotate" values="-4 1720 1240;4 1720 1240;-4 1720 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M1720 1240 Q1705 1161 1706 1082" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="5">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-1.4s" dur="4.3s" repeatCount="indefinite" type="rotate" values="-4 1720 1240;4 1720 1240;-4 1720 1240"/>
         </path>
-        <path d="M1740 1240 Q1757 1177 1775 1113" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="6">
-         <animateTransform attributeName="transform" begin="-5.4s" dur="5.7s" repeatCount="indefinite" type="rotate" values="-4 1740 1240;4 1740 1240;-4 1740 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M1740 1240 Q1757 1177 1775 1113" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="6">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-5.4s" dur="5.7s" repeatCount="indefinite" type="rotate" values="-4 1740 1240;4 1740 1240;-4 1740 1240"/>
         </path>
-        <path d="M1760 1240 Q1761 1170 1721 1100" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="6">
-         <animateTransform attributeName="transform" begin="-2.6s" dur="4.2s" repeatCount="indefinite" type="rotate" values="-4 1760 1240;4 1760 1240;-4 1760 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M1760 1240 Q1761 1170 1721 1100" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="6">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-2.6s" dur="4.2s" repeatCount="indefinite" type="rotate" values="-4 1760 1240;4 1760 1240;-4 1760 1240"/>
         </path>
-        <path d="M1780 1240 Q1766 1144 1797 1047" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="5">
-         <animateTransform attributeName="transform" begin="-3.1s" dur="5.7s" repeatCount="indefinite" type="rotate" values="-4 1780 1240;4 1780 1240;-4 1780 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M1780 1240 Q1766 1144 1797 1047" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="5">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-3.1s" dur="5.7s" repeatCount="indefinite" type="rotate" values="-4 1780 1240;4 1780 1240;-4 1780 1240"/>
         </path>
-        <path d="M1800 1240 Q1792 1127 1798 1014" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="5">
-         <animateTransform attributeName="transform" begin="-2.9s" dur="3.9s" repeatCount="indefinite" type="rotate" values="-4 1800 1240;4 1800 1240;-4 1800 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M1800 1240 Q1792 1127 1798 1014" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="5">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-2.9s" dur="3.9s" repeatCount="indefinite" type="rotate" values="-4 1800 1240;4 1800 1240;-4 1800 1240"/>
         </path>
-        <path d="M1820 1240 Q1821 1150 1813 1059" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="6">
-         <animateTransform attributeName="transform" begin="-1.9s" dur="4.7s" repeatCount="indefinite" type="rotate" values="-4 1820 1240;4 1820 1240;-4 1820 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M1820 1240 Q1821 1150 1813 1059" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="6">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-1.9s" dur="4.7s" repeatCount="indefinite" type="rotate" values="-4 1820 1240;4 1820 1240;-4 1820 1240"/>
         </path>
-        <path d="M1840 1240 Q1810 1160 1804 1079" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="5">
-         <animateTransform attributeName="transform" begin="-3.7s" dur="4.5s" repeatCount="indefinite" type="rotate" values="-4 1840 1240;4 1840 1240;-4 1840 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M1840 1240 Q1810 1160 1804 1079" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="5">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-3.7s" dur="4.5s" repeatCount="indefinite" type="rotate" values="-4 1840 1240;4 1840 1240;-4 1840 1240"/>
         </path>
-        <path d="M1860 1240 Q1868 1138 1872 1035" fill="none" stroke="#3f9b3a" stroke-linecap="round" stroke-width="4">
-         <animateTransform attributeName="transform" begin="-0.7s" dur="3.4s" repeatCount="indefinite" type="rotate" values="-4 1860 1240;4 1860 1240;-4 1860 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M1860 1240 Q1868 1138 1872 1035" fill="none" stroke="#3f9b3a" stroke-linecap="round" stroke-width="4">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-0.7s" dur="3.4s" repeatCount="indefinite" type="rotate" values="-4 1860 1240;4 1860 1240;-4 1860 1240"/>
         </path>
-        <path d="M1880 1240 Q1873 1137 1906 1033" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="4">
-         <animateTransform attributeName="transform" begin="-1.5s" dur="4.0s" repeatCount="indefinite" type="rotate" values="-4 1880 1240;4 1880 1240;-4 1880 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M1880 1240 Q1873 1137 1906 1033" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="4">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-1.5s" dur="4.0s" repeatCount="indefinite" type="rotate" values="-4 1880 1240;4 1880 1240;-4 1880 1240"/>
         </path>
-        <path d="M1900 1240 Q1903 1128 1904 1015" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="5">
-         <animateTransform attributeName="transform" begin="-1.1s" dur="5.2s" repeatCount="indefinite" type="rotate" values="-4 1900 1240;4 1900 1240;-4 1900 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M1900 1240 Q1903 1128 1904 1015" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="5">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-1.1s" dur="5.2s" repeatCount="indefinite" type="rotate" values="-4 1900 1240;4 1900 1240;-4 1900 1240"/>
         </path>
-        <path d="M1920 1240 Q1921 1173 1938 1105" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="4">
-         <animateTransform attributeName="transform" begin="-1.7s" dur="4.7s" repeatCount="indefinite" type="rotate" values="-4 1920 1240;4 1920 1240;-4 1920 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M1920 1240 Q1921 1173 1938 1105" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="4">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-1.7s" dur="4.7s" repeatCount="indefinite" type="rotate" values="-4 1920 1240;4 1920 1240;-4 1920 1240"/>
         </path>
-        <path d="M1940 1240 Q1932 1146 1926 1051" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="4">
-         <animateTransform attributeName="transform" begin="-1.9s" dur="4.2s" repeatCount="indefinite" type="rotate" values="-4 1940 1240;4 1940 1240;-4 1940 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M1940 1240 Q1932 1146 1926 1051" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="4">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-1.9s" dur="4.2s" repeatCount="indefinite" type="rotate" values="-4 1940 1240;4 1940 1240;-4 1940 1240"/>
         </path>
-        <path d="M1960 1240 Q1941 1164 1919 1088" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="6">
-         <animateTransform attributeName="transform" begin="-4.6s" dur="5.1s" repeatCount="indefinite" type="rotate" values="-4 1960 1240;4 1960 1240;-4 1960 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M1960 1240 Q1941 1164 1919 1088" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="6">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-4.6s" dur="5.1s" repeatCount="indefinite" type="rotate" values="-4 1960 1240;4 1960 1240;-4 1960 1240"/>
         </path>
-        <path d="M1980 1240 Q1936 1118 1935 995" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="5">
-         <animateTransform attributeName="transform" begin="-3.9s" dur="4.2s" repeatCount="indefinite" type="rotate" values="-4 1980 1240;4 1980 1240;-4 1980 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M1980 1240 Q1936 1118 1935 995" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="5">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-3.9s" dur="4.2s" repeatCount="indefinite" type="rotate" values="-4 1980 1240;4 1980 1240;-4 1980 1240"/>
         </path>
-        <path d="M2000 1240 Q1973 1149 1968 1057" fill="none" stroke="#3f9b3a" stroke-linecap="round" stroke-width="6">
-         <animateTransform attributeName="transform" begin="-1.8s" dur="3.5s" repeatCount="indefinite" type="rotate" values="-4 2000 1240;4 2000 1240;-4 2000 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M2000 1240 Q1973 1149 1968 1057" fill="none" stroke="#3f9b3a" stroke-linecap="round" stroke-width="6">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-1.8s" dur="3.5s" repeatCount="indefinite" type="rotate" values="-4 2000 1240;4 2000 1240;-4 2000 1240"/>
         </path>
-        <path d="M2020 1240 Q2012 1122 1985 1003" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="4">
-         <animateTransform attributeName="transform" begin="-0.0s" dur="5.3s" repeatCount="indefinite" type="rotate" values="-4 2020 1240;4 2020 1240;-4 2020 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M2020 1240 Q2012 1122 1985 1003" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="4">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-0.0s" dur="5.3s" repeatCount="indefinite" type="rotate" values="-4 2020 1240;4 2020 1240;-4 2020 1240"/>
         </path>
-        <path d="M2040 1240 Q2078 1176 2077 1111" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="6">
-         <animateTransform attributeName="transform" begin="-0.5s" dur="3.9s" repeatCount="indefinite" type="rotate" values="-4 2040 1240;4 2040 1240;-4 2040 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M2040 1240 Q2078 1176 2077 1111" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="6">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-0.5s" dur="3.9s" repeatCount="indefinite" type="rotate" values="-4 2040 1240;4 2040 1240;-4 2040 1240"/>
         </path>
-        <path d="M2060 1240 Q2105 1125 2104 1009" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="5">
-         <animateTransform attributeName="transform" begin="-0.2s" dur="3.3s" repeatCount="indefinite" type="rotate" values="-4 2060 1240;4 2060 1240;-4 2060 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M2060 1240 Q2105 1125 2104 1009" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="5">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-0.2s" dur="3.3s" repeatCount="indefinite" type="rotate" values="-4 2060 1240;4 2060 1240;-4 2060 1240"/>
         </path>
-        <path d="M2080 1240 Q2096 1147 2063 1054" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="5">
-         <animateTransform attributeName="transform" begin="-0.1s" dur="4.8s" repeatCount="indefinite" type="rotate" values="-4 2080 1240;4 2080 1240;-4 2080 1240"/>
+        <path xmlns="http://www.w3.org/2000/svg" d="M2080 1240 Q2096 1147 2063 1054" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="5">
+         <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" begin="-0.1s" dur="4.8s" repeatCount="indefinite" type="rotate" values="-4 2080 1240;4 2080 1240;-4 2080 1240"/>
         </path>
        </g>
       </g>
      </g>
-     <g hearth:layer="actions" hearth:layer-name="Actions" id="d86def5a-33f4-4261-bbf7-7e862c26c373"/>
+     <g xmlns="http://www.w3.org/2000/svg" id="d86def5a-33f4-4261-bbf7-7e862c26c373" hearth:layer="actions" hearth:layer-name="Actions" xmlns:hearth="https://forgeiec.io/hearth/1.0"/>
     </svg>
    </symbol>
   </symbols>
@@ -25382,6 +25559,7 @@ If another operating mode is selected at the same time, for example the schedule
        <hearth-connectors>
         <hearth-connector dir="in" id="f20bc310-5d1e-4e7a-a5ed-c9228baf71dc" name="valve"/>
         <hearth-connector dir="out" id="fc47dd2d-36c9-421d-9f8a-57dfd7ff4abe" name="taster"/>
+        <hearth-connector dir="in" id="1fa6f044-c39e-4219-bbd7-692059b0ace6" name="led"/>
        </hearth-connectors>
       </symbol>
       <hearth-param name="wegfarbe" value="#deddda"/>
@@ -25391,6 +25569,7 @@ If another operating mode is selected at the same time, for example the schedule
        <hearth-connectors>
         <hearth-connector dir="in" id="db17a8a2-af51-4dd2-a2a4-00645f2a7af2" name="valve"/>
         <hearth-connector dir="out" id="c849d98c-3899-4c8b-95ee-d012a9cd2d78" name="taster"/>
+        <hearth-connector dir="in" id="e673d54d-eb67-4a44-8855-0a3240186ce5" name="led"/>
        </hearth-connectors>
       </symbol>
       <hearth-param name="wegfarbe" value="#deddda"/>
@@ -25400,6 +25579,7 @@ If another operating mode is selected at the same time, for example the schedule
        <hearth-connectors>
         <hearth-connector dir="in" id="c3889afc-ed12-4285-9f88-a1ac9e71ed63" name="valve"/>
         <hearth-connector dir="out" id="8b48a72f-b337-4560-81ed-aa9a56517bb1" name="taster"/>
+        <hearth-connector dir="in" id="0d70fccc-ce82-4f28-9dfa-2e92d836edd1" name="led"/>
        </hearth-connectors>
       </symbol>
       <hearth-param name="wegfarbe" value="#deddda"/>
@@ -25409,6 +25589,7 @@ If another operating mode is selected at the same time, for example the schedule
        <hearth-connectors>
         <hearth-connector dir="in" id="b4bb1046-aac2-4216-8200-a67f2ac36025" name="valve"/>
         <hearth-connector dir="out" id="abc50daf-9890-4753-bea1-caa48c052d11" name="taster"/>
+        <hearth-connector dir="in" id="a8c8ce46-02f6-4c9e-bd3c-1574f3986d72" name="led"/>
        </hearth-connectors>
       </symbol>
       <hearth-param name="wegfarbe" value="#deddda"/>
@@ -25439,6 +25620,8 @@ If another operating mode is selected at the same time, for example the schedule
         <hearth-connector dir="in" id="1f86ddd6-5e1a-474b-998a-abd73c42d81e" name="valve_1"/>
         <hearth-connector dir="in" id="ceb2dc6f-d850-4a4a-9b71-2ed07de2964d" name="valve_2"/>
         <hearth-connector dir="out" id="15e5a6b6-84a5-4d26-b91e-5bd39adfe7be" name="taster_2"/>
+        <hearth-connector dir="in" id="126e8e75-63bf-41af-afb3-1e0540d46c2b" name="led_1"/>
+        <hearth-connector dir="in" id="c4c9513f-a88c-4a37-8b58-be448ebd71f9" name="led_2"/>
         <hearth-connector dir="out" id="0a98219c-966c-4c47-9667-d8e9393f30ab" name="taster_1"/>
        </hearth-connectors>
       </symbol>
@@ -25557,6 +25740,7 @@ If another operating mode is selected at the same time, for example the schedule
        <hearth-connectors>
         <hearth-connector dir="in" id="475bf081-1c58-4fed-972b-dcefab4ad5a3" name="valve"/>
         <hearth-connector dir="out" id="ce58ad66-f888-42aa-95e7-6c6a44b37907" name="taster"/>
+        <hearth-connector dir="in" id="4dab382d-8392-427e-85b8-e7301c0ba789" name="led"/>
        </hearth-connectors>
       </symbol>
       <hearth-param name="wegfarbe" value="#deddda"/>
@@ -25566,15 +25750,17 @@ If another operating mode is selected at the same time, for example the schedule
        <hearth-connectors>
         <hearth-connector dir="in" id="674fc8af-4149-406a-9fde-b29918004e12" name="valve"/>
         <hearth-connector dir="out" id="5ecc33f5-c721-4e6d-ac66-00fb97871a8e" name="taster"/>
+        <hearth-connector dir="in" id="0d85187b-90f9-4b8b-9115-4b3ff34f8b55" name="led"/>
        </hearth-connectors>
       </symbol>
       <hearth-param name="wegfarbe" value="#deddda"/>
      </hearth-placement>
-     <hearth-placement id="43e922b3-9de5-4647-b70f-88209cd3de62" transform="matrix(0.4 0 0 0.4 795 582)">
+     <hearth-placement id="43e922b3-9de5-4647-b70f-88209cd3de62" transform="matrix(0.4 0 0 0.4 790 580)">
       <symbol name="Beetgruppe" uuid="9316a334-6903-5e4a-8599-e3fb6e2adbc9" viewbox="0 0 374 1060">
        <hearth-connectors>
         <hearth-connector dir="in" id="83a0ecb0-628d-4e4a-a1a4-05fc0ac61a58" name="valve"/>
         <hearth-connector dir="out" id="89201d0f-7d53-4455-8320-a0c8e613efb8" name="taster"/>
+        <hearth-connector dir="in" id="99c60b02-88b5-4b27-a778-911ce479d3af" name="led"/>
        </hearth-connectors>
       </symbol>
       <hearth-param name="wegfarbe" value="#deddda"/>
@@ -25584,6 +25770,7 @@ If another operating mode is selected at the same time, for example the schedule
        <hearth-connectors>
         <hearth-connector dir="in" id="14d7669d-373f-463d-bddc-5e87e5c56f3c" name="valve"/>
         <hearth-connector dir="out" id="72d1ec5a-e175-4bcb-ba4b-90146f66ab29" name="taster"/>
+        <hearth-connector dir="in" id="1d2e9fc8-ac06-468b-ba4b-306e51071514" name="led"/>
        </hearth-connectors>
       </symbol>
       <hearth-param name="wegfarbe" value="#deddda"/>
@@ -25593,6 +25780,7 @@ If another operating mode is selected at the same time, for example the schedule
        <hearth-connectors>
         <hearth-connector dir="in" id="21d20e15-68e8-4f6e-b053-26a50ad16349" name="valve"/>
         <hearth-connector dir="out" id="2cb7e1eb-e40e-4d43-969f-83a89749b3fb" name="taster"/>
+        <hearth-connector dir="in" id="a2137e55-a0ce-4bc2-aac6-8f6819325ebc" name="led"/>
        </hearth-connectors>
       </symbol>
       <hearth-param name="wegfarbe" value="#deddda"/>
@@ -25659,6 +25847,7 @@ If another operating mode is selected at the same time, for example the schedule
        <hearth-connectors>
         <hearth-connector dir="in" id="99d9bbf7-14c1-43a8-9864-3a832d8829fc" name="valve"/>
         <hearth-connector dir="out" id="ebc6c575-63dc-46ae-8772-5b39a5e2cede" name="taster"/>
+        <hearth-connector dir="in" id="1a59673f-d9ec-4776-a916-ccf7539c7ce7" name="led"/>
        </hearth-connectors>
       </symbol>
       <hearth-param name="wegfarbe" value="#deddda"/>
@@ -25991,7 +26180,7 @@ If another operating mode is selected at the same time, for example the schedule
       <symbol family="Landwirtschaft/Sträucher" name="Strauchreihe" uuid="f94c3a0f-a37b-5e02-ad63-7f817d7c9011" viewbox="0 0 30 480"/>
       <hearth-param name="art" value="Stachelbeere"/>
      </hearth-placement>
-     <hearth-placement id="6ebaf3dd-2a66-4fcf-9445-7ad9b3f45dc4" logic="true" transform="matrix(-1 1.22464679915e-16 -1.22464679915e-16 -1 1613 218)">
+     <hearth-placement id="6ebaf3dd-2a66-4fcf-9445-7ad9b3f45dc4" logic="true" transform="matrix(-1 1.22464679915e-16 -1.22464679915e-16 -1 1640 420)">
       <symbol family="Variablen" name="Variable IN" viewbox="0 0 200 150">
        <style xmlns="http://www.w3.org/2000/svg">
 :root {
@@ -26065,7 +26254,7 @@ class extends HearthSymbol {
       <hearth-param name="address" value="bellows.gvl.Pfirsich.xT_2"/>
       <hearth-param name="var_name" value="Pfirsich.xT_2"/>
      </hearth-placement>
-     <hearth-placement id="608965f7-6241-48e2-b23d-c1a763248f54" logic="true" transform="matrix(-1 1.22464679915e-16 -1.22464679915e-16 -1 730 218)">
+     <hearth-placement id="608965f7-6241-48e2-b23d-c1a763248f54" logic="true" transform="matrix(-1 1.22464679915e-16 -1.22464679915e-16 -1 710 380)">
       <symbol family="Variablen" name="Variable IN" viewbox="0 0 200 150">
        <style xmlns="http://www.w3.org/2000/svg">
 :root {
@@ -26102,7 +26291,7 @@ class extends HearthSymbol {
       <hearth-param name="address" value="bellows.anvil.Johannisbeere.xV_2"/>
       <hearth-param name="var_name" value="Johannisbeere.xV_2"/>
      </hearth-placement>
-     <hearth-placement id="0bff5b9c-e14a-4eaa-8556-df802e697ec0" logic="true" transform="matrix(-1 1.22464679915e-16 -1.22464679915e-16 -1 730 308)">
+     <hearth-placement id="0bff5b9c-e14a-4eaa-8556-df802e697ec0" logic="true" transform="matrix(-1 1.22464679915e-16 -1.22464679915e-16 -1 780 310)">
       <symbol family="Variablen" name="Variable OUT" viewbox="0 0 200 150">
        <style xmlns="http://www.w3.org/2000/svg">
 :root {
@@ -26139,7 +26328,7 @@ class extends HearthSymbol {
       <hearth-param name="address" value="bellows.gvl.Johannisbeere.xT_2"/>
       <hearth-param name="var_name" value="Johannisbeere.xT_2"/>
      </hearth-placement>
-     <hearth-placement id="631f5932-17c2-439d-813b-734e8938da84" logic="true" transform="matrix(-1 1.22464679915e-16 -1.22464679915e-16 -1 920 218)">
+     <hearth-placement id="631f5932-17c2-439d-813b-734e8938da84" logic="true" transform="matrix(-1 1.22464679915e-16 -1.22464679915e-16 -1 900 380)">
       <symbol family="Variablen" name="Variable IN" viewbox="0 0 200 150">
        <style xmlns="http://www.w3.org/2000/svg">
 :root {
@@ -26176,7 +26365,7 @@ class extends HearthSymbol {
       <hearth-param name="address" value="bellows.anvil.Johannisbeere.xV_3"/>
       <hearth-param name="var_name" value="Johannisbeere.xV_3"/>
      </hearth-placement>
-     <hearth-placement id="e5b1f781-09c1-4d41-b388-2a3a9097d588" logic="true" transform="matrix(-1 1.22464679915e-16 -1.22464679915e-16 -1 920 308)">
+     <hearth-placement id="e5b1f781-09c1-4d41-b388-2a3a9097d588" logic="true" transform="matrix(-1 1.22464679915e-16 -1.22464679915e-16 -1 960 310)">
       <symbol family="Variablen" name="Variable OUT" viewbox="0 0 200 150">
        <style xmlns="http://www.w3.org/2000/svg">
 :root {
@@ -26213,7 +26402,7 @@ class extends HearthSymbol {
       <hearth-param name="address" value="bellows.gvl.Johannisbeere.xT_3"/>
       <hearth-param name="var_name" value="Johannisbeere.xT_3"/>
      </hearth-placement>
-     <hearth-placement id="39ceb42e-641b-40e8-ac87-c3a36697b167" logic="true" transform="matrix(-1 1.22464679915e-16 -1.22464679915e-16 -1 1190 218)">
+     <hearth-placement id="39ceb42e-641b-40e8-ac87-c3a36697b167" logic="true" transform="matrix(-1 1.22464679915e-16 -1.22464679915e-16 -1 1180 380)">
       <symbol family="Variablen" name="Variable IN" viewbox="0 0 200 150">
        <style xmlns="http://www.w3.org/2000/svg">
 :root {
@@ -26250,7 +26439,7 @@ class extends HearthSymbol {
       <hearth-param name="address" value="bellows.anvil.Maibeere.xV_2"/>
       <hearth-param name="var_name" value="Maibeere.xV_2"/>
      </hearth-placement>
-     <hearth-placement id="6bbd3e58-5ab9-4b32-9df6-30da12f54f78" logic="true" transform="matrix(-1 1.22464679915e-16 -1.22464679915e-16 -1 1190 308)">
+     <hearth-placement id="6bbd3e58-5ab9-4b32-9df6-30da12f54f78" logic="true" transform="matrix(-1 1.22464679915e-16 -1.22464679915e-16 -1 1240 310)">
       <symbol family="Variablen" name="Variable OUT" viewbox="0 0 200 150">
        <style xmlns="http://www.w3.org/2000/svg">
 :root {
@@ -26287,7 +26476,7 @@ class extends HearthSymbol {
       <hearth-param name="address" value="bellows.gvl.Maibeere.xT_2"/>
       <hearth-param name="var_name" value="Maibeere.xT_2"/>
      </hearth-placement>
-     <hearth-placement id="e23dee77-b8aa-46e4-82e6-0e7eb2fb424f" logic="true" transform="matrix(-1 1.22464679915e-16 -1.22464679915e-16 -1 1370 218)">
+     <hearth-placement id="e23dee77-b8aa-46e4-82e6-0e7eb2fb424f" logic="true" transform="matrix(-1 1.22464679915e-16 -1.22464679915e-16 -1 1360 380)">
       <symbol family="Variablen" name="Variable IN" viewbox="0 0 200 150">
        <style xmlns="http://www.w3.org/2000/svg">
 :root {
@@ -26324,7 +26513,7 @@ class extends HearthSymbol {
       <hearth-param name="address" value="bellows.anvil.Maibeere.xV_3"/>
       <hearth-param name="var_name" value="Maibeere.xV_3"/>
      </hearth-placement>
-     <hearth-placement id="cc5a15c1-b117-45ac-bed9-1aeb9a7833b8" logic="true" transform="matrix(-1 1.22464679915e-16 -1.22464679915e-16 -1 1370 308)">
+     <hearth-placement id="cc5a15c1-b117-45ac-bed9-1aeb9a7833b8" logic="true" transform="matrix(-1 1.22464679915e-16 -1.22464679915e-16 -1 1420 310)">
       <symbol family="Variablen" name="Variable OUT" viewbox="0 0 200 150">
        <style xmlns="http://www.w3.org/2000/svg">
 :root {
@@ -26361,7 +26550,7 @@ class extends HearthSymbol {
       <hearth-param name="address" value="bellows.gvl.Maibeere.xT_3"/>
       <hearth-param name="var_name" value="Maibeere.xT_3"/>
      </hearth-placement>
-     <hearth-placement id="13bcb313-2099-4aed-b816-d5d166144051" logic="true" transform="matrix(-1 1.22464679915e-16 -1.22464679915e-16 -1 1190 710)">
+     <hearth-placement id="13bcb313-2099-4aed-b816-d5d166144051" logic="true" transform="matrix(-1 1.22464679915e-16 -1.22464679915e-16 -1 1170 870)">
       <symbol family="Variablen" name="Variable IN" viewbox="0 0 200 150">
        <style xmlns="http://www.w3.org/2000/svg">
 :root {
@@ -26435,7 +26624,7 @@ class extends HearthSymbol {
       <hearth-param name="address" value="bellows.gvl.Felsenbirne.xT_2"/>
       <hearth-param name="var_name" value="Felsenbirne.xT_2"/>
      </hearth-placement>
-     <hearth-placement id="ec19e21c-0c96-456e-bbc9-378974d654cc" logic="true" transform="matrix(-1 1.22464679915e-16 -1.22464679915e-16 -1 1370 710)">
+     <hearth-placement id="ec19e21c-0c96-456e-bbc9-378974d654cc" logic="true" transform="matrix(-1 1.22464679915e-16 -1.22464679915e-16 -1 1350 870)">
       <symbol family="Variablen" name="Variable IN" viewbox="0 0 200 150">
        <style xmlns="http://www.w3.org/2000/svg">
 :root {
@@ -26509,7 +26698,7 @@ class extends HearthSymbol {
       <hearth-param name="address" value="bellows.gvl.Felsenbirne.xT_3"/>
       <hearth-param name="var_name" value="Felsenbirne.xT_3"/>
      </hearth-placement>
-     <hearth-placement id="252688c8-09cb-47c1-9895-354d8ed0adbd" logic="true" transform="matrix(-1 1.22464679915e-16 -1.22464679915e-16 -1 520 710)">
+     <hearth-placement id="252688c8-09cb-47c1-9895-354d8ed0adbd" logic="true" transform="matrix(-1 1.22464679915e-16 -1.22464679915e-16 -1 480 870)">
       <symbol family="Variablen" name="Variable IN" viewbox="0 0 200 150">
        <style xmlns="http://www.w3.org/2000/svg">
 :root {
@@ -26657,7 +26846,7 @@ class extends HearthSymbol {
       <hearth-param name="address" value="bellows.gvl.Stachelbeere.xT_2"/>
       <hearth-param name="var_name" value="Stachelbeere.xT_2"/>
      </hearth-placement>
-     <hearth-placement id="fd808dbb-2383-4405-97ee-9d1fd2c8bd0d" logic="true" transform="matrix(-1 1.22464679915e-16 -1.22464679915e-16 -1 920 710)">
+     <hearth-placement id="fd808dbb-2383-4405-97ee-9d1fd2c8bd0d" logic="true" transform="matrix(-1 1.22464679915e-16 -1.22464679915e-16 -1 900 880)">
       <symbol family="Variablen" name="Variable IN" viewbox="0 0 200 150">
        <style xmlns="http://www.w3.org/2000/svg">
 :root {
@@ -26694,7 +26883,7 @@ class extends HearthSymbol {
       <hearth-param name="address" value="bellows.anvil.Stachelbeere.xV_3"/>
       <hearth-param name="var_name" value="Stachelbeere.xV_3"/>
      </hearth-placement>
-     <hearth-placement id="b331b242-1fce-4e77-8735-6111bda1bf4a" logic="true" transform="matrix(-1 1.22464679915e-16 -1.22464679915e-16 -1 920 800)">
+     <hearth-placement id="b331b242-1fce-4e77-8735-6111bda1bf4a" logic="true" transform="matrix(-1 1.22464679915e-16 -1.22464679915e-16 -1 920 750)">
       <symbol family="Variablen" name="Variable OUT" viewbox="0 0 200 150">
        <style xmlns="http://www.w3.org/2000/svg">
 :root {
@@ -26770,7 +26959,7 @@ class extends HearthSymbol {
       <hearth-param name="font_color" value="#202020"/>
       <hearth-param name="var_name" value="Betrieb.xManuell"/>
      </hearth-placement>
-     <hearth-placement id="02217732-903d-4bca-a010-3129627147eb" logic="true" transform="matrix(-1 1.22464679915e-16 -1.22464679915e-16 -1 320 830)">
+     <hearth-placement id="02217732-903d-4bca-a010-3129627147eb" logic="true" transform="matrix(-1 1.22464679915e-16 -1.22464679915e-16 -1 290 880)">
       <symbol family="Variablen" name="Variable IN" viewbox="0 0 200 150">
        <style xmlns="http://www.w3.org/2000/svg">
 :root {
@@ -26844,7 +27033,7 @@ class extends HearthSymbol {
       <hearth-param name="address" value="bellows.gvl.Maulbeere.xT_3"/>
       <hearth-param name="var_name" value="Maulbeere.xT_3"/>
      </hearth-placement>
-     <hearth-placement id="f2240796-d755-4a3b-a8a3-a2ada1fc148c" logic="true" transform="matrix(-1 1.22464679915e-16 -1.22464679915e-16 -1 1613 710)">
+     <hearth-placement id="f2240796-d755-4a3b-a8a3-a2ada1fc148c" logic="true" transform="matrix(-1 1.22464679915e-16 -1.22464679915e-16 -1 1630 880)">
       <symbol family="Variablen" name="Variable IN" viewbox="0 0 200 150">
        <style xmlns="http://www.w3.org/2000/svg">
 :root {
@@ -26984,6 +27173,450 @@ class extends HearthSymbol {
      <hearth-placement id="79256a07-70c0-4297-b318-e58bc0414ccc" transform="matrix(0.7 0 0 0.7 180 1020)">
       <drawing uuid="bbb45d9d-0648-4cf3-9d0a-0b89c72c2603"/>
      </hearth-placement>
+     <hearth-placement id="7d5c1325-6c9d-4446-83aa-94311d4c68fd" logic="true" transform="matrix(-1 1.22464679915e-16 -1.22464679915e-16 -1 710 410)">
+      <symbol family="Variablen" name="Variable IN" viewbox="0 0 200 150">
+       <style xmlns="http://www.w3.org/2000/svg">
+:root {
+  --color: #bcd8ff;
+  --font_color: #202020;
+}
+</style>
+       <g xmlns="http://www.w3.org/2000/svg" id="b6373c56-b00d-4571-b2e6-5f7f95fb28cc" hearth:layer="background" hearth:layer-name="Background" hearth:locked="true" xmlns:hearth="https://forgeiec.io/hearth/1.0"/>
+       <g xmlns="http://www.w3.org/2000/svg" id="6bc7600c-6c2f-4a0f-b293-ae302c8a2ccc" hearth:layer="content" hearth:layer-name="Content" xmlns:hearth="https://forgeiec.io/hearth/1.0">
+        <polygon xmlns="http://www.w3.org/2000/svg" data-role="tag" fill="#bcd8ff" id="68386c9f-999b-4bb2-a7a4-b286999c5c27" points="14,26 98,26 98,54 14,54 28,40" stroke="#3a6ea5" stroke-width="1"/>
+        <text xmlns="http://www.w3.org/2000/svg" class="hearth-reference" data-h="28" data-role="reference-designator" data-w="60" dominant-baseline="central" fill="#202020" font-size="12" id="5e2fbc3c-ddb9-4f2b-98f1-a2b50e592709" text-anchor="middle" x="60" y="40" hearth:field="reference-designator" xmlns:hearth="https://forgeiec.io/hearth/1.0">Variable</text>
+       </g>
+       <g xmlns="http://www.w3.org/2000/svg" id="53edda61-d2c7-4cfc-a603-53a84e18c878" hearth:layer="actions" hearth:layer-name="Actions" xmlns:hearth="https://forgeiec.io/hearth/1.0">
+        <g xmlns="https://forgeiec.io/hearth/1.0" class="hearth-connector" id="f4c9c639-808f-4fc9-95dc-5b00898e1623" hearth:connector="value" hearth:dir="out" hearth:editor-only="true" xmlns:hearth="https://forgeiec.io/hearth/1.0">
+         <circle xmlns="https://forgeiec.io/hearth/1.0" cx="98" cy="40" fill="#ff6b35" r="3" stroke="#ffffff" stroke-width="1"/>
+        </g>
+       </g>
+       <hearth-source><![CDATA[// Generated by hearth-symbols — do not edit by hand.
+class extends HearthSymbol {
+  static observed = ['value'];
+  onInit() {
+    this.applyAttr('tag', 'fill', 'color');
+    this.applyAttr('reference-designator', 'fill', 'font_color');
+    this.setText('reference-designator', this.prop('var_name'));
+  }
+  onAttr(name, v) {
+    if (name === 'value') this.setVisible('tag', v);
+  }
+}]]></hearth-source>
+       <hearth-connectors>
+        <hearth-connector dir="out" id="ed451d4c-6407-40da-861b-43defebb58d6" name="value"/>
+       </hearth-connectors>
+      </symbol>
+      <hearth-param name="address" value="bellows.anvil.Johannisbeere.xV_5"/>
+      <hearth-param name="var_name" value="Johannisbeere.xV_5"/>
+     </hearth-placement>
+     <hearth-placement id="822ab143-d148-4850-9ea3-cf5f09e86c5e" logic="true" transform="matrix(-1 1.22464679915e-16 -1.22464679915e-16 -1 900 410)">
+      <symbol family="Variablen" name="Variable IN" viewbox="0 0 200 150">
+       <style xmlns="http://www.w3.org/2000/svg">
+:root {
+  --color: #bcd8ff;
+  --font_color: #202020;
+}
+</style>
+       <g xmlns="http://www.w3.org/2000/svg" id="b6373c56-b00d-4571-b2e6-5f7f95fb28cc" hearth:layer="background" hearth:layer-name="Background" hearth:locked="true" xmlns:hearth="https://forgeiec.io/hearth/1.0"/>
+       <g xmlns="http://www.w3.org/2000/svg" id="6bc7600c-6c2f-4a0f-b293-ae302c8a2ccc" hearth:layer="content" hearth:layer-name="Content" xmlns:hearth="https://forgeiec.io/hearth/1.0">
+        <polygon xmlns="http://www.w3.org/2000/svg" data-role="tag" fill="#bcd8ff" id="68386c9f-999b-4bb2-a7a4-b286999c5c27" points="14,26 98,26 98,54 14,54 28,40" stroke="#3a6ea5" stroke-width="1"/>
+        <text xmlns="http://www.w3.org/2000/svg" class="hearth-reference" data-h="28" data-role="reference-designator" data-w="60" dominant-baseline="central" fill="#202020" font-size="12" id="5e2fbc3c-ddb9-4f2b-98f1-a2b50e592709" text-anchor="middle" x="60" y="40" hearth:field="reference-designator" xmlns:hearth="https://forgeiec.io/hearth/1.0">Variable</text>
+       </g>
+       <g xmlns="http://www.w3.org/2000/svg" id="53edda61-d2c7-4cfc-a603-53a84e18c878" hearth:layer="actions" hearth:layer-name="Actions" xmlns:hearth="https://forgeiec.io/hearth/1.0">
+        <g xmlns="https://forgeiec.io/hearth/1.0" class="hearth-connector" id="f4c9c639-808f-4fc9-95dc-5b00898e1623" hearth:connector="value" hearth:dir="out" hearth:editor-only="true" xmlns:hearth="https://forgeiec.io/hearth/1.0">
+         <circle xmlns="https://forgeiec.io/hearth/1.0" cx="98" cy="40" fill="#ff6b35" r="3" stroke="#ffffff" stroke-width="1"/>
+        </g>
+       </g>
+       <hearth-source><![CDATA[// Generated by hearth-symbols — do not edit by hand.
+class extends HearthSymbol {
+  static observed = ['value'];
+  onInit() {
+    this.applyAttr('tag', 'fill', 'color');
+    this.applyAttr('reference-designator', 'fill', 'font_color');
+    this.setText('reference-designator', this.prop('var_name'));
+  }
+  onAttr(name, v) {
+    if (name === 'value') this.setVisible('tag', v);
+  }
+}]]></hearth-source>
+       <hearth-connectors>
+        <hearth-connector dir="out" id="19d3b166-911e-44a9-be9d-1394c34207d9" name="value"/>
+       </hearth-connectors>
+      </symbol>
+      <hearth-param name="address" value="bellows.anvil.Johannisbeere.xV_6"/>
+      <hearth-param name="var_name" value="Johannisbeere.xV_6"/>
+     </hearth-placement>
+     <hearth-placement id="cfea2533-398d-4b0c-bf0b-0b2dd29e35ef" logic="true" transform="matrix(-1 1.22464679915e-16 -1.22464679915e-16 -1 1180 410)">
+      <symbol family="Variablen" name="Variable IN" viewbox="0 0 200 150">
+       <style xmlns="http://www.w3.org/2000/svg">
+:root {
+  --color: #bcd8ff;
+  --font_color: #202020;
+}
+</style>
+       <g xmlns="http://www.w3.org/2000/svg" id="b6373c56-b00d-4571-b2e6-5f7f95fb28cc" hearth:layer="background" hearth:layer-name="Background" hearth:locked="true" xmlns:hearth="https://forgeiec.io/hearth/1.0"/>
+       <g xmlns="http://www.w3.org/2000/svg" id="6bc7600c-6c2f-4a0f-b293-ae302c8a2ccc" hearth:layer="content" hearth:layer-name="Content" xmlns:hearth="https://forgeiec.io/hearth/1.0">
+        <polygon xmlns="http://www.w3.org/2000/svg" data-role="tag" fill="#bcd8ff" id="68386c9f-999b-4bb2-a7a4-b286999c5c27" points="14,26 98,26 98,54 14,54 28,40" stroke="#3a6ea5" stroke-width="1"/>
+        <text xmlns="http://www.w3.org/2000/svg" class="hearth-reference" data-h="28" data-role="reference-designator" data-w="60" dominant-baseline="central" fill="#202020" font-size="12" id="5e2fbc3c-ddb9-4f2b-98f1-a2b50e592709" text-anchor="middle" x="60" y="40" hearth:field="reference-designator" xmlns:hearth="https://forgeiec.io/hearth/1.0">Variable</text>
+       </g>
+       <g xmlns="http://www.w3.org/2000/svg" id="53edda61-d2c7-4cfc-a603-53a84e18c878" hearth:layer="actions" hearth:layer-name="Actions" xmlns:hearth="https://forgeiec.io/hearth/1.0">
+        <g xmlns="https://forgeiec.io/hearth/1.0" class="hearth-connector" id="f4c9c639-808f-4fc9-95dc-5b00898e1623" hearth:connector="value" hearth:dir="out" hearth:editor-only="true" xmlns:hearth="https://forgeiec.io/hearth/1.0">
+         <circle xmlns="https://forgeiec.io/hearth/1.0" cx="98" cy="40" fill="#ff6b35" r="3" stroke="#ffffff" stroke-width="1"/>
+        </g>
+       </g>
+       <hearth-source><![CDATA[// Generated by hearth-symbols — do not edit by hand.
+class extends HearthSymbol {
+  static observed = ['value'];
+  onInit() {
+    this.applyAttr('tag', 'fill', 'color');
+    this.applyAttr('reference-designator', 'fill', 'font_color');
+    this.setText('reference-designator', this.prop('var_name'));
+  }
+  onAttr(name, v) {
+    if (name === 'value') this.setVisible('tag', v);
+  }
+}]]></hearth-source>
+       <hearth-connectors>
+        <hearth-connector dir="out" id="bfa68ee0-f12d-4ff3-a0bb-8190115cdfae" name="value"/>
+       </hearth-connectors>
+      </symbol>
+      <hearth-param name="address" value="bellows.anvil.Maibeere.xV_5"/>
+      <hearth-param name="var_name" value="Maibeere.xV_5"/>
+     </hearth-placement>
+     <hearth-placement id="e6ba156f-45a4-40d0-b070-3b11cc9ebfc7" logic="true" transform="matrix(-1 1.22464679915e-16 -1.22464679915e-16 -1 1360 410)">
+      <symbol family="Variablen" name="Variable IN" viewbox="0 0 200 150">
+       <style xmlns="http://www.w3.org/2000/svg">
+:root {
+  --color: #bcd8ff;
+  --font_color: #202020;
+}
+</style>
+       <g xmlns="http://www.w3.org/2000/svg" id="b6373c56-b00d-4571-b2e6-5f7f95fb28cc" hearth:layer="background" hearth:layer-name="Background" hearth:locked="true" xmlns:hearth="https://forgeiec.io/hearth/1.0"/>
+       <g xmlns="http://www.w3.org/2000/svg" id="6bc7600c-6c2f-4a0f-b293-ae302c8a2ccc" hearth:layer="content" hearth:layer-name="Content" xmlns:hearth="https://forgeiec.io/hearth/1.0">
+        <polygon xmlns="http://www.w3.org/2000/svg" data-role="tag" fill="#bcd8ff" id="68386c9f-999b-4bb2-a7a4-b286999c5c27" points="14,26 98,26 98,54 14,54 28,40" stroke="#3a6ea5" stroke-width="1"/>
+        <text xmlns="http://www.w3.org/2000/svg" class="hearth-reference" data-h="28" data-role="reference-designator" data-w="60" dominant-baseline="central" fill="#202020" font-size="12" id="5e2fbc3c-ddb9-4f2b-98f1-a2b50e592709" text-anchor="middle" x="60" y="40" hearth:field="reference-designator" xmlns:hearth="https://forgeiec.io/hearth/1.0">Variable</text>
+       </g>
+       <g xmlns="http://www.w3.org/2000/svg" id="53edda61-d2c7-4cfc-a603-53a84e18c878" hearth:layer="actions" hearth:layer-name="Actions" xmlns:hearth="https://forgeiec.io/hearth/1.0">
+        <g xmlns="https://forgeiec.io/hearth/1.0" class="hearth-connector" id="f4c9c639-808f-4fc9-95dc-5b00898e1623" hearth:connector="value" hearth:dir="out" hearth:editor-only="true" xmlns:hearth="https://forgeiec.io/hearth/1.0">
+         <circle xmlns="https://forgeiec.io/hearth/1.0" cx="98" cy="40" fill="#ff6b35" r="3" stroke="#ffffff" stroke-width="1"/>
+        </g>
+       </g>
+       <hearth-source><![CDATA[// Generated by hearth-symbols — do not edit by hand.
+class extends HearthSymbol {
+  static observed = ['value'];
+  onInit() {
+    this.applyAttr('tag', 'fill', 'color');
+    this.applyAttr('reference-designator', 'fill', 'font_color');
+    this.setText('reference-designator', this.prop('var_name'));
+  }
+  onAttr(name, v) {
+    if (name === 'value') this.setVisible('tag', v);
+  }
+}]]></hearth-source>
+       <hearth-connectors>
+        <hearth-connector dir="out" id="ab24c37e-d865-45b9-a2d7-67040248fc10" name="value"/>
+       </hearth-connectors>
+      </symbol>
+      <hearth-param name="address" value="bellows.anvil.Maibeere.xV_6"/>
+      <hearth-param name="var_name" value="Maibeere.xV_6"/>
+     </hearth-placement>
+     <hearth-placement id="2cc99907-a531-4f14-878f-7fb8bbead6f0" logic="true" transform="matrix(-1 1.22464679915e-16 -1.22464679915e-16 -1 480 900)">
+      <symbol family="Variablen" name="Variable IN" viewbox="0 0 200 150">
+       <style xmlns="http://www.w3.org/2000/svg">
+:root {
+  --color: #bcd8ff;
+  --font_color: #202020;
+}
+</style>
+       <g xmlns="http://www.w3.org/2000/svg" id="b6373c56-b00d-4571-b2e6-5f7f95fb28cc" hearth:layer="background" hearth:layer-name="Background" hearth:locked="true" xmlns:hearth="https://forgeiec.io/hearth/1.0"/>
+       <g xmlns="http://www.w3.org/2000/svg" id="6bc7600c-6c2f-4a0f-b293-ae302c8a2ccc" hearth:layer="content" hearth:layer-name="Content" xmlns:hearth="https://forgeiec.io/hearth/1.0">
+        <polygon xmlns="http://www.w3.org/2000/svg" data-role="tag" fill="#bcd8ff" id="68386c9f-999b-4bb2-a7a4-b286999c5c27" points="14,26 98,26 98,54 14,54 28,40" stroke="#3a6ea5" stroke-width="1"/>
+        <text xmlns="http://www.w3.org/2000/svg" class="hearth-reference" data-h="28" data-role="reference-designator" data-w="60" dominant-baseline="central" fill="#202020" font-size="12" id="5e2fbc3c-ddb9-4f2b-98f1-a2b50e592709" text-anchor="middle" x="60" y="40" hearth:field="reference-designator" xmlns:hearth="https://forgeiec.io/hearth/1.0">Variable</text>
+       </g>
+       <g xmlns="http://www.w3.org/2000/svg" id="53edda61-d2c7-4cfc-a603-53a84e18c878" hearth:layer="actions" hearth:layer-name="Actions" xmlns:hearth="https://forgeiec.io/hearth/1.0">
+        <g xmlns="https://forgeiec.io/hearth/1.0" class="hearth-connector" id="f4c9c639-808f-4fc9-95dc-5b00898e1623" hearth:connector="value" hearth:dir="out" hearth:editor-only="true" xmlns:hearth="https://forgeiec.io/hearth/1.0">
+         <circle xmlns="https://forgeiec.io/hearth/1.0" cx="98" cy="40" fill="#ff6b35" r="3" stroke="#ffffff" stroke-width="1"/>
+        </g>
+       </g>
+       <hearth-source><![CDATA[// Generated by hearth-symbols — do not edit by hand.
+class extends HearthSymbol {
+  static observed = ['value'];
+  onInit() {
+    this.applyAttr('tag', 'fill', 'color');
+    this.applyAttr('reference-designator', 'fill', 'font_color');
+    this.setText('reference-designator', this.prop('var_name'));
+  }
+  onAttr(name, v) {
+    if (name === 'value') this.setVisible('tag', v);
+  }
+}]]></hearth-source>
+       <hearth-connectors>
+        <hearth-connector dir="out" id="a94988a6-9632-47ca-91aa-fdcbd520a175" name="value"/>
+       </hearth-connectors>
+      </symbol>
+      <hearth-param name="address" value="bellows.anvil.Maulbeere.xV_5"/>
+      <hearth-param name="var_name" value="Maulbeere.xV_5"/>
+     </hearth-placement>
+     <hearth-placement id="a35b7da7-9ec5-4cec-bc05-dca20a6498cc" logic="true" transform="matrix(-1 1.22464679915e-16 -1.22464679915e-16 -1 740 890)">
+      <symbol family="Variablen" name="Variable IN" viewbox="0 0 200 150">
+       <style xmlns="http://www.w3.org/2000/svg">
+:root {
+  --color: #bcd8ff;
+  --font_color: #202020;
+}
+</style>
+       <g xmlns="http://www.w3.org/2000/svg" id="b6373c56-b00d-4571-b2e6-5f7f95fb28cc" hearth:layer="background" hearth:layer-name="Background" hearth:locked="true" xmlns:hearth="https://forgeiec.io/hearth/1.0"/>
+       <g xmlns="http://www.w3.org/2000/svg" id="6bc7600c-6c2f-4a0f-b293-ae302c8a2ccc" hearth:layer="content" hearth:layer-name="Content" xmlns:hearth="https://forgeiec.io/hearth/1.0">
+        <polygon xmlns="http://www.w3.org/2000/svg" data-role="tag" fill="#bcd8ff" id="68386c9f-999b-4bb2-a7a4-b286999c5c27" points="14,26 98,26 98,54 14,54 28,40" stroke="#3a6ea5" stroke-width="1"/>
+        <text xmlns="http://www.w3.org/2000/svg" class="hearth-reference" data-h="28" data-role="reference-designator" data-w="60" dominant-baseline="central" fill="#202020" font-size="12" id="5e2fbc3c-ddb9-4f2b-98f1-a2b50e592709" text-anchor="middle" x="60" y="40" hearth:field="reference-designator" xmlns:hearth="https://forgeiec.io/hearth/1.0">Variable</text>
+       </g>
+       <g xmlns="http://www.w3.org/2000/svg" id="53edda61-d2c7-4cfc-a603-53a84e18c878" hearth:layer="actions" hearth:layer-name="Actions" xmlns:hearth="https://forgeiec.io/hearth/1.0">
+        <g xmlns="https://forgeiec.io/hearth/1.0" class="hearth-connector" id="f4c9c639-808f-4fc9-95dc-5b00898e1623" hearth:connector="value" hearth:dir="out" hearth:editor-only="true" xmlns:hearth="https://forgeiec.io/hearth/1.0">
+         <circle xmlns="https://forgeiec.io/hearth/1.0" cx="98" cy="40" fill="#ff6b35" r="3" stroke="#ffffff" stroke-width="1"/>
+        </g>
+       </g>
+       <hearth-source><![CDATA[// Generated by hearth-symbols — do not edit by hand.
+class extends HearthSymbol {
+  static observed = ['value'];
+  onInit() {
+    this.applyAttr('tag', 'fill', 'color');
+    this.applyAttr('reference-designator', 'fill', 'font_color');
+    this.setText('reference-designator', this.prop('var_name'));
+  }
+  onAttr(name, v) {
+    if (name === 'value') this.setVisible('tag', v);
+  }
+}]]></hearth-source>
+       <hearth-connectors>
+        <hearth-connector dir="out" id="9ef62d15-2dd1-4f6d-8efa-dcdb9f4ae66c" name="value"/>
+       </hearth-connectors>
+      </symbol>
+      <hearth-param name="address" value="bellows.anvil.Stachelbeere.xV_5"/>
+      <hearth-param name="var_name" value="Stachelbeere.xV_5"/>
+     </hearth-placement>
+     <hearth-placement id="ed05c2c9-821e-45af-ac82-eb185dc02ec1" logic="true" transform="matrix(-1 1.22464679915e-16 -1.22464679915e-16 -1 900 910)">
+      <symbol family="Variablen" name="Variable IN" viewbox="0 0 200 150">
+       <style xmlns="http://www.w3.org/2000/svg">
+:root {
+  --color: #bcd8ff;
+  --font_color: #202020;
+}
+</style>
+       <g xmlns="http://www.w3.org/2000/svg" id="b6373c56-b00d-4571-b2e6-5f7f95fb28cc" hearth:layer="background" hearth:layer-name="Background" hearth:locked="true" xmlns:hearth="https://forgeiec.io/hearth/1.0"/>
+       <g xmlns="http://www.w3.org/2000/svg" id="6bc7600c-6c2f-4a0f-b293-ae302c8a2ccc" hearth:layer="content" hearth:layer-name="Content" xmlns:hearth="https://forgeiec.io/hearth/1.0">
+        <polygon xmlns="http://www.w3.org/2000/svg" data-role="tag" fill="#bcd8ff" id="68386c9f-999b-4bb2-a7a4-b286999c5c27" points="14,26 98,26 98,54 14,54 28,40" stroke="#3a6ea5" stroke-width="1"/>
+        <text xmlns="http://www.w3.org/2000/svg" class="hearth-reference" data-h="28" data-role="reference-designator" data-w="60" dominant-baseline="central" fill="#202020" font-size="12" id="5e2fbc3c-ddb9-4f2b-98f1-a2b50e592709" text-anchor="middle" x="60" y="40" hearth:field="reference-designator" xmlns:hearth="https://forgeiec.io/hearth/1.0">Variable</text>
+       </g>
+       <g xmlns="http://www.w3.org/2000/svg" id="53edda61-d2c7-4cfc-a603-53a84e18c878" hearth:layer="actions" hearth:layer-name="Actions" xmlns:hearth="https://forgeiec.io/hearth/1.0">
+        <g xmlns="https://forgeiec.io/hearth/1.0" class="hearth-connector" id="f4c9c639-808f-4fc9-95dc-5b00898e1623" hearth:connector="value" hearth:dir="out" hearth:editor-only="true" xmlns:hearth="https://forgeiec.io/hearth/1.0">
+         <circle xmlns="https://forgeiec.io/hearth/1.0" cx="98" cy="40" fill="#ff6b35" r="3" stroke="#ffffff" stroke-width="1"/>
+        </g>
+       </g>
+       <hearth-source><![CDATA[// Generated by hearth-symbols — do not edit by hand.
+class extends HearthSymbol {
+  static observed = ['value'];
+  onInit() {
+    this.applyAttr('tag', 'fill', 'color');
+    this.applyAttr('reference-designator', 'fill', 'font_color');
+    this.setText('reference-designator', this.prop('var_name'));
+  }
+  onAttr(name, v) {
+    if (name === 'value') this.setVisible('tag', v);
+  }
+}]]></hearth-source>
+       <hearth-connectors>
+        <hearth-connector dir="out" id="490e8efd-a4ef-45ab-a344-34f7b72fa6be" name="value"/>
+       </hearth-connectors>
+      </symbol>
+      <hearth-param name="address" value="bellows.anvil.Stachelbeere.xV_6"/>
+      <hearth-param name="var_name" value="Stachelbeere.xV_6"/>
+     </hearth-placement>
+     <hearth-placement id="1fabeec4-2f2b-40ea-afa9-5e2412eff3f2" logic="true" transform="matrix(-1 1.22464679915e-16 -1.22464679915e-16 -1 1170 900)">
+      <symbol family="Variablen" name="Variable IN" viewbox="0 0 200 150">
+       <style xmlns="http://www.w3.org/2000/svg">
+:root {
+  --color: #bcd8ff;
+  --font_color: #202020;
+}
+</style>
+       <g xmlns="http://www.w3.org/2000/svg" id="b6373c56-b00d-4571-b2e6-5f7f95fb28cc" hearth:layer="background" hearth:layer-name="Background" hearth:locked="true" xmlns:hearth="https://forgeiec.io/hearth/1.0"/>
+       <g xmlns="http://www.w3.org/2000/svg" id="6bc7600c-6c2f-4a0f-b293-ae302c8a2ccc" hearth:layer="content" hearth:layer-name="Content" xmlns:hearth="https://forgeiec.io/hearth/1.0">
+        <polygon xmlns="http://www.w3.org/2000/svg" data-role="tag" fill="#bcd8ff" id="68386c9f-999b-4bb2-a7a4-b286999c5c27" points="14,26 98,26 98,54 14,54 28,40" stroke="#3a6ea5" stroke-width="1"/>
+        <text xmlns="http://www.w3.org/2000/svg" class="hearth-reference" data-h="28" data-role="reference-designator" data-w="60" dominant-baseline="central" fill="#202020" font-size="12" id="5e2fbc3c-ddb9-4f2b-98f1-a2b50e592709" text-anchor="middle" x="60" y="40" hearth:field="reference-designator" xmlns:hearth="https://forgeiec.io/hearth/1.0">Variable</text>
+       </g>
+       <g xmlns="http://www.w3.org/2000/svg" id="53edda61-d2c7-4cfc-a603-53a84e18c878" hearth:layer="actions" hearth:layer-name="Actions" xmlns:hearth="https://forgeiec.io/hearth/1.0">
+        <g xmlns="https://forgeiec.io/hearth/1.0" class="hearth-connector" id="f4c9c639-808f-4fc9-95dc-5b00898e1623" hearth:connector="value" hearth:dir="out" hearth:editor-only="true" xmlns:hearth="https://forgeiec.io/hearth/1.0">
+         <circle xmlns="https://forgeiec.io/hearth/1.0" cx="98" cy="40" fill="#ff6b35" r="3" stroke="#ffffff" stroke-width="1"/>
+        </g>
+       </g>
+       <hearth-source><![CDATA[// Generated by hearth-symbols — do not edit by hand.
+class extends HearthSymbol {
+  static observed = ['value'];
+  onInit() {
+    this.applyAttr('tag', 'fill', 'color');
+    this.applyAttr('reference-designator', 'fill', 'font_color');
+    this.setText('reference-designator', this.prop('var_name'));
+  }
+  onAttr(name, v) {
+    if (name === 'value') this.setVisible('tag', v);
+  }
+}]]></hearth-source>
+       <hearth-connectors>
+        <hearth-connector dir="out" id="723a1b6d-fd7b-41a3-a843-ab41fd0a1274" name="value"/>
+       </hearth-connectors>
+      </symbol>
+      <hearth-param name="address" value="bellows.anvil.Felsenbirne.xV_5"/>
+      <hearth-param name="var_name" value="Felsenbirne.xV_5"/>
+     </hearth-placement>
+     <hearth-placement id="62618e57-edaf-481c-a696-31e0df9e5c97" logic="true" transform="matrix(-1 1.22464679915e-16 -1.22464679915e-16 -1 1350 900)">
+      <symbol family="Variablen" name="Variable IN" viewbox="0 0 200 150">
+       <style xmlns="http://www.w3.org/2000/svg">
+:root {
+  --color: #bcd8ff;
+  --font_color: #202020;
+}
+</style>
+       <g xmlns="http://www.w3.org/2000/svg" id="b6373c56-b00d-4571-b2e6-5f7f95fb28cc" hearth:layer="background" hearth:layer-name="Background" hearth:locked="true" xmlns:hearth="https://forgeiec.io/hearth/1.0"/>
+       <g xmlns="http://www.w3.org/2000/svg" id="6bc7600c-6c2f-4a0f-b293-ae302c8a2ccc" hearth:layer="content" hearth:layer-name="Content" xmlns:hearth="https://forgeiec.io/hearth/1.0">
+        <polygon xmlns="http://www.w3.org/2000/svg" data-role="tag" fill="#bcd8ff" id="68386c9f-999b-4bb2-a7a4-b286999c5c27" points="14,26 98,26 98,54 14,54 28,40" stroke="#3a6ea5" stroke-width="1"/>
+        <text xmlns="http://www.w3.org/2000/svg" class="hearth-reference" data-h="28" data-role="reference-designator" data-w="60" dominant-baseline="central" fill="#202020" font-size="12" id="5e2fbc3c-ddb9-4f2b-98f1-a2b50e592709" text-anchor="middle" x="60" y="40" hearth:field="reference-designator" xmlns:hearth="https://forgeiec.io/hearth/1.0">Variable</text>
+       </g>
+       <g xmlns="http://www.w3.org/2000/svg" id="53edda61-d2c7-4cfc-a603-53a84e18c878" hearth:layer="actions" hearth:layer-name="Actions" xmlns:hearth="https://forgeiec.io/hearth/1.0">
+        <g xmlns="https://forgeiec.io/hearth/1.0" class="hearth-connector" id="f4c9c639-808f-4fc9-95dc-5b00898e1623" hearth:connector="value" hearth:dir="out" hearth:editor-only="true" xmlns:hearth="https://forgeiec.io/hearth/1.0">
+         <circle xmlns="https://forgeiec.io/hearth/1.0" cx="98" cy="40" fill="#ff6b35" r="3" stroke="#ffffff" stroke-width="1"/>
+        </g>
+       </g>
+       <hearth-source><![CDATA[// Generated by hearth-symbols — do not edit by hand.
+class extends HearthSymbol {
+  static observed = ['value'];
+  onInit() {
+    this.applyAttr('tag', 'fill', 'color');
+    this.applyAttr('reference-designator', 'fill', 'font_color');
+    this.setText('reference-designator', this.prop('var_name'));
+  }
+  onAttr(name, v) {
+    if (name === 'value') this.setVisible('tag', v);
+  }
+}]]></hearth-source>
+       <hearth-connectors>
+        <hearth-connector dir="out" id="ed91dc34-9e6d-4da8-8cad-ccfbbd62f50c" name="value"/>
+       </hearth-connectors>
+      </symbol>
+      <hearth-param name="address" value="bellows.anvil.Felsenbirne.xV_6"/>
+      <hearth-param name="var_name" value="Felsenbirne.xV_6"/>
+     </hearth-placement>
+     <hearth-placement id="4693a14a-28a3-48e5-9abb-5a08b27195cc" logic="true" transform="matrix(-1 1.22464679915e-16 -1.22464679915e-16 -1 1640 380)">
+      <symbol family="Variablen" name="Variable IN" viewbox="0 0 200 150">
+       <style xmlns="http://www.w3.org/2000/svg">
+:root {
+  --color: #bcd8ff;
+  --font_color: #202020;
+}
+</style>
+       <g xmlns="http://www.w3.org/2000/svg" id="b6373c56-b00d-4571-b2e6-5f7f95fb28cc" hearth:layer="background" hearth:layer-name="Background" hearth:locked="true" xmlns:hearth="https://forgeiec.io/hearth/1.0"/>
+       <g xmlns="http://www.w3.org/2000/svg" id="6bc7600c-6c2f-4a0f-b293-ae302c8a2ccc" hearth:layer="content" hearth:layer-name="Content" xmlns:hearth="https://forgeiec.io/hearth/1.0">
+        <polygon xmlns="http://www.w3.org/2000/svg" data-role="tag" fill="#bcd8ff" id="68386c9f-999b-4bb2-a7a4-b286999c5c27" points="14,26 98,26 98,54 14,54 28,40" stroke="#3a6ea5" stroke-width="1"/>
+        <text xmlns="http://www.w3.org/2000/svg" class="hearth-reference" data-h="28" data-role="reference-designator" data-w="60" dominant-baseline="central" fill="#202020" font-size="12" id="5e2fbc3c-ddb9-4f2b-98f1-a2b50e592709" text-anchor="middle" x="60" y="40" hearth:field="reference-designator" xmlns:hearth="https://forgeiec.io/hearth/1.0">Variable</text>
+       </g>
+       <g xmlns="http://www.w3.org/2000/svg" id="53edda61-d2c7-4cfc-a603-53a84e18c878" hearth:layer="actions" hearth:layer-name="Actions" xmlns:hearth="https://forgeiec.io/hearth/1.0">
+        <g xmlns="https://forgeiec.io/hearth/1.0" class="hearth-connector" id="f4c9c639-808f-4fc9-95dc-5b00898e1623" hearth:connector="value" hearth:dir="out" hearth:editor-only="true" xmlns:hearth="https://forgeiec.io/hearth/1.0">
+         <circle xmlns="https://forgeiec.io/hearth/1.0" cx="98" cy="40" fill="#ff6b35" r="3" stroke="#ffffff" stroke-width="1"/>
+        </g>
+       </g>
+       <hearth-source><![CDATA[// Generated by hearth-symbols — do not edit by hand.
+class extends HearthSymbol {
+  static observed = ['value'];
+  onInit() {
+    this.applyAttr('tag', 'fill', 'color');
+    this.applyAttr('reference-designator', 'fill', 'font_color');
+    this.setText('reference-designator', this.prop('var_name'));
+  }
+  onAttr(name, v) {
+    if (name === 'value') this.setVisible('tag', v);
+  }
+}]]></hearth-source>
+       <hearth-connectors>
+        <hearth-connector dir="out" id="e886b1f1-e40d-44a0-9a76-3beb152894c9" name="value"/>
+       </hearth-connectors>
+      </symbol>
+      <hearth-param name="address" value="bellows.anvil.Pfirsich.xV_5"/>
+      <hearth-param name="var_name" value="Pfirsich.xV_5"/>
+     </hearth-placement>
+     <hearth-placement id="64b3190c-2254-4787-a457-5a2f810db8c8" logic="true" transform="matrix(-1 1.22464679915e-16 -1.22464679915e-16 -1 1630 910)">
+      <symbol family="Variablen" name="Variable IN" viewbox="0 0 200 150">
+       <style xmlns="http://www.w3.org/2000/svg">
+:root {
+  --color: #bcd8ff;
+  --font_color: #202020;
+}
+</style>
+       <g xmlns="http://www.w3.org/2000/svg" id="b6373c56-b00d-4571-b2e6-5f7f95fb28cc" hearth:layer="background" hearth:layer-name="Background" hearth:locked="true" xmlns:hearth="https://forgeiec.io/hearth/1.0"/>
+       <g xmlns="http://www.w3.org/2000/svg" id="6bc7600c-6c2f-4a0f-b293-ae302c8a2ccc" hearth:layer="content" hearth:layer-name="Content" xmlns:hearth="https://forgeiec.io/hearth/1.0">
+        <polygon xmlns="http://www.w3.org/2000/svg" data-role="tag" fill="#bcd8ff" id="68386c9f-999b-4bb2-a7a4-b286999c5c27" points="14,26 98,26 98,54 14,54 28,40" stroke="#3a6ea5" stroke-width="1"/>
+        <text xmlns="http://www.w3.org/2000/svg" class="hearth-reference" data-h="28" data-role="reference-designator" data-w="60" dominant-baseline="central" fill="#202020" font-size="12" id="5e2fbc3c-ddb9-4f2b-98f1-a2b50e592709" text-anchor="middle" x="60" y="40" hearth:field="reference-designator" xmlns:hearth="https://forgeiec.io/hearth/1.0">Variable</text>
+       </g>
+       <g xmlns="http://www.w3.org/2000/svg" id="53edda61-d2c7-4cfc-a603-53a84e18c878" hearth:layer="actions" hearth:layer-name="Actions" xmlns:hearth="https://forgeiec.io/hearth/1.0">
+        <g xmlns="https://forgeiec.io/hearth/1.0" class="hearth-connector" id="f4c9c639-808f-4fc9-95dc-5b00898e1623" hearth:connector="value" hearth:dir="out" hearth:editor-only="true" xmlns:hearth="https://forgeiec.io/hearth/1.0">
+         <circle xmlns="https://forgeiec.io/hearth/1.0" cx="98" cy="40" fill="#ff6b35" r="3" stroke="#ffffff" stroke-width="1"/>
+        </g>
+       </g>
+       <hearth-source><![CDATA[// Generated by hearth-symbols — do not edit by hand.
+class extends HearthSymbol {
+  static observed = ['value'];
+  onInit() {
+    this.applyAttr('tag', 'fill', 'color');
+    this.applyAttr('reference-designator', 'fill', 'font_color');
+    this.setText('reference-designator', this.prop('var_name'));
+  }
+  onAttr(name, v) {
+    if (name === 'value') this.setVisible('tag', v);
+  }
+}]]></hearth-source>
+       <hearth-connectors>
+        <hearth-connector dir="out" id="52a7ef9d-fb05-4bdf-aa22-d5168a6af7e1" name="value"/>
+       </hearth-connectors>
+      </symbol>
+      <hearth-param name="address" value="bellows.anvil.Pfirsich.xV_6"/>
+      <hearth-param name="var_name" value="Pfirsich.xV_6"/>
+     </hearth-placement>
+     <hearth-placement id="3b7e99f3-b609-4468-ac13-106735a01547" logic="true" transform="matrix(-1 1.22464679915e-16 -1.22464679915e-16 -1 290 910)">
+      <symbol family="Variablen" name="Variable IN" viewbox="0 0 200 150">
+       <style xmlns="http://www.w3.org/2000/svg">
+:root {
+  --color: #bcd8ff;
+  --font_color: #202020;
+}
+</style>
+       <g xmlns="http://www.w3.org/2000/svg" id="b6373c56-b00d-4571-b2e6-5f7f95fb28cc" hearth:layer="background" hearth:layer-name="Background" hearth:locked="true" xmlns:hearth="https://forgeiec.io/hearth/1.0"/>
+       <g xmlns="http://www.w3.org/2000/svg" id="6bc7600c-6c2f-4a0f-b293-ae302c8a2ccc" hearth:layer="content" hearth:layer-name="Content" xmlns:hearth="https://forgeiec.io/hearth/1.0">
+        <polygon xmlns="http://www.w3.org/2000/svg" data-role="tag" fill="#bcd8ff" id="68386c9f-999b-4bb2-a7a4-b286999c5c27" points="14,26 98,26 98,54 14,54 28,40" stroke="#3a6ea5" stroke-width="1"/>
+        <text xmlns="http://www.w3.org/2000/svg" class="hearth-reference" data-h="28" data-role="reference-designator" data-w="60" dominant-baseline="central" fill="#202020" font-size="12" id="5e2fbc3c-ddb9-4f2b-98f1-a2b50e592709" text-anchor="middle" x="60" y="40" hearth:field="reference-designator" xmlns:hearth="https://forgeiec.io/hearth/1.0">Variable</text>
+       </g>
+       <g xmlns="http://www.w3.org/2000/svg" id="53edda61-d2c7-4cfc-a603-53a84e18c878" hearth:layer="actions" hearth:layer-name="Actions" xmlns:hearth="https://forgeiec.io/hearth/1.0">
+        <g xmlns="https://forgeiec.io/hearth/1.0" class="hearth-connector" id="f4c9c639-808f-4fc9-95dc-5b00898e1623" hearth:connector="value" hearth:dir="out" hearth:editor-only="true" xmlns:hearth="https://forgeiec.io/hearth/1.0">
+         <circle xmlns="https://forgeiec.io/hearth/1.0" cx="98" cy="40" fill="#ff6b35" r="3" stroke="#ffffff" stroke-width="1"/>
+        </g>
+       </g>
+       <hearth-source><![CDATA[// Generated by hearth-symbols — do not edit by hand.
+class extends HearthSymbol {
+  static observed = ['value'];
+  onInit() {
+    this.applyAttr('tag', 'fill', 'color');
+    this.applyAttr('reference-designator', 'fill', 'font_color');
+    this.setText('reference-designator', this.prop('var_name'));
+  }
+  onAttr(name, v) {
+    if (name === 'value') this.setVisible('tag', v);
+  }
+}]]></hearth-source>
+       <hearth-connectors>
+        <hearth-connector dir="out" id="3b86e198-6d0a-463e-82f4-974683c77537" name="value"/>
+       </hearth-connectors>
+      </symbol>
+      <hearth-param name="address" value="bellows.anvil.Maulbeere.xV_6"/>
+      <hearth-param name="var_name" value="Maulbeere.xV_6"/>
+     </hearth-placement>
      <hearth-placement id="005021d7" transform="matrix(-3.82856869893e-16 -1 1 -3.82856869893e-16 486.45994873 494.100506592)" z="101">
       <drawing uuid="cf6a361a-9489-42e1-940f-750eb27a7ef7"/>
      </hearth-placement>
@@ -27055,6 +27688,18 @@ class extends HearthSymbol {
      <wire destination="f5079f19-0c8e-4fc1-a270-c552ea1cd813" source="ebc6c575-63dc-46ae-8772-5b39a5e2cede"/>
      <wire destination="ceb2dc6f-d850-4a4a-9b71-2ed07de2964d" source="16b52b7a-6aac-43a2-b2a6-5a5e5d9a3189"/>
      <wire destination="ef0b5e1c-dce1-4fc1-ad6b-5ed56ecb6840" source="15e5a6b6-84a5-4d26-b91e-5bd39adfe7be"/>
+     <wire destination="a8c8ce46-02f6-4c9e-bd3c-1574f3986d72" source="ed451d4c-6407-40da-861b-43defebb58d6"/>
+     <wire destination="0d70fccc-ce82-4f28-9dfa-2e92d836edd1" source="19d3b166-911e-44a9-be9d-1394c34207d9"/>
+     <wire destination="e673d54d-eb67-4a44-8855-0a3240186ce5" source="bfa68ee0-f12d-4ff3-a0bb-8190115cdfae"/>
+     <wire destination="1fa6f044-c39e-4219-bbd7-692059b0ace6" source="ab24c37e-d865-45b9-a2d7-67040248fc10"/>
+     <wire destination="4dab382d-8392-427e-85b8-e7301c0ba789" source="a94988a6-9632-47ca-91aa-fdcbd520a175"/>
+     <wire destination="0d85187b-90f9-4b8b-9115-4b3ff34f8b55" source="9ef62d15-2dd1-4f6d-8efa-dcdb9f4ae66c"/>
+     <wire destination="99c60b02-88b5-4b27-a778-911ce479d3af" source="490e8efd-a4ef-45ab-a344-34f7b72fa6be"/>
+     <wire destination="1d2e9fc8-ac06-468b-ba4b-306e51071514" source="723a1b6d-fd7b-41a3-a843-ab41fd0a1274"/>
+     <wire destination="a2137e55-a0ce-4bc2-aac6-8f6819325ebc" source="ed91dc34-9e6d-4da8-8cad-ccfbbd62f50c"/>
+     <wire destination="126e8e75-63bf-41af-afb3-1e0540d46c2b" source="e886b1f1-e40d-44a0-9a76-3beb152894c9"/>
+     <wire destination="c4c9513f-a88c-4a37-8b58-be448ebd71f9" source="52a7ef9d-fb05-4bdf-aa22-d5168a6af7e1"/>
+     <wire destination="1a59673f-d9ec-4776-a916-ccf7539c7ce7" source="3b86e198-6d0a-463e-82f4-974683c77537"/>
     </wires>
     <hearth-routes/>
    </hearth-screen>

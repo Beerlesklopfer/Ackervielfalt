@@ -8,114 +8,122 @@
 &gt; (Kooperation mit **SALZ Automation**). Ziel: präzises, wassersparendes Bewässern statt Handgießen.
 &gt; Ref: https://www.solawi-ackervielfalt.de/kooperation-salz-automation/
 &gt;
-&gt; **Stand (2026-06-06) — Liefer-Scope FERTIG &amp; grün:** Phasen 1–3 (Manuell / One-Shot / wiederkehrend)
-&gt; in PLC_PRG verdrahtet, 2-Ventil-Arbiter, Ventil-Job-Scheduler, Blink-Programm-Anzeige, sowie die
-&gt; **Geräte-/Modulüberwachung** (Zustandsgraph je Gerät + HMI-Diagnose) — alles kompiliert grün
-&gt; (cxx: compile_ok, emit_ok, keine Fehler). Ausnahmen/geparkt: **`REFERENCE TO` (#53)** läuft bewusst
-&gt; per INDEX-Workaround; **Phase 4 (Kc/ET0 nach GSEHEN)** ist mangels Sensorik-/ET0-Hardware nicht
-&gt; umsetzbar und zurückgestellt. Verifizierter End-to-End-Test steht noch aus (Runtime „Fundament-Release&quot;,
-&gt; operator-gated). Details §8.
+&gt; Repository: https://github.com/Beerlesklopfer/Ackervielfalt — SPS-Projekt `Ackersteuerung.forge`,
+&gt; HMI-Projekt `Ackersteuerung.hearth`. **Stand 2026-09-11.**
 
 ---
 
-## 0. Harte Randbedingungen (sicherheits-/anlagenrelevant)
+## 0. Harte Randbedingungen
 
-1. **Max. 2 Ventile gleichzeitig offen** — global erzwungen durch `FB_VALVE_ARBITER` (24 Anforderungen →
-   höchstens 2 Freigaben). Greift über ALLE Phasen, auch Manuell.
-2. **Kein geplantes/angewähltes Beet darf ausgelassen werden** — der Bewässerungs-Timer läuft nur bei
-   tatsächlicher Arbiter-Freigabe → ein Job WARTET höchstens, wird nie übersprungen.
-3. **Betriebsart per Wahlschalter** (One-Hot-verriegelt) — Mode-LEDs überflüssig.
-4. Beet-/Ventil-Anwahl **per HMI ODER Taster** (Dual-Namespace `Anvil.*` / `Bellows.*`).
+1. **Höchstens `Bellows.Betrieb.uMaxVentile` Ventile gleichzeitig offen** (1..24, Startwert 24) —
+   erzwungen durch `FB_VALVE_ARBITER` über alle Betriebsarten.
+2. **Kein angewähltes Beet wird ausgelassen** — die Bewässerungsdauer zählt erst ab der
+   Arbiter-Freigabe; ein Job wartet höchstens, er wird nie übersprungen.
+3. **Betriebsart One-Hot** — genau eine der vier Wahlflaggen in `Bellows.Betrieb`, sonst Aus
+   (alle Ventile zu).
+4. **Anwahl per HMI oder Taster** am Beet (Dual-Namespace `Anvil.*` Hardware / `Bellows.*` HMI).
 
-## 1. Anlagenüberblick &amp; Bus-Topologie
+## 1. Anlage und Bus
 
-Sechs Bewässerungszonen (Amsamotion-Modbus-TCP-I/O) + Weidmüller-UR20-Koppler im Schaltschrank, zwei
-Segmente (Netz 192.168.24.x):
+Sechs Feldboxen (Amsamotion Modbus-TCP) und ein Weidmüller-UR20-Koppler, zwei Segmente an `end0`:
 
-| Zone/Gerät | Modul | IP | Segment |
+| Gerät | Typ | IP | Segment | Ventile |
+|---|---|---|---|---|
+| Pfirsich | ETH-MODBUS-IO8R-A | .26 | MODBUS-SUED | 1–4 |
+| Stachelbeere | ETH-MODBUS-IO8R-A | .28 | MODBUS-SUED | 5–8 |
+| Maulbeere | ETH-MODBUS-IO8R-A | .29 | MODBUS-SUED | 9–12 |
+| Felsenbirne | ETH-MODBUS-IO8R-A | .27 | MODBUS-SUED | 13–16 |
+| Maibeere | ETH-MODBUS-IO5R | .25 | MODBUS_NORD | 17–20 |
+| Johannisbeere | ETH-MODBUS-IO8R-A | .24 | MODBUS_NORD | 21–24 |
+| Schaltschrank | Weidmüller UR20-FBC-MOD-TCP (8 DI / 8 DO) | .229 | MODBUS_NORD | — |
+
+Netz 192.168.24.x. Ventilnummer = Index in `Bellows.Zeitplan.aValveJobs`; intern Arbiter-Index
+= Ventil − 1.
+
+## 2. Ein- und Ausgänge je Feldbox
+
+IO8R-A: `xT_1..4` Beet-Taster · `xT_5..8` frei · `xV_1..4` Ventile · `xV_5..8` Status-LEDs der
+Ventile 1..4 · `wAI_Voltage_1..3`, `wAI_Current_1..3` Analogeingänge · `wAO_1..2` Analogausgänge.
+IO5R (Maibeere): `xT_1..4` Taster · `xV_1..4` Ventile · `xV_5` Sammel-LED für alle vier.
+
+## 3. Betriebsarten (`Bellows.Betrieb`)
+
+| uMode | Wahl | Verhalten |
+|---|---|---|
+| 0 | keine oder mehrere Flaggen | Aus: alle Ventile zu, Handbetrieb gesperrt |
+| 1 | `xManuell` | `FB_MANUAL`: Taster oder HMI schalten das Ventil um → Anforderung → Arbiter |
+| 2 | `xOneShot` | `FB_MANUAL_SEQUENCE` je Box über `aValveJobs`: jedes angewählte Beet läuft einmal seine Dauer; Restzeit nach `Schrittkette.atRemaining` |
+| 3 | `xWiederkehrend` | `FB_MANUAL_TIME` (wiederkehrend): Start zur Startzeit je Beet an den Wochentagen aus `Zeitplan.bWeekMask` |
+| 4 | `xAuto` | Bedarf nach Kc/ET0 — zurückgestellt, Sensorik fehlt; öffnet kein Ventil. `FC_GetKcValue` liegt bereit |
+
+Die bestätigte Betriebsart steht in `Bellows.Betrieb.uModeActive`.
+
+## 4. Anzeige
+
+- Ventile `xV_1..4` folgen allein der Arbiter-Freigabe.
+- Status-LEDs `xV_5..8` spiegeln die Freigabe: Dauerlicht = Ventil offen.
+- **Manuell:** angefordert, aber wartend → Blinken im Takt `Bellows.Betrieb.rBlinkHz`
+  (Startwert 0.1 Hz = 5 s an / 5 s aus, begrenzt auf 0.01..10 Hz).
+- **One-Shot:** angewählt, aber noch nicht freigegeben → Blinken mit `FB_BLINK` (1 s an / 9 s aus).
+- Maibeere: `xV_5` ist die Sammelanzeige aller vier Ventile.
+- Warterang je Ventil: `Bellows.Schrittkette.auQueue` (1 = als nächstes).
+
+## 5. Persistente Einstellungen
+
+Persistent heißt: der Wert übersteht Neustart und Programm-Download (Schlüssel
+`bellows.&lt;Gruppe&gt;.&lt;Name&gt;` in `persistence.cpp`). Alle sind von der HMI schreibbar.
+
+| Variable | Label | Startwert | Bedeutung |
 |---|---|---|---|
-| Johannisbeere | ETH-MODBUS-IO8R-A | .24 | MODBUS_NORD |
-| Maibeere | **ETH-MODBUS-IO5R** | .25 | MODBUS_NORD |
-| Schaltschrank | **Weidmüller UR20-FBC-MOD-TCP** (8DI/8DO) | .229 | MODBUS_NORD |
-| Pfirsich | ETH-MODBUS-IO8R-A | .26 | MODBUS-SUED |
-| Felsenbirne | ETH-MODBUS-IO8R-A | .27 | MODBUS-SUED |
-| Stachelbeere | ETH-MODBUS-IO8R-A | .28 | MODBUS-SUED |
-| Maulbeere | ETH-MODBUS-IO8R-A | .29 | MODBUS-SUED |
+| `Betrieb.xManuell` | Handbetrieb | — | Betriebsart 1 |
+| `Betrieb.xOneShot` | Einmal-Lauf | — | Betriebsart 2 |
+| `Betrieb.xWiederkehrend` | Wiederkehrend | — | Betriebsart 3 |
+| `Betrieb.xAuto` | Automatik | — | Betriebsart 4 (zurückgestellt) |
+| `Betrieb.uMaxVentile` | Max. offene Ventile | 24 | Höchstzahl gleichzeitig offener Ventile |
+| `Betrieb.rBlinkHz` | Blinkfrequenz Handbetrieb [Hz] | 0.1 | Blinktakt wartender Ventile im Handbetrieb |
+| `Zeitplan.aValveJobs` | Ventil-Jobs | — | Anwahl, Startzeit und Dauer je Ventil (`ST_BedCfg`) |
 
-Dual-Namespace: `Anvil.&lt;Zone&gt;.*` (Hardware) / `Bellows.&lt;Zone&gt;.*` (HMI). Wahlschalter auf
-`Anvil.Schaltschrank.DI_0..3`.
+## 6. Zeitbasis
 
-## 2. I/O je Zone (ETH-MODBUS-IO8R-A)
+`FB_WEEKLY_TIMER` (UNIX-Zeit via `FB_SYS_TIME`, Hinnant-Civil-Date → `ST_DateTime`).
+`FB_MANUAL_TIME` vergleicht daraus die Startzeit je Job.
 
-`xT_1..8` 8 DI (1–4 = Beet-Taster) · `xV_1..4` Relais 0–3 = Ventile · `xV_5..8` Relais 4–7 =
-Programm-/Phasen-Anzeige · `wAI_*` 6 Analog-Eingänge · `wAO_1..2` 2 Analog-Ausgänge.
-⚠️ Maibeere (IO5R): nur `xV_1..4` + ein Anzeige-Relais `xV_5` → Sammelanzeige.
-Ventil-Index 24 = z*4+v (z = Pfirsich..Johannisbeere 0..5).
+## 7. Geräteüberwachung
 
-## 3. Bedien- &amp; Anzeigekonzept
+`BusMonitor` (taskDiag) liest je Gerät `Anvil.&lt;Gerät&gt;.Status.xOnline`, `FB_BUS_MONITOR` führt je
+Gerät einen `FB_DEVICE_MONITOR` (0 Unbekannt → 1 Online → 2 Gestört → 3 Offline, entprellt) und
+schreibt nach `Bellows.Diag`: `auDevState[0..6]`, `asDevStatus`, `sSummary`, `xAllOk`,
+`iFaultCount`. Index 0 Pfirsich … 5 Johannisbeere, 6 Schaltschrank — handgepflegt.
 
-- **Ventil-Rückmeldung (Dauerlicht):** Tastenlicht folgt dem Ventilrelais `xV_1..4` (HW-Verbindung
-  angenommen, kein separater Lampen-Ausgang).
-- **Programm-Anzeige (`xV_5..8`):** ein Relais je Phase — `xV_5`=P1, `xV_6`=P2, `xV_7`=P3, `xV_8`=P4.
-  P1 Manuell = Dauerlicht (kein Blinken), P2/P3/P4 = Blinken (Periode 30 s, `FB_BLINK`), invalid = aus.
+## 8. Tasks
 
-## 4. Automationsphasen
+| Task | Takt | Priorität | Programm |
+|---|---|---|---|
+| task0 | 20 ms | 0 | `PLC_PRG` |
+| taskDiag | 200 ms | 10 | `BusMonitor` |
 
-Wahlschalter `Anvil.Schaltschrank.DI_0..3` → `uMode` (One-Hot-Verriegelung: genau EIN Bit ⇒ Phase 1..4;
-sonst uMode=0 INVALID → sicherer Zustand, alles aus).
+## 9. Bausteine und Typen
 
-- **Phase 1 Manuell — FERTIG/verdrahtet.** `FB_MANUAL` (8 JK-Flipflops, Toggle je Taster), Enable nur uMode=1.
-- **Phase 2 One-Shot — FERTIG/verdrahtet.** `FB_MANUAL_TIME` (xMtRecurring=FALSE) über die Job-Liste
-  `Bellows.Zeitplan.aValveJobs : ARRAY[1..24] OF ST_BedCfg` (je Ventil Startzeit+Dauer), Timer gated am Arbiter.
-- **Phase 3 wiederkehrend — FERTIG/verdrahtet.** Dieselbe `FB_MANUAL_TIME` (xMtRecurring=TRUE), re-arm bei Tageswechsel.
-- **Phase 4 Kc/ET0 (GSEHEN/Geisenheim) — ZURÜCKGESTELLT, mangels Hardware nicht umsetzbar.** Es fehlt die
-  ET0-/Sensorik-Hardware (Wetterstation/Bodenfeuchte, geplant per LoRaWAN). `FC_GetKcValue` (FAO-56-Kc)
-  liegt als Rechenbaustein bereit; Anbindung erst wenn die Hardware/ET0-Quelle existiert.
+Programme: `PLC_PRG`, `BusMonitor`. Funktionsbausteine: `FB_MANUAL`, `FB_MANUAL_SEQUENCE`,
+`FB_MANUAL_TIME`, `FB_VALVE_ARBITER`, `FB_BLINK`, `FB_WEEKLY_TIMER`, `FB_DEVICE_MONITOR`,
+`FB_BUS_MONITOR`. Funktion: `FC_GetKcValue`.
+Gruppen: sieben Geräte (Pfirsich … Schaltschrank) und die HMI-Gruppen `Betrieb`, `Zeitplan`,
+`Schrittkette`, `Diag`, `HmiCmd`.
+Typen: `ST_BedCfg` (xSelected, uStartHour, uStartMin, tDuration), `ST_DateTime`, `T_WeekMask`,
+`ST_KcCurve`; `ST_TimerConfig` ist verwaist.
 
-## 5. Zeitbasis
+## 10. Offene Punkte (2026-09-11)
 
-`FB_WEEKLY_TIMER` (UNIX-Zeit via `FB_SYS_TIME`, Hinnant-Civil-Date → DUT `ST_DateTime`). `FB_MANUAL_TIME`
-nutzt daraus `dtNow` für den Startzeit-Vergleich je Job.
-
-## 6. Geräte-/Modulüberwachung (HMI) — FERTIG/grün
-
-- **`FB_DEVICE_MONITOR`** — Zustandsgraph je Gerät: **0 Unbekannt → 1 Online → 2 Gestört → 3 Offline**
-  (entprellt `tDmFault`/`tDmRecover`), Klartext-STRING-Ausgabe. Quellen-agnostisch (`xOnline`+`xStatusValid`).
-- **`FB_BUS_MONITOR`** — aggregiert 7 Geräte (0=Pfirsich..5=Johannisbeere, 6=Schaltschrank): Zustand +
-  Klartext je Gerät, `xBmAllOk`, `iBmFaultCount`, Sammel-Klartext.
-- **Quelle live:** read-only `Anvil.&lt;grp&gt;.Status.xOnline` (cxx-Codegen aus dem Tongs-Status, Input-Scan
-  vor Execute; Spec `device-status-interface.md`). In PLC_PRG §9 verdrahtet.
-- **HMI (`Bellows.Diag`):** `auDevState[0..6]` (Zustandscode), `xAllOk`, `iFaultCount` — **live**.
-  Die HMI rendert den **Klartext aus dem Zustandscode** (Standard-Pattern):
-  `0=Unbekannt · 1=Online · 2=Gestört · 3=Keine Verbindung`.
-  Optional zusätzlich PLC-seitiger Klartext (`asDevStatus`/`sSummary`) — siehe §8 (wartet auf Codegen-Fix).
-- UR20-Modulebene (per-Modul-Fault) = Phase 3 der Status-Schnittstelle, beim Developer noch offen.
-
-## 7. POU- &amp; Typ-Inventar
-
-PLC_PRG · FB_MANUAL · FB_MANUAL_TIME · FB_VALVE_ARBITER · FB_BLINK · FB_WEEKLY_TIMER ·
-**FB_DEVICE_MONITOR · FB_BUS_MONITOR** · FC_GetKcValue · JK_FF (lib) · 6 Zonen-AnvilVarLists +
-Schaltschrank · GVL `Zeitplan` (aValveJobs) · GVL `Diag` (Bellows-HMI).
-DUTs: `ST_BedCfg` (uValveIdx/uStartHour/uStartMin/tDuration) · `ST_DateTime` · `T_WeekMask` · `ST_KcCurve`.
-`ST_TimerConfig` abgelöst (verwaist, Aufräum-Kandidat).
-
-## 8. Stand &amp; offene Punkte
-
-- **Liefer-Scope (Phasen 1–3 + Überwachung): code-komplett &amp; grün** (cxx compile_ok/emit_ok, keine Fehler).
-- **Ausnahme #53 — `REFERENCE TO`:** bleibt per **INDEX-Workaround** (`ST_BedCfg.uValveIdx`); Dev queued
-  REFERENCE TO als eigenen Sprint, spätere saubere Umstellung optional. Kein „fertig&quot;-Hindernis.
-- **Phase 4 — nicht möglich (Hardware fehlt):** ET0-/Sensorik-Hardware (geplant per LoRaWAN) nicht vorhanden
-  → zurückgestellt; `FC_GetKcValue` steht bereit.
-- **HMI-Klartext PLC-seitig (optional):** Pool-/Bellows-STRING-Codegen emittiert STRING noch falsch
-  (`atomic&lt;unsigned long&gt;` statt `std::string`) → die zwei Zuweisungen `Bellows.Diag.asDevStatus`/`sSummary`
-  sind deaktiviert. **Nicht blockierend** — die HMI zeigt Klartext aus dem Zustandscode (§6). Nach Dev-Fix
-  per 2 Zeilen aktivierbar (Texte liegen in `fbBusMon.asBmStatus/.sBmSummary`).
-- **Verifizierter End-to-End-Test offen:** benötigt die Runtime („Fundament-Release&quot;: cxx-Runtime-Lib +
-  bestehender core-Pfad, Ackersteuerung läuft unter anvild) — beim Developer PRIO 1. Runtime-Start
-  operator-gated. Danach: Funktionstest Phasen 1–3 + Arbiter-2-Limit + Job-Sequenz + Überwachung.
-- **Monitoring-Ausbau (optional, später):** `wErrCount`/`tLastOk` (Phase 2), UR20-Modul-Fault (Phase 3).
-- **HMI-Retain:** Persistenz der Job-Liste sicherstellen.
-- **Fork-Plugin (I1/I2) der Runtime:** Pflicht VOR Produktivbetrieb (eigener Sprint nach dem Fundament-Release).</Comment>
+- `Zeitplan.bWeekMask` ist **nicht persistent** — nach einem Neustart ist die Wochentag-Freigabe leer.
+- Geräteüberwachung **doppelt**: `PLC_PRG` §9 (task0) und `BusMonitor` (taskDiag) schreiben beide
+  `Bellows.Diag.auDevState`, `xAllOk`, `iFaultCount`.
+- One-Shot-Blinken liegt nur auf den LEDs der Ventile 2 und 3 je Box (`xV_6`, `xV_7`).
+- `Schrittkette.xStart/xStop/xPause/xQuit` sind angelegt, werden aber nicht ausgewertet;
+  `HmiCmd` ist leer.
+- Schaltschrank: Ein- und Ausgänge ungenutzt; die Bindungen stehen in der alten Steckplatz-Zählung.
+- Analogausgänge `wAO_1..2`: die Bindung nennt Register 0/1, die Gerätebeschreibung 6/7.
+- Betriebsart Auto (Kc/ET0) wartet auf Wetter- und Bodensensorik.
+</Comment>
     <coordinateInfo>
       <fbd>
         <scaling x="1" y="1"/>
@@ -353,6 +361,9 @@ DUTs: `ST_BedCfg` (uValveIdx/uStartHour/uStartMin/tDuration) · `ST_DateTime` ·
             </variable>
           </struct>
         </baseType>
+        <documentation>
+          <xhtml xmlns="http://www.w3.org/1999/xhtml">Konfiguration eines Beets (eines Ventils) fuer One-Shot und wiederkehrend: Anwahl, Startzeit in Ortszeit und Bewaesserungsdauer. Element der Job-Liste Bellows.Zeitplan.aValveJobs[1..24].</xhtml>
+        </documentation>
       </dataType>
     </dataTypes>
     <pous>
@@ -1401,6 +1412,9 @@ Liefert den Pflanzenkoeffizienten Kc für den Kultur-Tag `iDay_crop` aus der Kur
             <ForgeIecPou xmlns="https://forgeiec.io/v2" pouType="anvilVarList"/>
           </data>
         </addData>
+        <documentation>
+          <xhtml xmlns="http://www.w3.org/1999/xhtml">Feldbox Pfirsich (Amsamotion ETH-MODBUS-IO8R-A, 192.168.24.26, Segment MODBUS-SUED), Ventile 1-4 der Job-Liste. xT_1..4 Beet-Taster, xT_5..8 frei; xV_1..4 Ventile (= Arbiter-Freigabe); xV_5..8 Status-LEDs der Ventile 1..4; wAI_Voltage_1..3 und wAI_Current_1..3 Analogeingaenge; wAO_1..2 Analogausgaenge. Anvil.* ist die Hardware-Sicht, Bellows.* die HMI-Sicht derselben Variablen.</xhtml>
+        </documentation>
       </pou>
       <pou name="Stachelbeere" pouType="program">
         <interface>
@@ -1732,6 +1746,9 @@ Liefert den Pflanzenkoeffizienten Kc für den Kultur-Tag `iDay_crop` aus der Kur
             <ForgeIecPou xmlns="https://forgeiec.io/v2" pouType="anvilVarList"/>
           </data>
         </addData>
+        <documentation>
+          <xhtml xmlns="http://www.w3.org/1999/xhtml">Feldbox Stachelbeere (Amsamotion ETH-MODBUS-IO8R-A, 192.168.24.28, Segment MODBUS-SUED), Ventile 5-8 der Job-Liste. xT_1..4 Beet-Taster, xT_5..8 frei; xV_1..4 Ventile (= Arbiter-Freigabe); xV_5..8 Status-LEDs der Ventile 1..4; wAI_Voltage_1..3 und wAI_Current_1..3 Analogeingaenge; wAO_1..2 Analogausgaenge. Anvil.* ist die Hardware-Sicht, Bellows.* die HMI-Sicht derselben Variablen.</xhtml>
+        </documentation>
       </pou>
       <pou name="Maulbeere" pouType="program">
         <interface>
@@ -2063,6 +2080,9 @@ Liefert den Pflanzenkoeffizienten Kc für den Kultur-Tag `iDay_crop` aus der Kur
             <ForgeIecPou xmlns="https://forgeiec.io/v2" pouType="anvilVarList"/>
           </data>
         </addData>
+        <documentation>
+          <xhtml xmlns="http://www.w3.org/1999/xhtml">Feldbox Maulbeere (Amsamotion ETH-MODBUS-IO8R-A, 192.168.24.29, Segment MODBUS-SUED), Ventile 9-12 der Job-Liste. xT_1..4 Beet-Taster, xT_5..8 frei; xV_1..4 Ventile (= Arbiter-Freigabe); xV_5..8 Status-LEDs der Ventile 1..4; wAI_Voltage_1..3 und wAI_Current_1..3 Analogeingaenge; wAO_1..2 Analogausgaenge. Anvil.* ist die Hardware-Sicht, Bellows.* die HMI-Sicht derselben Variablen.</xhtml>
+        </documentation>
       </pou>
       <pou name="Maibeere" pouType="program">
         <interface>
@@ -2212,6 +2232,9 @@ Liefert den Pflanzenkoeffizienten Kc für den Kultur-Tag `iDay_crop` aus der Kur
             <ForgeIecPou xmlns="https://forgeiec.io/v2" pouType="anvilVarList"/>
           </data>
         </addData>
+        <documentation>
+          <xhtml xmlns="http://www.w3.org/1999/xhtml">Feldbox Maibeere (Amsamotion ETH-MODBUS-IO5R, 192.168.24.25, Segment MODBUS_NORD), Ventile 17-20 der Job-Liste. xT_1..4 Beet-Taster, xT_5 frei; xV_1..4 Ventile (= Arbiter-Freigabe); xV_5 Sammel-LED fuer alle vier Ventile. Anvil.* ist die Hardware-Sicht, Bellows.* die HMI-Sicht.</xhtml>
+        </documentation>
       </pou>
       <pou name="Johannisbeere" pouType="program">
         <interface>
@@ -2543,6 +2566,9 @@ Liefert den Pflanzenkoeffizienten Kc für den Kultur-Tag `iDay_crop` aus der Kur
             <ForgeIecPou xmlns="https://forgeiec.io/v2" pouType="anvilVarList"/>
           </data>
         </addData>
+        <documentation>
+          <xhtml xmlns="http://www.w3.org/1999/xhtml">Feldbox Johannisbeere (Amsamotion ETH-MODBUS-IO8R-A, 192.168.24.24, Segment MODBUS_NORD), Ventile 21-24 der Job-Liste. xT_1..4 Beet-Taster, xT_5..8 frei; xV_1..4 Ventile (= Arbiter-Freigabe); xV_5..8 Status-LEDs der Ventile 1..4; wAI_Voltage_1..3 und wAI_Current_1..3 Analogeingaenge; wAO_1..2 Analogausgaenge. Anvil.* ist die Hardware-Sicht, Bellows.* die HMI-Sicht derselben Variablen.</xhtml>
+        </documentation>
       </pou>
       <pou name="Felsenbirne" pouType="program">
         <interface>
@@ -2874,6 +2900,9 @@ Liefert den Pflanzenkoeffizienten Kc für den Kultur-Tag `iDay_crop` aus der Kur
             <ForgeIecPou xmlns="https://forgeiec.io/v2" pouType="anvilVarList"/>
           </data>
         </addData>
+        <documentation>
+          <xhtml xmlns="http://www.w3.org/1999/xhtml">Feldbox Felsenbirne (Amsamotion ETH-MODBUS-IO8R-A, 192.168.24.27, Segment MODBUS-SUED), Ventile 13-16 der Job-Liste. xT_1..4 Beet-Taster, xT_5..8 frei; xV_1..4 Ventile (= Arbiter-Freigabe); xV_5..8 Status-LEDs der Ventile 1..4; wAI_Voltage_1..3 und wAI_Current_1..3 Analogeingaenge; wAO_1..2 Analogausgaenge. Anvil.* ist die Hardware-Sicht, Bellows.* die HMI-Sicht derselben Variablen.</xhtml>
+        </documentation>
       </pou>
       <pou name="FB_WEEKLY_TIMER" pouType="functionBlock">
         <interface>
@@ -3563,6 +3592,9 @@ Asymmetrisches Blinksignal aus zwei TON: kurzer Flash (`tBlFlash`) + längere Pa
             <ForgeIecPou xmlns="https://forgeiec.io/v2" pouType="anvilVarList"/>
           </data>
         </addData>
+        <documentation>
+          <xhtml xmlns="http://www.w3.org/1999/xhtml">Koppler im Schaltschrank (Weidmueller UR20-FBC-MOD-TCP, 192.168.24.229, Segment MODBUS_NORD) mit 8 digitalen Ein- und 8 Ausgaengen DI_0..7 und DO_0..7. Derzeit vom Programm nicht verwendet; die Betriebsart kommt aus der HMI-Gruppe Betrieb, nicht mehr von einem Wahlschalter.</xhtml>
+        </documentation>
       </pou>
       <pou name="Zeitplan" pouType="program">
         <interface>
@@ -3578,11 +3610,11 @@ Asymmetrisches Blinksignal aus zwei TON: kurzer Flash (`tBlFlash`) + längere Pa
               </type>
               <addData>
                 <data name="https://forgeiec.io/v2/variable" handleUnknown="discard">
-                  <ForgeIecVar xmlns="https://forgeiec.io/v2/variable" accessedMs="1782501481454" addressLocked="true" bellowsRead="true" bellowsWrite="true" createdMs="1780691319052" modifiedMs="1782501481454" monitorEnabled="true" persistent="true" uuid="ddbfcefd-642c-4c69-8d47-41925e048467"/>
+                  <ForgeIecVar xmlns="https://forgeiec.io/v2/variable" accessedMs="1782501481454" addressLocked="true" bellowsRead="true" bellowsWrite="true" createdMs="1780691319052" label="Ventil-Jobs" modifiedMs="1782501481454" monitorEnabled="true" persistent="true" uuid="ddbfcefd-642c-4c69-8d47-41925e048467"/>
                 </data>
               </addData>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">Zentrale Ventil-Job-Liste (24 Ventile): je Ventil Startzeit+Dauer; von HMI gesetzt. Index 1..24 = Arbiter-Index+1. Phase 2/3 Schrittkette.</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Job-Liste je Ventil, Index 1..24: Pfirsich 1-4, Stachelbeere 5-8, Maulbeere 9-12, Felsenbirne 13-16, Maibeere 17-20, Johannisbeere 21-24. Je Eintrag Anwahl, Startzeit (Stunde/Minute, Ortszeit) und Dauer (ST_BedCfg). Grundlage fuer One-Shot und wiederkehrend. Von der HMI gesetzt, persistent: uebersteht Neustart und Programm-Download.</xhtml>
               </documentation>
             </variable>
             <variable name="bWeekMask" address="%MB1">
@@ -3610,6 +3642,9 @@ Asymmetrisches Blinksignal aus zwei TON: kurzer Flash (`tBlFlash`) + längere Pa
             <ForgeIecPou xmlns="https://forgeiec.io/v2" pouType="globalVarList"/>
           </data>
         </addData>
+        <documentation>
+          <xhtml xmlns="http://www.w3.org/1999/xhtml">HMI-Gruppe Zeitplan: die Job-Liste aValveJobs[1..24] (je Ventil Anwahl, Startzeit, Dauer; persistent) und die Wochentag-Freigabe bWeekMask fuer den wiederkehrenden Betrieb (Bit 0 = Montag bis Bit 6 = Sonntag).</xhtml>
+        </documentation>
       </pou>
       <pou name="FB_MANUAL_TIME" pouType="functionBlock">
         <interface>
@@ -4449,6 +4484,9 @@ Führt je Gerät eine `FB_DEVICE_MONITOR`-Instanz (7 Geräte) und bündelt: Zust
             <ForgeIecPou xmlns="https://forgeiec.io/v2" pouType="globalVarList"/>
           </data>
         </addData>
+        <documentation>
+          <xhtml xmlns="http://www.w3.org/1999/xhtml">HMI-Gruppe Diag: Geraeteueberwachung fuer die HMI. auDevState[0..6] Zustand je Geraet (0 Unbekannt, 1 Online, 2 Gestoert, 3 Keine Verbindung), asDevStatus und sSummary als Klartext, xAllOk und iFaultCount als Sammelmeldung. Index 0 Pfirsich, 1 Stachelbeere, 2 Maulbeere, 3 Felsenbirne, 4 Maibeere, 5 Johannisbeere, 6 Schaltschrank.</xhtml>
+        </documentation>
       </pou>
       <pou name="Betrieb" pouType="program">
         <interface>
@@ -4459,11 +4497,11 @@ Führt je Gerät eine `FB_DEVICE_MONITOR`-Instanz (7 Geräte) und bündelt: Zust
               </type>
               <addData>
                 <data name="https://forgeiec.io/v2/variable" handleUnknown="discard">
-                  <ForgeIecVar xmlns="https://forgeiec.io/v2/variable" accessedMs="1782499931954" addressLocked="true" bellowsRead="true" bellowsWrite="true" createdMs="1780835523502" modifiedMs="1782499931954" monitorEnabled="true" persistent="true" uuid="d75f0f54-ddf5-4dc0-812f-62990b32886d"/>
+                  <ForgeIecVar xmlns="https://forgeiec.io/v2/variable" accessedMs="1782499931954" addressLocked="true" bellowsRead="true" bellowsWrite="true" createdMs="1780835523502" label="Handbetrieb" modifiedMs="1782499931954" monitorEnabled="true" persistent="true" uuid="d75f0f54-ddf5-4dc0-812f-62990b32886d"/>
                 </data>
               </addData>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">Betriebsart-Wahl Phase 1 (Manuell) — HMI-writable, RETAIN. One-Hot mit xOneShot/xWiederkehrend/xAuto.</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Betriebsart Manuell (uMode 1): Taster am Beet oder HMI schalten das Ventil um, der Arbiter gibt frei; wartende Ventile blinken im Takt rBlinkHz. Genau eine der vier Betriebsarten darf gesetzt sein, sonst gilt Aus (uMode 0, alle Ventile zu). Von der HMI gesetzt, persistent.</xhtml>
               </documentation>
             </variable>
             <variable name="xOneShot" address="%MX0.2">
@@ -4472,11 +4510,11 @@ Führt je Gerät eine `FB_DEVICE_MONITOR`-Instanz (7 Geräte) und bündelt: Zust
               </type>
               <addData>
                 <data name="https://forgeiec.io/v2/variable" handleUnknown="discard">
-                  <ForgeIecVar xmlns="https://forgeiec.io/v2/variable" accessedMs="1782499933237" addressLocked="true" bellowsRead="true" bellowsWrite="true" createdMs="1780835558147" modifiedMs="1782499933237" monitorEnabled="true" persistent="true" uuid="1f17e1d0-fb06-4a53-bfdc-228ee869811a"/>
+                  <ForgeIecVar xmlns="https://forgeiec.io/v2/variable" accessedMs="1782499933237" addressLocked="true" bellowsRead="true" bellowsWrite="true" createdMs="1780835558147" label="Einmal-Lauf" modifiedMs="1782499933237" monitorEnabled="true" persistent="true" uuid="1f17e1d0-fb06-4a53-bfdc-228ee869811a"/>
                 </data>
               </addData>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">Betriebsart-Wahl Phase 2 (One-Shot) — HMI-writable, RETAIN.</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Betriebsart One-Shot (uMode 2): die in aValveJobs angewaehlten Beete laufen je einmal ihre Dauer; die Dauer zaehlt erst ab der Arbiter-Freigabe, kein Beet wird uebersprungen. Angewaehlte, noch wartende Beete blinken. Genau eine Betriebsart, persistent.</xhtml>
               </documentation>
             </variable>
             <variable name="xWiederkehrend" address="%MX0.3">
@@ -4485,11 +4523,11 @@ Führt je Gerät eine `FB_DEVICE_MONITOR`-Instanz (7 Geräte) und bündelt: Zust
               </type>
               <addData>
                 <data name="https://forgeiec.io/v2/variable" handleUnknown="discard">
-                  <ForgeIecVar xmlns="https://forgeiec.io/v2/variable" accessedMs="1782499934557" addressLocked="true" bellowsRead="true" bellowsWrite="true" createdMs="1780835567548" modifiedMs="1782499934557" monitorEnabled="true" persistent="true" uuid="cfe844dc-bee2-4d44-9809-3aa46258ad2c"/>
+                  <ForgeIecVar xmlns="https://forgeiec.io/v2/variable" accessedMs="1782499934557" addressLocked="true" bellowsRead="true" bellowsWrite="true" createdMs="1780835567548" label="Wiederkehrend" modifiedMs="1782499934557" monitorEnabled="true" persistent="true" uuid="cfe844dc-bee2-4d44-9809-3aa46258ad2c"/>
                 </data>
               </addData>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">Betriebsart-Wahl Phase 3 (wiederkehrend) — HMI-writable, RETAIN.</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Betriebsart wiederkehrend (uMode 3): jedes angewaehlte Beet startet an den Wochentagen aus Zeitplan.bWeekMask zu seiner Startzeit aus aValveJobs und laeuft seine Dauer. Genau eine Betriebsart, persistent.</xhtml>
               </documentation>
             </variable>
             <variable name="xAuto" address="%MX0.4">
@@ -4498,11 +4536,11 @@ Führt je Gerät eine `FB_DEVICE_MONITOR`-Instanz (7 Geräte) und bündelt: Zust
               </type>
               <addData>
                 <data name="https://forgeiec.io/v2/variable" handleUnknown="discard">
-                  <ForgeIecVar xmlns="https://forgeiec.io/v2/variable" accessedMs="1782499930176" addressLocked="true" bellowsRead="true" bellowsWrite="true" createdMs="1780835581325" force="true" modifiedMs="1782499930176" monitorEnabled="true" persistent="true" uuid="202e3cb0-7d6b-45ca-a049-a33cd4272454"/>
+                  <ForgeIecVar xmlns="https://forgeiec.io/v2/variable" accessedMs="1782499930176" addressLocked="true" bellowsRead="true" bellowsWrite="true" createdMs="1780835581325" force="true" label="Automatik" modifiedMs="1782499930176" monitorEnabled="true" persistent="true" uuid="202e3cb0-7d6b-45ca-a049-a33cd4272454"/>
                 </data>
               </addData>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">Betriebsart-Wahl Phase 4 (Auto) — HMI-writable, RETAIN.</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Betriebsart Auto (uMode 4, Bedarf nach Kc/ET0): zurueckgestellt, weil Wetter- und Bodensensorik fehlen. Gewaehlt oeffnet sie kein Ventil. Genau eine Betriebsart, persistent.</xhtml>
               </documentation>
             </variable>
             <variable name="uModeActive" address="%MB0">
@@ -4530,11 +4568,11 @@ Führt je Gerät eine `FB_DEVICE_MONITOR`-Instanz (7 Geräte) und bündelt: Zust
               </initialValue>
               <addData>
                 <data name="https://forgeiec.io/v2/variable" handleUnknown="discard">
-                  <ForgeIecVar xmlns="https://forgeiec.io/v2/variable" accessedMs="1785368375714" addressLocked="true" bellowsRead="true" bellowsWrite="true" createdMs="1781477239426" modifiedMs="1785368375714" monitorEnabled="true" persistent="true" uuid="db1f89d9-48fc-4b39-9300-fbca38abea4c"/>
+                  <ForgeIecVar xmlns="https://forgeiec.io/v2/variable" accessedMs="1785368375714" addressLocked="true" bellowsRead="true" bellowsWrite="true" createdMs="1781477239426" label="Max. offene Ventile" modifiedMs="1785368375714" monitorEnabled="true" persistent="true" uuid="db1f89d9-48fc-4b39-9300-fbca38abea4c"/>
                 </data>
               </addData>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">HMI-konfigurierbares Max gleichzeitig offener Ventile (Sollwert, persistent). Arbiter clampt physisch [1..24] in der ST.</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Hoechstzahl gleichzeitig offener Ventile (Wasserdruck, Pumpenleistung). FB_VALVE_ARBITER begrenzt auf 1..24; weitere Anforderungen warten in Index-Reihenfolge, der Warterang steht in Schrittkette.auQueue. Startwert 24. Von der HMI gesetzt, persistent.</xhtml>
               </documentation>
             </variable>
             <variable name="rBlinkHz">
@@ -4543,14 +4581,14 @@ Führt je Gerät eine `FB_DEVICE_MONITOR`-Instanz (7 Geräte) und bündelt: Zust
               </type>
               <addData>
                 <data name="https://forgeiec.io/v2" handleUnknown="preserve">
-                  <ForgeIecVar xmlns="https://forgeiec.io/v2" bellowsRead="true" bellowsWrite="true" monitorEnabled="true" persistent="true" setting="true" uuid="98ec68a7-c512-45a9-b244-73866f0676c2"/>
+                  <ForgeIecVar xmlns="https://forgeiec.io/v2" bellowsRead="true" bellowsWrite="true" label="Blinkfrequenz Handbetrieb [Hz]" monitorEnabled="true" persistent="true" setting="true" uuid="98ec68a7-c512-45a9-b244-73866f0676c2"/>
                 </data>
               </addData>
               <initialValue>
                 <simpleValue value="0.1"/>
               </initialValue>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">Blinkfrequenz der wartenden Status-LEDs im Handbetrieb [Hz]; 0.1 = 5 s an / 5 s aus</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Blinkfrequenz der Status-LEDs wartender Ventile im Handbetrieb, in Hz. PLC_PRG begrenzt auf 0.01..10 Hz, ein Wert unter 0.01 gilt als 0.1. Startwert 0.1 Hz = 5 s an / 5 s aus. Von der HMI gesetzt, persistent.</xhtml>
               </documentation>
             </variable>
           </globalVars>
@@ -4565,6 +4603,9 @@ Führt je Gerät eine `FB_DEVICE_MONITOR`-Instanz (7 Geräte) und bündelt: Zust
             <ForgeIecPou xmlns="https://forgeiec.io/v2" pouType="globalVarList"/>
           </data>
         </addData>
+        <documentation>
+          <xhtml xmlns="http://www.w3.org/1999/xhtml">HMI-Gruppe Betrieb: Betriebsartwahl xManuell, xOneShot, xWiederkehrend, xAuto (genau eine gesetzt, sonst Aus), die bestaetigte Betriebsart uModeActive (0 Aus, 1 Manuell, 2 One-Shot, 3 wiederkehrend, 4 Auto) und die Einstellwerte uMaxVentile und rBlinkHz. Wahl und Einstellwerte sind persistent.</xhtml>
+        </documentation>
       </pou>
       <pou name="HmiCmd" pouType="program">
         <interface/>
@@ -4578,6 +4619,9 @@ Führt je Gerät eine `FB_DEVICE_MONITOR`-Instanz (7 Geräte) und bündelt: Zust
             <ForgeIecPou xmlns="https://forgeiec.io/v2" pouType="globalVarList"/>
           </data>
         </addData>
+        <documentation>
+          <xhtml xmlns="http://www.w3.org/1999/xhtml">HMI-Gruppe HmiCmd: derzeit ohne Variablen.</xhtml>
+        </documentation>
       </pou>
       <pou name="Schrittkette" pouType="program">
         <interface>
@@ -4700,6 +4744,9 @@ Führt je Gerät eine `FB_DEVICE_MONITOR`-Instanz (7 Geräte) und bündelt: Zust
             <ForgeIecPou xmlns="https://forgeiec.io/v2" pouType="globalVarList"/>
           </data>
         </addData>
+        <documentation>
+          <xhtml xmlns="http://www.w3.org/1999/xhtml">HMI-Gruppe Schrittkette: Anwahl-Puls je Beet fuer One-Shot (axSelToggle), Restzeit je Ventil (atRemaining) und Warterang aus dem Arbiter (auQueue, 0 = offen oder inaktiv, 1 = als naechstes). Die Befehle xStart, xStop, xPause und xQuit sind angelegt, werden vom Programm aber noch nicht ausgewertet.</xhtml>
+        </documentation>
       </pou>
       <pou name="FB_MANUAL_SEQUENCE" pouType="functionBlock">
         <interface>
@@ -5342,6 +5389,9 @@ Bellows.Diag.sSummary    := mon.sBmSummary;
 </xhtml>
           </ST>
         </body>
+        <documentation>
+          <xhtml xmlns="http://www.w3.org/1999/xhtml">Programm in taskDiag (200 ms): liest je Geraet den Online-Status aus Anvil.&lt;Geraet&gt;.Status, wertet ihn mit FB_BUS_MONITOR aus (Zustandsgraph mit Entprellung je Geraet) und schreibt das Ergebnis nach Bellows.Diag, damit die HMI es anzeigt. Die Geraete-Indizes sind handgepflegt (0 Pfirsich bis 6 Schaltschrank); ein neues Geraet muss hier und in FB_BUS_MONITOR nachgetragen werden.</xhtml>
+        </documentation>
       </pou>
     </pous>
   </types>

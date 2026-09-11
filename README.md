@@ -1,7 +1,7 @@
 # Ackersteuerung — SoLaWi Ackervielfalt
 
-Bewässerungssteuerung des Gemeinschaftsackers der SoLaWi Ackervielfalt,
-gebaut mit [ForgeIEC](https://forgeiec.io).
+Bewässerungssteuerung des Gemeinschaftsackers der SoLaWi Ackervielfalt
+(Kooperation mit SALZ Automation), gebaut mit [ForgeIEC](https://forgeiec.io).
 
 | Datei | Inhalt |
 |---|---|
@@ -11,11 +11,23 @@ gebaut mit [ForgeIEC](https://forgeiec.io).
 ## Anlage
 
 Sechs Modbus-TCP-Feldboxen (Amsamotion ETH-MODBUS-IO8R-A und IO5R) an zwei
-Segmenten, ein Weidmüller-UR20-Koppler im Schaltschrank. Je Beet vier Ventile
-mit Taster und Status-LED; ein Arbiter begrenzt die gleichzeitig offenen
-Ventile.
+Segmenten, ein Weidmüller-UR20-Koppler im Schaltschrank. 24 Ventile, je Beet
+Taster und Status-LED; ein Arbiter begrenzt die gleichzeitig offenen Ventile.
 
-Betriebsarten: Aus, Manuell, One-Shot, Wiederkehrend, Auto.
+Betriebsarten: Aus, Manuell, One-Shot, Wiederkehrend, Auto (zurückgestellt).
+
+## Dokumentation
+
+Die vollständige Beschreibung steht im Projekt selbst: ForgeIEC Studio →
+Projekteigenschaften. Jede Gruppe, jeder Baustein und jede persistente
+Einstellung trägt dort Beschreibung und Label. Die Einstellungen:
+
+| Variable | Label | Startwert |
+|---|---|---|
+| `Betrieb.xManuell` / `xOneShot` / `xWiederkehrend` / `xAuto` | Betriebsart | — |
+| `Betrieb.uMaxVentile` | Max. offene Ventile | 24 |
+| `Betrieb.rBlinkHz` | Blinkfrequenz Handbetrieb [Hz] | 0.1 |
+| `Zeitplan.aValveJobs` | Ventil-Jobs | — |
 
 ## Öffnen
 
@@ -23,3 +35,14 @@ Betriebsarten: Aus, Manuell, One-Shot, Wiederkehrend, Auto.
 * HMI: Hearth Studio, `Ackersteuerung.hearth`
 
 Pakete: https://apt.forgeiec.io
+
+## Hinweis zum Einchecken
+
+`Ackersteuerung.hearth` enthält lokal den Passwort-Hash des HMI-Benutzers.
+Der Git-Filter `hearth-nopw` nimmt ihn beim Einchecken heraus. Er muss in
+jedem Klon einmal gesetzt werden:
+
+```
+git config filter.hearth-nopw.clean "sed -E 's/ pw-hash=\"[^\"]*\"//; s/ pw-hash-epoch=\"[^\"]*\"//'"
+git config filter.hearth-nopw.smudge cat
+```
