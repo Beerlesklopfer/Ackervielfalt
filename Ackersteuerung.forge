@@ -2060,12 +2060,12 @@ Liefert den Pflanzenkoeffizienten Kc für den Kultur-Tag `iDay_crop` aus der Kur
                 <BOOL/>
               </type>
               <addData>
-                <data name="https://forgeiec.io/v2/variable" handleUnknown="discard">
-                  <ForgeIecVar xmlns="https://forgeiec.io/v2/variable" accessedMs="1788127858657" addressLocked="true" bellowsRead="true" bellowsWrite="true" createdMs="1778955277253" modifiedMs="1788127858657" uuid="a5ac5956-6dae-4e61-aa6c-da0b6c8c19b4"/>
+                <data name="https://forgeiec.io/v2" handleUnknown="preserve">
+                  <ForgeIecVar xmlns="https://forgeiec.io/v2" bellowsRead="true" bellowsWrite="true" uuid="17434467-ae38-48c2-9c38-b1f6e240b65e"/>
                 </data>
               </addData>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">Digital input 1 (opto-isolated, DC 20-28V)</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Digital input channel 1 (24V DC, opto-isolated)</xhtml>
               </documentation>
             </variable>
             <variable name="xT_2" address="%IX3.1">
@@ -2073,12 +2073,12 @@ Liefert den Pflanzenkoeffizienten Kc für den Kultur-Tag `iDay_crop` aus der Kur
                 <BOOL/>
               </type>
               <addData>
-                <data name="https://forgeiec.io/v2/variable" handleUnknown="discard">
-                  <ForgeIecVar xmlns="https://forgeiec.io/v2/variable" accessedMs="1788127858657" addressLocked="true" bellowsRead="true" bellowsWrite="true" createdMs="1778955277253" modifiedMs="1788127858657" uuid="fd4fffc9-48e0-48dd-8a9d-7ecc9fb12c10"/>
+                <data name="https://forgeiec.io/v2" handleUnknown="preserve">
+                  <ForgeIecVar xmlns="https://forgeiec.io/v2" bellowsRead="true" bellowsWrite="true" uuid="eab12f09-0571-4c9b-9281-cae9200a674f"/>
                 </data>
               </addData>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">Digital input 2 (opto-isolated, DC 20-28V)</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Digital input channel 2 (24V DC, opto-isolated)</xhtml>
               </documentation>
             </variable>
             <variable name="xT_3" address="%IX3.2">
@@ -2086,12 +2086,12 @@ Liefert den Pflanzenkoeffizienten Kc für den Kultur-Tag `iDay_crop` aus der Kur
                 <BOOL/>
               </type>
               <addData>
-                <data name="https://forgeiec.io/v2/variable" handleUnknown="discard">
-                  <ForgeIecVar xmlns="https://forgeiec.io/v2/variable" accessedMs="1788127858657" addressLocked="true" bellowsRead="true" bellowsWrite="true" createdMs="1778955277253" modifiedMs="1788127858657" uuid="7cb93c9b-e3d8-4c26-8ed8-85659c12e760"/>
+                <data name="https://forgeiec.io/v2" handleUnknown="preserve">
+                  <ForgeIecVar xmlns="https://forgeiec.io/v2" bellowsRead="true" bellowsWrite="true" uuid="cbaa3b7b-0b9d-460d-9d77-aeed02e14bb2"/>
                 </data>
               </addData>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">Digital input 3 (opto-isolated, DC 20-28V)</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Digital input channel 3 (24V DC, opto-isolated)</xhtml>
               </documentation>
             </variable>
             <variable name="xT_4" address="%IX3.3">
@@ -2099,12 +2099,12 @@ Liefert den Pflanzenkoeffizienten Kc für den Kultur-Tag `iDay_crop` aus der Kur
                 <BOOL/>
               </type>
               <addData>
-                <data name="https://forgeiec.io/v2/variable" handleUnknown="discard">
-                  <ForgeIecVar xmlns="https://forgeiec.io/v2/variable" accessedMs="1788127858657" addressLocked="true" bellowsRead="true" bellowsWrite="true" createdMs="1778955277253" modifiedMs="1788127858657" uuid="319a0101-0de0-4db3-8d6f-56613a8d4e21"/>
+                <data name="https://forgeiec.io/v2" handleUnknown="preserve">
+                  <ForgeIecVar xmlns="https://forgeiec.io/v2" bellowsRead="true" bellowsWrite="true" uuid="a510b174-1041-456e-879f-b8c48db30cc7"/>
                 </data>
               </addData>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">Digital input 4 (opto-isolated, DC 20-28V)</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Digital input channel 4 (24V DC, opto-isolated)</xhtml>
               </documentation>
             </variable>
             <variable name="xT_5" address="%IX3.4">
@@ -2112,12 +2112,51 @@ Liefert den Pflanzenkoeffizienten Kc für den Kultur-Tag `iDay_crop` aus der Kur
                 <BOOL/>
               </type>
               <addData>
-                <data name="https://forgeiec.io/v2/variable" handleUnknown="discard">
-                  <ForgeIecVar xmlns="https://forgeiec.io/v2/variable" accessedMs="1788127858657" addressLocked="true" createdMs="1778955277253" modifiedMs="1788127858657" uuid="0d04d7ad-b28c-4a66-a022-6d830d3276e4"/>
+                <data name="https://forgeiec.io/v2" handleUnknown="preserve">
+                  <ForgeIecVar xmlns="https://forgeiec.io/v2" uuid="216ff3a6-f1c6-47ff-8715-5afa4a4cd7af"/>
                 </data>
               </addData>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">Digital input 5 (opto-isolated, DC 20-28V)</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Digital input channel 5 (24V DC, opto-isolated)</xhtml>
+              </documentation>
+            </variable>
+            <variable name="xT_6" address="%IX3.5">
+              <type>
+                <BOOL/>
+              </type>
+              <addData>
+                <data name="https://forgeiec.io/v2" handleUnknown="preserve">
+                  <ForgeIecVar xmlns="https://forgeiec.io/v2" uuid="c053471c-03a5-4e53-99d9-fbd83f341600"/>
+                </data>
+              </addData>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Digital input channel 6 (24V DC, opto-isolated)</xhtml>
+              </documentation>
+            </variable>
+            <variable name="xT_7" address="%IX3.6">
+              <type>
+                <BOOL/>
+              </type>
+              <addData>
+                <data name="https://forgeiec.io/v2" handleUnknown="preserve">
+                  <ForgeIecVar xmlns="https://forgeiec.io/v2" uuid="ac8878f2-fabd-4db2-9a43-ed64e765e5a4"/>
+                </data>
+              </addData>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Digital input channel 7 (24V DC, opto-isolated)</xhtml>
+              </documentation>
+            </variable>
+            <variable name="xT_8" address="%IX3.7">
+              <type>
+                <BOOL/>
+              </type>
+              <addData>
+                <data name="https://forgeiec.io/v2" handleUnknown="preserve">
+                  <ForgeIecVar xmlns="https://forgeiec.io/v2" uuid="c6f67b0c-5223-4788-b4e7-10beb56d80eb"/>
+                </data>
+              </addData>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Digital input channel 8 (24V DC, opto-isolated)</xhtml>
               </documentation>
             </variable>
             <variable name="xV_1" address="%QX3.0">
@@ -2125,12 +2164,12 @@ Liefert den Pflanzenkoeffizienten Kc für den Kultur-Tag `iDay_crop` aus der Kur
                 <BOOL/>
               </type>
               <addData>
-                <data name="https://forgeiec.io/v2/variable" handleUnknown="discard">
-                  <ForgeIecVar xmlns="https://forgeiec.io/v2/variable" accessedMs="1788127858657" addressLocked="true" bellowsRead="true" createdMs="1778955277253" modifiedMs="1788127858657" uuid="53ed6e04-6020-426a-a5bf-a528b2d13280"/>
+                <data name="https://forgeiec.io/v2" handleUnknown="preserve">
+                  <ForgeIecVar xmlns="https://forgeiec.io/v2" bellowsRead="true" uuid="a09e0cb3-0660-4331-b0e0-4e70ebd2c340"/>
                 </data>
               </addData>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">Relay output 1 (2A max per point)</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Relay output channel 1 (max 2A)</xhtml>
               </documentation>
             </variable>
             <variable name="xV_2" address="%QX3.1">
@@ -2138,12 +2177,12 @@ Liefert den Pflanzenkoeffizienten Kc für den Kultur-Tag `iDay_crop` aus der Kur
                 <BOOL/>
               </type>
               <addData>
-                <data name="https://forgeiec.io/v2/variable" handleUnknown="discard">
-                  <ForgeIecVar xmlns="https://forgeiec.io/v2/variable" accessedMs="1788127858657" addressLocked="true" bellowsRead="true" createdMs="1778955277253" modifiedMs="1788127858657" uuid="fbe04820-6add-4101-8b4d-e28fd0ea13be"/>
+                <data name="https://forgeiec.io/v2" handleUnknown="preserve">
+                  <ForgeIecVar xmlns="https://forgeiec.io/v2" bellowsRead="true" uuid="08fdce77-c5db-4cea-abc6-6fda85d72edf"/>
                 </data>
               </addData>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">Relay output 2 (2A max per point)</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Relay output channel 2 (max 2A)</xhtml>
               </documentation>
             </variable>
             <variable name="xV_3" address="%QX3.2">
@@ -2151,12 +2190,12 @@ Liefert den Pflanzenkoeffizienten Kc für den Kultur-Tag `iDay_crop` aus der Kur
                 <BOOL/>
               </type>
               <addData>
-                <data name="https://forgeiec.io/v2/variable" handleUnknown="discard">
-                  <ForgeIecVar xmlns="https://forgeiec.io/v2/variable" accessedMs="1788127858657" addressLocked="true" bellowsRead="true" createdMs="1778955277253" modifiedMs="1788127858657" uuid="9930502d-2408-48b7-a893-cd41a16f6557"/>
+                <data name="https://forgeiec.io/v2" handleUnknown="preserve">
+                  <ForgeIecVar xmlns="https://forgeiec.io/v2" bellowsRead="true" uuid="5c457a55-4bf8-48f7-b7be-89c4c4643f17"/>
                 </data>
               </addData>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">Relay output 3 (2A max per point)</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Relay output channel 3 (max 2A)</xhtml>
               </documentation>
             </variable>
             <variable name="xV_4" address="%QX3.3">
@@ -2164,12 +2203,12 @@ Liefert den Pflanzenkoeffizienten Kc für den Kultur-Tag `iDay_crop` aus der Kur
                 <BOOL/>
               </type>
               <addData>
-                <data name="https://forgeiec.io/v2/variable" handleUnknown="discard">
-                  <ForgeIecVar xmlns="https://forgeiec.io/v2/variable" accessedMs="1788127858657" addressLocked="true" bellowsRead="true" createdMs="1778955277253" modifiedMs="1788127858657" uuid="5019fbeb-63ec-4fdd-a396-adae2d948be9"/>
+                <data name="https://forgeiec.io/v2" handleUnknown="preserve">
+                  <ForgeIecVar xmlns="https://forgeiec.io/v2" bellowsRead="true" uuid="ff65ece6-ad76-4ca4-8af0-7c9a038ff9c6"/>
                 </data>
               </addData>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">Relay output 4 (2A max per point)</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Relay output channel 4 (max 2A)</xhtml>
               </documentation>
             </variable>
             <variable name="xV_5" address="%QX3.4">
@@ -2177,12 +2216,155 @@ Liefert den Pflanzenkoeffizienten Kc für den Kultur-Tag `iDay_crop` aus der Kur
                 <BOOL/>
               </type>
               <addData>
-                <data name="https://forgeiec.io/v2/variable" handleUnknown="discard">
-                  <ForgeIecVar xmlns="https://forgeiec.io/v2/variable" accessedMs="1788127858657" addressLocked="true" bellowsRead="true" createdMs="1778955277253" modifiedMs="1788127858657" uuid="c50a749e-6997-4f92-a9b5-fad917169633"/>
+                <data name="https://forgeiec.io/v2" handleUnknown="preserve">
+                  <ForgeIecVar xmlns="https://forgeiec.io/v2" bellowsRead="true" uuid="90ddaea8-c66b-4cf4-9b51-20a9b38b90d3"/>
                 </data>
               </addData>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">Relay output 5 (2A max per point)</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Relay output channel 5 (max 2A)</xhtml>
+              </documentation>
+            </variable>
+            <variable name="xV_6" address="%QX3.5">
+              <type>
+                <BOOL/>
+              </type>
+              <addData>
+                <data name="https://forgeiec.io/v2" handleUnknown="preserve">
+                  <ForgeIecVar xmlns="https://forgeiec.io/v2" bellowsRead="true" uuid="a059bbbc-3178-4167-a9a0-a4679e4854ee"/>
+                </data>
+              </addData>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Relay output channel 6 (max 2A)</xhtml>
+              </documentation>
+            </variable>
+            <variable name="xV_7" address="%QX3.6">
+              <type>
+                <BOOL/>
+              </type>
+              <addData>
+                <data name="https://forgeiec.io/v2" handleUnknown="preserve">
+                  <ForgeIecVar xmlns="https://forgeiec.io/v2" bellowsRead="true" uuid="eabe0f4a-8888-4e4c-8253-e944392062a7"/>
+                </data>
+              </addData>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Relay output channel 7 (max 2A)</xhtml>
+              </documentation>
+            </variable>
+            <variable name="xV_8" address="%QX3.7">
+              <type>
+                <BOOL/>
+              </type>
+              <addData>
+                <data name="https://forgeiec.io/v2" handleUnknown="preserve">
+                  <ForgeIecVar xmlns="https://forgeiec.io/v2" bellowsRead="true" uuid="5f2a3a82-66ee-4bac-b77d-843874cedce1"/>
+                </data>
+              </addData>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Relay output channel 8 (max 2A)</xhtml>
+              </documentation>
+            </variable>
+            <variable name="wAI_Voltage_1" address="%IW30">
+              <type>
+                <UINT/>
+              </type>
+              <addData>
+                <data name="https://forgeiec.io/v2" handleUnknown="preserve">
+                  <ForgeIecVar xmlns="https://forgeiec.io/v2" uuid="c725182b-626c-4da1-becb-af30c0e5fcbb"/>
+                </data>
+              </addData>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Analog input channel 1 (0-10V, 12-bit)</xhtml>
+              </documentation>
+            </variable>
+            <variable name="wAI_Voltage_2" address="%IW31">
+              <type>
+                <UINT/>
+              </type>
+              <addData>
+                <data name="https://forgeiec.io/v2" handleUnknown="preserve">
+                  <ForgeIecVar xmlns="https://forgeiec.io/v2" uuid="378ed63a-f084-44c9-94f1-1f291562dbd8"/>
+                </data>
+              </addData>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Analog input channel 2 (0-10V, 12-bit)</xhtml>
+              </documentation>
+            </variable>
+            <variable name="wAI_Voltage_3" address="%IW32">
+              <type>
+                <UINT/>
+              </type>
+              <addData>
+                <data name="https://forgeiec.io/v2" handleUnknown="preserve">
+                  <ForgeIecVar xmlns="https://forgeiec.io/v2" uuid="f0b6d74b-7167-4315-84da-79c2cbe2ad10"/>
+                </data>
+              </addData>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Analog input channel 3 (0-10V, 12-bit)</xhtml>
+              </documentation>
+            </variable>
+            <variable name="wAI_Current_1" address="%IW33">
+              <type>
+                <UINT/>
+              </type>
+              <addData>
+                <data name="https://forgeiec.io/v2" handleUnknown="preserve">
+                  <ForgeIecVar xmlns="https://forgeiec.io/v2" uuid="c32eb182-3640-4bdc-bcb7-15029a21aa48"/>
+                </data>
+              </addData>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Analog input channel 4 (0-20mA, 12-bit)</xhtml>
+              </documentation>
+            </variable>
+            <variable name="wAI_Current_2" address="%IW34">
+              <type>
+                <UINT/>
+              </type>
+              <addData>
+                <data name="https://forgeiec.io/v2" handleUnknown="preserve">
+                  <ForgeIecVar xmlns="https://forgeiec.io/v2" uuid="cb945fc6-7f0b-443e-a038-493dd49ef1ee"/>
+                </data>
+              </addData>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Analog input channel 5 (0-20mA, 12-bit)</xhtml>
+              </documentation>
+            </variable>
+            <variable name="wAI_Current_3" address="%IW35">
+              <type>
+                <UINT/>
+              </type>
+              <addData>
+                <data name="https://forgeiec.io/v2" handleUnknown="preserve">
+                  <ForgeIecVar xmlns="https://forgeiec.io/v2" uuid="28598d60-8ede-4cc6-aab1-2fbfb4a40f39"/>
+                </data>
+              </addData>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Analog input channel 6 (0-20mA, 12-bit)</xhtml>
+              </documentation>
+            </variable>
+            <variable name="wAO_1" address="%QW10">
+              <type>
+                <UINT/>
+              </type>
+              <addData>
+                <data name="https://forgeiec.io/v2" handleUnknown="preserve">
+                  <ForgeIecVar xmlns="https://forgeiec.io/v2" uuid="4805446c-3d74-4d09-b306-dfe4f337cade"/>
+                </data>
+              </addData>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Analog output channel 1 (0-10V / 0-20mA, 12-bit)</xhtml>
+              </documentation>
+            </variable>
+            <variable name="wAO_2" address="%QW11">
+              <type>
+                <UINT/>
+              </type>
+              <addData>
+                <data name="https://forgeiec.io/v2" handleUnknown="preserve">
+                  <ForgeIecVar xmlns="https://forgeiec.io/v2" uuid="58bb38e6-8e85-4737-ad4c-23b8961de7f3"/>
+                </data>
+              </addData>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Analog output channel 2 (0-10V / 0-20mA, 12-bit)</xhtml>
               </documentation>
             </variable>
           </globalVars>
@@ -4520,7 +4702,7 @@ Führt je Gerät eine `FB_DEVICE_MONITOR`-Instanz (7 Geräte) und bündelt: Zust
               </initialValue>
               <addData>
                 <data name="https://forgeiec.io/v2/variable" handleUnknown="discard">
-                  <ForgeIecVar xmlns="https://forgeiec.io/v2/variable" accessedMs="1781336329254" addressLocked="true" bellowsRead="true" createdMs="1781216915539" modifiedMs="1781336329254" monitorEnabled="true" uuid="4ccabb88-05f2-49d5-8cfd-ff62205058d1"/>
+                  <ForgeIecVar xmlns="https://forgeiec.io/v2/variable" accessedMs="1781336329254" addressLocked="true" bellowsRead="true" createdMs="1781216915539" modifiedMs="1781336329254" monitorEnabled="true" persistent="true" uuid="4ccabb88-05f2-49d5-8cfd-ff62205058d1"/>
                 </data>
               </addData>
               <documentation>
@@ -5543,7 +5725,7 @@ Bellows.Diag.sSummary    := mon.sBmSummary;
             </type>
             <addData>
               <data name="https://forgeiec.io/v2" handleUnknown="preserve">
-                <ForgeIecVar xmlns="https://forgeiec.io/v2" addressLocked="true" bellowsCellOf="a5ac5956-6dae-4e61-aa6c-da0b6c8c19b4" bellowsRead="true" bellowsWrite="true" uuid="3716a1ce-b0bb-4237-96c2-37158edd4b06"/>
+                <ForgeIecVar xmlns="https://forgeiec.io/v2" addressLocked="true" bellowsCellOf="17434467-ae38-48c2-9c38-b1f6e240b65e" bellowsRead="true" bellowsWrite="true" uuid="3716a1ce-b0bb-4237-96c2-37158edd4b06"/>
               </data>
             </addData>
             <documentation>
@@ -5556,7 +5738,7 @@ Bellows.Diag.sSummary    := mon.sBmSummary;
             </type>
             <addData>
               <data name="https://forgeiec.io/v2" handleUnknown="preserve">
-                <ForgeIecVar xmlns="https://forgeiec.io/v2" addressLocked="true" bellowsCellOf="fd4fffc9-48e0-48dd-8a9d-7ecc9fb12c10" bellowsRead="true" bellowsWrite="true" uuid="1a88a8cd-0a69-4bf3-b9da-aa7e27ce2633"/>
+                <ForgeIecVar xmlns="https://forgeiec.io/v2" addressLocked="true" bellowsCellOf="eab12f09-0571-4c9b-9281-cae9200a674f" bellowsRead="true" bellowsWrite="true" uuid="1a88a8cd-0a69-4bf3-b9da-aa7e27ce2633"/>
               </data>
             </addData>
             <documentation>
@@ -5569,7 +5751,7 @@ Bellows.Diag.sSummary    := mon.sBmSummary;
             </type>
             <addData>
               <data name="https://forgeiec.io/v2" handleUnknown="preserve">
-                <ForgeIecVar xmlns="https://forgeiec.io/v2" addressLocked="true" bellowsCellOf="7cb93c9b-e3d8-4c26-8ed8-85659c12e760" bellowsRead="true" bellowsWrite="true" uuid="b2c21f02-7585-405b-90b6-03707efb4b93"/>
+                <ForgeIecVar xmlns="https://forgeiec.io/v2" addressLocked="true" bellowsCellOf="cbaa3b7b-0b9d-460d-9d77-aeed02e14bb2" bellowsRead="true" bellowsWrite="true" uuid="b2c21f02-7585-405b-90b6-03707efb4b93"/>
               </data>
             </addData>
             <documentation>
@@ -5582,7 +5764,7 @@ Bellows.Diag.sSummary    := mon.sBmSummary;
             </type>
             <addData>
               <data name="https://forgeiec.io/v2" handleUnknown="preserve">
-                <ForgeIecVar xmlns="https://forgeiec.io/v2" addressLocked="true" bellowsCellOf="319a0101-0de0-4db3-8d6f-56613a8d4e21" bellowsRead="true" bellowsWrite="true" uuid="30cb072c-1abc-420e-bedc-e5790f6fc767"/>
+                <ForgeIecVar xmlns="https://forgeiec.io/v2" addressLocked="true" bellowsCellOf="a510b174-1041-456e-879f-b8c48db30cc7" bellowsRead="true" bellowsWrite="true" uuid="30cb072c-1abc-420e-bedc-e5790f6fc767"/>
               </data>
             </addData>
             <documentation>
@@ -5743,20 +5925,40 @@ Bellows.Diag.sSummary    := mon.sBmSummary;
               <FddBinding busAddress="1" signalRef="analog_outputs/wAO_2" variable="74064f09-4a92-4aca-b11a-a12de90c217e"/>
             </FddModule>
           </FddDevice>
-          <FddDevice id="02e972e7-8c76-45ab-8bb9-368cf539fac2" anvilGroup="Maibeere" catalogRef="Amsamotion/ETH-MODBUS-IO5R" displayOrder="4" hostname="Maibeere" ipAddress="192.168.24.25">
-            <FddModule name="Digital Inputs" id="12fef6dd-50b7-4005-aa66-86b35df70b9b" catalogRef="digital_inputs" slot="1">
-              <FddBinding busAddress="0" signalRef="digital_inputs/di_1" variable="a5ac5956-6dae-4e61-aa6c-da0b6c8c19b4"/>
-              <FddBinding busAddress="1" signalRef="digital_inputs/di_2" variable="fd4fffc9-48e0-48dd-8a9d-7ecc9fb12c10"/>
-              <FddBinding busAddress="2" signalRef="digital_inputs/di_3" variable="7cb93c9b-e3d8-4c26-8ed8-85659c12e760"/>
-              <FddBinding busAddress="3" signalRef="digital_inputs/di_4" variable="319a0101-0de0-4db3-8d6f-56613a8d4e21"/>
-              <FddBinding busAddress="4" signalRef="digital_inputs/di_5" variable="0d04d7ad-b28c-4a66-a022-6d830d3276e4"/>
+          <FddDevice id="02e972e7-8c76-45ab-8bb9-368cf539fac2" anvilGroup="Maibeere" catalogRef="Amsamotion/ETH-MODBUS-IO8R-A" deviceRef="a7e8a748-dfe2-4fe7-a7e8-a99dc719fe32" displayOrder="4" hostname="Maibeere" ipAddress="192.168.24.25">
+            <FddModule name="Digital Inputs" id="dc5c1c44-9cc2-4bbe-a222-a85294dfef4d" catalogRef="digital_inputs" slot="1">
+              <FddBinding busAddress="0" signalRef="digital_inputs/di_1" variable="17434467-ae38-48c2-9c38-b1f6e240b65e"/>
+              <FddBinding busAddress="1" signalRef="digital_inputs/di_2" variable="eab12f09-0571-4c9b-9281-cae9200a674f"/>
+              <FddBinding busAddress="2" signalRef="digital_inputs/di_3" variable="cbaa3b7b-0b9d-460d-9d77-aeed02e14bb2"/>
+              <FddBinding busAddress="3" signalRef="digital_inputs/di_4" variable="a510b174-1041-456e-879f-b8c48db30cc7"/>
+              <FddBinding busAddress="4" signalRef="digital_inputs/di_5" variable="216ff3a6-f1c6-47ff-8715-5afa4a4cd7af"/>
+              <FddBinding busAddress="5" signalRef="digital_inputs/di_6" variable="c053471c-03a5-4e53-99d9-fbd83f341600"/>
+              <FddBinding busAddress="6" signalRef="digital_inputs/di_7" variable="ac8878f2-fabd-4db2-9a43-ed64e765e5a4"/>
+              <FddBinding busAddress="7" signalRef="digital_inputs/di_8" variable="c6f67b0c-5223-4788-b4e7-10beb56d80eb"/>
             </FddModule>
-            <FddModule name="Relay Outputs" id="fa59720e-3ea7-456d-9e9c-165d11849aac" catalogRef="relay_outputs" slot="2">
-              <FddBinding busAddress="0" signalRef="relay_outputs/do_1" variable="53ed6e04-6020-426a-a5bf-a528b2d13280"/>
-              <FddBinding busAddress="1" signalRef="relay_outputs/do_2" variable="fbe04820-6add-4101-8b4d-e28fd0ea13be"/>
-              <FddBinding busAddress="2" signalRef="relay_outputs/do_3" variable="9930502d-2408-48b7-a893-cd41a16f6557"/>
-              <FddBinding busAddress="3" signalRef="relay_outputs/do_4" variable="5019fbeb-63ec-4fdd-a396-adae2d948be9"/>
-              <FddBinding busAddress="4" signalRef="relay_outputs/do_5" variable="c50a749e-6997-4f92-a9b5-fad917169633"/>
+            <FddModule name="Relay Outputs" id="8cd550c2-d829-4569-999f-b73a204927a6" catalogRef="relay_outputs" slot="2">
+              <FddBinding busAddress="0" signalRef="relay_outputs/do_1" variable="a09e0cb3-0660-4331-b0e0-4e70ebd2c340"/>
+              <FddBinding busAddress="1" signalRef="relay_outputs/do_2" variable="08fdce77-c5db-4cea-abc6-6fda85d72edf"/>
+              <FddBinding busAddress="2" signalRef="relay_outputs/do_3" variable="5c457a55-4bf8-48f7-b7be-89c4c4643f17"/>
+              <FddBinding busAddress="3" signalRef="relay_outputs/do_4" variable="ff65ece6-ad76-4ca4-8af0-7c9a038ff9c6"/>
+              <FddBinding busAddress="4" signalRef="relay_outputs/do_5" variable="90ddaea8-c66b-4cf4-9b51-20a9b38b90d3"/>
+              <FddBinding busAddress="5" signalRef="relay_outputs/do_6" variable="a059bbbc-3178-4167-a9a0-a4679e4854ee"/>
+              <FddBinding busAddress="6" signalRef="relay_outputs/do_7" variable="eabe0f4a-8888-4e4c-8253-e944392062a7"/>
+              <FddBinding busAddress="7" signalRef="relay_outputs/do_8" variable="5f2a3a82-66ee-4bac-b77d-843874cedce1"/>
+            </FddModule>
+            <FddModule name="Analog Inputs (Voltage)" id="91c3cbb1-e510-4e32-9849-f6f7ad4f1fc7" catalogRef="analog_inputs_voltage" slot="3">
+              <FddBinding busAddress="0" signalRef="analog_inputs_voltage/ai_v1" variable="c725182b-626c-4da1-becb-af30c0e5fcbb"/>
+              <FddBinding busAddress="1" signalRef="analog_inputs_voltage/ai_v2" variable="378ed63a-f084-44c9-94f1-1f291562dbd8"/>
+              <FddBinding busAddress="2" signalRef="analog_inputs_voltage/ai_v3" variable="f0b6d74b-7167-4315-84da-79c2cbe2ad10"/>
+            </FddModule>
+            <FddModule name="Analog Inputs (Current)" id="5450dd97-4867-4f8c-9f86-033604a10c46" catalogRef="analog_inputs_current" slot="4">
+              <FddBinding busAddress="3" signalRef="analog_inputs_current/ai_c1" variable="c32eb182-3640-4bdc-bcb7-15029a21aa48"/>
+              <FddBinding busAddress="4" signalRef="analog_inputs_current/ai_c2" variable="cb945fc6-7f0b-443e-a038-493dd49ef1ee"/>
+              <FddBinding busAddress="5" signalRef="analog_inputs_current/ai_c3" variable="28598d60-8ede-4cc6-aab1-2fbfb4a40f39"/>
+            </FddModule>
+            <FddModule name="Analog Outputs" id="97a92ce3-1345-46b9-b205-9888893dd792" catalogRef="analog_outputs" slot="5">
+              <FddBinding busAddress="6" signalRef="analog_outputs/ao_1" variable="4805446c-3d74-4d09-b306-dfe4f337cade"/>
+              <FddBinding busAddress="7" signalRef="analog_outputs/ao_2" variable="58bb38e6-8e85-4737-ad4c-23b8961de7f3"/>
             </FddModule>
           </FddDevice>
           <FddDevice id="0e2a24bc-447b-4106-9643-ce70c6c2b435" anvilGroup="Schaltschrank" catalogRef="Weidmueller/UR20-FBC-MOD-TCP" displayOrder="6" hostname="Schaltschrank" ipAddress="192.168.24.229">
