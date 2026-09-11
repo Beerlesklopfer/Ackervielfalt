@@ -2061,7 +2061,7 @@ Liefert den Pflanzenkoeffizienten Kc für den Kultur-Tag `iDay_crop` aus der Kur
               </type>
               <addData>
                 <data name="https://forgeiec.io/v2" handleUnknown="preserve">
-                  <ForgeIecVar addressLocked="true" xmlns="https://forgeiec.io/v2" bellowsRead="true" bellowsWrite="true" uuid="17434467-ae38-48c2-9c38-b1f6e240b65e"/>
+                  <ForgeIecVar xmlns="https://forgeiec.io/v2" addressLocked="true" bellowsRead="true" bellowsWrite="true" uuid="17434467-ae38-48c2-9c38-b1f6e240b65e"/>
                 </data>
               </addData>
               <documentation>
@@ -2074,7 +2074,7 @@ Liefert den Pflanzenkoeffizienten Kc für den Kultur-Tag `iDay_crop` aus der Kur
               </type>
               <addData>
                 <data name="https://forgeiec.io/v2" handleUnknown="preserve">
-                  <ForgeIecVar addressLocked="true" xmlns="https://forgeiec.io/v2" bellowsRead="true" bellowsWrite="true" uuid="eab12f09-0571-4c9b-9281-cae9200a674f"/>
+                  <ForgeIecVar xmlns="https://forgeiec.io/v2" addressLocked="true" bellowsRead="true" bellowsWrite="true" uuid="eab12f09-0571-4c9b-9281-cae9200a674f"/>
                 </data>
               </addData>
               <documentation>
@@ -2087,7 +2087,7 @@ Liefert den Pflanzenkoeffizienten Kc für den Kultur-Tag `iDay_crop` aus der Kur
               </type>
               <addData>
                 <data name="https://forgeiec.io/v2" handleUnknown="preserve">
-                  <ForgeIecVar addressLocked="true" xmlns="https://forgeiec.io/v2" bellowsRead="true" bellowsWrite="true" uuid="cbaa3b7b-0b9d-460d-9d77-aeed02e14bb2"/>
+                  <ForgeIecVar xmlns="https://forgeiec.io/v2" addressLocked="true" bellowsRead="true" bellowsWrite="true" uuid="cbaa3b7b-0b9d-460d-9d77-aeed02e14bb2"/>
                 </data>
               </addData>
               <documentation>
@@ -2100,7 +2100,7 @@ Liefert den Pflanzenkoeffizienten Kc für den Kultur-Tag `iDay_crop` aus der Kur
               </type>
               <addData>
                 <data name="https://forgeiec.io/v2" handleUnknown="preserve">
-                  <ForgeIecVar addressLocked="true" xmlns="https://forgeiec.io/v2" bellowsRead="true" bellowsWrite="true" uuid="a510b174-1041-456e-879f-b8c48db30cc7"/>
+                  <ForgeIecVar xmlns="https://forgeiec.io/v2" addressLocked="true" bellowsRead="true" bellowsWrite="true" uuid="a510b174-1041-456e-879f-b8c48db30cc7"/>
                 </data>
               </addData>
               <documentation>
@@ -2113,7 +2113,7 @@ Liefert den Pflanzenkoeffizienten Kc für den Kultur-Tag `iDay_crop` aus der Kur
               </type>
               <addData>
                 <data name="https://forgeiec.io/v2" handleUnknown="preserve">
-                  <ForgeIecVar addressLocked="true" xmlns="https://forgeiec.io/v2" uuid="216ff3a6-f1c6-47ff-8715-5afa4a4cd7af"/>
+                  <ForgeIecVar xmlns="https://forgeiec.io/v2" addressLocked="true" uuid="216ff3a6-f1c6-47ff-8715-5afa4a4cd7af"/>
                 </data>
               </addData>
               <documentation>
@@ -2126,7 +2126,7 @@ Liefert den Pflanzenkoeffizienten Kc für den Kultur-Tag `iDay_crop` aus der Kur
               </type>
               <addData>
                 <data name="https://forgeiec.io/v2" handleUnknown="preserve">
-                  <ForgeIecVar addressLocked="true" xmlns="https://forgeiec.io/v2" uuid="c053471c-03a5-4e53-99d9-fbd83f341600"/>
+                  <ForgeIecVar xmlns="https://forgeiec.io/v2" addressLocked="true" uuid="c053471c-03a5-4e53-99d9-fbd83f341600"/>
                 </data>
               </addData>
               <documentation>
@@ -2139,7 +2139,7 @@ Liefert den Pflanzenkoeffizienten Kc für den Kultur-Tag `iDay_crop` aus der Kur
               </type>
               <addData>
                 <data name="https://forgeiec.io/v2" handleUnknown="preserve">
-                  <ForgeIecVar addressLocked="true" xmlns="https://forgeiec.io/v2" uuid="ac8878f2-fabd-4db2-9a43-ed64e765e5a4"/>
+                  <ForgeIecVar xmlns="https://forgeiec.io/v2" addressLocked="true" uuid="ac8878f2-fabd-4db2-9a43-ed64e765e5a4"/>
                 </data>
               </addData>
               <documentation>
@@ -2152,7 +2152,7 @@ Liefert den Pflanzenkoeffizienten Kc für den Kultur-Tag `iDay_crop` aus der Kur
               </type>
               <addData>
                 <data name="https://forgeiec.io/v2" handleUnknown="preserve">
-                  <ForgeIecVar addressLocked="true" xmlns="https://forgeiec.io/v2" uuid="c6f67b0c-5223-4788-b4e7-10beb56d80eb"/>
+                  <ForgeIecVar xmlns="https://forgeiec.io/v2" addressLocked="true" uuid="c6f67b0c-5223-4788-b4e7-10beb56d80eb"/>
                 </data>
               </addData>
               <documentation>
@@ -2165,7 +2165,7 @@ Liefert den Pflanzenkoeffizienten Kc für den Kultur-Tag `iDay_crop` aus der Kur
               </type>
               <addData>
                 <data name="https://forgeiec.io/v2" handleUnknown="preserve">
-                  <ForgeIecVar addressLocked="true" xmlns="https://forgeiec.io/v2" bellowsRead="true" uuid="a09e0cb3-0660-4331-b0e0-4e70ebd2c340"/>
+                  <ForgeIecVar xmlns="https://forgeiec.io/v2" addressLocked="true" bellowsRead="true" uuid="a09e0cb3-0660-4331-b0e0-4e70ebd2c340"/>
                 </data>
               </addData>
               <documentation>
@@ -2178,7 +2178,7 @@ Liefert den Pflanzenkoeffizienten Kc für den Kultur-Tag `iDay_crop` aus der Kur
               </type>
               <addData>
                 <data name="https://forgeiec.io/v2" handleUnknown="preserve">
-                  <ForgeIecVar addressLocked="true" xmlns="https://forgeiec.io/v2" bellowsRead="true" uuid="08fdce77-c5db-4cea-abc6-6fda85d72edf"/>
+                  <ForgeIecVar xmlns="https://forgeiec.io/v2" addressLocked="true" bellowsRead="true" uuid="08fdce77-c5db-4cea-abc6-6fda85d72edf"/>
                 </data>
               </addData>
               <documentation>
@@ -2191,7 +2191,7 @@ Liefert den Pflanzenkoeffizienten Kc für den Kultur-Tag `iDay_crop` aus der Kur
               </type>
               <addData>
                 <data name="https://forgeiec.io/v2" handleUnknown="preserve">
-                  <ForgeIecVar addressLocked="true" xmlns="https://forgeiec.io/v2" bellowsRead="true" uuid="5c457a55-4bf8-48f7-b7be-89c4c4643f17"/>
+                  <ForgeIecVar xmlns="https://forgeiec.io/v2" addressLocked="true" bellowsRead="true" uuid="5c457a55-4bf8-48f7-b7be-89c4c4643f17"/>
                 </data>
               </addData>
               <documentation>
@@ -2204,7 +2204,7 @@ Liefert den Pflanzenkoeffizienten Kc für den Kultur-Tag `iDay_crop` aus der Kur
               </type>
               <addData>
                 <data name="https://forgeiec.io/v2" handleUnknown="preserve">
-                  <ForgeIecVar addressLocked="true" xmlns="https://forgeiec.io/v2" bellowsRead="true" uuid="ff65ece6-ad76-4ca4-8af0-7c9a038ff9c6"/>
+                  <ForgeIecVar xmlns="https://forgeiec.io/v2" addressLocked="true" bellowsRead="true" uuid="ff65ece6-ad76-4ca4-8af0-7c9a038ff9c6"/>
                 </data>
               </addData>
               <documentation>
@@ -2217,7 +2217,7 @@ Liefert den Pflanzenkoeffizienten Kc für den Kultur-Tag `iDay_crop` aus der Kur
               </type>
               <addData>
                 <data name="https://forgeiec.io/v2" handleUnknown="preserve">
-                  <ForgeIecVar addressLocked="true" xmlns="https://forgeiec.io/v2" bellowsRead="true" uuid="90ddaea8-c66b-4cf4-9b51-20a9b38b90d3"/>
+                  <ForgeIecVar xmlns="https://forgeiec.io/v2" addressLocked="true" bellowsRead="true" uuid="90ddaea8-c66b-4cf4-9b51-20a9b38b90d3"/>
                 </data>
               </addData>
               <documentation>
@@ -2230,7 +2230,7 @@ Liefert den Pflanzenkoeffizienten Kc für den Kultur-Tag `iDay_crop` aus der Kur
               </type>
               <addData>
                 <data name="https://forgeiec.io/v2" handleUnknown="preserve">
-                  <ForgeIecVar addressLocked="true" xmlns="https://forgeiec.io/v2" bellowsRead="true" uuid="a059bbbc-3178-4167-a9a0-a4679e4854ee"/>
+                  <ForgeIecVar xmlns="https://forgeiec.io/v2" addressLocked="true" bellowsRead="true" uuid="a059bbbc-3178-4167-a9a0-a4679e4854ee"/>
                 </data>
               </addData>
               <documentation>
@@ -2243,7 +2243,7 @@ Liefert den Pflanzenkoeffizienten Kc für den Kultur-Tag `iDay_crop` aus der Kur
               </type>
               <addData>
                 <data name="https://forgeiec.io/v2" handleUnknown="preserve">
-                  <ForgeIecVar addressLocked="true" xmlns="https://forgeiec.io/v2" bellowsRead="true" uuid="eabe0f4a-8888-4e4c-8253-e944392062a7"/>
+                  <ForgeIecVar xmlns="https://forgeiec.io/v2" addressLocked="true" bellowsRead="true" uuid="eabe0f4a-8888-4e4c-8253-e944392062a7"/>
                 </data>
               </addData>
               <documentation>
@@ -2256,7 +2256,7 @@ Liefert den Pflanzenkoeffizienten Kc für den Kultur-Tag `iDay_crop` aus der Kur
               </type>
               <addData>
                 <data name="https://forgeiec.io/v2" handleUnknown="preserve">
-                  <ForgeIecVar addressLocked="true" xmlns="https://forgeiec.io/v2" bellowsRead="true" uuid="5f2a3a82-66ee-4bac-b77d-843874cedce1"/>
+                  <ForgeIecVar xmlns="https://forgeiec.io/v2" addressLocked="true" bellowsRead="true" uuid="5f2a3a82-66ee-4bac-b77d-843874cedce1"/>
                 </data>
               </addData>
               <documentation>
@@ -2269,7 +2269,7 @@ Liefert den Pflanzenkoeffizienten Kc für den Kultur-Tag `iDay_crop` aus der Kur
               </type>
               <addData>
                 <data name="https://forgeiec.io/v2" handleUnknown="preserve">
-                  <ForgeIecVar addressLocked="true" xmlns="https://forgeiec.io/v2" uuid="c725182b-626c-4da1-becb-af30c0e5fcbb"/>
+                  <ForgeIecVar xmlns="https://forgeiec.io/v2" addressLocked="true" uuid="c725182b-626c-4da1-becb-af30c0e5fcbb"/>
                 </data>
               </addData>
               <documentation>
@@ -2282,7 +2282,7 @@ Liefert den Pflanzenkoeffizienten Kc für den Kultur-Tag `iDay_crop` aus der Kur
               </type>
               <addData>
                 <data name="https://forgeiec.io/v2" handleUnknown="preserve">
-                  <ForgeIecVar addressLocked="true" xmlns="https://forgeiec.io/v2" uuid="378ed63a-f084-44c9-94f1-1f291562dbd8"/>
+                  <ForgeIecVar xmlns="https://forgeiec.io/v2" addressLocked="true" uuid="378ed63a-f084-44c9-94f1-1f291562dbd8"/>
                 </data>
               </addData>
               <documentation>
@@ -2295,7 +2295,7 @@ Liefert den Pflanzenkoeffizienten Kc für den Kultur-Tag `iDay_crop` aus der Kur
               </type>
               <addData>
                 <data name="https://forgeiec.io/v2" handleUnknown="preserve">
-                  <ForgeIecVar addressLocked="true" xmlns="https://forgeiec.io/v2" uuid="f0b6d74b-7167-4315-84da-79c2cbe2ad10"/>
+                  <ForgeIecVar xmlns="https://forgeiec.io/v2" addressLocked="true" uuid="f0b6d74b-7167-4315-84da-79c2cbe2ad10"/>
                 </data>
               </addData>
               <documentation>
@@ -2308,7 +2308,7 @@ Liefert den Pflanzenkoeffizienten Kc für den Kultur-Tag `iDay_crop` aus der Kur
               </type>
               <addData>
                 <data name="https://forgeiec.io/v2" handleUnknown="preserve">
-                  <ForgeIecVar addressLocked="true" xmlns="https://forgeiec.io/v2" uuid="c32eb182-3640-4bdc-bcb7-15029a21aa48"/>
+                  <ForgeIecVar xmlns="https://forgeiec.io/v2" addressLocked="true" uuid="c32eb182-3640-4bdc-bcb7-15029a21aa48"/>
                 </data>
               </addData>
               <documentation>
@@ -2321,7 +2321,7 @@ Liefert den Pflanzenkoeffizienten Kc für den Kultur-Tag `iDay_crop` aus der Kur
               </type>
               <addData>
                 <data name="https://forgeiec.io/v2" handleUnknown="preserve">
-                  <ForgeIecVar addressLocked="true" xmlns="https://forgeiec.io/v2" uuid="cb945fc6-7f0b-443e-a038-493dd49ef1ee"/>
+                  <ForgeIecVar xmlns="https://forgeiec.io/v2" addressLocked="true" uuid="cb945fc6-7f0b-443e-a038-493dd49ef1ee"/>
                 </data>
               </addData>
               <documentation>
@@ -2334,7 +2334,7 @@ Liefert den Pflanzenkoeffizienten Kc für den Kultur-Tag `iDay_crop` aus der Kur
               </type>
               <addData>
                 <data name="https://forgeiec.io/v2" handleUnknown="preserve">
-                  <ForgeIecVar addressLocked="true" xmlns="https://forgeiec.io/v2" uuid="28598d60-8ede-4cc6-aab1-2fbfb4a40f39"/>
+                  <ForgeIecVar xmlns="https://forgeiec.io/v2" addressLocked="true" uuid="28598d60-8ede-4cc6-aab1-2fbfb4a40f39"/>
                 </data>
               </addData>
               <documentation>
@@ -2347,7 +2347,7 @@ Liefert den Pflanzenkoeffizienten Kc für den Kultur-Tag `iDay_crop` aus der Kur
               </type>
               <addData>
                 <data name="https://forgeiec.io/v2" handleUnknown="preserve">
-                  <ForgeIecVar addressLocked="true" xmlns="https://forgeiec.io/v2" uuid="4805446c-3d74-4d09-b306-dfe4f337cade"/>
+                  <ForgeIecVar xmlns="https://forgeiec.io/v2" addressLocked="true" uuid="4805446c-3d74-4d09-b306-dfe4f337cade"/>
                 </data>
               </addData>
               <documentation>
@@ -2360,7 +2360,7 @@ Liefert den Pflanzenkoeffizienten Kc für den Kultur-Tag `iDay_crop` aus der Kur
               </type>
               <addData>
                 <data name="https://forgeiec.io/v2" handleUnknown="preserve">
-                  <ForgeIecVar addressLocked="true" xmlns="https://forgeiec.io/v2" uuid="58bb38e6-8e85-4737-ad4c-23b8961de7f3"/>
+                  <ForgeIecVar xmlns="https://forgeiec.io/v2" addressLocked="true" uuid="58bb38e6-8e85-4737-ad4c-23b8961de7f3"/>
                 </data>
               </addData>
               <documentation>
@@ -4725,7 +4725,7 @@ Führt je Gerät eine `FB_DEVICE_MONITOR`-Instanz (7 Geräte) und bündelt: Zust
                 <xhtml xmlns="http://www.w3.org/1999/xhtml">Hoechstzahl gleichzeitig offener Ventile (Wasserdruck, Pumpenleistung). FB_VALVE_ARBITER begrenzt auf 1..24; weitere Anforderungen warten in Index-Reihenfolge, der Warterang steht in Schrittkette.auQueue. Startwert 24. Von der HMI gesetzt, persistent.</xhtml>
               </documentation>
             </variable>
-            <variable name="rBlinkHz">
+            <variable name="rBlinkHz" address="%MD9">
               <type>
                 <REAL/>
               </type>
