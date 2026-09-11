@@ -1,0 +1,2 @@
+# Zugangsdaten bleiben lokal: der Filter nimmt pw-hash/pw-hash-epoch beim Einchecken heraus
+*.hearth filter=hearth-nopw
