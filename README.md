@@ -26,8 +26,9 @@ Einstellung trägt dort Beschreibung und Label. Die Einstellungen:
 |---|---|---|
 | `Betrieb.xManuell` / `xOneShot` / `xWiederkehrend` / `xAuto` | Betriebsart | — |
 | `Betrieb.uMaxVentile` | Max. offene Ventile | 24 |
-| `Betrieb.rBlinkHz` | Blinkfrequenz Handbetrieb [Hz] | 0.1 |
+| `Betrieb.rBlinkHz` | Blinkfrequenz wartende Ventile [Hz] | 0.1 |
 | `Zeitplan.aValveJobs` | Ventil-Jobs | — |
+| `Zeitplan.bWeekMask` | Wochentage wiederkehrend | 0 |
 
 ## Öffnen
 

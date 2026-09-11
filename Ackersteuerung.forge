@@ -62,9 +62,9 @@ Die bestätigte Betriebsart steht in `Bellows.Betrieb.uModeActive`.
 
 - Ventile `xV_1..4` folgen allein der Arbiter-Freigabe.
 - Status-LEDs `xV_5..8` spiegeln die Freigabe: Dauerlicht = Ventil offen.
-- **Manuell:** angefordert, aber wartend → Blinken im Takt `Bellows.Betrieb.rBlinkHz`
-  (Startwert 0.1 Hz = 5 s an / 5 s aus, begrenzt auf 0.01..10 Hz).
-- **One-Shot:** angewählt, aber noch nicht freigegeben → Blinken mit `FB_BLINK` (1 s an / 9 s aus).
+- **Wartende Ventile (Manuell, One-Shot, wiederkehrend):** angefordert, aber vom Arbiter noch
+  nicht freigegeben → Blinken im Takt `Bellows.Betrieb.rBlinkHz` (Startwert 0.1 Hz = 5 s an /
+  5 s aus, begrenzt auf 0.01..10 Hz). Ein Blinkgenerator für alle drei Betriebsarten.
 - Maibeere: `xV_5` ist die Sammelanzeige aller vier Ventile.
 - Warterang je Ventil: `Bellows.Schrittkette.auQueue` (1 = als nächstes).
 
@@ -80,8 +80,9 @@ Persistent heißt: der Wert übersteht Neustart und Programm-Download (Schlüsse
 | `Betrieb.xWiederkehrend` | Wiederkehrend | — | Betriebsart 3 |
 | `Betrieb.xAuto` | Automatik | — | Betriebsart 4 (zurückgestellt) |
 | `Betrieb.uMaxVentile` | Max. offene Ventile | 24 | Höchstzahl gleichzeitig offener Ventile |
-| `Betrieb.rBlinkHz` | Blinkfrequenz Handbetrieb [Hz] | 0.1 | Blinktakt wartender Ventile im Handbetrieb |
+| `Betrieb.rBlinkHz` | Blinkfrequenz wartende Ventile [Hz] | 0.1 | Blinktakt wartender Ventile in Betriebsart 1–3 |
 | `Zeitplan.aValveJobs` | Ventil-Jobs | — | Anwahl, Startzeit und Dauer je Ventil (`ST_BedCfg`) |
+| `Zeitplan.bWeekMask` | Wochentage wiederkehrend | 0 | Bit 0 = Montag … Bit 6 = Sonntag |
 
 ## 6. Zeitbasis
 
@@ -114,10 +115,8 @@ Typen: `ST_BedCfg` (xSelected, uStartHour, uStartMin, tDuration), `ST_DateTime`,
 
 ## 10. Offene Punkte (2026-09-11)
 
-- `Zeitplan.bWeekMask` ist **nicht persistent** — nach einem Neustart ist die Wochentag-Freigabe leer.
 - Geräteüberwachung **doppelt**: `PLC_PRG` §9 (task0) und `BusMonitor` (taskDiag) schreiben beide
   `Bellows.Diag.auDevState`, `xAllOk`, `iFaultCount`.
-- One-Shot-Blinken liegt nur auf den LEDs der Ventile 2 und 3 je Box (`xV_6`, `xV_7`).
 - `Schrittkette.xStart/xStop/xPause/xQuit` sind angelegt, werden aber nicht ausgewertet;
   `HmiCmd` ist leer.
 - Schaltschrank: Ein- und Ausgänge ungenutzt; die Bindungen stehen in der alten Steckplatz-Zählung.
@@ -475,19 +474,6 @@ Typen: `ST_BedCfg` (xSelected, uStartHour, uStartMin, tDuration), `ST_DateTime`,
               </addData>
               <documentation>
                 <xhtml xmlns="http://www.w3.org/1999/xhtml">Globaler 2-Ventil-Interlock (24 Anforderungen -&gt; max. 2 Freigaben)</xhtml>
-              </documentation>
-            </variable>
-            <variable name="fbBlink">
-              <type>
-                <derived name="FB_BLINK"/>
-              </type>
-              <addData>
-                <data name="https://forgeiec.io/v2/variable" handleUnknown="discard">
-                  <ForgeIecVar xmlns="https://forgeiec.io/v2/variable" accessedMs="1788127850053" createdMs="1788127850053" modifiedMs="1788127850053" monitorEnabled="true" uuid="99752f74-33a9-4684-bc13-808d9823d2c5"/>
-                </data>
-              </addData>
-              <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">Blink-Generator Programm-Anzeige; Periode 30s (1s Flash / 29s Pause)</xhtml>
               </documentation>
             </variable>
             <variable name="axReq">
@@ -859,17 +845,17 @@ FOR iPlc := 0 TO 23 DO
     Bellows.Schrittkette.auQueue[iPlc + 1] := fbArbiter.o_auQueue[iPlc];
 END_FOR;
 
-(* Blink-Generator Handbetrieb: Takt aus der Betriebseinstellung Bellows.Betrieb.rBlinkHz [Hz],
+(* Blink-Generator wartende Ventile: Takt aus der Betriebseinstellung Bellows.Betrieb.rBlinkHz [Hz],
    persistent, per HMI stellbar; 0.1 Hz = 5 s an / 5 s aus. Begrenzt auf 0.01..10 Hz,
-   nur in Mode 1 aktiv. *)
+   aktiv in Mode 1 (Manuell), 2 (One-Shot) und 3 (wiederkehrend). *)
 rHz := Bellows.Betrieb.rBlinkHz;
 IF rHz &lt; 0.01 THEN rHz := 0.1;  END_IF;
 IF rHz &gt; 10.0 THEN rHz := 10.0; END_IF;
 tBlinkHalb := DINT_TO_TIME(REAL_TO_DINT(500.0 / rHz));
-fbBlinkMan(xBlEnable := (uMode = 1), tBlFlash := tBlinkHalb, tBlPause := tBlinkHalb);
+fbBlinkMan(xBlEnable := (uMode &gt;= 1) AND (uMode &lt;= 3), tBlFlash := tBlinkHalb, tBlPause := tBlinkHalb);
 
 (* --- 4) Ausgabe: Ventile (xV_1..4) = GRANT. Status-LEDs (xV_5..8) spiegeln Grant
-   (in Mode 1/2 unten ueberblendet mit Blink). IO8R: xV_5..8 = xV_1..4. *)
+   (in Mode 1..3 unten ueberblendet mit Blink). IO8R: xV_5..8 = xV_1..4. *)
 Anvil.Pfirsich.xV_1 := axGrant[0]; Anvil.Pfirsich.xV_5 := axGrant[0];
 Anvil.Pfirsich.xV_2 := axGrant[1]; Anvil.Pfirsich.xV_6 := axGrant[1];
 Anvil.Pfirsich.xV_3 := axGrant[2]; Anvil.Pfirsich.xV_7 := axGrant[2];
@@ -901,29 +887,11 @@ Anvil.Maibeere.xV_3 := axGrant[18];
 Anvil.Maibeere.xV_4 := axGrant[19];
 Anvil.Maibeere.xV_5 := axGrant[16] OR axGrant[17] OR axGrant[18] OR axGrant[19];
 
-(* --- 4b) One-Shot-Anwahl (Mode 2): angewaehlte, nicht freigegebene Beete BLINKEN
-   die Status-LED (fbBlink, Programm-Periode); freigegebene leuchten dauerhaft. *)
-fbBlink(xBlEnable := (uMode = 2));
-IF uMode = 2 THEN
-    Anvil.Pfirsich.xV_6      := axGrant[1]  OR (Bellows.Zeitplan.aValveJobs[2].xSelected  AND fbBlink.xBlQ);
-    Anvil.Pfirsich.xV_7      := axGrant[2]  OR (Bellows.Zeitplan.aValveJobs[3].xSelected  AND fbBlink.xBlQ);
-    Anvil.Stachelbeere.xV_6  := axGrant[5]  OR (Bellows.Zeitplan.aValveJobs[6].xSelected  AND fbBlink.xBlQ);
-    Anvil.Stachelbeere.xV_7  := axGrant[6]  OR (Bellows.Zeitplan.aValveJobs[7].xSelected  AND fbBlink.xBlQ);
-    Anvil.Maulbeere.xV_6     := axGrant[9]  OR (Bellows.Zeitplan.aValveJobs[10].xSelected AND fbBlink.xBlQ);
-    Anvil.Maulbeere.xV_7     := axGrant[10] OR (Bellows.Zeitplan.aValveJobs[11].xSelected AND fbBlink.xBlQ);
-    Anvil.Felsenbirne.xV_6   := axGrant[13] OR (Bellows.Zeitplan.aValveJobs[14].xSelected AND fbBlink.xBlQ);
-    Anvil.Felsenbirne.xV_7   := axGrant[14] OR (Bellows.Zeitplan.aValveJobs[15].xSelected AND fbBlink.xBlQ);
-    Anvil.Johannisbeere.xV_6 := axGrant[21] OR (Bellows.Zeitplan.aValveJobs[22].xSelected AND fbBlink.xBlQ);
-    Anvil.Johannisbeere.xV_7 := axGrant[22] OR (Bellows.Zeitplan.aValveJobs[23].xSelected AND fbBlink.xBlQ);
-    Anvil.Maibeere.xV_5 := (axGrant[16] OR axGrant[17] OR axGrant[18] OR axGrant[19])
-        OR ((Bellows.Zeitplan.aValveJobs[17].xSelected OR Bellows.Zeitplan.aValveJobs[18].xSelected
-             OR Bellows.Zeitplan.aValveJobs[19].xSelected OR Bellows.Zeitplan.aValveJobs[20].xSelected) AND fbBlink.xBlQ);
-END_IF;
-
-(* --- 4c) Handbetrieb-Anzeige (Mode 1): Status-LEDs (xV_5..8) = GRANT (offen) ODER
-   angefordert-aber-nicht-offen -&gt; Blink im Takt rBlinkHz (fbBlinkMan). Macht Feld-Taster
-   erkennbar + zeigt &quot;wartet&quot;. Die Ventile xV_1..4 folgen NUR dem Grant. *)
-IF uMode = 1 THEN
+(* --- 4b) Anzeige wartender Ventile (Mode 1..3): Status-LEDs (xV_5..8) = GRANT (offen) ODER
+   angefordert-aber-nicht-offen -&gt; Blink im Takt rBlinkHz (fbBlinkMan). Gilt fuer die Taster-
+   Anforderung (Manuell), angewaehlte Beete (One-Shot) und faellige Jobs (wiederkehrend).
+   Die Ventile xV_1..4 folgen NUR dem Grant. *)
+IF (uMode &gt;= 1) AND (uMode &lt;= 3) THEN
     Anvil.Pfirsich.xV_5 := axGrant[0] OR (axReq[0] AND NOT axGrant[0] AND fbBlinkMan.xBlQ);
     Anvil.Pfirsich.xV_6 := axGrant[1] OR (axReq[1] AND NOT axGrant[1] AND fbBlinkMan.xBlQ);
     Anvil.Pfirsich.xV_7 := axGrant[2] OR (axReq[2] AND NOT axGrant[2] AND fbBlinkMan.xBlQ);
@@ -3623,11 +3591,11 @@ Asymmetrisches Blinksignal aus zwei TON: kurzer Flash (`tBlFlash`) + längere Pa
               </type>
               <addData>
                 <data name="https://forgeiec.io/v2/variable" handleUnknown="discard">
-                  <ForgeIecVar xmlns="https://forgeiec.io/v2/variable" accessedMs="1782500392581" addressLocked="true" bellowsRead="true" bellowsWrite="true" createdMs="1781296705679" modifiedMs="1782500392581" monitorEnabled="true" uuid="39013e2a-20fb-41d0-b384-05c2c935ebca"/>
+                  <ForgeIecVar xmlns="https://forgeiec.io/v2/variable" accessedMs="1782500392581" addressLocked="true" bellowsRead="true" bellowsWrite="true" createdMs="1781296705679" label="Wochentage wiederkehrend" modifiedMs="1782500392581" monitorEnabled="true" persistent="true" uuid="39013e2a-20fb-41d0-b384-05c2c935ebca"/>
                 </data>
               </addData>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">Wochentag-Freigabe wiederkehrend (P3): Bit0=Mo .. Bit6=So; von Hearth/HMI gesetzt</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Wochentag-Freigabe fuer den wiederkehrenden Betrieb (Betriebsart 3): Bit 0 = Montag bis Bit 6 = Sonntag, ein gesetztes Bit gibt den Tag frei. Von der HMI gesetzt, persistent.</xhtml>
               </documentation>
             </variable>
           </globalVars>
@@ -4581,14 +4549,14 @@ Führt je Gerät eine `FB_DEVICE_MONITOR`-Instanz (7 Geräte) und bündelt: Zust
               </type>
               <addData>
                 <data name="https://forgeiec.io/v2" handleUnknown="preserve">
-                  <ForgeIecVar xmlns="https://forgeiec.io/v2" bellowsRead="true" bellowsWrite="true" label="Blinkfrequenz Handbetrieb [Hz]" monitorEnabled="true" persistent="true" setting="true" uuid="98ec68a7-c512-45a9-b244-73866f0676c2"/>
+                  <ForgeIecVar xmlns="https://forgeiec.io/v2" bellowsRead="true" bellowsWrite="true" label="Blinkfrequenz wartende Ventile [Hz]" monitorEnabled="true" persistent="true" setting="true" uuid="98ec68a7-c512-45a9-b244-73866f0676c2"/>
                 </data>
               </addData>
               <initialValue>
                 <simpleValue value="0.1"/>
               </initialValue>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">Blinkfrequenz der Status-LEDs wartender Ventile im Handbetrieb, in Hz. PLC_PRG begrenzt auf 0.01..10 Hz, ein Wert unter 0.01 gilt als 0.1. Startwert 0.1 Hz = 5 s an / 5 s aus. Von der HMI gesetzt, persistent.</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Blinkfrequenz der Status-LEDs wartender Ventile in den Betriebsarten Manuell, One-Shot und wiederkehrend, in Hz: angefordert, aber vom Arbiter noch nicht freigegeben. PLC_PRG begrenzt auf 0.01..10 Hz, ein Wert unter 0.01 gilt als 0.1. Startwert 0.1 Hz = 5 s an / 5 s aus. Von der HMI gesetzt, persistent.</xhtml>
               </documentation>
             </variable>
           </globalVars>
