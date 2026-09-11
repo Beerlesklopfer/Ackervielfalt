@@ -1,0 +1,10 @@
+# Sicherungen und Arbeitsstaende bleiben lokal — im Repo steht nur der eine Stand
+*.bak
+*.bak-*
+*.KAPUTT-*
+*.vor-*
+Ackersteuerung-2026-*.forge
+Ackersteuerung-kopie-*.forge
+Ackersteuerung-Panel-*.hearth
+Ackersteuerung_descriptor.toml
+*.jpg
