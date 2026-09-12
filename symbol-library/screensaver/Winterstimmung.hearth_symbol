@@ -1,23 +1,624 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<!-- Bildschirmschoner „Winterstimmung“ — ein Symbol der Kategorie screensaver.
-     Ein Schirm verweist mit screensaver="6b1d7d4e-2b6a-4a3b-9c0f-1e4d7a2c5f03" darauf; die Ausfuhr holt
-     das Bild aus der Registratur des Projekts. Bis 11.09.2026 war das eine
-     Vorlage (:/screensavers/winter.hearthtmpl); jetzt ein Symbol wie jedes
-     andere, mit fester Kennung — sie steht in der Datei und wird nie gerechnet. -->
-<symbol uuid="6b1d7d4e-2b6a-4a3b-9c0f-1e4d7a2c5f03" name="Winterstimmung" version="0.2.0" category="screensaver" author="ForgeIEC" description="Verschneite Landschaft mit Mond und fallendem Schnee.">
-<svg hearth:element="hearth-screensaver" hearth:format-version="1.0" hearth:visible="true" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" xmlns:hearth="https://forgeiec.io/hearth/1.0">
-  <metadata>
-    <hearth:widget>
-      <hearth:name>Winterstimmung</hearth:name>
-      <hearth:version>0.2.0</hearth:version>
-      <hearth:category>screensaver</hearth:category>
-      <hearth:description>Verschneite Landschaft mit Mond und fallendem Schnee.</hearth:description>
-      <hearth:location-type>software</hearth:location-type>
-    </hearth:widget>
-  </metadata>
-  <g hearth:layer="background" hearth:layer-name="Background" hearth:locked="true" id="6c12a901-3626-463a-bd2d-836b027e0db9"/>
-  <g hearth:layer="content" hearth:layer-name="Content" id="8850111d-959f-4ae7-8643-0d65ef17dafd"><g><animateTransform attributeName='transform' type='translate' values='-80 0;80 0;-80 0' dur='47s' repeatCount='indefinite'/><g><animateTransform attributeName='transform' type='translate' values='0 -56;0 56;0 -56' dur='37s' repeatCount='indefinite'/><defs><linearGradient id='wsky' x1='0' y1='0' x2='0' y2='1'><stop offset='0%' stop-color='#0b1224'/><stop offset='55%' stop-color='#1f2f4d'/><stop offset='100%' stop-color='#3a4f72'/></linearGradient></defs><rect x='-160' y='-160' width='2240' height='1400' fill='url(#wsky)'/><g><animateTransform attributeName='transform' type='translate' values='130 -30;-130 30;130 -30' dur='110s' repeatCount='indefinite'/><circle cx='1480' cy='235' r='150' fill='#eef4ff' opacity='0.10'/><circle cx='1480' cy='235' r='88' fill='#eef4ff' opacity='0.92'/></g><path d='M-160 980 Q480 905 960 958 T1920 940 L2080 945 L2080 1400 L-160 1400 Z' fill='#cfdcef'/><path d='M-160 1028 Q600 985 1200 1018 T1920 1010 L2080 1014 L2080 1400 L-160 1400 Z' fill='#eef3fb'/><circle cx='1027' cy='-80' r='5.6' fill='#ffffff'><animate attributeName='cy' values='-80;1180' dur='7.8s' begin='-4.6s' repeatCount='indefinite'/><animate attributeName='cx' values='1027;1021;1027' dur='7.8s' begin='-4.6s' repeatCount='indefinite'/><animate attributeName='opacity' values='0;0.67;0.67;0' dur='7.8s' begin='-4.6s' repeatCount='indefinite'/></circle><circle cx='1306' cy='-80' r='2.5' fill='#ffffff'><animate attributeName='cy' values='-80;1180' dur='8.9s' begin='-4.0s' repeatCount='indefinite'/><animate attributeName='cx' values='1306;1274;1306' dur='8.9s' begin='-4.0s' repeatCount='indefinite'/><animate attributeName='opacity' values='0;0.78;0.78;0' dur='8.9s' begin='-4.0s' repeatCount='indefinite'/></circle><circle cx='-59' cy='-80' r='2.4' fill='#ffffff'><animate attributeName='cy' values='-80;1180' dur='16.8s' begin='-8.4s' repeatCount='indefinite'/><animate attributeName='cx' values='-59;-117;-59' dur='16.8s' begin='-8.4s' repeatCount='indefinite'/><animate attributeName='opacity' values='0;0.73;0.73;0' dur='16.8s' begin='-8.4s' repeatCount='indefinite'/></circle><circle cx='1606' cy='-80' r='3.4' fill='#ffffff'><animate attributeName='cy' values='-80;1180' dur='7.6s' begin='-6.0s' repeatCount='indefinite'/><animate attributeName='cx' values='1606;1621;1606' dur='7.6s' begin='-6.0s' repeatCount='indefinite'/><animate attributeName='opacity' values='0;0.67;0.67;0' dur='7.6s' begin='-6.0s' repeatCount='indefinite'/></circle><circle cx='544' cy='-80' r='4.5' fill='#ffffff'><animate attributeName='cy' values='-80;1180' dur='16.7s' begin='-6.1s' repeatCount='indefinite'/><animate attributeName='cx' values='544;581;544' dur='16.7s' begin='-6.1s' repeatCount='indefinite'/><animate attributeName='opacity' values='0;0.89;0.89;0' dur='16.7s' begin='-6.1s' repeatCount='indefinite'/></circle><circle cx='992' cy='-80' r='4.6' fill='#ffffff'><animate attributeName='cy' values='-80;1180' dur='10.1s' begin='-0.9s' repeatCount='indefinite'/><animate attributeName='cx' values='992;992;992' dur='10.1s' begin='-0.9s' repeatCount='indefinite'/><animate attributeName='opacity' values='0;0.58;0.58;0' dur='10.1s' begin='-0.9s' repeatCount='indefinite'/></circle><circle cx='1818' cy='-80' r='4.4' fill='#ffffff'><animate attributeName='cy' values='-80;1180' dur='11.5s' begin='-7.4s' repeatCount='indefinite'/><animate attributeName='cx' values='1818;1781;1818' dur='11.5s' begin='-7.4s' repeatCount='indefinite'/><animate attributeName='opacity' values='0;0.86;0.86;0' dur='11.5s' begin='-7.4s' repeatCount='indefinite'/></circle><circle cx='2025' cy='-80' r='3.3' fill='#ffffff'><animate attributeName='cy' values='-80;1180' dur='15.2s' begin='-3.0s' repeatCount='indefinite'/><animate attributeName='cx' values='2025;1979;2025' dur='15.2s' begin='-3.0s' repeatCount='indefinite'/><animate attributeName='opacity' values='0;0.54;0.54;0' dur='15.2s' begin='-3.0s' repeatCount='indefinite'/></circle><circle cx='1585' cy='-80' r='2.2' fill='#ffffff'><animate attributeName='cy' values='-80;1180' dur='9.8s' begin='-5.6s' repeatCount='indefinite'/><animate attributeName='cx' values='1585;1630;1585' dur='9.8s' begin='-5.6s' repeatCount='indefinite'/><animate attributeName='opacity' values='0;0.77;0.77;0' dur='9.8s' begin='-5.6s' repeatCount='indefinite'/></circle><circle cx='286' cy='-80' r='3.5' fill='#ffffff'><animate attributeName='cy' values='-80;1180' dur='9.9s' begin='-3.0s' repeatCount='indefinite'/><animate attributeName='cx' values='286;325;286' dur='9.9s' begin='-3.0s' repeatCount='indefinite'/><animate attributeName='opacity' values='0;0.7;0.7;0' dur='9.9s' begin='-3.0s' repeatCount='indefinite'/></circle><circle cx='734' cy='-80' r='3.0' fill='#ffffff'><animate attributeName='cy' values='-80;1180' dur='8.1s' begin='-6.3s' repeatCount='indefinite'/><animate attributeName='cx' values='734;764;734' dur='8.1s' begin='-6.3s' repeatCount='indefinite'/><animate attributeName='opacity' values='0;0.86;0.86;0' dur='8.1s' begin='-6.3s' repeatCount='indefinite'/></circle><circle cx='1859' cy='-80' r='3.0' fill='#ffffff'><animate attributeName='cy' values='-80;1180' dur='12.5s' begin='-11.5s' repeatCount='indefinite'/><animate attributeName='cx' values='1859;1874;1859' dur='12.5s' begin='-11.5s' repeatCount='indefinite'/><animate attributeName='opacity' values='0;0.55;0.55;0' dur='12.5s' begin='-11.5s' repeatCount='indefinite'/></circle><circle cx='1408' cy='-80' r='2.7' fill='#ffffff'><animate attributeName='cy' values='-80;1180' dur='16.8s' begin='-0.9s' repeatCount='indefinite'/><animate attributeName='cx' values='1408;1401;1408' dur='16.8s' begin='-0.9s' repeatCount='indefinite'/><animate attributeName='opacity' values='0;0.68;0.68;0' dur='16.8s' begin='-0.9s' repeatCount='indefinite'/></circle><circle cx='505' cy='-80' r='5.2' fill='#ffffff'><animate attributeName='cy' values='-80;1180' dur='13.9s' begin='-13.5s' repeatCount='indefinite'/><animate attributeName='cx' values='505;548;505' dur='13.9s' begin='-13.5s' repeatCount='indefinite'/><animate attributeName='opacity' values='0;0.83;0.83;0' dur='13.9s' begin='-13.5s' repeatCount='indefinite'/></circle><circle cx='72' cy='-80' r='4.2' fill='#ffffff'><animate attributeName='cy' values='-80;1180' dur='16.9s' begin='-12.7s' repeatCount='indefinite'/><animate attributeName='cx' values='72;56;72' dur='16.9s' begin='-12.7s' repeatCount='indefinite'/><animate attributeName='opacity' values='0;0.51;0.51;0' dur='16.9s' begin='-12.7s' repeatCount='indefinite'/></circle><circle cx='1384' cy='-80' r='4.0' fill='#ffffff'><animate attributeName='cy' values='-80;1180' dur='7.4s' begin='-2.0s' repeatCount='indefinite'/><animate attributeName='cx' values='1384;1394;1384' dur='7.4s' begin='-2.0s' repeatCount='indefinite'/><animate attributeName='opacity' values='0;0.59;0.59;0' dur='7.4s' begin='-2.0s' repeatCount='indefinite'/></circle><circle cx='1720' cy='-80' r='5.8' fill='#ffffff'><animate attributeName='cy' values='-80;1180' dur='9.2s' begin='-1.0s' repeatCount='indefinite'/><animate attributeName='cx' values='1720;1727;1720' dur='9.2s' begin='-1.0s' repeatCount='indefinite'/><animate attributeName='opacity' values='0;0.79;0.79;0' dur='9.2s' begin='-1.0s' repeatCount='indefinite'/></circle><circle cx='2066' cy='-80' r='4.2' fill='#ffffff'><animate attributeName='cy' values='-80;1180' dur='9.4s' begin='-0.9s' repeatCount='indefinite'/><animate attributeName='cx' values='2066;2027;2066' dur='9.4s' begin='-0.9s' repeatCount='indefinite'/><animate attributeName='opacity' values='0;0.91;0.91;0' dur='9.4s' begin='-0.9s' repeatCount='indefinite'/></circle><circle cx='1661' cy='-80' r='5.0' fill='#ffffff'><animate attributeName='cy' values='-80;1180' dur='13.6s' begin='-5.6s' repeatCount='indefinite'/><animate attributeName='cx' values='1661;1622;1661' dur='13.6s' begin='-5.6s' repeatCount='indefinite'/><animate attributeName='opacity' values='0;0.9;0.9;0' dur='13.6s' begin='-5.6s' repeatCount='indefinite'/></circle><circle cx='1530' cy='-80' r='2.3' fill='#ffffff'><animate attributeName='cy' values='-80;1180' dur='16.6s' begin='-14.9s' repeatCount='indefinite'/><animate attributeName='cx' values='1530;1565;1530' dur='16.6s' begin='-14.9s' repeatCount='indefinite'/><animate attributeName='opacity' values='0;0.61;0.61;0' dur='16.6s' begin='-14.9s' repeatCount='indefinite'/></circle><circle cx='1049' cy='-80' r='3.7' fill='#ffffff'><animate attributeName='cy' values='-80;1180' dur='10.0s' begin='-8.6s' repeatCount='indefinite'/><animate attributeName='cx' values='1049;1067;1049' dur='10.0s' begin='-8.6s' repeatCount='indefinite'/><animate attributeName='opacity' values='0;0.75;0.75;0' dur='10.0s' begin='-8.6s' repeatCount='indefinite'/></circle><circle cx='1006' cy='-80' r='2.4' fill='#ffffff'><animate attributeName='cy' values='-80;1180' dur='13.3s' begin='-4.4s' repeatCount='indefinite'/><animate attributeName='cx' values='1006;1017;1006' dur='13.3s' begin='-4.4s' repeatCount='indefinite'/><animate attributeName='opacity' values='0;0.83;0.83;0' dur='13.3s' begin='-4.4s' repeatCount='indefinite'/></circle><circle cx='1603' cy='-80' r='3.0' fill='#ffffff'><animate attributeName='cy' values='-80;1180' dur='16.5s' begin='-1.3s' repeatCount='indefinite'/><animate attributeName='cx' values='1603;1614;1603' dur='16.5s' begin='-1.3s' repeatCount='indefinite'/><animate attributeName='opacity' values='0;0.81;0.81;0' dur='16.5s' begin='-1.3s' repeatCount='indefinite'/></circle><circle cx='305' cy='-80' r='2.9' fill='#ffffff'><animate attributeName='cy' values='-80;1180' dur='12.6s' begin='-5.9s' repeatCount='indefinite'/><animate attributeName='cx' values='305;302;305' dur='12.6s' begin='-5.9s' repeatCount='indefinite'/><animate attributeName='opacity' values='0;0.94;0.94;0' dur='12.6s' begin='-5.9s' repeatCount='indefinite'/></circle><circle cx='954' cy='-80' r='2.0' fill='#ffffff'><animate attributeName='cy' values='-80;1180' dur='10.8s' begin='-8.5s' repeatCount='indefinite'/><animate attributeName='cx' values='954;912;954' dur='10.8s' begin='-8.5s' repeatCount='indefinite'/><animate attributeName='opacity' values='0;0.84;0.84;0' dur='10.8s' begin='-8.5s' repeatCount='indefinite'/></circle><circle cx='1485' cy='-80' r='2.8' fill='#ffffff'><animate attributeName='cy' values='-80;1180' dur='13.8s' begin='-2.4s' repeatCount='indefinite'/><animate attributeName='cx' values='1485;1482;1485' dur='13.8s' begin='-2.4s' repeatCount='indefinite'/><animate attributeName='opacity' values='0;0.84;0.84;0' dur='13.8s' begin='-2.4s' repeatCount='indefinite'/></circle><circle cx='175' cy='-80' r='3.7' fill='#ffffff'><animate attributeName='cy' values='-80;1180' dur='9.8s' begin='-5.9s' repeatCount='indefinite'/><animate attributeName='cx' values='175;184;175' dur='9.8s' begin='-5.9s' repeatCount='indefinite'/><animate attributeName='opacity' values='0;0.82;0.82;0' dur='9.8s' begin='-5.9s' repeatCount='indefinite'/></circle><circle cx='567' cy='-80' r='4.1' fill='#ffffff'><animate attributeName='cy' values='-80;1180' dur='10.0s' begin='-9.0s' repeatCount='indefinite'/><animate attributeName='cx' values='567;518;567' dur='10.0s' begin='-9.0s' repeatCount='indefinite'/><animate attributeName='opacity' values='0;0.6;0.6;0' dur='10.0s' begin='-9.0s' repeatCount='indefinite'/></circle><circle cx='94' cy='-80' r='5.5' fill='#ffffff'><animate attributeName='cy' values='-80;1180' dur='12.0s' begin='-9.3s' repeatCount='indefinite'/><animate attributeName='cx' values='94;120;94' dur='12.0s' begin='-9.3s' repeatCount='indefinite'/><animate attributeName='opacity' values='0;0.71;0.71;0' dur='12.0s' begin='-9.3s' repeatCount='indefinite'/></circle><circle cx='1526' cy='-80' r='3.2' fill='#ffffff'><animate attributeName='cy' values='-80;1180' dur='10.2s' begin='-3.6s' repeatCount='indefinite'/><animate attributeName='cx' values='1526;1504;1526' dur='10.2s' begin='-3.6s' repeatCount='indefinite'/><animate attributeName='opacity' values='0;0.62;0.62;0' dur='10.2s' begin='-3.6s' repeatCount='indefinite'/></circle><circle cx='1237' cy='-80' r='2.6' fill='#ffffff'><animate attributeName='cy' values='-80;1180' dur='7.4s' begin='-6.6s' repeatCount='indefinite'/><animate attributeName='cx' values='1237;1262;1237' dur='7.4s' begin='-6.6s' repeatCount='indefinite'/><animate attributeName='opacity' values='0;0.71;0.71;0' dur='7.4s' begin='-6.6s' repeatCount='indefinite'/></circle><circle cx='886' cy='-80' r='4.2' fill='#ffffff'><animate attributeName='cy' values='-80;1180' dur='13.9s' begin='-5.3s' repeatCount='indefinite'/><animate attributeName='cx' values='886;940;886' dur='13.9s' begin='-5.3s' repeatCount='indefinite'/><animate attributeName='opacity' values='0;0.62;0.62;0' dur='13.9s' begin='-5.3s' repeatCount='indefinite'/></circle><circle cx='439' cy='-80' r='4.0' fill='#ffffff'><animate attributeName='cy' values='-80;1180' dur='8.1s' begin='-3.7s' repeatCount='indefinite'/><animate attributeName='cx' values='439;394;439' dur='8.1s' begin='-3.7s' repeatCount='indefinite'/><animate attributeName='opacity' values='0;0.62;0.62;0' dur='8.1s' begin='-3.7s' repeatCount='indefinite'/></circle><circle cx='1650' cy='-80' r='2.0' fill='#ffffff'><animate attributeName='cy' values='-80;1180' dur='7.4s' begin='-5.8s' repeatCount='indefinite'/><animate attributeName='cx' values='1650;1604;1650' dur='7.4s' begin='-5.8s' repeatCount='indefinite'/><animate attributeName='opacity' values='0;0.61;0.61;0' dur='7.4s' begin='-5.8s' repeatCount='indefinite'/></circle><circle cx='1763' cy='-80' r='2.2' fill='#ffffff'><animate attributeName='cy' values='-80;1180' dur='15.1s' begin='-4.2s' repeatCount='indefinite'/><animate attributeName='cx' values='1763;1749;1763' dur='15.1s' begin='-4.2s' repeatCount='indefinite'/><animate attributeName='opacity' values='0;0.75;0.75;0' dur='15.1s' begin='-4.2s' repeatCount='indefinite'/></circle><circle cx='210' cy='-80' r='2.7' fill='#ffffff'><animate attributeName='cy' values='-80;1180' dur='12.1s' begin='-7.4s' repeatCount='indefinite'/><animate attributeName='cx' values='210;196;210' dur='12.1s' begin='-7.4s' repeatCount='indefinite'/><animate attributeName='opacity' values='0;0.63;0.63;0' dur='12.1s' begin='-7.4s' repeatCount='indefinite'/></circle><circle cx='160' cy='-80' r='4.5' fill='#ffffff'><animate attributeName='cy' values='-80;1180' dur='14.0s' begin='-8.5s' repeatCount='indefinite'/><animate attributeName='cx' values='160;105;160' dur='14.0s' begin='-8.5s' repeatCount='indefinite'/><animate attributeName='opacity' values='0;0.94;0.94;0' dur='14.0s' begin='-8.5s' repeatCount='indefinite'/></circle><circle cx='587' cy='-80' r='5.9' fill='#ffffff'><animate attributeName='cy' values='-80;1180' dur='8.4s' begin='-5.7s' repeatCount='indefinite'/><animate attributeName='cx' values='587;646;587' dur='8.4s' begin='-5.7s' repeatCount='indefinite'/><animate attributeName='opacity' values='0;0.83;0.83;0' dur='8.4s' begin='-5.7s' repeatCount='indefinite'/></circle><circle cx='1760' cy='-80' r='5.6' fill='#ffffff'><animate attributeName='cy' values='-80;1180' dur='10.0s' begin='-7.9s' repeatCount='indefinite'/><animate attributeName='cx' values='1760;1706;1760' dur='10.0s' begin='-7.9s' repeatCount='indefinite'/><animate attributeName='opacity' values='0;0.87;0.87;0' dur='10.0s' begin='-7.9s' repeatCount='indefinite'/></circle><circle cx='259' cy='-80' r='3.3' fill='#ffffff'><animate attributeName='cy' values='-80;1180' dur='8.3s' begin='-0.8s' repeatCount='indefinite'/><animate attributeName='cx' values='259;308;259' dur='8.3s' begin='-0.8s' repeatCount='indefinite'/><animate attributeName='opacity' values='0;0.6;0.6;0' dur='8.3s' begin='-0.8s' repeatCount='indefinite'/></circle><circle cx='1587' cy='-80' r='6.0' fill='#ffffff'><animate attributeName='cy' values='-80;1180' dur='14.6s' begin='-3.2s' repeatCount='indefinite'/><animate attributeName='cx' values='1587;1602;1587' dur='14.6s' begin='-3.2s' repeatCount='indefinite'/><animate attributeName='opacity' values='0;0.89;0.89;0' dur='14.6s' begin='-3.2s' repeatCount='indefinite'/></circle><circle cx='1626' cy='-80' r='4.7' fill='#ffffff'><animate attributeName='cy' values='-80;1180' dur='12.3s' begin='-2.7s' repeatCount='indefinite'/><animate attributeName='cx' values='1626;1637;1626' dur='12.3s' begin='-2.7s' repeatCount='indefinite'/><animate attributeName='opacity' values='0;0.92;0.92;0' dur='12.3s' begin='-2.7s' repeatCount='indefinite'/></circle><circle cx='1117' cy='-80' r='3.8' fill='#ffffff'><animate attributeName='cy' values='-80;1180' dur='13.6s' begin='-13.0s' repeatCount='indefinite'/><animate attributeName='cx' values='1117;1138;1117' dur='13.6s' begin='-13.0s' repeatCount='indefinite'/><animate attributeName='opacity' values='0;0.56;0.56;0' dur='13.6s' begin='-13.0s' repeatCount='indefinite'/></circle><circle cx='1396' cy='-80' r='5.9' fill='#ffffff'><animate attributeName='cy' values='-80;1180' dur='10.1s' begin='-9.3s' repeatCount='indefinite'/><animate attributeName='cx' values='1396;1398;1396' dur='10.1s' begin='-9.3s' repeatCount='indefinite'/><animate attributeName='opacity' values='0;0.68;0.68;0' dur='10.1s' begin='-9.3s' repeatCount='indefinite'/></circle><circle cx='701' cy='-80' r='5.0' fill='#ffffff'><animate attributeName='cy' values='-80;1180' dur='12.4s' begin='-2.6s' repeatCount='indefinite'/><animate attributeName='cx' values='701;693;701' dur='12.4s' begin='-2.6s' repeatCount='indefinite'/><animate attributeName='opacity' values='0;0.69;0.69;0' dur='12.4s' begin='-2.6s' repeatCount='indefinite'/></circle><circle cx='6' cy='-80' r='3.3' fill='#ffffff'><animate attributeName='cy' values='-80;1180' dur='11.3s' begin='-9.3s' repeatCount='indefinite'/><animate attributeName='cx' values='6;21;6' dur='11.3s' begin='-9.3s' repeatCount='indefinite'/><animate attributeName='opacity' values='0;0.92;0.92;0' dur='11.3s' begin='-9.3s' repeatCount='indefinite'/></circle><circle cx='1341' cy='-80' r='3.0' fill='#ffffff'><animate attributeName='cy' values='-80;1180' dur='10.2s' begin='-6.8s' repeatCount='indefinite'/><animate attributeName='cx' values='1341;1338;1341' dur='10.2s' begin='-6.8s' repeatCount='indefinite'/><animate attributeName='opacity' values='0;0.87;0.87;0' dur='10.2s' begin='-6.8s' repeatCount='indefinite'/></circle><circle cx='1473' cy='-80' r='5.3' fill='#ffffff'><animate attributeName='cy' values='-80;1180' dur='12.8s' begin='-12.4s' repeatCount='indefinite'/><animate attributeName='cx' values='1473;1481;1473' dur='12.8s' begin='-12.4s' repeatCount='indefinite'/><animate attributeName='opacity' values='0;0.9;0.9;0' dur='12.8s' begin='-12.4s' repeatCount='indefinite'/></circle><circle cx='1591' cy='-80' r='5.3' fill='#ffffff'><animate attributeName='cy' values='-80;1180' dur='8.8s' begin='-3.9s' repeatCount='indefinite'/><animate attributeName='cx' values='1591;1555;1591' dur='8.8s' begin='-3.9s' repeatCount='indefinite'/><animate attributeName='opacity' values='0;0.8;0.8;0' dur='8.8s' begin='-3.9s' repeatCount='indefinite'/></circle><circle cx='1602' cy='-80' r='5.9' fill='#ffffff'><animate attributeName='cy' values='-80;1180' dur='11.6s' begin='-0.0s' repeatCount='indefinite'/><animate attributeName='cx' values='1602;1623;1602' dur='11.6s' begin='-0.0s' repeatCount='indefinite'/><animate attributeName='opacity' values='0;0.67;0.67;0' dur='11.6s' begin='-0.0s' repeatCount='indefinite'/></circle><circle cx='73' cy='-80' r='4.9' fill='#ffffff'><animate attributeName='cy' values='-80;1180' dur='11.2s' begin='-3.9s' repeatCount='indefinite'/><animate attributeName='cx' values='73;133;73' dur='11.2s' begin='-3.9s' repeatCount='indefinite'/><animate attributeName='opacity' values='0;0.83;0.83;0' dur='11.2s' begin='-3.9s' repeatCount='indefinite'/></circle><circle cx='957' cy='-80' r='4.9' fill='#ffffff'><animate attributeName='cy' values='-80;1180' dur='8.4s' begin='-8.3s' repeatCount='indefinite'/><animate attributeName='cx' values='957;993;957' dur='8.4s' begin='-8.3s' repeatCount='indefinite'/><animate attributeName='opacity' values='0;0.76;0.76;0' dur='8.4s' begin='-8.3s' repeatCount='indefinite'/></circle><circle cx='1947' cy='-80' r='3.9' fill='#ffffff'><animate attributeName='cy' values='-80;1180' dur='14.5s' begin='-13.5s' repeatCount='indefinite'/><animate attributeName='cx' values='1947;1941;1947' dur='14.5s' begin='-13.5s' repeatCount='indefinite'/><animate attributeName='opacity' values='0;0.71;0.71;0' dur='14.5s' begin='-13.5s' repeatCount='indefinite'/></circle><circle cx='436' cy='-80' r='5.9' fill='#ffffff'><animate attributeName='cy' values='-80;1180' dur='15.0s' begin='-1.8s' repeatCount='indefinite'/><animate attributeName='cx' values='436;378;436' dur='15.0s' begin='-1.8s' repeatCount='indefinite'/><animate attributeName='opacity' values='0;0.84;0.84;0' dur='15.0s' begin='-1.8s' repeatCount='indefinite'/></circle><circle cx='694' cy='-80' r='4.1' fill='#ffffff'><animate attributeName='cy' values='-80;1180' dur='9.0s' begin='-3.1s' repeatCount='indefinite'/><animate attributeName='cx' values='694;673;694' dur='9.0s' begin='-3.1s' repeatCount='indefinite'/><animate attributeName='opacity' values='0;0.62;0.62;0' dur='9.0s' begin='-3.1s' repeatCount='indefinite'/></circle><circle cx='1004' cy='-80' r='3.7' fill='#ffffff'><animate attributeName='cy' values='-80;1180' dur='16.1s' begin='-15.1s' repeatCount='indefinite'/><animate attributeName='cx' values='1004;1013;1004' dur='16.1s' begin='-15.1s' repeatCount='indefinite'/><animate attributeName='opacity' values='0;0.63;0.63;0' dur='16.1s' begin='-15.1s' repeatCount='indefinite'/></circle><circle cx='-69' cy='-80' r='2.9' fill='#ffffff'><animate attributeName='cy' values='-80;1180' dur='13.7s' begin='-10.8s' repeatCount='indefinite'/><animate attributeName='cx' values='-69;-58;-69' dur='13.7s' begin='-10.8s' repeatCount='indefinite'/><animate attributeName='opacity' values='0;0.57;0.57;0' dur='13.7s' begin='-10.8s' repeatCount='indefinite'/></circle><circle cx='412' cy='-80' r='4.7' fill='#ffffff'><animate attributeName='cy' values='-80;1180' dur='8.1s' begin='-7.5s' repeatCount='indefinite'/><animate attributeName='cx' values='412;384;412' dur='8.1s' begin='-7.5s' repeatCount='indefinite'/><animate attributeName='opacity' values='0;0.55;0.55;0' dur='8.1s' begin='-7.5s' repeatCount='indefinite'/></circle><circle cx='164' cy='-80' r='5.3' fill='#ffffff'><animate attributeName='cy' values='-80;1180' dur='16.6s' begin='-0.6s' repeatCount='indefinite'/><animate attributeName='cx' values='164;165;164' dur='16.6s' begin='-0.6s' repeatCount='indefinite'/><animate attributeName='opacity' values='0;0.93;0.93;0' dur='16.6s' begin='-0.6s' repeatCount='indefinite'/></circle><circle cx='-16' cy='-80' r='4.0' fill='#ffffff'><animate attributeName='cy' values='-80;1180' dur='9.7s' begin='-5.6s' repeatCount='indefinite'/><animate attributeName='cx' values='-16;5;-16' dur='9.7s' begin='-5.6s' repeatCount='indefinite'/><animate attributeName='opacity' values='0;0.79;0.79;0' dur='9.7s' begin='-5.6s' repeatCount='indefinite'/></circle><circle cx='648' cy='-80' r='5.7' fill='#ffffff'><animate attributeName='cy' values='-80;1180' dur='13.6s' begin='-9.2s' repeatCount='indefinite'/><animate attributeName='cx' values='648;672;648' dur='13.6s' begin='-9.2s' repeatCount='indefinite'/><animate attributeName='opacity' values='0;0.87;0.87;0' dur='13.6s' begin='-9.2s' repeatCount='indefinite'/></circle><circle cx='561' cy='-80' r='5.3' fill='#ffffff'><animate attributeName='cy' values='-80;1180' dur='11.9s' begin='-8.8s' repeatCount='indefinite'/><animate attributeName='cx' values='561;615;561' dur='11.9s' begin='-8.8s' repeatCount='indefinite'/><animate attributeName='opacity' values='0;0.56;0.56;0' dur='11.9s' begin='-8.8s' repeatCount='indefinite'/></circle><circle cx='-160' cy='-80' r='4.4' fill='#ffffff'><animate attributeName='cy' values='-80;1180' dur='10.9s' begin='-0.5s' repeatCount='indefinite'/><animate attributeName='cx' values='-160;-123;-160' dur='10.9s' begin='-0.5s' repeatCount='indefinite'/><animate attributeName='opacity' values='0;0.76;0.76;0' dur='10.9s' begin='-0.5s' repeatCount='indefinite'/></circle><circle cx='27' cy='-80' r='4.5' fill='#ffffff'><animate attributeName='cy' values='-80;1180' dur='8.4s' begin='-6.7s' repeatCount='indefinite'/><animate attributeName='cx' values='27;12;27' dur='8.4s' begin='-6.7s' repeatCount='indefinite'/><animate attributeName='opacity' values='0;0.79;0.79;0' dur='8.4s' begin='-6.7s' repeatCount='indefinite'/></circle><circle cx='1938' cy='-80' r='4.2' fill='#ffffff'><animate attributeName='cy' values='-80;1180' dur='16.8s' begin='-0.1s' repeatCount='indefinite'/><animate attributeName='cx' values='1938;1941;1938' dur='16.8s' begin='-0.1s' repeatCount='indefinite'/><animate attributeName='opacity' values='0;0.54;0.54;0' dur='16.8s' begin='-0.1s' repeatCount='indefinite'/></circle><circle cx='1175' cy='-80' r='3.1' fill='#ffffff'><animate attributeName='cy' values='-80;1180' dur='14.2s' begin='-0.5s' repeatCount='indefinite'/><animate attributeName='cx' values='1175;1136;1175' dur='14.2s' begin='-0.5s' repeatCount='indefinite'/><animate attributeName='opacity' values='0;0.59;0.59;0' dur='14.2s' begin='-0.5s' repeatCount='indefinite'/></circle><circle cx='310' cy='-80' r='2.6' fill='#ffffff'><animate attributeName='cy' values='-80;1180' dur='8.4s' begin='-4.9s' repeatCount='indefinite'/><animate attributeName='cx' values='310;264;310' dur='8.4s' begin='-4.9s' repeatCount='indefinite'/><animate attributeName='opacity' values='0;0.78;0.78;0' dur='8.4s' begin='-4.9s' repeatCount='indefinite'/></circle><circle cx='1592' cy='-80' r='5.0' fill='#ffffff'><animate attributeName='cy' values='-80;1180' dur='9.0s' begin='-1.5s' repeatCount='indefinite'/><animate attributeName='cx' values='1592;1618;1592' dur='9.0s' begin='-1.5s' repeatCount='indefinite'/><animate attributeName='opacity' values='0;0.74;0.74;0' dur='9.0s' begin='-1.5s' repeatCount='indefinite'/></circle><circle cx='684' cy='-80' r='5.4' fill='#ffffff'><animate attributeName='cy' values='-80;1180' dur='9.7s' begin='-5.8s' repeatCount='indefinite'/><animate attributeName='cx' values='684;729;684' dur='9.7s' begin='-5.8s' repeatCount='indefinite'/><animate attributeName='opacity' values='0;0.76;0.76;0' dur='9.7s' begin='-5.8s' repeatCount='indefinite'/></circle><circle cx='362' cy='-80' r='2.5' fill='#ffffff'><animate attributeName='cy' values='-80;1180' dur='11.3s' begin='-0.7s' repeatCount='indefinite'/><animate attributeName='cx' values='362;388;362' dur='11.3s' begin='-0.7s' repeatCount='indefinite'/><animate attributeName='opacity' values='0;0.73;0.73;0' dur='11.3s' begin='-0.7s' repeatCount='indefinite'/></circle><circle cx='1209' cy='-80' r='5.1' fill='#ffffff'><animate attributeName='cy' values='-80;1180' dur='8.0s' begin='-2.0s' repeatCount='indefinite'/><animate attributeName='cx' values='1209;1196;1209' dur='8.0s' begin='-2.0s' repeatCount='indefinite'/><animate attributeName='opacity' values='0;0.78;0.78;0' dur='8.0s' begin='-2.0s' repeatCount='indefinite'/></circle><circle cx='1581' cy='-80' r='3.8' fill='#ffffff'><animate attributeName='cy' values='-80;1180' dur='8.6s' begin='-4.7s' repeatCount='indefinite'/><animate attributeName='cx' values='1581;1552;1581' dur='8.6s' begin='-4.7s' repeatCount='indefinite'/><animate attributeName='opacity' values='0;0.65;0.65;0' dur='8.6s' begin='-4.7s' repeatCount='indefinite'/></circle><circle cx='234' cy='-80' r='5.1' fill='#ffffff'><animate attributeName='cy' values='-80;1180' dur='14.4s' begin='-2.2s' repeatCount='indefinite'/><animate attributeName='cx' values='234;245;234' dur='14.4s' begin='-2.2s' repeatCount='indefinite'/><animate attributeName='opacity' values='0;0.67;0.67;0' dur='14.4s' begin='-2.2s' repeatCount='indefinite'/></circle><circle cx='-32' cy='-80' r='5.0' fill='#ffffff'><animate attributeName='cy' values='-80;1180' dur='11.5s' begin='-0.6s' repeatCount='indefinite'/><animate attributeName='cx' values='-32;26;-32' dur='11.5s' begin='-0.6s' repeatCount='indefinite'/><animate attributeName='opacity' values='0;0.9;0.9;0' dur='11.5s' begin='-0.6s' repeatCount='indefinite'/></circle><circle cx='1270' cy='-80' r='5.0' fill='#ffffff'><animate attributeName='cy' values='-80;1180' dur='11.6s' begin='-9.0s' repeatCount='indefinite'/><animate attributeName='cx' values='1270;1253;1270' dur='11.6s' begin='-9.0s' repeatCount='indefinite'/><animate attributeName='opacity' values='0;0.64;0.64;0' dur='11.6s' begin='-9.0s' repeatCount='indefinite'/></circle><circle cx='1593' cy='-80' r='5.6' fill='#ffffff'><animate attributeName='cy' values='-80;1180' dur='14.9s' begin='-1.6s' repeatCount='indefinite'/><animate attributeName='cx' values='1593;1601;1593' dur='14.9s' begin='-1.6s' repeatCount='indefinite'/><animate attributeName='opacity' values='0;0.8;0.8;0' dur='14.9s' begin='-1.6s' repeatCount='indefinite'/></circle><circle cx='1381' cy='-80' r='4.6' fill='#ffffff'><animate attributeName='cy' values='-80;1180' dur='7.2s' begin='-4.1s' repeatCount='indefinite'/><animate attributeName='cx' values='1381;1404;1381' dur='7.2s' begin='-4.1s' repeatCount='indefinite'/><animate attributeName='opacity' values='0;0.92;0.92;0' dur='7.2s' begin='-4.1s' repeatCount='indefinite'/></circle><circle cx='-63' cy='-80' r='2.1' fill='#ffffff'><animate attributeName='cy' values='-80;1180' dur='16.3s' begin='-5.4s' repeatCount='indefinite'/><animate attributeName='cx' values='-63;-105;-63' dur='16.3s' begin='-5.4s' repeatCount='indefinite'/><animate attributeName='opacity' values='0;0.55;0.55;0' dur='16.3s' begin='-5.4s' repeatCount='indefinite'/></circle><circle cx='1214' cy='-80' r='5.8' fill='#ffffff'><animate attributeName='cy' values='-80;1180' dur='13.3s' begin='-12.3s' repeatCount='indefinite'/><animate attributeName='cx' values='1214;1172;1214' dur='13.3s' begin='-12.3s' repeatCount='indefinite'/><animate attributeName='opacity' values='0;0.68;0.68;0' dur='13.3s' begin='-12.3s' repeatCount='indefinite'/></circle><circle cx='362' cy='-80' r='4.1' fill='#ffffff'><animate attributeName='cy' values='-80;1180' dur='12.2s' begin='-11.6s' repeatCount='indefinite'/><animate attributeName='cx' values='362;383;362' dur='12.2s' begin='-11.6s' repeatCount='indefinite'/><animate attributeName='opacity' values='0;0.87;0.87;0' dur='12.2s' begin='-11.6s' repeatCount='indefinite'/></circle><circle cx='1936' cy='-80' r='3.6' fill='#ffffff'><animate attributeName='cy' values='-80;1180' dur='14.4s' begin='-8.6s' repeatCount='indefinite'/><animate attributeName='cx' values='1936;1927;1936' dur='14.4s' begin='-8.6s' repeatCount='indefinite'/><animate attributeName='opacity' values='0;0.83;0.83;0' dur='14.4s' begin='-8.6s' repeatCount='indefinite'/></circle><circle cx='469' cy='-80' r='5.3' fill='#ffffff'><animate attributeName='cy' values='-80;1180' dur='15.9s' begin='-12.5s' repeatCount='indefinite'/><animate attributeName='cx' values='469;479;469' dur='15.9s' begin='-12.5s' repeatCount='indefinite'/><animate attributeName='opacity' values='0;0.54;0.54;0' dur='15.9s' begin='-12.5s' repeatCount='indefinite'/></circle><circle cx='1828' cy='-80' r='3.9' fill='#ffffff'><animate attributeName='cy' values='-80;1180' dur='14.2s' begin='-0.8s' repeatCount='indefinite'/><animate attributeName='cx' values='1828;1820;1828' dur='14.2s' begin='-0.8s' repeatCount='indefinite'/><animate attributeName='opacity' values='0;0.8;0.8;0' dur='14.2s' begin='-0.8s' repeatCount='indefinite'/></circle><circle cx='163' cy='-80' r='3.1' fill='#ffffff'><animate attributeName='cy' values='-80;1180' dur='8.2s' begin='-5.0s' repeatCount='indefinite'/><animate attributeName='cx' values='163;132;163' dur='8.2s' begin='-5.0s' repeatCount='indefinite'/><animate attributeName='opacity' values='0;0.91;0.91;0' dur='8.2s' begin='-5.0s' repeatCount='indefinite'/></circle><circle cx='1335' cy='-80' r='3.7' fill='#ffffff'><animate attributeName='cy' values='-80;1180' dur='15.9s' begin='-3.9s' repeatCount='indefinite'/><animate attributeName='cx' values='1335;1286;1335' dur='15.9s' begin='-3.9s' repeatCount='indefinite'/><animate attributeName='opacity' values='0;0.87;0.87;0' dur='15.9s' begin='-3.9s' repeatCount='indefinite'/></circle><circle cx='1984' cy='-80' r='4.8' fill='#ffffff'><animate attributeName='cy' values='-80;1180' dur='9.6s' begin='-8.9s' repeatCount='indefinite'/><animate attributeName='cx' values='1984;1951;1984' dur='9.6s' begin='-8.9s' repeatCount='indefinite'/><animate attributeName='opacity' values='0;0.81;0.81;0' dur='9.6s' begin='-8.9s' repeatCount='indefinite'/></circle><circle cx='2042' cy='-80' r='5.9' fill='#ffffff'><animate attributeName='cy' values='-80;1180' dur='8.5s' begin='-6.2s' repeatCount='indefinite'/><animate attributeName='cx' values='2042;2077;2042' dur='8.5s' begin='-6.2s' repeatCount='indefinite'/><animate attributeName='opacity' values='0;0.85;0.85;0' dur='8.5s' begin='-6.2s' repeatCount='indefinite'/></circle><circle cx='1512' cy='-80' r='3.4' fill='#ffffff'><animate attributeName='cy' values='-80;1180' dur='12.4s' begin='-7.3s' repeatCount='indefinite'/><animate attributeName='cx' values='1512;1560;1512' dur='12.4s' begin='-7.3s' repeatCount='indefinite'/><animate attributeName='opacity' values='0;0.84;0.84;0' dur='12.4s' begin='-7.3s' repeatCount='indefinite'/></circle><circle cx='1376' cy='-80' r='5.6' fill='#ffffff'><animate attributeName='cy' values='-80;1180' dur='12.9s' begin='-9.5s' repeatCount='indefinite'/><animate attributeName='cx' values='1376;1324;1376' dur='12.9s' begin='-9.5s' repeatCount='indefinite'/><animate attributeName='opacity' values='0;0.53;0.53;0' dur='12.9s' begin='-9.5s' repeatCount='indefinite'/></circle><circle cx='312' cy='-80' r='2.7' fill='#ffffff'><animate attributeName='cy' values='-80;1180' dur='15.7s' begin='-4.5s' repeatCount='indefinite'/><animate attributeName='cx' values='312;268;312' dur='15.7s' begin='-4.5s' repeatCount='indefinite'/><animate attributeName='opacity' values='0;0.66;0.66;0' dur='15.7s' begin='-4.5s' repeatCount='indefinite'/></circle></g></g></g>
-  <g hearth:layer="actions" hearth:layer-name="Actions" id="2de6609d-ac22-48fd-b115-72240b9fc9fa"/>
-</svg>
-</symbol>
+<symbol category="screensaver" location-type="field" name="Winterstimmung" norm-standard="IEC 62424" uuid="6b1d7d4e-2b6a-4a3b-9c0f-1e4d7a2c5f03" version="0.3.2">
+  <hearth:properties xmlns:hearth="https://forgeiec.io/hearth/1.0">
+    <hearth:property key="hour" label="Stunde festhalten (leer = echte Uhr)" type="string" xmlns:hearth="https://forgeiec.io/hearth/1.0"/>
+    <hearth:property default="240" key="flakes" label="Flocken" type="number" xmlns:hearth="https://forgeiec.io/hearth/1.0"/>
+    <hearth:property default="1" key="snow" label="Schneemenge (1 = normal)" type="number" xmlns:hearth="https://forgeiec.io/hearth/1.0"/>
+    <hearth:property default="1" key="wind" label="Windstaerke (1 = normal)" type="number" xmlns:hearth="https://forgeiec.io/hearth/1.0"/>
+    <hearth:property default="14" key="trees" label="Tannen" type="number" xmlns:hearth="https://forgeiec.io/hearth/1.0"/>
+  </hearth:properties>
+  <svg hearth:element="hearth-winterstimmung" hearth:format-version="1.0" hearth:visible="true" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg" xmlns:hearth="https://forgeiec.io/hearth/1.0">
+    <g hearth:layer="background" hearth:layer-name="Background" hearth:locked="true" id="9705b4d0-808d-4660-80ca-1344cf0a4533"/>
+    <g hearth:layer="content" hearth:layer-name="Content" id="ca681f19-c77f-4365-a745-af6770ae116e">
+      <rect data-role="sky" fill="#c6dcef" height="772" id="1cace16e-b158-4648-8069-ee7426977156" stroke="none" width="1920" x="0" y="0"/>
+      <rect data-role="ground" fill="#e6eef8" height="368" id="86012bd0-d905-4910-b75a-8e28be11e229" stroke="none" width="1920" x="0" y="712"/>
+    </g>
+    <g hearth:layer="actions" hearth:layer-name="Actions" id="a7f607f1-72f8-4ed1-a5f3-c8de79d389bc"/>
+    <g hearth:layer="edit" hearth:layer-name="Edit" id="062fc039-c50a-48df-8345-689a8892e942"/>
+    <script type="text/javascript">class extends HearthSymbol {
 
+  // ── SCHNEE, DER LIEGEN BLEIBT ──────────────────────────────────────────────
+  //
+  // Fallenden Schnee kann man vorzeichnen — er faellt auf Bahnen, die vorher
+  // feststehen; genau das tat die alte Fassung mit 273 SMIL-Animationen. Was
+  // sich nicht vorzeichnen laesst, ist das, was DANACH passiert: die Flocke
+  // bleibt liegen, die Schicht waechst, und auf einem schraegen Dach rutscht
+  // sie wieder ab.
+  //
+  // Also fuehrt diese Klasse zwei Hoehenfelder — eines fuer den Schneewall im
+  // Vordergrund, eines fuer das Dach der Hundehuette. Jede Flocke, die
+  // auftrifft, erhoeht ihren Eimer; zwischen benachbarten Eimern flieszt
+  // Schnee bergab, und was ueber die Traufe rutscht, faellt auf den Wall
+  // darunter. Der Wind traegt oben wieder ab. Deshalb waechst die Decke nicht
+  // ins Unendliche, sondern pendelt sich ein.
+  //
+  // Das SVG traegt nur zwei Rechtecke — Himmel und Schneefeld —, damit die
+  // Kachel der Bibliothek nicht luegt. Alles andere entsteht hier.
+
+  onInit() {
+    const NS = 'http://www.w3.org/2000/svg';
+    this.mkEl = (tag, attrs, parent) => {
+      const el = document.createElementNS(NS, tag);
+      for (const k in attrs) el.setAttribute(k, attrs[k]);
+      (parent || this.root).appendChild(el);
+      return el;
+    };
+
+    this.W = 1920; this.H = 1080; this.HY = 712;
+    this.uid = 'wi' + Math.floor(Math.random() * 1e9).toString(36);
+
+    const num = (key, dflt, lo, hi) => {
+      const v = parseFloat(this.prop(key));
+      return isFinite(v) ? Math.min(hi, Math.max(lo, v)) : dflt;
+    };
+    this.flakeCount = num('flakes', 240, 0, 900);
+    this.treeCount  = num('trees', 14, 0, 60);
+    this.windScale  = num('wind', 1, 0, 4);
+    this.snowRate   = num('snow', 1, 0, 4);
+    const h = parseFloat(this.prop('hour'));
+    this.hourForced = isFinite(h) ? ((h % 24) + 24) % 24 : null;
+
+    // ── DIE HUETTE ────────────────────────────────────────────────────────
+    // Sie steht vorn rechts, damit der Blick ueber das Feld auf sie faellt.
+    this.hut = {
+      mid: 1400, half: 168,           // Dachbreite (mit Ueberstand)
+      eave: 922, ridge: 806,          // Traufe und First
+      bx0: 1262, bx1: 1538,           // Rumpf
+      by0: 922, by1: 1030,
+      door: { x: 1400, w: 46, y: 1030, top: 944 }
+    };
+    this.ROOFN = 34;
+    this.roof = new Float32Array(this.ROOFN);
+    this.BANKN = 210;
+    this.bank = new Float32Array(this.BANKN);
+
+    this.buildStage();
+    this.buildTrees();
+    this.buildHut();
+    this.buildFlakes();
+
+    this.time = 0; this.raf = 0; this.running = false;
+    // VORGEWAERMT — und hier ist das keine Kosmetik: ein Winterschoner, der
+    // mit blankem Dach anlaeuft, hat seine Aussage verloren. Zwei Minuten
+    // Physik, dann liegt schon etwas.
+    for (let i = 0; i &lt; 6000; i++) this.advance(1 / 50);
+
+    this.gate = setInterval(() => this.checkStage(), 500);
+    this.onVisible = () => this.checkStage();
+    document.addEventListener('visibilitychange', this.onVisible);
+    this.checkStage();
+  }
+
+  onDestroy() {
+    this.halt();
+    if (this.gate) { clearInterval(this.gate); this.gate = 0; }
+    if (this.onVisible) document.removeEventListener('visibilitychange', this.onVisible);
+  }
+
+  // ── Werkzeug ───────────────────────────────────────────────────────────────
+
+  hexToRgb(h) {
+    return [parseInt(h.slice(1, 3), 16), parseInt(h.slice(3, 5), 16), parseInt(h.slice(5, 7), 16)];
+  }
+  rgbToHex(c) {
+    const p = (v) => ('0' + Math.max(0, Math.min(255, Math.round(v))).toString(16)).slice(-2);
+    return '#' + p(c[0]) + p(c[1]) + p(c[2]);
+  }
+  blend(a, b, t) {
+    const x = this.hexToRgb(a), y = this.hexToRgb(b);
+    return this.rgbToHex([x[0] + (y[0] - x[0]) * t, x[1] + (y[1] - x[1]) * t, x[2] + (y[2] - x[2]) * t]);
+  }
+  rnd(a, b) { return a + Math.random() * (b - a); }
+  clamp(v, a, b) { return v &lt; a ? a : (v > b ? b : v); }
+  smooth(a, b, x) {
+    if (b === a) return x &lt; a ? 0 : 1;
+    const t = this.clamp((x - a) / (b - a), 0, 1);
+    return t * t * (3 - 2 * t);
+  }
+
+  // ── Die Buehne ─────────────────────────────────────────────────────────────
+
+  buildStage() {
+    const defs = this.mkEl('defs', {});
+    this.defs = defs;
+
+    const skyGrad = this.mkEl('linearGradient',
+      { id: this.uid + '-sky', x1: '0', y1: '0', x2: '0', y2: '1' }, defs);
+    this.skyStops = [
+      this.mkEl('stop', { offset: '0%',   'stop-color': '#8FB8DC' }, skyGrad),
+      this.mkEl('stop', { offset: '60%',  'stop-color': '#C6DCEF' }, skyGrad),
+      this.mkEl('stop', { offset: '100%', 'stop-color': '#E9F1F8' }, skyGrad)
+    ];
+    const gndGrad = this.mkEl('linearGradient',
+      { id: this.uid + '-gnd', x1: '0', y1: '0', x2: '0', y2: '1' }, defs);
+    this.gndStops = [
+      this.mkEl('stop', { offset: '0%',   'stop-color': '#F3F8FF' }, gndGrad),
+      this.mkEl('stop', { offset: '100%', 'stop-color': '#D4E0F0' }, gndGrad)
+    ];
+
+    this.skyEl = this.role('sky') || this.mkEl('rect',
+      { x: -60, y: -60, width: this.W + 120, height: this.HY + 80 });
+    this.skyEl.setAttribute('fill', 'url(#' + this.uid + '-sky)');
+
+    this.starHost = this.mkEl('g', { 'data-role': 'stars', opacity: 0 });
+    for (let i = 0; i &lt; 110; i++)
+      this.mkEl('circle', {
+        cx: this.rnd(0, this.W).toFixed(1),
+        cy: (Math.pow(Math.random(), 1.4) * (this.HY - 90)).toFixed(1),
+        r: this.rnd(.8, 2.3).toFixed(2), fill: '#ffffff',
+        opacity: this.rnd(.3, 1).toFixed(2)
+      }, this.starHost);
+
+    this.moonHost = this.mkEl('g', { 'data-role': 'moon', opacity: 0 });
+    this.mkEl('circle', { r: 104, fill: '#dfe8ff', opacity: .14 }, this.moonHost);
+    this.mkEl('circle', { r: 56, fill: '#f6f8ff' }, this.moonHost);
+    this.mkEl('circle', { cx: -20, cy: -14, r: 10, fill: '#e2e7f5' }, this.moonHost);
+    this.mkEl('circle', { cx: 16, cy: 18, r: 13, fill: '#e2e7f5' }, this.moonHost);
+
+    const halo = this.mkEl('radialGradient', { id: this.uid + '-halo' }, defs);
+    this.haloStops = [
+      this.mkEl('stop', { offset: '0%',   'stop-color': '#fff4d8', 'stop-opacity': .7 }, halo),
+      this.mkEl('stop', { offset: '40%',  'stop-color': '#fff4d8', 'stop-opacity': .26 }, halo),
+      this.mkEl('stop', { offset: '100%', 'stop-color': '#fff4d8', 'stop-opacity': 0 }, halo)
+    ];
+    this.sunHost = this.mkEl('g', { 'data-role': 'sun' });
+    this.sunGlow = this.mkEl('circle', { r: 270, fill: 'url(#' + this.uid + '-halo)' }, this.sunHost);
+    this.sunDisc = this.mkEl('circle', { r: 86, fill: '#fff6dc' }, this.sunHost);
+
+    this.treeHost = this.mkEl('g', { 'data-role': 'trees' });
+
+    this.gndEl = this.role('ground') || this.mkEl('rect',
+      { x: -60, y: this.HY, width: this.W + 120, height: this.H - this.HY + 120 });
+    this.gndEl.setAttribute('fill', 'url(#' + this.uid + '-gnd)');
+
+    // Dunst am Horizont: im Winter traegt die Luft, und die Ferne verschwimmt
+    // heller als die Naehe.
+    const hazeGrad = this.mkEl('linearGradient',
+      { id: this.uid + '-haze', x1: '0', y1: '0', x2: '0', y2: '1' }, defs);
+    this.hazeStops = [
+      this.mkEl('stop', { offset: '0%',   'stop-color': '#E9F1F8', 'stop-opacity': .75 }, hazeGrad),
+      this.mkEl('stop', { offset: '100%', 'stop-color': '#E9F1F8', 'stop-opacity': 0 }, hazeGrad)
+    ];
+    this.hazeEl = this.mkEl('rect', { x: -60, y: this.HY - 40,
+      width: this.W + 120, height: 210, fill: 'url(#' + this.uid + '-haze)' });
+
+    this.hutHost  = this.mkEl('g', { 'data-role': 'huette' });
+    this.bankEl   = this.mkEl('path', { 'data-role': 'schneewall', fill: '#FFFFFF' });
+    this.bankEdge = this.mkEl('path', { fill: 'none', stroke: '#C9D8EC', 'stroke-width': 2.5 });
+    this.flakeHost = this.mkEl('g', { 'data-role': 'schnee' });
+    this.veilEl = this.mkEl('rect',
+      { x: -60, y: -60, width: this.W + 120, height: this.H + 120,
+        fill: '#0A1225', opacity: 0, 'pointer-events': 'none' });
+  }
+
+  buildTrees() {
+    // Tannen: hinten klein und blass, vorn gross und dunkel. Jede traegt
+    // ihre eigene Schneehaube — die liegt schon, bevor der Schoner anlaeuft.
+    this.trees = [];
+    for (let i = 0; i &lt; this.treeCount; i++) {
+      const d = Math.pow(Math.random(), 1.5);
+      // Um die Huette bleibt es frei: sie ist der Gegenstand des Bildes, und
+      // eine Tanne davor nimmt ihr genau das.
+      let x = this.rnd(-60, this.W + 60);
+      if (d > .34 &amp;&amp; x > 1120 &amp;&amp; x &lt; 1690) x += (x &lt; 1400 ? -520 : 520);
+      const y = this.HY + 26 + d * 230;
+      const s = .34 + d * .95;
+      const g = this.mkEl('g', {
+        transform: 'translate(' + x.toFixed(1) + ' ' + y.toFixed(1) + ') scale(' + s.toFixed(3) + ')'
+      }, this.treeHost);
+      // Kein `opacity` auf der Gruppe: die Tanne wurde dadurch DURCHSICHTIG,
+      // und man sah die dahinter durch sie hindurch. Blass wird die Ferne
+      // ueber die Farbe (Luftperspektive), nicht ueber die Deckkraft.
+      const stamm = this.mkEl('rect', { x: -9, y: -34, width: 18, height: 44 }, g);
+      const body = this.mkEl('g', {}, g);
+      const snow = this.mkEl('g', {}, g);
+      for (let k = 0; k &lt; 4; k++) {
+        const w = 96 - k * 18, top = -60 - k * 62, bot = top + 92;
+        this.mkEl('path', { d: 'M0 ' + top + ' L' + w + ' ' + bot + ' L' + (-w) + ' ' + bot + 'Z',
+                            fill: '#245239' }, body);
+        // ── DER SCHNEE LIEGT AUF DEN KANTEN ─────────────────────────────
+        // Erst war es eine zweite, kleinere Scheibe derselben Form — die
+        // deckte 74 % des Astes zu, und aus der Tanne wurde ein weisses
+        // Dreieck mit gruenem Rand. Schnee liegt aber OBEN AUF: ein schmales
+        // Band entlang der beiden schraegen Kanten.
+        const dz = 15;
+        this.mkEl('path', {
+          d: 'M0 ' + top + ' L' + w + ' ' + bot + ' L' + (w - dz * 1.5) + ' ' + bot +
+             ' L0 ' + (top + dz) + ' L' + (-(w - dz * 1.5)) + ' ' + bot +
+             ' L' + (-w) + ' ' + bot + 'Z', fill: '#FFFFFF' }, snow);
+      }
+      this.trees.push({ g: g, body: body, snow: snow, stamm: stamm, d: d });
+    }
+    this.trees.sort((a, b) => a.d - b.d);
+    for (const t of this.trees) this.treeHost.appendChild(t.g);
+  }
+
+  // ── Die Hundehuette ────────────────────────────────────────────────────────
+
+  roofLineAt(x) {
+    const u = this.hut;
+    const t = Math.abs(x - u.mid) / u.half;       // 0 = First, 1 = Traufe
+    return u.ridge + (u.eave - u.ridge) * this.clamp(t, 0, 1);
+  }
+
+  buildHut() {
+    const u = this.hut;
+    const g = this.hutHost;
+    // ── DIE GIEBELWAND ────────────────────────────────────────────────────
+    // Sie stand hier nicht, und man sah zwischen Dach und Rumpf die Tannen
+    // hindurch. Ein Dach ohne Wand darunter ist zwei Balken in der Luft.
+    this.mkEl('path', {
+      d: 'M' + u.mid + ' ' + (u.ridge + 4) +
+         ' L' + u.bx1 + ' ' + u.by0 + ' L' + u.bx0 + ' ' + u.by0 + 'Z',
+      fill: '#7E5230' }, g);
+    // Rumpf mit Brettern
+    this.mkEl('rect', { x: u.bx0, y: u.by0, width: u.bx1 - u.bx0, height: u.by1 - u.by0,
+                        fill: '#8A5A32', rx: 3 }, g);
+    for (let x = u.bx0 + 24; x &lt; u.bx1 - 8; x += 24)
+      this.mkEl('line', { x1: x, y1: u.by0 + 4, x2: x, y2: u.by1 - 2,
+                          stroke: '#734829', 'stroke-width': 2.2 }, g);
+    // Die Tuer: ein Bogen, dahinter Dunkelheit.
+    const d = u.door;
+    this.mkEl('path', {
+      d: 'M' + (d.x - d.w) + ' ' + d.y +
+         ' L' + (d.x - d.w) + ' ' + (d.top + 22) +
+         ' Q' + d.x + ' ' + (d.top - 30) + ' ' + (d.x + d.w) + ' ' + (d.top + 22) +
+         ' L' + (d.x + d.w) + ' ' + d.y + 'Z', fill: '#2A1A0C' }, g);
+    this.mkEl('path', {
+      d: 'M' + (d.x - d.w - 6) + ' ' + d.y +
+         ' L' + (d.x - d.w - 6) + ' ' + (d.top + 21) +
+         ' Q' + d.x + ' ' + (d.top - 38) + ' ' + (d.x + d.w + 6) + ' ' + (d.top + 21) +
+         ' L' + (d.x + d.w + 6) + ' ' + d.y + 'Z',
+      fill: 'none', stroke: '#6B4224', 'stroke-width': 6 }, g);
+    // Das Dach: ein Brett je Seite, mit Ueberstand ueber die Wand hinaus.
+    const dick = 15;
+    this.mkEl('path', {
+      d: 'M' + u.mid + ' ' + (u.ridge - 4) +
+         ' L' + (u.mid + u.half) + ' ' + u.eave +
+         ' L' + (u.mid + u.half) + ' ' + (u.eave + dick) +
+         ' L' + u.mid + ' ' + (u.ridge - 4 + dick) + 'Z', fill: '#6E4526' }, g);
+    this.mkEl('path', {
+      d: 'M' + u.mid + ' ' + (u.ridge - 4) +
+         ' L' + (u.mid - u.half) + ' ' + u.eave +
+         ' L' + (u.mid - u.half) + ' ' + (u.eave + dick) +
+         ' L' + u.mid + ' ' + (u.ridge - 4 + dick) + 'Z', fill: '#7E5230' }, g);
+    for (let k = 1; k &lt; 6; k++) {
+      const tk = k / 6;
+      const y = u.ridge - 4 + (u.eave - u.ridge + 4) * tk;
+      this.mkEl('line', { x1: u.mid + u.half * tk, y1: y, x2: u.mid + u.half * tk, y2: y + dick,
+                          stroke: '#5E3A1F', 'stroke-width': 2 }, g);
+      this.mkEl('line', { x1: u.mid - u.half * tk, y1: y, x2: u.mid - u.half * tk, y2: y + dick,
+                          stroke: '#6B4527', 'stroke-width': 2 }, g);
+    }
+    // ── UND DAS, WOFUER DAS GANZE DA IST ─────────────────────────────────
+    // Die Schneedecke auf dem Dach. Ihre Form kommt je Bild aus `this.roof`.
+    this.roofSnow = this.mkEl('path', { fill: '#FFFFFF' }, g);
+    this.roofEdge = this.mkEl('path', { fill: 'none', stroke: '#DDE7F5',
+                                        'stroke-width': 2 }, g);
+  }
+
+  buildFlakes() {
+    this.flakes = [];
+    for (let i = 0; i &lt; this.flakeCount; i++) {
+      const d = Math.random();
+      this.flakes.push({
+        el: this.mkEl('circle', { fill: '#ffffff' }, this.flakeHost),
+        x: this.rnd(-80, this.W + 80), y: this.rnd(-this.H, this.H),
+        d: d, r: 1.6 + d * 5.2, vy: 26 + d * 104,
+        sway: this.rnd(8, 34), ph: this.rnd(0, 6.283), sp: this.rnd(.5, 1.5)
+      });
+    }
+  }
+
+  // ── Tageszeit: der Wintertag ist kurz ──────────────────────────────────────
+
+  daylight() {
+    const now = new Date();
+    const h = this.hourForced !== null
+      ? this.hourForced
+      : now.getHours() + now.getMinutes() / 60 + now.getSeconds() / 3600;
+    this.hourNow = h;
+    const day   = this.smooth(8.0, 9.6, h) * (1 - this.smooth(15.4, 16.8, h));
+    const dusk  = this.smooth(15.0, 16.4, h) * (1 - this.smooth(17.2, 18.6, h))
+                + this.smooth(6.4, 7.8, h)  * (1 - this.smooth(8.6, 9.8, h));
+    const night = 1 - this.smooth(6.4, 8.2, h) + this.smooth(16.8, 18.8, h);
+    this.dayF   = this.clamp(day, 0, 1);
+    this.duskF  = this.clamp(dusk, 0, 1);
+    this.nightF = this.clamp(night, 0, 1);
+  }
+
+  sunArc(h) {
+    const rise = 8.0, set = 16.6;
+    const t = (h - rise) / (set - rise);
+    const x = -220 + t * (this.W + 440);
+    // Tief: im Winter kommt die Sonne nicht hoch, und das ist die halbe
+    // Stimmung.
+    const y = this.HY - 70 - Math.sin(this.clamp(t, 0, 1) * Math.PI) * 330;
+    return { x: x, y: y };
+  }
+
+  // ── Wind ───────────────────────────────────────────────────────────────────
+
+  windAt(x) {
+    let gust = 0;
+    for (const w of this.gusts) {
+      const dx = x - w.pos;
+      if (dx > -w.width &amp;&amp; dx &lt; w.width) {
+        const f = Math.cos(dx / w.width * Math.PI * .5);
+        gust += w.amp * f * f;
+      }
+    }
+    const jitter = 11 * Math.sin(x * .009 + this.time * 1.9);
+    return (this.baseWind + gust + jitter) * this.windScale;
+  }
+
+  bankLineAt(x) {
+    return 1004 + 7 * Math.sin(x * .0042) + 4 * Math.sin(x * .0115 + 1.9);
+  }
+  bankBucket(x) { return this.clamp(Math.floor((x + 80) / (this.W + 160) * this.BANKN), 0, this.BANKN - 1); }
+  roofBucket(x) {
+    const u = this.hut;
+    return this.clamp(Math.floor((x - (u.mid - u.half)) / (2 * u.half) * this.ROOFN), 0, this.ROOFN - 1);
+  }
+  bankX(i) { return -80 + (i + .5) / this.BANKN * (this.W + 160); }
+  roofX(i) { return this.hut.mid - this.hut.half + (i + .5) / this.ROOFN * 2 * this.hut.half; }
+
+  checkStage() {
+    const gated = this.root.hasAttribute('data-ss-art') || !!this.root.closest('[data-ss-art]');
+    const shown = gated ? !!this.root.closest('[data-ss-buehne]') : true;
+    if (shown &amp;&amp; !document.hidden) this.run(); else this.halt();
+  }
+  run() {
+    if (this.running) return;
+    this.running = true;
+    this.last = (typeof performance !== 'undefined' ? performance.now() : Date.now());
+    const tick = (now) => {
+      if (!this.running) return;
+      const dt = Math.min(.05, (now - this.last) / 1000);
+      this.last = now;
+      this.advance(dt);
+      this.paint(dt);
+      this.raf = requestAnimationFrame(tick);
+    };
+    this.raf = requestAnimationFrame(tick);
+  }
+  halt() {
+    this.running = false;
+    if (this.raf) { cancelAnimationFrame(this.raf); this.raf = 0; }
+  }
+
+  // ── Die Physik ─────────────────────────────────────────────────────────────
+
+  advance(dt) {
+    this.time += dt;
+    const t = this.time;
+
+    if (!this.gusts) { this.gusts = []; this.gustClock = 3; }
+    this.baseWind = 34 + 26 * Math.sin(t / 41) + 14 * Math.sin(t / 9.7 + .8);
+    this.gustClock -= dt;
+    if (this.gustClock &lt;= 0) {
+      this.gustClock = this.rnd(4, 13);
+      this.gusts.push({ pos: -460, width: this.rnd(380, 860),
+                        amp: this.rnd(60, 260), v: this.rnd(200, 420) });
+    }
+    for (let i = this.gusts.length - 1; i >= 0; i--) {
+      const g = this.gusts[i];
+      g.pos += g.v * dt;
+      if (g.pos - g.width > this.W + 220) this.gusts.splice(i, 1);
+    }
+
+    this.daylight();
+
+    // ── Flocken ────────────────────────────────────────────────────────────
+    for (const f of this.flakes) {
+      f.ph += dt * f.sp;
+      f.x += (this.windAt(f.x) * (.22 + f.d * .85) + Math.sin(f.ph * 2.1) * f.sway) * dt;
+      f.y += f.vy * dt;
+      if (f.x &lt; -90) f.x = this.W + 80; else if (f.x > this.W + 90) f.x = -80;
+
+      const surf = this.surfaceAt(f.x);
+      if (f.y >= surf) {
+        this.deposit(f.x, f.d);
+        f.y = -this.rnd(20, 260);
+        f.x = this.rnd(-80, this.W + 80);
+      }
+    }
+
+    this.settle(dt);
+  }
+
+  /// Wo liegt an dieser Stelle die oberste Schneeflaeche?
+  ///
+  /// Ueber der Huette ist es das Dach — darum bleibt dort etwas liegen,
+  /// waehrend daneben alles bis zum Wall durchfaellt.
+  surfaceAt(x) {
+    const u = this.hut;
+    if (x > u.mid - u.half &amp;&amp; x &lt; u.mid + u.half)
+      return this.roofLineAt(x) - this.roof[this.roofBucket(x)];
+    return this.bankLineAt(x) - this.bank[this.bankBucket(x)];
+  }
+
+  /// Eine Flocke legt sich hin. Grosse (nahe) zaehlen mehr — sie sind naeher
+  /// und decken mehr Flaeche.
+  deposit(x, d) {
+    // Die windzugewandte Dachseite bekommt mehr ab als die abgewandte — das
+    // ist so und sieht auch so aus. Damit die magere Seite trotzdem eine
+    // Decke traegt und keinen Anflug, faellt insgesamt mehr.
+    const menge = (1.5 + d * 3.6) * this.snowRate;
+    const u = this.hut;
+    if (x > u.mid - u.half &amp;&amp; x &lt; u.mid + u.half) {
+      const i = this.roofBucket(x);
+      this.roof[i] += menge;
+      if (i > 0) this.roof[i - 1] += menge * .3;
+      if (i &lt; this.ROOFN - 1) this.roof[i + 1] += menge * .3;
+    } else {
+      const i = this.bankBucket(x);
+      this.bank[i] += menge * .85;
+      if (i > 0) this.bank[i - 1] += menge * .2;
+      if (i &lt; this.BANKN - 1) this.bank[i + 1] += menge * .2;
+    }
+  }
+
+  /// Setzen, Rutschen, Abtragen — das, was aus einer Anhaeufung eine Decke
+  /// macht.
+  settle(dt) {
+    // 1. ── WAS AUF EINEM SCHRAEGDACH LIEGEN BLEIBT ──────────────────────
+    //
+    //    Hier stand erst ein Vergleich der OBERFLAECHENHOEHEN. Der ist
+    //    falsch: auf einem Schraegdach liegt der Nachbareimer immer tiefer
+    //    (hier um rund 7 px), also floss immer alles sofort zur Traufe und
+    //    das Dach blieb kahl. Gemessen am 12.09.2026 — man sah einen weissen
+    //    Strich statt einer Decke.
+    //
+    //    Schnee bleibt auf 35 Grad liegen. Zwei Vorgaenge, getrennt:
+    //
+    //    a) LAWINE — die DECKE selbst gleicht sich aus, wenn sie ungleich
+    //       liegt. Verglichen wird die Dicke, nicht die Hoehe.
+    for (let i = 0; i &lt; this.ROOFN - 1; i++) {
+      const d = this.roof[i] - this.roof[i + 1];
+      if (Math.abs(d) > 2.5) {
+        const m = (Math.abs(d) - 2.5) * 1.1 * dt;
+        if (d > 0) { this.roof[i] -= m; this.roof[i + 1] += m; }
+        else       { this.roof[i + 1] -= m; this.roof[i] += m; }
+      }
+    }
+    //    b) KRIECHEN — eine Decke auf einer Schraege wandert langsam
+    //       talwaerts. 0,8 % je Sekunde, nicht 9: bei 9 war der First nach
+    //       zwei Minuten leer (gemessen: 5,8 px am First gegen 34 an der
+    //       Traufe), und genau das sah man — ein Strich statt einer Decke.
+    for (let i = 0; i &lt; this.ROOFN - 1; i++) {
+      const hoeher = this.roofLineAt(this.roofX(i)) &lt; this.roofLineAt(this.roofX(i + 1)) ? i : i + 1;
+      const tiefer = hoeher === i ? i + 1 : i;
+      const m = Math.min(this.roof[hoeher], this.roof[hoeher] * .008 * dt);
+      this.roof[hoeher] -= m; this.roof[tiefer] += m;
+    }
+    // 2. Was ueber die Traufe rutscht, ist nicht weg — es faellt auf den
+    //    Wall darunter. Genau das sieht man unter einem verschneiten Dach.
+    for (const i of [0, this.ROOFN - 1]) {
+      const ueber = this.roof[i] - 30;
+      if (ueber > 0) {
+        const m = Math.min(this.roof[i], ueber * 1.8 * dt);
+        this.roof[i] -= m;
+        const j = this.bankBucket(this.roofX(i));
+        this.bank[j] += m * 1.6;
+      }
+    }
+    // 3. Der Wind traegt oben ab, und die Decke setzt sich. Ohne das waechst
+    //    sie ins Unendliche und der Schirm ist nach einer Stunde weisz.
+    const zehr = 1 - .006 * dt;
+    for (let i = 0; i &lt; this.ROOFN; i++) {
+      this.roof[i] *= zehr;
+      if (this.roof[i] > 34) this.roof[i] = 34;
+      if (this.roof[i] &lt; 0) this.roof[i] = 0;
+    }
+    const wind = Math.abs(this.baseWind) * .00018;
+    for (let i = 0; i &lt; this.BANKN; i++) {
+      this.bank[i] *= (1 - (.007 + wind) * dt);
+      if (this.bank[i] > 62) this.bank[i] = 62;
+    }
+    // 4. Der Wall gleicht sich aus — Schnee steht nicht in Zinnen.
+    for (let i = 0; i &lt; this.BANKN - 1; i++) {
+      const diff = this.bank[i] - this.bank[i + 1];
+      const m = diff * .9 * dt;
+      this.bank[i] -= m; this.bank[i + 1] += m;
+    }
+  }
+
+  // ── Das Bild ───────────────────────────────────────────────────────────────
+
+  paint(dt) {
+    const day = this.dayF, dusk = this.duskF, night = this.nightF;
+
+    const sky = [
+      this.blend(this.blend('#060C1C', '#38375E', dusk), '#8FB8DC', day),
+      this.blend(this.blend('#0D1630', '#8E5F79', dusk), '#C6DCEF', day),
+      this.blend(this.blend('#16203E', '#E0A488', dusk), '#E9F1F8', day)
+    ];
+    for (let i = 0; i &lt; 3; i++) this.skyStops[i].setAttribute('stop-color', sky[i]);
+    // Schnee ist ein SPIEGEL: er nimmt die Farbe des Himmels an. Ein weiszes
+    // Feld unter einem rosa Abendhimmel gaebe es in der Natur nicht.
+    const gnd = [
+      this.blend(this.blend('#1B2540', '#C9A6B4', dusk), '#F3F8FF', day),
+      this.blend(this.blend('#0C1226', '#8C7A96', dusk), '#D4E0F0', day)
+    ];
+    for (let i = 0; i &lt; 2; i++) this.gndStops[i].setAttribute('stop-color', gnd[i]);
+    for (const st of this.hazeStops) st.setAttribute('stop-color', sky[2]);
+    this.veilEl.setAttribute('fill', this.blend('#0A1225', '#3A1A2A',
+      this.clamp(dusk - night, 0, 1)));
+    this.veilEl.setAttribute('opacity', (night * .46 + dusk * .1).toFixed(3));
+
+    const s = this.sunArc(this.hourNow);
+    this.sunHost.setAttribute('transform', 'translate(' + s.x.toFixed(1) + ' ' + s.y.toFixed(1) + ')');
+    this.sunHost.setAttribute('opacity', this.clamp(day + dusk * .85, 0, 1).toFixed(3));
+    this.sunDisc.setAttribute('fill', this.blend('#FFB98A', '#fff6dc', day));
+    const haloCol = this.blend('#FFC79A', '#fff4d8', day);
+    for (const st of this.haloStops) st.setAttribute('stop-color', haloCol);
+
+    const m = this.sunArc((this.hourNow + 12) % 24);
+    this.moonHost.setAttribute('transform', 'translate(' + m.x.toFixed(1) + ' ' + m.y.toFixed(1) + ')');
+    this.moonHost.setAttribute('opacity', (night * .95).toFixed(3));
+    this.starHost.setAttribute('opacity', (night * .9).toFixed(3));
+
+    // Die Baeume: Nadeln blasser in der Ferne (Luftperspektive), Schnee wie
+    // der Boden.
+    const nadel = this.blend(this.blend('#12203A', '#4B4258', dusk), '#245239', day);
+    const haube = this.blend(this.blend('#26314C', '#D8B8C2', dusk), '#FFFFFF', day);
+    for (const tr of this.trees) {
+      const fern = 1 - tr.d;                       // 1 = ganz hinten
+      tr.body.setAttribute('fill', this.blend(nadel, sky[2], fern * .72));
+      tr.snow.setAttribute('fill', this.blend(haube, sky[2], fern * .5));
+      tr.stamm.setAttribute('fill', this.blend(
+        this.blend('#1A1008', '#4A3520', day), sky[2], fern * .72));
+    }
+
+    // ── Die Decke auf dem Dach ────────────────────────────────────────────
+    const u = this.hut;
+    let oben = '', unten = '';
+    // Der Ueberhang an der Traufe: eine Schneedecke endet nicht am Brett,
+    // sie steht ein Stueck darueber hinaus und bricht dort ab.
+    const lip = 9;
+    oben = 'M' + (u.mid - u.half - lip).toFixed(1) + ' ' +
+           (this.roofLineAt(u.mid - u.half) - this.roof[0] + 2).toFixed(1);
+    for (let i = 0; i &lt; this.ROOFN; i++) {
+      const x = this.roofX(i);
+      oben += ' L' + x.toFixed(1) + ' ' + (this.roofLineAt(x) - this.roof[i]).toFixed(1);
+    }
+    oben += ' L' + (u.mid + u.half + lip).toFixed(1) + ' ' +
+            (this.roofLineAt(u.mid + u.half) - this.roof[this.ROOFN - 1] + 2).toFixed(1);
+    unten = ' L' + (u.mid + u.half + lip).toFixed(1) + ' ' + (u.eave + 6).toFixed(1);
+    for (let i = this.ROOFN - 1; i >= 0; i--) {
+      const x = this.roofX(i);
+      unten += ' L' + x.toFixed(1) + ' ' + (this.roofLineAt(x) + 3).toFixed(1);
+    }
+    unten += ' L' + (u.mid - u.half - lip).toFixed(1) + ' ' + (u.eave + 6).toFixed(1);
+    this.roofSnow.setAttribute('d', oben + unten + 'Z');
+    this.roofSnow.setAttribute('fill', haube);
+    this.roofEdge.setAttribute('d', oben);
+    this.roofEdge.setAttribute('stroke', this.blend(haube, '#7A8CA8', .22));
+
+    // ── Der Wall im Vordergrund ───────────────────────────────────────────
+    let wall = 'M-80 ' + (this.H + 80);
+    for (let i = 0; i &lt; this.BANKN; i++) {
+      const x = this.bankX(i);
+      wall += ' L' + x.toFixed(1) + ' ' + (this.bankLineAt(x) - this.bank[i]).toFixed(1);
+    }
+    wall += ' L' + (this.W + 80) + ' ' + (this.H + 80) + 'Z';
+    this.bankEl.setAttribute('d', wall);
+    this.bankEl.setAttribute('fill', this.blend(haube, '#FFFFFF', .5));
+    this.bankEdge.setAttribute('d', wall.slice(wall.indexOf(' L') + 1,
+                                               wall.lastIndexOf(' L')));
+    this.bankEdge.setAttribute('stroke', this.blend(haube, '#7A8CA8', .3));
+
+    // ── Die Flocken ───────────────────────────────────────────────────────
+    const flocke = this.blend(this.blend('#C8D6F0', '#FFE2D2', dusk), '#FFFFFF', day);
+    for (const f of this.flakes) {
+      f.el.setAttribute('cx', f.x.toFixed(1));
+      f.el.setAttribute('cy', f.y.toFixed(1));
+      f.el.setAttribute('r', f.r.toFixed(1));
+      f.el.setAttribute('fill', flocke);
+      f.el.setAttribute('opacity', (.3 + f.d * .65).toFixed(2));
+    }
+  }
+}</script>
+  </svg>
+</symbol>
