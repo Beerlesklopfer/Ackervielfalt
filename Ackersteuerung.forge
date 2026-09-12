@@ -876,16 +876,21 @@ Anvil.Felsenbirne.xV_2 := axGrant[13]; Anvil.Felsenbirne.xV_6 := axGrant[13];
 Anvil.Felsenbirne.xV_3 := axGrant[14]; Anvil.Felsenbirne.xV_7 := axGrant[14];
 Anvil.Felsenbirne.xV_4 := axGrant[15]; Anvil.Felsenbirne.xV_8 := axGrant[15];
 
+(* MAIBEERE: seit dem 12.09.2026 im selben Zuschnitt wie die anderen fuenf.
+   Vorher trug das Geraet nur fuenf Ausgaenge, und xV_5 war eine SAMMELMELDUNG
+   ueber alle vier Grants — xV_6..8 gab es nicht. Das Byte ist gewachsen; die
+   Anwahl-Leuchten der beiden mittleren Beete blieben dunkel, weil hier nichts
+   stand. Gemessen an der Anlage: Maibeere.xV_6/xV_7 kamen ueber die Bruecke an,
+   standen aber immer auf 0. *)
+Anvil.Maibeere.xV_1 := axGrant[16]; Anvil.Maibeere.xV_5 := axGrant[16];
+Anvil.Maibeere.xV_2 := axGrant[17]; Anvil.Maibeere.xV_6 := axGrant[17];
+Anvil.Maibeere.xV_3 := axGrant[18]; Anvil.Maibeere.xV_7 := axGrant[18];
+Anvil.Maibeere.xV_4 := axGrant[19]; Anvil.Maibeere.xV_8 := axGrant[19];
+
 Anvil.Johannisbeere.xV_1 := axGrant[20]; Anvil.Johannisbeere.xV_5 := axGrant[20];
 Anvil.Johannisbeere.xV_2 := axGrant[21]; Anvil.Johannisbeere.xV_6 := axGrant[21];
 Anvil.Johannisbeere.xV_3 := axGrant[22]; Anvil.Johannisbeere.xV_7 := axGrant[22];
 Anvil.Johannisbeere.xV_4 := axGrant[23]; Anvil.Johannisbeere.xV_8 := axGrant[23];
-
-Anvil.Maibeere.xV_1 := axGrant[16];
-Anvil.Maibeere.xV_2 := axGrant[17];
-Anvil.Maibeere.xV_3 := axGrant[18];
-Anvil.Maibeere.xV_4 := axGrant[19];
-Anvil.Maibeere.xV_5 := axGrant[16] OR axGrant[17] OR axGrant[18] OR axGrant[19];
 
 (* --- 4b) Anzeige wartender Ventile (Mode 1..3): Status-LEDs (xV_5..8) = GRANT (offen) ODER
    angefordert-aber-nicht-offen -&gt; Blink im Takt rBlinkHz (fbBlinkMan). Gilt fuer die Taster-
@@ -912,14 +917,15 @@ IF (uMode &gt;= 1) AND (uMode &lt;= 3) THEN
     Anvil.Felsenbirne.xV_7 := axGrant[14] OR (axReq[14] AND NOT axGrant[14] AND fbBlinkMan.xBlQ);
     Anvil.Felsenbirne.xV_8 := axGrant[15] OR (axReq[15] AND NOT axGrant[15] AND fbBlinkMan.xBlQ);
 
+    Anvil.Maibeere.xV_5 := axGrant[16] OR (axReq[16] AND NOT axGrant[16] AND fbBlinkMan.xBlQ);
+    Anvil.Maibeere.xV_6 := axGrant[17] OR (axReq[17] AND NOT axGrant[17] AND fbBlinkMan.xBlQ);
+    Anvil.Maibeere.xV_7 := axGrant[18] OR (axReq[18] AND NOT axGrant[18] AND fbBlinkMan.xBlQ);
+    Anvil.Maibeere.xV_8 := axGrant[19] OR (axReq[19] AND NOT axGrant[19] AND fbBlinkMan.xBlQ);
+
     Anvil.Johannisbeere.xV_5 := axGrant[20] OR (axReq[20] AND NOT axGrant[20] AND fbBlinkMan.xBlQ);
     Anvil.Johannisbeere.xV_6 := axGrant[21] OR (axReq[21] AND NOT axGrant[21] AND fbBlinkMan.xBlQ);
     Anvil.Johannisbeere.xV_7 := axGrant[22] OR (axReq[22] AND NOT axGrant[22] AND fbBlinkMan.xBlQ);
     Anvil.Johannisbeere.xV_8 := axGrant[23] OR (axReq[23] AND NOT axGrant[23] AND fbBlinkMan.xBlQ);
-
-    Anvil.Maibeere.xV_5 := (axGrant[16] OR axGrant[17] OR axGrant[18] OR axGrant[19])
-        OR (((axReq[16] AND NOT axGrant[16]) OR (axReq[17] AND NOT axGrant[17])
-             OR (axReq[18] AND NOT axGrant[18]) OR (axReq[19] AND NOT axGrant[19])) AND fbBlinkMan.xBlQ);
 END_IF;
 
 (* --- 9) Geraete-/Modulueberwachung -&gt; HMI (Bellows.Diag). --- *)
