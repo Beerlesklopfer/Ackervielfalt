@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Bildschirmschoner „Schwarz“ — ein Symbol der Kategorie screensaver.
+     Ein Schirm verweist mit screensaver="6b1d7d4e-2b6a-4a3b-9c0f-1e4d7a2c5f04" darauf; die Ausfuhr holt
+     das Bild aus der Registratur des Projekts. Bis 11.09.2026 war das eine
+     Vorlage (:/screensavers/blankScreen.hearthtmpl); jetzt ein Symbol wie jedes
+     andere, mit fester Kennung — sie steht in der Datei und wird nie gerechnet. -->
+<symbol uuid="6b1d7d4e-2b6a-4a3b-9c0f-1e4d7a2c5f04" name="Schwarz" version="0.2.0" category="screensaver" author="ForgeIEC" description="Blendet den Screen schwarz aus.">
+<svg hearth:element="hearth-screensaver" hearth:format-version="1.0" hearth:visible="true" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" xmlns:hearth="https://forgeiec.io/hearth/1.0">
+  <metadata>
+    <hearth:widget>
+      <hearth:name>Schwarz</hearth:name>
+      <hearth:version>0.2.0</hearth:version>
+      <hearth:category>screensaver</hearth:category>
+      <hearth:description>Blendet den Screen schwarz aus.</hearth:description>
+      <hearth:location-type>software</hearth:location-type>
+    </hearth:widget>
+  </metadata>
+  <g hearth:layer="background" hearth:layer-name="Background" hearth:locked="true" id="c70b153f-1da7-4e09-a9e0-a9a5f388f194"/>
+  <g hearth:layer="content" hearth:layer-name="Content" id="ab8af6a3-c014-4d64-a98e-a3746f5df33b"><rect x='-160' y='-160' width='2240' height='1400' fill='#000'/><circle r='4' fill='#1e1e1e'><animate attributeName='opacity' values='0.05;0.5;0.05' dur='6s' repeatCount='indefinite'/><animateMotion dur='43s' repeatCount='indefinite' path='M200 200 L1720 240 L1660 860 L240 880 Z'/></circle></g>
+  <g hearth:layer="actions" hearth:layer-name="Actions" id="6d8f0305-9873-4ebd-8154-197e33ffd203"/>
+</svg>
+</symbol>
+
