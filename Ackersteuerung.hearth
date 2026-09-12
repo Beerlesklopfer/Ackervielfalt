@@ -15254,7 +15254,7 @@ td { padding: 6px 8px; border-bottom: 1px solid #1a1a2a; }
 </script>
 {% endblock %}
 ]]></asset>
-   <asset name="frame.html.tera" type="tera" version="841c6e40"><![CDATA[{# DER RAHMEN — die eine Stelle, an der ein Screen eingepasst wird.
+   <asset name="frame.html.tera" type="tera" version="9c1d0a3e"><![CDATA[{# DER RAHMEN — die eine Stelle, an der ein Screen eingepasst wird.
 
    ── Warum es diese Vorlage gibt ─────────────────────────────────────────────
 
@@ -15300,6 +15300,26 @@ td { padding: 6px 8px; border-bottom: 1px solid #1a1a2a; }
 <style>
 /* Von body bis svg durchgehend — jede Unterbrechung kappt die Hoehe. */
 body { display: flex; flex-direction: column; min-height: 100vh; }
+
+/* ── DER ROLLBALKEN IST UNSICHTBAR, GEROLLT WIRD TROTZDEM ────────────────────
+ *
+ * Festlegung des Anwenders (12.09.2026): „ich moechte scrollen koennen, aber
+ * nur die Bar moege nicht sichtbar sein."
+ *
+ * Auf einem Panel-PC zieht niemand an einer Bildlaufleiste — dort wird
+ * gewischt. Der Balken nimmt nur Flaeche und beschneidet die Breite. Das
+ * Rollen selbst muss aber bleiben: eine umgebrochene Leiste, ein langer
+ * Dialog, ein schmales Fenster — was nicht ins Bild passt, muss erreichbar
+ * sein. Ein `overflow: hidden` haette es abgeschnitten, und der Inhalt waere
+ * still verschwunden.
+ *
+ * Also: nichts am Rollverhalten, nur der Balken wird verborgen. */
+html, body, .help-modal__body {
+  scrollbar-width: none;            /* Firefox */
+  -ms-overflow-style: none;         /* alte Edge */
+}
+html::-webkit-scrollbar, body::-webkit-scrollbar,
+.help-modal__body::-webkit-scrollbar { width: 0; height: 0; }
 main {
   /* `flex: 1` fragt NICHT, wie hoch die Leiste ist — es nimmt, was uebrig
      bleibt. Eine abgezogene Zahl (`calc(100vh - 48px)`) stimmt in dem Moment
@@ -24445,7 +24465,7 @@ function onLiveUpdate(values) {
 </script>
 {% endblock %}
 ]]></asset>
-   <asset name="screen-runtime.js" type="js" version="9ddbda75"><![CDATA[// screen-runtime.js — PROJECT / runtime JS.
+   <asset name="screen-runtime.js" type="js" version="af9fe8bc"><![CDATA[// screen-runtime.js — PROJECT / runtime JS.
 //
 // Belongs to the SCREEN (the deployed page), not to the Studio editor. Plain JS,
 // no editor dependencies. Studio's editor (canvas-editor.js) only *initiates*
@@ -24913,8 +24933,30 @@ function onLiveUpdate(values) {
   function playScreensaver() {
     // True OS fullscreen on a kiosk/operator panel if the browser grants it; the
     // overlay covers the full screen regardless (so "fullscreen" holds either way).
-    try { if (!document.fullscreenElement) document.documentElement.requestFullscreen(); }
-    catch (e) { /* needs a gesture — overlay still covers the screen */ }
+    //
+    // ── EIN try/catch FAENGT KEIN PROMISE ──────────────────────────────────
+    //
+    // Hier stand der Aufruf nackt in einem try/catch, mit dem Kommentar „needs
+    // a gesture". Die Absicht war richtig, der Griff nicht: `requestFullscreen()`
+    // wirft nicht, es LIEFERT ein Promise — und dessen Ablehnung laeuft am
+    // try/catch vorbei. Gemessen am 12.09.2026 in der Live-Vorschau:
+    // „Uncaught (in promise) TypeError: Fullscreen is not supported".
+    //
+    // Das ist kein Schoenheitsfehler. Der Schoner laeuft danach zwar weiter,
+    // aber die Anlage schreibt bei JEDEM Anlauf einen Fehler in die Konsole —
+    // und wer dort spaeter einen echten sucht, findet zuerst diesen.
+    //
+    // Die Ablehnung ist ausserdem der NORMALFALL: Vollbild verlangt eine
+    // Geste des Benutzers, und ein Schoner startet gerade dann, wenn seit
+    // Minuten keine kam. Er braucht es auch nicht — das Overlay deckt das
+    // ganze Fenster ohnehin.
+    try {
+      const el = document.documentElement;
+      if (!document.fullscreenElement && typeof el.requestFullscreen === 'function') {
+        const p = el.requestFullscreen();
+        if (p && typeof p.catch === 'function') p.catch(() => {});
+      }
+    } catch (e) { /* synchroner Wurf aelterer Maschinen — Overlay deckt trotzdem */ }
 
     if (maximizeScreensaver()) { armDismiss(); return; }
 
