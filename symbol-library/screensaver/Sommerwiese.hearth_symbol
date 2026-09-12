@@ -1,23 +1,815 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<!-- Bildschirmschoner „Sommerwiese“ — ein Symbol der Kategorie screensaver.
-     Ein Schirm verweist mit screensaver="6b1d7d4e-2b6a-4a3b-9c0f-1e4d7a2c5f01" darauf; die Ausfuhr holt
-     das Bild aus der Registratur des Projekts. Bis 11.09.2026 war das eine
-     Vorlage (:/screensavers/meadow.hearthtmpl); jetzt ein Symbol wie jedes
-     andere, mit fester Kennung — sie steht in der Datei und wird nie gerechnet. -->
-<symbol uuid="6b1d7d4e-2b6a-4a3b-9c0f-1e4d7a2c5f01" name="Sommerwiese" version="0.2.0" category="screensaver" author="ForgeIEC" description="Sonnige Wiese mit wehendem Gras und ziehenden Wolken.">
-<svg hearth:element="hearth-screensaver" hearth:format-version="1.0" hearth:visible="true" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" xmlns:hearth="https://forgeiec.io/hearth/1.0">
-  <metadata>
-    <hearth:widget>
-      <hearth:name>Sommerwiese</hearth:name>
-      <hearth:version>0.2.0</hearth:version>
-      <hearth:category>screensaver</hearth:category>
-      <hearth:description>Sonnige Wiese mit wehendem Gras und ziehenden Wolken.</hearth:description>
-      <hearth:location-type>software</hearth:location-type>
-    </hearth:widget>
-  </metadata>
-  <g hearth:layer="background" hearth:layer-name="Background" hearth:locked="true" id="b73768db-081f-4198-8929-38e6ebc442f8"/>
-  <g hearth:layer="content" hearth:layer-name="Content" id="de5593d1-fc56-4642-bedb-ba64847a0a6e"><g><animateTransform attributeName='transform' type='translate' values='-80 0;80 0;-80 0' dur='47s' repeatCount='indefinite'/><g><animateTransform attributeName='transform' type='translate' values='0 -56;0 56;0 -56' dur='37s' repeatCount='indefinite'/><defs><linearGradient id='sky' x1='0' y1='0' x2='0' y2='1'><stop offset='0%' stop-color='#79c4ee'/><stop offset='65%' stop-color='#cdeeff'/><stop offset='100%' stop-color='#e9f8df'/></linearGradient><linearGradient id='grd' x1='0' y1='0' x2='0' y2='1'><stop offset='0%' stop-color='#74c24f'/><stop offset='100%' stop-color='#327f25'/></linearGradient></defs><rect x='-160' y='-160' width='2240' height='1400' fill='url(#sky)'/><g><animateTransform attributeName='transform' type='translate' values='-140 40;140 -40;-140 40' dur='90s' repeatCount='indefinite'/><circle cx='1500' cy='235' r='185' fill='#fff6c2' opacity='0.35'><animate attributeName='r' values='185;205;185' dur='8s' repeatCount='indefinite'/></circle><circle cx='1500' cy='235' r='110' fill='#fff3a8'/></g><g><animateTransform attributeName='transform' type='translate' values='-420 0;2340 0' dur='62.8s' begin='-3.0s' repeatCount='indefinite'/><g transform='translate(0 235) scale(1.45)' fill='#ffffff' opacity='0.92'><ellipse cx='0' cy='0' rx='90' ry='46'/><ellipse cx='70' cy='14' rx='70' ry='40'/><ellipse cx='-70' cy='16' rx='64' ry='34'/><ellipse cx='10' cy='-30' rx='60' ry='40'/></g></g><g><animateTransform attributeName='transform' type='translate' values='-420 0;2340 0' dur='71.2s' begin='-64.8s' repeatCount='indefinite'/><g transform='translate(0 344) scale(0.68)' fill='#ffffff' opacity='0.92'><ellipse cx='0' cy='0' rx='90' ry='46'/><ellipse cx='70' cy='14' rx='70' ry='40'/><ellipse cx='-70' cy='16' rx='64' ry='34'/><ellipse cx='10' cy='-30' rx='60' ry='40'/></g></g><g><animateTransform attributeName='transform' type='translate' values='-420 0;2340 0' dur='64.5s' begin='-4.5s' repeatCount='indefinite'/><g transform='translate(0 179) scale(0.63)' fill='#ffffff' opacity='0.92'><ellipse cx='0' cy='0' rx='90' ry='46'/><ellipse cx='70' cy='14' rx='70' ry='40'/><ellipse cx='-70' cy='16' rx='64' ry='34'/><ellipse cx='10' cy='-30' rx='60' ry='40'/></g></g><g><animateTransform attributeName='transform' type='translate' values='-420 0;2340 0' dur='47.7s' begin='-27.0s' repeatCount='indefinite'/><g transform='translate(0 116) scale(1.1)' fill='#ffffff' opacity='0.92'><ellipse cx='0' cy='0' rx='90' ry='46'/><ellipse cx='70' cy='14' rx='70' ry='40'/><ellipse cx='-70' cy='16' rx='64' ry='34'/><ellipse cx='10' cy='-30' rx='60' ry='40'/></g></g><g><animateTransform attributeName='transform' type='translate' values='-420 0;2340 0' dur='71.2s' begin='-4.4s' repeatCount='indefinite'/><g transform='translate(0 184) scale(1.17)' fill='#ffffff' opacity='0.92'><ellipse cx='0' cy='0' rx='90' ry='46'/><ellipse cx='70' cy='14' rx='70' ry='40'/><ellipse cx='-70' cy='16' rx='64' ry='34'/><ellipse cx='10' cy='-30' rx='60' ry='40'/></g></g><rect x='-160' y='815' width='2240' height='585' fill='url(#grd)'/><path d='M-160 1240 Q-191 1130 -199 1019' stroke='#358a30' stroke-width='5' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 -160 1240;4 -160 1240;-4 -160 1240' dur='3.1s' begin='-2.7s' repeatCount='indefinite'/></path><path d='M-140 1240 Q-146 1162 -116 1084' stroke='#4aa83f' stroke-width='4' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 -140 1240;4 -140 1240;-4 -140 1240' dur='4.7s' begin='-2.6s' repeatCount='indefinite'/></path><path d='M-120 1240 Q-138 1156 -118 1072' stroke='#3f9b3a' stroke-width='6' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 -120 1240;4 -120 1240;-4 -120 1240' dur='4.6s' begin='-0.3s' repeatCount='indefinite'/></path><path d='M-100 1240 Q-73 1154 -82 1068' stroke='#56b84a' stroke-width='6' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 -100 1240;4 -100 1240;-4 -100 1240' dur='4.6s' begin='-3.6s' repeatCount='indefinite'/></path><path d='M-80 1240 Q-86 1122 -79 1004' stroke='#4aa83f' stroke-width='4' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 -80 1240;4 -80 1240;-4 -80 1240' dur='3.7s' begin='-0.7s' repeatCount='indefinite'/></path><path d='M-60 1240 Q-43 1142 -38 1044' stroke='#358a30' stroke-width='6' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 -60 1240;4 -60 1240;-4 -60 1240' dur='5.6s' begin='-4.1s' repeatCount='indefinite'/></path><path d='M-40 1240 Q-48 1171 -70 1102' stroke='#4aa83f' stroke-width='5' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 -40 1240;4 -40 1240;-4 -40 1240' dur='4.3s' begin='-3.3s' repeatCount='indefinite'/></path><path d='M-20 1240 Q-23 1127 -60 1013' stroke='#358a30' stroke-width='5' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 -20 1240;4 -20 1240;-4 -20 1240' dur='3.2s' begin='-1.8s' repeatCount='indefinite'/></path><path d='M0 1240 Q21 1136 31 1031' stroke='#3f9b3a' stroke-width='5' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 0 1240;4 0 1240;-4 0 1240' dur='4.7s' begin='-2.1s' repeatCount='indefinite'/></path><path d='M20 1240 Q59 1120 64 999' stroke='#358a30' stroke-width='6' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 20 1240;4 20 1240;-4 20 1240' dur='3.2s' begin='-2.3s' repeatCount='indefinite'/></path><path d='M40 1240 Q55 1123 31 1006' stroke='#3f9b3a' stroke-width='5' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 40 1240;4 40 1240;-4 40 1240' dur='4.2s' begin='-2.8s' repeatCount='indefinite'/></path><path d='M60 1240 Q62 1135 36 1030' stroke='#358a30' stroke-width='4' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 60 1240;4 60 1240;-4 60 1240' dur='3.4s' begin='-0.2s' repeatCount='indefinite'/></path><path d='M80 1240 Q82 1149 85 1057' stroke='#4aa83f' stroke-width='5' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 80 1240;4 80 1240;-4 80 1240' dur='5.8s' begin='-2.9s' repeatCount='indefinite'/></path><path d='M100 1240 Q104 1129 125 1018' stroke='#358a30' stroke-width='6' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 100 1240;4 100 1240;-4 100 1240' dur='5.7s' begin='-4.7s' repeatCount='indefinite'/></path><path d='M120 1240 Q138 1127 120 1014' stroke='#4aa83f' stroke-width='4' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 120 1240;4 120 1240;-4 120 1240' dur='5.7s' begin='-5.5s' repeatCount='indefinite'/></path><path d='M140 1240 Q116 1158 114 1075' stroke='#4aa83f' stroke-width='5' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 140 1240;4 140 1240;-4 140 1240' dur='5.0s' begin='-0.1s' repeatCount='indefinite'/></path><path d='M160 1240 Q121 1144 115 1048' stroke='#358a30' stroke-width='4' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 160 1240;4 160 1240;-4 160 1240' dur='4.3s' begin='-1.6s' repeatCount='indefinite'/></path><path d='M180 1240 Q210 1174 193 1107' stroke='#56b84a' stroke-width='5' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 180 1240;4 180 1240;-4 180 1240' dur='5.9s' begin='-4.0s' repeatCount='indefinite'/></path><path d='M200 1240 Q183 1129 205 1018' stroke='#4aa83f' stroke-width='4' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 200 1240;4 200 1240;-4 200 1240' dur='4.4s' begin='-1.8s' repeatCount='indefinite'/></path><path d='M220 1240 Q210 1154 231 1067' stroke='#3f9b3a' stroke-width='4' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 220 1240;4 220 1240;-4 220 1240' dur='3.3s' begin='-2.0s' repeatCount='indefinite'/></path><path d='M240 1240 Q232 1161 263 1082' stroke='#3f9b3a' stroke-width='4' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 240 1240;4 240 1240;-4 240 1240' dur='5.8s' begin='-3.6s' repeatCount='indefinite'/></path><path d='M260 1240 Q262 1132 234 1024' stroke='#358a30' stroke-width='5' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 260 1240;4 260 1240;-4 260 1240' dur='3.8s' begin='-1.3s' repeatCount='indefinite'/></path><path d='M280 1240 Q270 1165 249 1089' stroke='#56b84a' stroke-width='5' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 280 1240;4 280 1240;-4 280 1240' dur='6.0s' begin='-2.8s' repeatCount='indefinite'/></path><path d='M300 1240 Q267 1170 273 1099' stroke='#56b84a' stroke-width='6' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 300 1240;4 300 1240;-4 300 1240' dur='5.2s' begin='-3.8s' repeatCount='indefinite'/></path><path d='M320 1240 Q306 1160 341 1079' stroke='#358a30' stroke-width='4' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 320 1240;4 320 1240;-4 320 1240' dur='3.6s' begin='-3.4s' repeatCount='indefinite'/></path><path d='M340 1240 Q345 1177 362 1114' stroke='#358a30' stroke-width='6' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 340 1240;4 340 1240;-4 340 1240' dur='5.9s' begin='-5.1s' repeatCount='indefinite'/></path><path d='M360 1240 Q345 1134 336 1027' stroke='#358a30' stroke-width='6' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 360 1240;4 360 1240;-4 360 1240' dur='5.3s' begin='-2.8s' repeatCount='indefinite'/></path><path d='M380 1240 Q421 1152 413 1063' stroke='#4aa83f' stroke-width='5' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 380 1240;4 380 1240;-4 380 1240' dur='6.0s' begin='-5.1s' repeatCount='indefinite'/></path><path d='M400 1240 Q398 1151 380 1062' stroke='#3f9b3a' stroke-width='5' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 400 1240;4 400 1240;-4 400 1240' dur='4.5s' begin='-3.3s' repeatCount='indefinite'/></path><path d='M420 1240 Q401 1120 408 1000' stroke='#56b84a' stroke-width='6' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 420 1240;4 420 1240;-4 420 1240' dur='5.1s' begin='-4.9s' repeatCount='indefinite'/></path><path d='M440 1240 Q420 1136 441 1031' stroke='#4aa83f' stroke-width='5' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 440 1240;4 440 1240;-4 440 1240' dur='3.7s' begin='-0.8s' repeatCount='indefinite'/></path><path d='M460 1240 Q482 1154 476 1068' stroke='#3f9b3a' stroke-width='5' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 460 1240;4 460 1240;-4 460 1240' dur='6.0s' begin='-3.7s' repeatCount='indefinite'/></path><path d='M480 1240 Q478 1136 517 1032' stroke='#56b84a' stroke-width='6' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 480 1240;4 480 1240;-4 480 1240' dur='5.5s' begin='-0.7s' repeatCount='indefinite'/></path><path d='M500 1240 Q494 1155 516 1069' stroke='#3f9b3a' stroke-width='6' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 500 1240;4 500 1240;-4 500 1240' dur='4.3s' begin='-2.7s' repeatCount='indefinite'/></path><path d='M520 1240 Q527 1130 534 1019' stroke='#4aa83f' stroke-width='4' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 520 1240;4 520 1240;-4 520 1240' dur='5.2s' begin='-0.4s' repeatCount='indefinite'/></path><path d='M540 1240 Q503 1164 498 1088' stroke='#4aa83f' stroke-width='6' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 540 1240;4 540 1240;-4 540 1240' dur='4.8s' begin='-2.2s' repeatCount='indefinite'/></path><path d='M560 1240 Q576 1120 599 999' stroke='#3f9b3a' stroke-width='4' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 560 1240;4 560 1240;-4 560 1240' dur='3.5s' begin='-1.9s' repeatCount='indefinite'/></path><path d='M580 1240 Q613 1167 602 1094' stroke='#4aa83f' stroke-width='4' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 580 1240;4 580 1240;-4 580 1240' dur='5.8s' begin='-2.5s' repeatCount='indefinite'/></path><path d='M600 1240 Q581 1177 587 1113' stroke='#358a30' stroke-width='5' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 600 1240;4 600 1240;-4 600 1240' dur='3.9s' begin='-0.9s' repeatCount='indefinite'/></path><path d='M620 1240 Q583 1127 591 1013' stroke='#56b84a' stroke-width='6' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 620 1240;4 620 1240;-4 620 1240' dur='5.7s' begin='-2.0s' repeatCount='indefinite'/></path><path d='M640 1240 Q632 1127 659 1013' stroke='#3f9b3a' stroke-width='5' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 640 1240;4 640 1240;-4 640 1240' dur='4.6s' begin='-2.4s' repeatCount='indefinite'/></path><path d='M660 1240 Q651 1157 692 1074' stroke='#4aa83f' stroke-width='5' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 660 1240;4 660 1240;-4 660 1240' dur='5.3s' begin='-0.8s' repeatCount='indefinite'/></path><path d='M680 1240 Q671 1165 706 1090' stroke='#56b84a' stroke-width='4' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 680 1240;4 680 1240;-4 680 1240' dur='4.0s' begin='-2.1s' repeatCount='indefinite'/></path><path d='M700 1240 Q680 1173 686 1106' stroke='#56b84a' stroke-width='6' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 700 1240;4 700 1240;-4 700 1240' dur='3.8s' begin='-2.9s' repeatCount='indefinite'/></path><path d='M720 1240 Q704 1177 683 1113' stroke='#4aa83f' stroke-width='6' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 720 1240;4 720 1240;-4 720 1240' dur='4.0s' begin='-3.9s' repeatCount='indefinite'/></path><path d='M740 1240 Q753 1145 752 1050' stroke='#4aa83f' stroke-width='6' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 740 1240;4 740 1240;-4 740 1240' dur='4.6s' begin='-2.2s' repeatCount='indefinite'/></path><path d='M760 1240 Q760 1147 786 1054' stroke='#3f9b3a' stroke-width='5' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 760 1240;4 760 1240;-4 760 1240' dur='5.5s' begin='-0.8s' repeatCount='indefinite'/></path><path d='M780 1240 Q756 1124 775 1007' stroke='#4aa83f' stroke-width='6' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 780 1240;4 780 1240;-4 780 1240' dur='5.0s' begin='-2.1s' repeatCount='indefinite'/></path><path d='M800 1240 Q809 1142 770 1043' stroke='#358a30' stroke-width='4' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 800 1240;4 800 1240;-4 800 1240' dur='3.5s' begin='-2.5s' repeatCount='indefinite'/></path><path d='M820 1240 Q810 1148 792 1056' stroke='#56b84a' stroke-width='5' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 820 1240;4 820 1240;-4 820 1240' dur='3.7s' begin='-3.5s' repeatCount='indefinite'/></path><path d='M840 1240 Q849 1160 880 1079' stroke='#56b84a' stroke-width='5' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 840 1240;4 840 1240;-4 840 1240' dur='3.5s' begin='-1.5s' repeatCount='indefinite'/></path><path d='M860 1240 Q847 1127 840 1013' stroke='#3f9b3a' stroke-width='5' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 860 1240;4 860 1240;-4 860 1240' dur='4.0s' begin='-2.9s' repeatCount='indefinite'/></path><path d='M880 1240 Q905 1122 891 1003' stroke='#358a30' stroke-width='6' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 880 1240;4 880 1240;-4 880 1240' dur='3.1s' begin='-1.0s' repeatCount='indefinite'/></path><path d='M900 1240 Q909 1172 869 1104' stroke='#3f9b3a' stroke-width='5' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 900 1240;4 900 1240;-4 900 1240' dur='3.7s' begin='-3.2s' repeatCount='indefinite'/></path><path d='M920 1240 Q924 1146 880 1051' stroke='#56b84a' stroke-width='6' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 920 1240;4 920 1240;-4 920 1240' dur='3.5s' begin='-2.6s' repeatCount='indefinite'/></path><path d='M940 1240 Q927 1147 946 1054' stroke='#56b84a' stroke-width='6' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 940 1240;4 940 1240;-4 940 1240' dur='4.6s' begin='-2.4s' repeatCount='indefinite'/></path><path d='M960 1240 Q935 1139 926 1037' stroke='#56b84a' stroke-width='4' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 960 1240;4 960 1240;-4 960 1240' dur='3.2s' begin='-2.2s' repeatCount='indefinite'/></path><path d='M980 1240 Q973 1146 937 1052' stroke='#4aa83f' stroke-width='4' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 980 1240;4 980 1240;-4 980 1240' dur='3.3s' begin='-0.9s' repeatCount='indefinite'/></path><path d='M1000 1240 Q989 1147 970 1053' stroke='#56b84a' stroke-width='5' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 1000 1240;4 1000 1240;-4 1000 1240' dur='3.0s' begin='-3.0s' repeatCount='indefinite'/></path><path d='M1020 1240 Q1008 1164 980 1087' stroke='#4aa83f' stroke-width='5' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 1020 1240;4 1020 1240;-4 1020 1240' dur='5.1s' begin='-4.8s' repeatCount='indefinite'/></path><path d='M1040 1240 Q1016 1174 1018 1108' stroke='#4aa83f' stroke-width='5' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 1040 1240;4 1040 1240;-4 1040 1240' dur='5.8s' begin='-3.6s' repeatCount='indefinite'/></path><path d='M1060 1240 Q1087 1123 1079 1006' stroke='#3f9b3a' stroke-width='5' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 1060 1240;4 1060 1240;-4 1060 1240' dur='3.5s' begin='-1.2s' repeatCount='indefinite'/></path><path d='M1080 1240 Q1034 1176 1036 1111' stroke='#4aa83f' stroke-width='6' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 1080 1240;4 1080 1240;-4 1080 1240' dur='5.2s' begin='-2.9s' repeatCount='indefinite'/></path><path d='M1100 1240 Q1096 1120 1086 999' stroke='#56b84a' stroke-width='6' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 1100 1240;4 1100 1240;-4 1100 1240' dur='3.3s' begin='-2.7s' repeatCount='indefinite'/></path><path d='M1120 1240 Q1132 1117 1144 994' stroke='#4aa83f' stroke-width='4' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 1120 1240;4 1120 1240;-4 1120 1240' dur='5.9s' begin='-1.8s' repeatCount='indefinite'/></path><path d='M1140 1240 Q1150 1137 1120 1033' stroke='#358a30' stroke-width='4' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 1140 1240;4 1140 1240;-4 1140 1240' dur='5.2s' begin='-0.7s' repeatCount='indefinite'/></path><path d='M1160 1240 Q1117 1164 1116 1087' stroke='#56b84a' stroke-width='4' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 1160 1240;4 1160 1240;-4 1160 1240' dur='4.9s' begin='-4.3s' repeatCount='indefinite'/></path><path d='M1180 1240 Q1179 1173 1145 1106' stroke='#358a30' stroke-width='6' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 1180 1240;4 1180 1240;-4 1180 1240' dur='5.5s' begin='-4.8s' repeatCount='indefinite'/></path><path d='M1200 1240 Q1214 1149 1243 1058' stroke='#358a30' stroke-width='5' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 1200 1240;4 1200 1240;-4 1200 1240' dur='3.1s' begin='-0.6s' repeatCount='indefinite'/></path><path d='M1220 1240 Q1212 1180 1208 1120' stroke='#358a30' stroke-width='4' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 1220 1240;4 1220 1240;-4 1220 1240' dur='5.9s' begin='-5.7s' repeatCount='indefinite'/></path><path d='M1240 1240 Q1225 1176 1234 1112' stroke='#56b84a' stroke-width='4' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 1240 1240;4 1240 1240;-4 1240 1240' dur='4.1s' begin='-0.0s' repeatCount='indefinite'/></path><path d='M1260 1240 Q1262 1120 1250 999' stroke='#3f9b3a' stroke-width='4' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 1260 1240;4 1260 1240;-4 1260 1240' dur='5.0s' begin='-1.2s' repeatCount='indefinite'/></path><path d='M1280 1240 Q1247 1147 1246 1053' stroke='#3f9b3a' stroke-width='5' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 1280 1240;4 1280 1240;-4 1280 1240' dur='4.2s' begin='-0.2s' repeatCount='indefinite'/></path><path d='M1300 1240 Q1306 1142 1335 1043' stroke='#4aa83f' stroke-width='6' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 1300 1240;4 1300 1240;-4 1300 1240' dur='3.3s' begin='-3.2s' repeatCount='indefinite'/></path><path d='M1320 1240 Q1339 1131 1316 1021' stroke='#4aa83f' stroke-width='4' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 1320 1240;4 1320 1240;-4 1320 1240' dur='6.0s' begin='-0.9s' repeatCount='indefinite'/></path><path d='M1340 1240 Q1369 1126 1384 1011' stroke='#3f9b3a' stroke-width='6' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 1340 1240;4 1340 1240;-4 1340 1240' dur='3.4s' begin='-1.8s' repeatCount='indefinite'/></path><path d='M1360 1240 Q1318 1151 1325 1062' stroke='#3f9b3a' stroke-width='5' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 1360 1240;4 1360 1240;-4 1360 1240' dur='3.1s' begin='-2.0s' repeatCount='indefinite'/></path><path d='M1380 1240 Q1371 1123 1406 1005' stroke='#4aa83f' stroke-width='5' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 1380 1240;4 1380 1240;-4 1380 1240' dur='4.9s' begin='-3.1s' repeatCount='indefinite'/></path><path d='M1400 1240 Q1381 1147 1355 1053' stroke='#3f9b3a' stroke-width='6' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 1400 1240;4 1400 1240;-4 1400 1240' dur='5.4s' begin='-4.0s' repeatCount='indefinite'/></path><path d='M1420 1240 Q1418 1172 1435 1104' stroke='#4aa83f' stroke-width='6' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 1420 1240;4 1420 1240;-4 1420 1240' dur='5.4s' begin='-4.6s' repeatCount='indefinite'/></path><path d='M1440 1240 Q1454 1154 1424 1068' stroke='#56b84a' stroke-width='4' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 1440 1240;4 1440 1240;-4 1440 1240' dur='4.9s' begin='-2.3s' repeatCount='indefinite'/></path><path d='M1460 1240 Q1474 1119 1502 998' stroke='#4aa83f' stroke-width='4' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 1460 1240;4 1460 1240;-4 1460 1240' dur='5.3s' begin='-3.3s' repeatCount='indefinite'/></path><path d='M1480 1240 Q1469 1162 1477 1083' stroke='#4aa83f' stroke-width='4' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 1480 1240;4 1480 1240;-4 1480 1240' dur='5.0s' begin='-3.5s' repeatCount='indefinite'/></path><path d='M1500 1240 Q1487 1119 1462 997' stroke='#4aa83f' stroke-width='6' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 1500 1240;4 1500 1240;-4 1500 1240' dur='3.8s' begin='-2.6s' repeatCount='indefinite'/></path><path d='M1520 1240 Q1536 1118 1512 995' stroke='#56b84a' stroke-width='4' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 1520 1240;4 1520 1240;-4 1520 1240' dur='4.5s' begin='-2.1s' repeatCount='indefinite'/></path><path d='M1540 1240 Q1517 1155 1534 1069' stroke='#56b84a' stroke-width='4' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 1540 1240;4 1540 1240;-4 1540 1240' dur='5.8s' begin='-0.1s' repeatCount='indefinite'/></path><path d='M1560 1240 Q1558 1116 1572 991' stroke='#4aa83f' stroke-width='4' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 1560 1240;4 1560 1240;-4 1560 1240' dur='4.2s' begin='-3.8s' repeatCount='indefinite'/></path><path d='M1580 1240 Q1588 1169 1553 1097' stroke='#4aa83f' stroke-width='6' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 1580 1240;4 1580 1240;-4 1580 1240' dur='4.6s' begin='-4.4s' repeatCount='indefinite'/></path><path d='M1600 1240 Q1577 1115 1590 990' stroke='#56b84a' stroke-width='5' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 1600 1240;4 1600 1240;-4 1600 1240' dur='5.1s' begin='-1.2s' repeatCount='indefinite'/></path><path d='M1620 1240 Q1582 1177 1595 1114' stroke='#56b84a' stroke-width='5' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 1620 1240;4 1620 1240;-4 1620 1240' dur='5.8s' begin='-4.0s' repeatCount='indefinite'/></path><path d='M1640 1240 Q1641 1162 1648 1084' stroke='#358a30' stroke-width='4' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 1640 1240;4 1640 1240;-4 1640 1240' dur='4.1s' begin='-0.5s' repeatCount='indefinite'/></path><path d='M1660 1240 Q1659 1139 1658 1037' stroke='#3f9b3a' stroke-width='6' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 1660 1240;4 1660 1240;-4 1660 1240' dur='3.4s' begin='-3.1s' repeatCount='indefinite'/></path><path d='M1680 1240 Q1671 1143 1667 1046' stroke='#3f9b3a' stroke-width='5' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 1680 1240;4 1680 1240;-4 1680 1240' dur='3.2s' begin='-1.2s' repeatCount='indefinite'/></path><path d='M1700 1240 Q1673 1126 1690 1011' stroke='#358a30' stroke-width='6' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 1700 1240;4 1700 1240;-4 1700 1240' dur='3.8s' begin='-0.2s' repeatCount='indefinite'/></path><path d='M1720 1240 Q1705 1161 1706 1082' stroke='#358a30' stroke-width='5' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 1720 1240;4 1720 1240;-4 1720 1240' dur='4.3s' begin='-1.4s' repeatCount='indefinite'/></path><path d='M1740 1240 Q1757 1177 1775 1113' stroke='#4aa83f' stroke-width='6' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 1740 1240;4 1740 1240;-4 1740 1240' dur='5.7s' begin='-5.4s' repeatCount='indefinite'/></path><path d='M1760 1240 Q1761 1170 1721 1100' stroke='#4aa83f' stroke-width='6' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 1760 1240;4 1760 1240;-4 1760 1240' dur='4.2s' begin='-2.6s' repeatCount='indefinite'/></path><path d='M1780 1240 Q1766 1144 1797 1047' stroke='#4aa83f' stroke-width='5' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 1780 1240;4 1780 1240;-4 1780 1240' dur='5.7s' begin='-3.1s' repeatCount='indefinite'/></path><path d='M1800 1240 Q1792 1127 1798 1014' stroke='#358a30' stroke-width='5' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 1800 1240;4 1800 1240;-4 1800 1240' dur='3.9s' begin='-2.9s' repeatCount='indefinite'/></path><path d='M1820 1240 Q1821 1150 1813 1059' stroke='#4aa83f' stroke-width='6' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 1820 1240;4 1820 1240;-4 1820 1240' dur='4.7s' begin='-1.9s' repeatCount='indefinite'/></path><path d='M1840 1240 Q1810 1160 1804 1079' stroke='#4aa83f' stroke-width='5' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 1840 1240;4 1840 1240;-4 1840 1240' dur='4.5s' begin='-3.7s' repeatCount='indefinite'/></path><path d='M1860 1240 Q1868 1138 1872 1035' stroke='#3f9b3a' stroke-width='4' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 1860 1240;4 1860 1240;-4 1860 1240' dur='3.4s' begin='-0.7s' repeatCount='indefinite'/></path><path d='M1880 1240 Q1873 1137 1906 1033' stroke='#4aa83f' stroke-width='4' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 1880 1240;4 1880 1240;-4 1880 1240' dur='4.0s' begin='-1.5s' repeatCount='indefinite'/></path><path d='M1900 1240 Q1903 1128 1904 1015' stroke='#358a30' stroke-width='5' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 1900 1240;4 1900 1240;-4 1900 1240' dur='5.2s' begin='-1.1s' repeatCount='indefinite'/></path><path d='M1920 1240 Q1921 1173 1938 1105' stroke='#4aa83f' stroke-width='4' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 1920 1240;4 1920 1240;-4 1920 1240' dur='4.7s' begin='-1.7s' repeatCount='indefinite'/></path><path d='M1940 1240 Q1932 1146 1926 1051' stroke='#358a30' stroke-width='4' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 1940 1240;4 1940 1240;-4 1940 1240' dur='4.2s' begin='-1.9s' repeatCount='indefinite'/></path><path d='M1960 1240 Q1941 1164 1919 1088' stroke='#56b84a' stroke-width='6' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 1960 1240;4 1960 1240;-4 1960 1240' dur='5.1s' begin='-4.6s' repeatCount='indefinite'/></path><path d='M1980 1240 Q1936 1118 1935 995' stroke='#56b84a' stroke-width='5' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 1980 1240;4 1980 1240;-4 1980 1240' dur='4.2s' begin='-3.9s' repeatCount='indefinite'/></path><path d='M2000 1240 Q1973 1149 1968 1057' stroke='#3f9b3a' stroke-width='6' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 2000 1240;4 2000 1240;-4 2000 1240' dur='3.5s' begin='-1.8s' repeatCount='indefinite'/></path><path d='M2020 1240 Q2012 1122 1985 1003' stroke='#4aa83f' stroke-width='4' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 2020 1240;4 2020 1240;-4 2020 1240' dur='5.3s' begin='-0.0s' repeatCount='indefinite'/></path><path d='M2040 1240 Q2078 1176 2077 1111' stroke='#358a30' stroke-width='6' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 2040 1240;4 2040 1240;-4 2040 1240' dur='3.9s' begin='-0.5s' repeatCount='indefinite'/></path><path d='M2060 1240 Q2105 1125 2104 1009' stroke='#4aa83f' stroke-width='5' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 2060 1240;4 2060 1240;-4 2060 1240' dur='3.3s' begin='-0.2s' repeatCount='indefinite'/></path><path d='M2080 1240 Q2096 1147 2063 1054' stroke='#358a30' stroke-width='5' fill='none' stroke-linecap='round'><animateTransform attributeName='transform' type='rotate' values='-4 2080 1240;4 2080 1240;-4 2080 1240' dur='4.8s' begin='-0.1s' repeatCount='indefinite'/></path></g></g></g>
-  <g hearth:layer="actions" hearth:layer-name="Actions" id="d86def5a-33f4-4261-bbf7-7e862c26c373"/>
-</svg>
+<symbol category="screensaver" location-type="field" name="Sommerwiese" norm-standard="IEC 62424" uuid="6b1d7d4e-2b6a-4a3b-9c0f-1e4d7a2c5f01" version="0.3.2">
+  <svg hearth:element="hearth-sommerwiese" hearth:format-version="1.0" hearth:visible="true" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg" xmlns:hearth="https://forgeiec.io/hearth/1.0">
+    <g hearth:layer="background" hearth:layer-name="Background" hearth:locked="true" id="0e8dc0ba-8f36-4f01-94de-dd6b8becfe4a"/>
+    <g hearth:layer="content" hearth:layer-name="Content" id="6026e299-6cda-47ec-960d-c54f7036a824">
+      <svg hearth:element="hearth-screensaver" hearth:format-version="1.0" hearth:visible="true" preserveAspectRatio="xMidYMid slice" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg" xmlns:hearth="https://forgeiec.io/hearth/1.0">
+        <metadata>
+          <hearth:widget>
+            <hearth:name>Sommerwiese</hearth:name>
+            <hearth:version>0.2.0</hearth:version>
+            <hearth:category>screensaver</hearth:category>
+            <hearth:description>Sonnige Wiese mit wehendem Gras und ziehenden Wolken.</hearth:description>
+            <hearth:location-type>software</hearth:location-type>
+          </hearth:widget>
+        </metadata>
+        <g hearth:layer="background" hearth:layer-name="Background" hearth:locked="true" id="b73768db-081f-4198-8929-38e6ebc442f8"/>
+        <g hearth:layer="content" hearth:layer-name="Content" id="de5593d1-fc56-4642-bedb-ba64847a0a6e">
+          <g>
+            <animateTransform attributeName="transform" dur="47s" repeatCount="indefinite" type="translate" values="-80 0;80 0;-80 0"/>
+            <g>
+              <animateTransform attributeName="transform" dur="37s" repeatCount="indefinite" type="translate" values="0 -56;0 56;0 -56"/>
+              <defs>
+                <linearGradient id="sky" x1="0" x2="0" y1="0" y2="1">
+                  <stop offset="0%" stop-color="#79c4ee"/>
+                  <stop offset="65%" stop-color="#cdeeff"/>
+                  <stop offset="100%" stop-color="#e9f8df"/>
+                </linearGradient>
+                <linearGradient id="grd" x1="0" x2="0" y1="0" y2="1">
+                  <stop offset="0%" stop-color="#74c24f"/>
+                  <stop offset="100%" stop-color="#327f25"/>
+                </linearGradient>
+                <g id="ss-sonnenblume">
+                  <path d="M0 0 Q-13 -136 4 -268" fill="none" stroke="#3d8a33" stroke-linecap="round" stroke-width="11"/>
+                  <path d="M-1 -94 C-58 -124 -78 -76 -31 -60 C-9 -53 -3 -76 -1 -94Z" fill="#4aa83f"/>
+                  <path d="M2 -152 C60 -182 80 -134 33 -118 C11 -111 4 -134 2 -152Z" fill="#57b94a"/>
+                  <g transform="translate(4 -268)">
+                    <ellipse cx="0" cy="-64" fill="#e0a010" rx="14" ry="36" transform="rotate(11.2)"/>
+                    <ellipse cx="0" cy="-64" fill="#e0a010" rx="14" ry="36" transform="rotate(33.8)"/>
+                    <ellipse cx="0" cy="-64" fill="#e0a010" rx="14" ry="36" transform="rotate(56.2)"/>
+                    <ellipse cx="0" cy="-64" fill="#e0a010" rx="14" ry="36" transform="rotate(78.8)"/>
+                    <ellipse cx="0" cy="-64" fill="#e0a010" rx="14" ry="36" transform="rotate(101.2)"/>
+                    <ellipse cx="0" cy="-64" fill="#e0a010" rx="14" ry="36" transform="rotate(123.8)"/>
+                    <ellipse cx="0" cy="-64" fill="#e0a010" rx="14" ry="36" transform="rotate(146.2)"/>
+                    <ellipse cx="0" cy="-64" fill="#e0a010" rx="14" ry="36" transform="rotate(168.8)"/>
+                    <ellipse cx="0" cy="-64" fill="#e0a010" rx="14" ry="36" transform="rotate(191.2)"/>
+                    <ellipse cx="0" cy="-64" fill="#e0a010" rx="14" ry="36" transform="rotate(213.8)"/>
+                    <ellipse cx="0" cy="-64" fill="#e0a010" rx="14" ry="36" transform="rotate(236.2)"/>
+                    <ellipse cx="0" cy="-64" fill="#e0a010" rx="14" ry="36" transform="rotate(258.8)"/>
+                    <ellipse cx="0" cy="-64" fill="#e0a010" rx="14" ry="36" transform="rotate(281.2)"/>
+                    <ellipse cx="0" cy="-64" fill="#e0a010" rx="14" ry="36" transform="rotate(303.8)"/>
+                    <ellipse cx="0" cy="-64" fill="#e0a010" rx="14" ry="36" transform="rotate(326.2)"/>
+                    <ellipse cx="0" cy="-64" fill="#e0a010" rx="14" ry="36" transform="rotate(348.8)"/>
+                    <ellipse cx="0" cy="-58" fill="#f9c828" rx="16" ry="33" transform="rotate(0)"/>
+                    <ellipse cx="0" cy="-58" fill="#f9c828" rx="16" ry="33" transform="rotate(22.5)"/>
+                    <ellipse cx="0" cy="-58" fill="#f9c828" rx="16" ry="33" transform="rotate(45)"/>
+                    <ellipse cx="0" cy="-58" fill="#f9c828" rx="16" ry="33" transform="rotate(67.5)"/>
+                    <ellipse cx="0" cy="-58" fill="#f9c828" rx="16" ry="33" transform="rotate(90)"/>
+                    <ellipse cx="0" cy="-58" fill="#f9c828" rx="16" ry="33" transform="rotate(112.5)"/>
+                    <ellipse cx="0" cy="-58" fill="#f9c828" rx="16" ry="33" transform="rotate(135)"/>
+                    <ellipse cx="0" cy="-58" fill="#f9c828" rx="16" ry="33" transform="rotate(157.5)"/>
+                    <ellipse cx="0" cy="-58" fill="#f9c828" rx="16" ry="33" transform="rotate(180)"/>
+                    <ellipse cx="0" cy="-58" fill="#f9c828" rx="16" ry="33" transform="rotate(202.5)"/>
+                    <ellipse cx="0" cy="-58" fill="#f9c828" rx="16" ry="33" transform="rotate(225)"/>
+                    <ellipse cx="0" cy="-58" fill="#f9c828" rx="16" ry="33" transform="rotate(247.5)"/>
+                    <ellipse cx="0" cy="-58" fill="#f9c828" rx="16" ry="33" transform="rotate(270)"/>
+                    <ellipse cx="0" cy="-58" fill="#f9c828" rx="16" ry="33" transform="rotate(292.5)"/>
+                    <ellipse cx="0" cy="-58" fill="#f9c828" rx="16" ry="33" transform="rotate(315)"/>
+                    <ellipse cx="0" cy="-58" fill="#f9c828" rx="16" ry="33" transform="rotate(337.5)"/>
+                    <circle fill="#7a5122" r="38"/>
+                    <circle fill="#5d3c19" r="29"/>
+                    <circle cx="18" cy="0" fill="#3d2610" r="3.4"/>
+                    <circle cx="15.1" cy="9.7" fill="#3d2610" r="3.4"/>
+                    <circle cx="7.5" cy="16.4" fill="#3d2610" r="3.4"/>
+                    <circle cx="-2.5" cy="17.8" fill="#3d2610" r="3.4"/>
+                    <circle cx="-11.8" cy="13.6" fill="#3d2610" r="3.4"/>
+                    <circle cx="-17.3" cy="5.1" fill="#3d2610" r="3.4"/>
+                    <circle cx="-17.3" cy="-5" fill="#3d2610" r="3.4"/>
+                    <circle cx="-11.8" cy="-13.6" fill="#3d2610" r="3.4"/>
+                    <circle cx="-2.6" cy="-17.8" fill="#3d2610" r="3.4"/>
+                    <circle cx="7.4" cy="-16.4" fill="#3d2610" r="3.4"/>
+                    <circle cx="15.1" cy="-9.8" fill="#3d2610" r="3.4"/>
+                  </g>
+                </g>
+                <g id="ss-schmetterling">
+                  <g>
+                    <animateTransform attributeName="transform" dur="0.34s" repeatCount="indefinite" type="scale" values="1 1;0.22 1;1 1"/>
+                    <path d="M0 0 C20 -30 48 -26 46 -4 C60 8 46 30 24 24 C9 20 2 11 0 0Z" fill="currentColor" stroke="#4a3520" stroke-width="1.6"/>
+                  </g>
+                  <g>
+                    <animateTransform attributeName="transform" dur="0.34s" repeatCount="indefinite" type="scale" values="1 1;0.22 1;1 1"/>
+                    <path d="M0 0 C-20 -30 -48 -26 -46 -4 C-60 8 -46 30 -24 24 C-9 20 -2 11 0 0Z" fill="currentColor" stroke="#4a3520" stroke-width="1.6"/>
+                  </g>
+                  <ellipse cx="0" cy="5" fill="#3a2a1c" rx="3.6" ry="16"/>
+                  <path d="M-1 -9 Q-9 -20 -14 -22M1 -9 Q9 -20 14 -22" fill="none" stroke="#3a2a1c" stroke-linecap="round" stroke-width="1.8"/>
+                </g>
+              </defs>
+              <rect fill="url(#sky)" height="1400" width="2240" x="-160" y="-160"/>
+              <g>
+                <animateTransform attributeName="transform" dur="90s" repeatCount="indefinite" type="translate" values="-140 40;140 -40;-140 40"/>
+                <circle cx="1500" cy="235" fill="#fff6c2" opacity="0.35" r="185">
+                  <animate attributeName="r" dur="8s" repeatCount="indefinite" values="185;205;185"/>
+                </circle>
+                <circle cx="1500" cy="235" fill="#fff3a8" r="110"/>
+              </g>
+              <g>
+                <animateTransform attributeName="transform" begin="-3.0s" dur="62.8s" repeatCount="indefinite" type="translate" values="-420 0;2340 0"/>
+                <g fill="#ffffff" opacity="0.92" transform="translate(0 235) scale(1.45)">
+                  <ellipse cx="0" cy="0" rx="90" ry="46"/>
+                  <ellipse cx="70" cy="14" rx="70" ry="40"/>
+                  <ellipse cx="-70" cy="16" rx="64" ry="34"/>
+                  <ellipse cx="10" cy="-30" rx="60" ry="40"/>
+                </g>
+              </g>
+              <g>
+                <animateTransform attributeName="transform" begin="-64.8s" dur="71.2s" repeatCount="indefinite" type="translate" values="-420 0;2340 0"/>
+                <g fill="#ffffff" opacity="0.92" transform="translate(0 344) scale(0.68)">
+                  <ellipse cx="0" cy="0" rx="90" ry="46"/>
+                  <ellipse cx="70" cy="14" rx="70" ry="40"/>
+                  <ellipse cx="-70" cy="16" rx="64" ry="34"/>
+                  <ellipse cx="10" cy="-30" rx="60" ry="40"/>
+                </g>
+              </g>
+              <g>
+                <animateTransform attributeName="transform" begin="-4.5s" dur="64.5s" repeatCount="indefinite" type="translate" values="-420 0;2340 0"/>
+                <g fill="#ffffff" opacity="0.92" transform="translate(0 179) scale(0.63)">
+                  <ellipse cx="0" cy="0" rx="90" ry="46"/>
+                  <ellipse cx="70" cy="14" rx="70" ry="40"/>
+                  <ellipse cx="-70" cy="16" rx="64" ry="34"/>
+                  <ellipse cx="10" cy="-30" rx="60" ry="40"/>
+                </g>
+              </g>
+              <g>
+                <animateTransform attributeName="transform" begin="-27.0s" dur="47.7s" repeatCount="indefinite" type="translate" values="-420 0;2340 0"/>
+                <g fill="#ffffff" opacity="0.92" transform="translate(0 116) scale(1.1)">
+                  <ellipse cx="0" cy="0" rx="90" ry="46"/>
+                  <ellipse cx="70" cy="14" rx="70" ry="40"/>
+                  <ellipse cx="-70" cy="16" rx="64" ry="34"/>
+                  <ellipse cx="10" cy="-30" rx="60" ry="40"/>
+                </g>
+              </g>
+              <g>
+                <animateTransform attributeName="transform" begin="-4.4s" dur="71.2s" repeatCount="indefinite" type="translate" values="-420 0;2340 0"/>
+                <g fill="#ffffff" opacity="0.92" transform="translate(0 184) scale(1.17)">
+                  <ellipse cx="0" cy="0" rx="90" ry="46"/>
+                  <ellipse cx="70" cy="14" rx="70" ry="40"/>
+                  <ellipse cx="-70" cy="16" rx="64" ry="34"/>
+                  <ellipse cx="10" cy="-30" rx="60" ry="40"/>
+                </g>
+              </g>
+              <g data-role="voegel">
+                <g>
+                  <animateMotion begin="-38.9s" dur="46s" path="M-160 150 Q580 87.5 960 133.8 T2080 109.5" repeatCount="indefinite"/>
+                  <g opacity="0.72" transform="scale(1.15)">
+                    <path d="M-28 0 Q-14 -17 0 -3 Q14 -17 28 0" fill="none" stroke="#3a4a58" stroke-linecap="round" stroke-width="5">
+                      <animate attributeName="d" begin="-1.06s" dur="1.15s" repeatCount="indefinite" values="M-28 0 Q-14 -17 0 -3 Q14 -17 28 0;M-27 -5 Q-14 -11 0 -3 Q14 -11 27 -5;M-25 -10 Q-13 -2 0 -3 Q13 -2 25 -10;M-27 -5 Q-14 -11 0 -3 Q14 -11 27 -5;M-28 0 Q-14 -17 0 -3 Q14 -17 28 0"/>
+                    </path>
+                  </g>
+                </g>
+                <g>
+                  <animateMotion begin="-38.6s" dur="54s" path="M-160 232 Q580 190.8 960 252 T2080 282.1" repeatCount="indefinite"/>
+                  <g opacity="0.72" transform="scale(0.86)">
+                    <path d="M-28 0 Q-14 -17 0 -3 Q14 -17 28 0" fill="none" stroke="#3a4a58" stroke-linecap="round" stroke-width="5">
+                      <animate attributeName="d" begin="-0.68s" dur="1.14s" repeatCount="indefinite" values="M-28 0 Q-14 -17 0 -3 Q14 -17 28 0;M-27 -5 Q-14 -11 0 -3 Q14 -11 27 -5;M-25 -10 Q-13 -2 0 -3 Q13 -2 25 -10;M-27 -5 Q-14 -11 0 -3 Q14 -11 27 -5;M-28 0 Q-14 -17 0 -3 Q14 -17 28 0"/>
+                    </path>
+                  </g>
+                </g>
+                <g>
+                  <animateMotion begin="-5.4s" dur="61s" path="M-160 196 Q580 157.2 960 218.3 T2080 251.7" repeatCount="indefinite"/>
+                  <g opacity="0.72" transform="scale(0.62)">
+                    <path d="M-28 0 Q-14 -17 0 -3 Q14 -17 28 0" fill="none" stroke="#3a4a58" stroke-linecap="round" stroke-width="5">
+                      <animate attributeName="d" begin="-0.84s" dur="1s" repeatCount="indefinite" values="M-28 0 Q-14 -17 0 -3 Q14 -17 28 0;M-27 -5 Q-14 -11 0 -3 Q14 -11 27 -5;M-25 -10 Q-13 -2 0 -3 Q13 -2 25 -10;M-27 -5 Q-14 -11 0 -3 Q14 -11 27 -5;M-28 0 Q-14 -17 0 -3 Q14 -17 28 0"/>
+                    </path>
+                  </g>
+                </g>
+                <g>
+                  <animateMotion begin="-9.7s" dur="50s" path="M-160 318 Q580 254.4 960 339.9 T2080 372.9" repeatCount="indefinite"/>
+                  <g opacity="0.72" transform="scale(1.02)">
+                    <path d="M-28 0 Q-14 -17 0 -3 Q14 -17 28 0" fill="none" stroke="#3a4a58" stroke-linecap="round" stroke-width="5">
+                      <animate attributeName="d" begin="-0.56s" dur="1.26s" repeatCount="indefinite" values="M-28 0 Q-14 -17 0 -3 Q14 -17 28 0;M-27 -5 Q-14 -11 0 -3 Q14 -11 27 -5;M-25 -10 Q-13 -2 0 -3 Q13 -2 25 -10;M-27 -5 Q-14 -11 0 -3 Q14 -11 27 -5;M-28 0 Q-14 -17 0 -3 Q14 -17 28 0"/>
+                    </path>
+                  </g>
+                </g>
+                <g>
+                  <animateMotion begin="-51.9s" dur="58s" path="M-160 372 Q580 318.3 960 370.9 T2080 369.3" repeatCount="indefinite"/>
+                  <g opacity="0.72" transform="scale(0.7)">
+                    <path d="M-28 0 Q-14 -17 0 -3 Q14 -17 28 0" fill="none" stroke="#3a4a58" stroke-linecap="round" stroke-width="5">
+                      <animate attributeName="d" begin="-0.87s" dur="1.3s" repeatCount="indefinite" values="M-28 0 Q-14 -17 0 -3 Q14 -17 28 0;M-27 -5 Q-14 -11 0 -3 Q14 -11 27 -5;M-25 -10 Q-13 -2 0 -3 Q13 -2 25 -10;M-27 -5 Q-14 -11 0 -3 Q14 -11 27 -5;M-28 0 Q-14 -17 0 -3 Q14 -17 28 0"/>
+                    </path>
+                  </g>
+                </g>
+                <g>
+                  <animateMotion begin="-33.2s" dur="66s" path="M-160 268 Q580 224.3 960 289.5 T2080 321.7" repeatCount="indefinite"/>
+                  <g opacity="0.72" transform="scale(0.55)">
+                    <path d="M-28 0 Q-14 -17 0 -3 Q14 -17 28 0" fill="none" stroke="#3a4a58" stroke-linecap="round" stroke-width="5">
+                      <animate attributeName="d" begin="-0.63s" dur="0.9s" repeatCount="indefinite" values="M-28 0 Q-14 -17 0 -3 Q14 -17 28 0;M-27 -5 Q-14 -11 0 -3 Q14 -11 27 -5;M-25 -10 Q-13 -2 0 -3 Q13 -2 25 -10;M-27 -5 Q-14 -11 0 -3 Q14 -11 27 -5;M-28 0 Q-14 -17 0 -3 Q14 -17 28 0"/>
+                    </path>
+                  </g>
+                </g>
+                <g>
+                  <animateMotion begin="-12.5s" dur="52s" path="M-160 410 Q580 344.7 960 399.2 T2080 382.9" repeatCount="indefinite"/>
+                  <g opacity="0.72" transform="scale(0.9)">
+                    <path d="M-28 0 Q-14 -17 0 -3 Q14 -17 28 0" fill="none" stroke="#3a4a58" stroke-linecap="round" stroke-width="5">
+                      <animate attributeName="d" begin="-0.82s" dur="0.97s" repeatCount="indefinite" values="M-28 0 Q-14 -17 0 -3 Q14 -17 28 0;M-27 -5 Q-14 -11 0 -3 Q14 -11 27 -5;M-25 -10 Q-13 -2 0 -3 Q13 -2 25 -10;M-27 -5 Q-14 -11 0 -3 Q14 -11 27 -5;M-28 0 Q-14 -17 0 -3 Q14 -17 28 0"/>
+                    </path>
+                  </g>
+                </g>
+              </g>
+              <rect fill="url(#grd)" height="585" width="2240" x="-160" y="815"/>
+              <g data-role="sonnenblumen">
+                <g transform="translate(1282 833.3) scale(0.165)">
+                  <g>
+                    <animateTransform attributeName="transform" begin="-2.6s" dur="6.7s" repeatCount="indefinite" type="rotate" values="-3.2 0 0;3.2 0 0;-3.2 0 0"/>
+                    <use href="#ss-sonnenblume"/>
+                  </g>
+                </g>
+                <g transform="translate(9.7 845.6) scale(0.166)">
+                  <g>
+                    <animateTransform attributeName="transform" begin="-4.9s" dur="5.6s" repeatCount="indefinite" type="rotate" values="-3.2 0 0;3.2 0 0;-3.2 0 0"/>
+                    <use href="#ss-sonnenblume"/>
+                  </g>
+                </g>
+                <g transform="translate(1283.4 828.9) scale(0.179)">
+                  <g>
+                    <animateTransform attributeName="transform" begin="-1.9s" dur="5.8s" repeatCount="indefinite" type="rotate" values="-3.2 0 0;3.2 0 0;-3.2 0 0"/>
+                    <use href="#ss-sonnenblume"/>
+                  </g>
+                </g>
+                <g transform="translate(319.2 844.8) scale(0.195)">
+                  <g>
+                    <animateTransform attributeName="transform" begin="-2.9s" dur="7.7s" repeatCount="indefinite" type="rotate" values="-3.2 0 0;3.2 0 0;-3.2 0 0"/>
+                    <use href="#ss-sonnenblume"/>
+                  </g>
+                </g>
+                <g transform="translate(5.2 862.5) scale(0.211)">
+                  <g>
+                    <animateTransform attributeName="transform" begin="-5.3s" dur="6.1s" repeatCount="indefinite" type="rotate" values="-3.1 0 0;3.1 0 0;-3.1 0 0"/>
+                    <use href="#ss-sonnenblume"/>
+                  </g>
+                </g>
+                <g transform="translate(1774.1 855.9) scale(0.217)">
+                  <g>
+                    <animateTransform attributeName="transform" begin="-0.7s" dur="5.5s" repeatCount="indefinite" type="rotate" values="-3.1 0 0;3.1 0 0;-3.1 0 0"/>
+                    <use href="#ss-sonnenblume"/>
+                  </g>
+                </g>
+                <g transform="translate(323.7 851.2) scale(0.219)">
+                  <g>
+                    <animateTransform attributeName="transform" begin="-7.2s" dur="7.5s" repeatCount="indefinite" type="rotate" values="-3.1 0 0;3.1 0 0;-3.1 0 0"/>
+                    <use href="#ss-sonnenblume"/>
+                  </g>
+                </g>
+                <g transform="translate(1664.2 847.4) scale(0.223)">
+                  <g>
+                    <animateTransform attributeName="transform" begin="-3s" dur="4.9s" repeatCount="indefinite" type="rotate" values="-3.1 0 0;3.1 0 0;-3.1 0 0"/>
+                    <use href="#ss-sonnenblume"/>
+                  </g>
+                </g>
+                <g transform="translate(1973.6 871.3) scale(0.255)">
+                  <g>
+                    <animateTransform attributeName="transform" begin="-3.7s" dur="4.8s" repeatCount="indefinite" type="rotate" values="-3.1 0 0;3.1 0 0;-3.1 0 0"/>
+                    <use href="#ss-sonnenblume"/>
+                  </g>
+                </g>
+                <g transform="translate(1896.2 887) scale(0.283)">
+                  <g>
+                    <animateTransform attributeName="transform" begin="-6.3s" dur="6.4s" repeatCount="indefinite" type="rotate" values="-3 0 0;3 0 0;-3 0 0"/>
+                    <use href="#ss-sonnenblume"/>
+                  </g>
+                </g>
+                <g transform="translate(1064.1 885.4) scale(0.317)">
+                  <g>
+                    <animateTransform attributeName="transform" begin="-3s" dur="5.6s" repeatCount="indefinite" type="rotate" values="-3 0 0;3 0 0;-3 0 0"/>
+                    <use href="#ss-sonnenblume"/>
+                  </g>
+                </g>
+                <g transform="translate(971 904.5) scale(0.329)">
+                  <g>
+                    <animateTransform attributeName="transform" begin="-0.4s" dur="4.9s" repeatCount="indefinite" type="rotate" values="-3 0 0;3 0 0;-3 0 0"/>
+                    <use href="#ss-sonnenblume"/>
+                  </g>
+                </g>
+                <g transform="translate(1645.7 963.1) scale(0.439)">
+                  <g>
+                    <animateTransform attributeName="transform" begin="-2.4s" dur="6.4s" repeatCount="indefinite" type="rotate" values="-2.8 0 0;2.8 0 0;-2.8 0 0"/>
+                    <use href="#ss-sonnenblume"/>
+                  </g>
+                </g>
+                <g transform="translate(802.9 985.6) scale(0.521)">
+                  <g>
+                    <animateTransform attributeName="transform" begin="-6.1s" dur="6.8s" repeatCount="indefinite" type="rotate" values="-2.7 0 0;2.7 0 0;-2.7 0 0"/>
+                    <use href="#ss-sonnenblume"/>
+                  </g>
+                </g>
+                <g transform="translate(804.9 996.2) scale(0.536)">
+                  <g>
+                    <animateTransform attributeName="transform" begin="-2.7s" dur="6.9s" repeatCount="indefinite" type="rotate" values="-2.7 0 0;2.7 0 0;-2.7 0 0"/>
+                    <use href="#ss-sonnenblume"/>
+                  </g>
+                </g>
+                <g transform="translate(835.6 997.5) scale(0.569)">
+                  <g>
+                    <animateTransform attributeName="transform" begin="-2s" dur="6.4s" repeatCount="indefinite" type="rotate" values="-2.6 0 0;2.6 0 0;-2.6 0 0"/>
+                    <use href="#ss-sonnenblume"/>
+                  </g>
+                </g>
+              </g>
+              <path d="M-160 1240 Q-191 1130 -199 1019" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="5">
+                <animateTransform attributeName="transform" begin="-2.7s" dur="3.1s" repeatCount="indefinite" type="rotate" values="-4 -160 1240;4 -160 1240;-4 -160 1240"/>
+              </path>
+              <path d="M-140 1240 Q-146 1162 -116 1084" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="4">
+                <animateTransform attributeName="transform" begin="-2.6s" dur="4.7s" repeatCount="indefinite" type="rotate" values="-4 -140 1240;4 -140 1240;-4 -140 1240"/>
+              </path>
+              <path d="M-120 1240 Q-138 1156 -118 1072" fill="none" stroke="#3f9b3a" stroke-linecap="round" stroke-width="6">
+                <animateTransform attributeName="transform" begin="-0.3s" dur="4.6s" repeatCount="indefinite" type="rotate" values="-4 -120 1240;4 -120 1240;-4 -120 1240"/>
+              </path>
+              <path d="M-100 1240 Q-73 1154 -82 1068" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="6">
+                <animateTransform attributeName="transform" begin="-3.6s" dur="4.6s" repeatCount="indefinite" type="rotate" values="-4 -100 1240;4 -100 1240;-4 -100 1240"/>
+              </path>
+              <path d="M-80 1240 Q-86 1122 -79 1004" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="4">
+                <animateTransform attributeName="transform" begin="-0.7s" dur="3.7s" repeatCount="indefinite" type="rotate" values="-4 -80 1240;4 -80 1240;-4 -80 1240"/>
+              </path>
+              <path d="M-60 1240 Q-43 1142 -38 1044" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="6">
+                <animateTransform attributeName="transform" begin="-4.1s" dur="5.6s" repeatCount="indefinite" type="rotate" values="-4 -60 1240;4 -60 1240;-4 -60 1240"/>
+              </path>
+              <path d="M-40 1240 Q-48 1171 -70 1102" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="5">
+                <animateTransform attributeName="transform" begin="-3.3s" dur="4.3s" repeatCount="indefinite" type="rotate" values="-4 -40 1240;4 -40 1240;-4 -40 1240"/>
+              </path>
+              <path d="M-20 1240 Q-23 1127 -60 1013" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="5">
+                <animateTransform attributeName="transform" begin="-1.8s" dur="3.2s" repeatCount="indefinite" type="rotate" values="-4 -20 1240;4 -20 1240;-4 -20 1240"/>
+              </path>
+              <path d="M0 1240 Q21 1136 31 1031" fill="none" stroke="#3f9b3a" stroke-linecap="round" stroke-width="5">
+                <animateTransform attributeName="transform" begin="-2.1s" dur="4.7s" repeatCount="indefinite" type="rotate" values="-4 0 1240;4 0 1240;-4 0 1240"/>
+              </path>
+              <path d="M20 1240 Q59 1120 64 999" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="6">
+                <animateTransform attributeName="transform" begin="-2.3s" dur="3.2s" repeatCount="indefinite" type="rotate" values="-4 20 1240;4 20 1240;-4 20 1240"/>
+              </path>
+              <path d="M40 1240 Q55 1123 31 1006" fill="none" stroke="#3f9b3a" stroke-linecap="round" stroke-width="5">
+                <animateTransform attributeName="transform" begin="-2.8s" dur="4.2s" repeatCount="indefinite" type="rotate" values="-4 40 1240;4 40 1240;-4 40 1240"/>
+              </path>
+              <path d="M60 1240 Q62 1135 36 1030" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="4">
+                <animateTransform attributeName="transform" begin="-0.2s" dur="3.4s" repeatCount="indefinite" type="rotate" values="-4 60 1240;4 60 1240;-4 60 1240"/>
+              </path>
+              <path d="M80 1240 Q82 1149 85 1057" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="5">
+                <animateTransform attributeName="transform" begin="-2.9s" dur="5.8s" repeatCount="indefinite" type="rotate" values="-4 80 1240;4 80 1240;-4 80 1240"/>
+              </path>
+              <path d="M100 1240 Q104 1129 125 1018" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="6">
+                <animateTransform attributeName="transform" begin="-4.7s" dur="5.7s" repeatCount="indefinite" type="rotate" values="-4 100 1240;4 100 1240;-4 100 1240"/>
+              </path>
+              <path d="M120 1240 Q138 1127 120 1014" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="4">
+                <animateTransform attributeName="transform" begin="-5.5s" dur="5.7s" repeatCount="indefinite" type="rotate" values="-4 120 1240;4 120 1240;-4 120 1240"/>
+              </path>
+              <path d="M140 1240 Q116 1158 114 1075" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="5">
+                <animateTransform attributeName="transform" begin="-0.1s" dur="5.0s" repeatCount="indefinite" type="rotate" values="-4 140 1240;4 140 1240;-4 140 1240"/>
+              </path>
+              <path d="M160 1240 Q121 1144 115 1048" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="4">
+                <animateTransform attributeName="transform" begin="-1.6s" dur="4.3s" repeatCount="indefinite" type="rotate" values="-4 160 1240;4 160 1240;-4 160 1240"/>
+              </path>
+              <path d="M180 1240 Q210 1174 193 1107" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="5">
+                <animateTransform attributeName="transform" begin="-4.0s" dur="5.9s" repeatCount="indefinite" type="rotate" values="-4 180 1240;4 180 1240;-4 180 1240"/>
+              </path>
+              <path d="M200 1240 Q183 1129 205 1018" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="4">
+                <animateTransform attributeName="transform" begin="-1.8s" dur="4.4s" repeatCount="indefinite" type="rotate" values="-4 200 1240;4 200 1240;-4 200 1240"/>
+              </path>
+              <path d="M220 1240 Q210 1154 231 1067" fill="none" stroke="#3f9b3a" stroke-linecap="round" stroke-width="4">
+                <animateTransform attributeName="transform" begin="-2.0s" dur="3.3s" repeatCount="indefinite" type="rotate" values="-4 220 1240;4 220 1240;-4 220 1240"/>
+              </path>
+              <path d="M240 1240 Q232 1161 263 1082" fill="none" stroke="#3f9b3a" stroke-linecap="round" stroke-width="4">
+                <animateTransform attributeName="transform" begin="-3.6s" dur="5.8s" repeatCount="indefinite" type="rotate" values="-4 240 1240;4 240 1240;-4 240 1240"/>
+              </path>
+              <path d="M260 1240 Q262 1132 234 1024" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="5">
+                <animateTransform attributeName="transform" begin="-1.3s" dur="3.8s" repeatCount="indefinite" type="rotate" values="-4 260 1240;4 260 1240;-4 260 1240"/>
+              </path>
+              <path d="M280 1240 Q270 1165 249 1089" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="5">
+                <animateTransform attributeName="transform" begin="-2.8s" dur="6.0s" repeatCount="indefinite" type="rotate" values="-4 280 1240;4 280 1240;-4 280 1240"/>
+              </path>
+              <path d="M300 1240 Q267 1170 273 1099" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="6">
+                <animateTransform attributeName="transform" begin="-3.8s" dur="5.2s" repeatCount="indefinite" type="rotate" values="-4 300 1240;4 300 1240;-4 300 1240"/>
+              </path>
+              <path d="M320 1240 Q306 1160 341 1079" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="4">
+                <animateTransform attributeName="transform" begin="-3.4s" dur="3.6s" repeatCount="indefinite" type="rotate" values="-4 320 1240;4 320 1240;-4 320 1240"/>
+              </path>
+              <path d="M340 1240 Q345 1177 362 1114" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="6">
+                <animateTransform attributeName="transform" begin="-5.1s" dur="5.9s" repeatCount="indefinite" type="rotate" values="-4 340 1240;4 340 1240;-4 340 1240"/>
+              </path>
+              <path d="M360 1240 Q345 1134 336 1027" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="6">
+                <animateTransform attributeName="transform" begin="-2.8s" dur="5.3s" repeatCount="indefinite" type="rotate" values="-4 360 1240;4 360 1240;-4 360 1240"/>
+              </path>
+              <path d="M380 1240 Q421 1152 413 1063" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="5">
+                <animateTransform attributeName="transform" begin="-5.1s" dur="6.0s" repeatCount="indefinite" type="rotate" values="-4 380 1240;4 380 1240;-4 380 1240"/>
+              </path>
+              <path d="M400 1240 Q398 1151 380 1062" fill="none" stroke="#3f9b3a" stroke-linecap="round" stroke-width="5">
+                <animateTransform attributeName="transform" begin="-3.3s" dur="4.5s" repeatCount="indefinite" type="rotate" values="-4 400 1240;4 400 1240;-4 400 1240"/>
+              </path>
+              <path d="M420 1240 Q401 1120 408 1000" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="6">
+                <animateTransform attributeName="transform" begin="-4.9s" dur="5.1s" repeatCount="indefinite" type="rotate" values="-4 420 1240;4 420 1240;-4 420 1240"/>
+              </path>
+              <path d="M440 1240 Q420 1136 441 1031" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="5">
+                <animateTransform attributeName="transform" begin="-0.8s" dur="3.7s" repeatCount="indefinite" type="rotate" values="-4 440 1240;4 440 1240;-4 440 1240"/>
+              </path>
+              <path d="M460 1240 Q482 1154 476 1068" fill="none" stroke="#3f9b3a" stroke-linecap="round" stroke-width="5">
+                <animateTransform attributeName="transform" begin="-3.7s" dur="6.0s" repeatCount="indefinite" type="rotate" values="-4 460 1240;4 460 1240;-4 460 1240"/>
+              </path>
+              <path d="M480 1240 Q478 1136 517 1032" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="6">
+                <animateTransform attributeName="transform" begin="-0.7s" dur="5.5s" repeatCount="indefinite" type="rotate" values="-4 480 1240;4 480 1240;-4 480 1240"/>
+              </path>
+              <path d="M500 1240 Q494 1155 516 1069" fill="none" stroke="#3f9b3a" stroke-linecap="round" stroke-width="6">
+                <animateTransform attributeName="transform" begin="-2.7s" dur="4.3s" repeatCount="indefinite" type="rotate" values="-4 500 1240;4 500 1240;-4 500 1240"/>
+              </path>
+              <path d="M520 1240 Q527 1130 534 1019" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="4">
+                <animateTransform attributeName="transform" begin="-0.4s" dur="5.2s" repeatCount="indefinite" type="rotate" values="-4 520 1240;4 520 1240;-4 520 1240"/>
+              </path>
+              <path d="M540 1240 Q503 1164 498 1088" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="6">
+                <animateTransform attributeName="transform" begin="-2.2s" dur="4.8s" repeatCount="indefinite" type="rotate" values="-4 540 1240;4 540 1240;-4 540 1240"/>
+              </path>
+              <path d="M560 1240 Q576 1120 599 999" fill="none" stroke="#3f9b3a" stroke-linecap="round" stroke-width="4">
+                <animateTransform attributeName="transform" begin="-1.9s" dur="3.5s" repeatCount="indefinite" type="rotate" values="-4 560 1240;4 560 1240;-4 560 1240"/>
+              </path>
+              <path d="M580 1240 Q613 1167 602 1094" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="4">
+                <animateTransform attributeName="transform" begin="-2.5s" dur="5.8s" repeatCount="indefinite" type="rotate" values="-4 580 1240;4 580 1240;-4 580 1240"/>
+              </path>
+              <path d="M600 1240 Q581 1177 587 1113" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="5">
+                <animateTransform attributeName="transform" begin="-0.9s" dur="3.9s" repeatCount="indefinite" type="rotate" values="-4 600 1240;4 600 1240;-4 600 1240"/>
+              </path>
+              <path d="M620 1240 Q583 1127 591 1013" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="6">
+                <animateTransform attributeName="transform" begin="-2.0s" dur="5.7s" repeatCount="indefinite" type="rotate" values="-4 620 1240;4 620 1240;-4 620 1240"/>
+              </path>
+              <path d="M640 1240 Q632 1127 659 1013" fill="none" stroke="#3f9b3a" stroke-linecap="round" stroke-width="5">
+                <animateTransform attributeName="transform" begin="-2.4s" dur="4.6s" repeatCount="indefinite" type="rotate" values="-4 640 1240;4 640 1240;-4 640 1240"/>
+              </path>
+              <path d="M660 1240 Q651 1157 692 1074" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="5">
+                <animateTransform attributeName="transform" begin="-0.8s" dur="5.3s" repeatCount="indefinite" type="rotate" values="-4 660 1240;4 660 1240;-4 660 1240"/>
+              </path>
+              <path d="M680 1240 Q671 1165 706 1090" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="4">
+                <animateTransform attributeName="transform" begin="-2.1s" dur="4.0s" repeatCount="indefinite" type="rotate" values="-4 680 1240;4 680 1240;-4 680 1240"/>
+              </path>
+              <path d="M700 1240 Q680 1173 686 1106" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="6">
+                <animateTransform attributeName="transform" begin="-2.9s" dur="3.8s" repeatCount="indefinite" type="rotate" values="-4 700 1240;4 700 1240;-4 700 1240"/>
+              </path>
+              <path d="M720 1240 Q704 1177 683 1113" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="6">
+                <animateTransform attributeName="transform" begin="-3.9s" dur="4.0s" repeatCount="indefinite" type="rotate" values="-4 720 1240;4 720 1240;-4 720 1240"/>
+              </path>
+              <path d="M740 1240 Q753 1145 752 1050" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="6">
+                <animateTransform attributeName="transform" begin="-2.2s" dur="4.6s" repeatCount="indefinite" type="rotate" values="-4 740 1240;4 740 1240;-4 740 1240"/>
+              </path>
+              <path d="M760 1240 Q760 1147 786 1054" fill="none" stroke="#3f9b3a" stroke-linecap="round" stroke-width="5">
+                <animateTransform attributeName="transform" begin="-0.8s" dur="5.5s" repeatCount="indefinite" type="rotate" values="-4 760 1240;4 760 1240;-4 760 1240"/>
+              </path>
+              <path d="M780 1240 Q756 1124 775 1007" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="6">
+                <animateTransform attributeName="transform" begin="-2.1s" dur="5.0s" repeatCount="indefinite" type="rotate" values="-4 780 1240;4 780 1240;-4 780 1240"/>
+              </path>
+              <path d="M800 1240 Q809 1142 770 1043" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="4">
+                <animateTransform attributeName="transform" begin="-2.5s" dur="3.5s" repeatCount="indefinite" type="rotate" values="-4 800 1240;4 800 1240;-4 800 1240"/>
+              </path>
+              <path d="M820 1240 Q810 1148 792 1056" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="5">
+                <animateTransform attributeName="transform" begin="-3.5s" dur="3.7s" repeatCount="indefinite" type="rotate" values="-4 820 1240;4 820 1240;-4 820 1240"/>
+              </path>
+              <path d="M840 1240 Q849 1160 880 1079" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="5">
+                <animateTransform attributeName="transform" begin="-1.5s" dur="3.5s" repeatCount="indefinite" type="rotate" values="-4 840 1240;4 840 1240;-4 840 1240"/>
+              </path>
+              <path d="M860 1240 Q847 1127 840 1013" fill="none" stroke="#3f9b3a" stroke-linecap="round" stroke-width="5">
+                <animateTransform attributeName="transform" begin="-2.9s" dur="4.0s" repeatCount="indefinite" type="rotate" values="-4 860 1240;4 860 1240;-4 860 1240"/>
+              </path>
+              <path d="M880 1240 Q905 1122 891 1003" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="6">
+                <animateTransform attributeName="transform" begin="-1.0s" dur="3.1s" repeatCount="indefinite" type="rotate" values="-4 880 1240;4 880 1240;-4 880 1240"/>
+              </path>
+              <path d="M900 1240 Q909 1172 869 1104" fill="none" stroke="#3f9b3a" stroke-linecap="round" stroke-width="5">
+                <animateTransform attributeName="transform" begin="-3.2s" dur="3.7s" repeatCount="indefinite" type="rotate" values="-4 900 1240;4 900 1240;-4 900 1240"/>
+              </path>
+              <path d="M920 1240 Q924 1146 880 1051" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="6">
+                <animateTransform attributeName="transform" begin="-2.6s" dur="3.5s" repeatCount="indefinite" type="rotate" values="-4 920 1240;4 920 1240;-4 920 1240"/>
+              </path>
+              <path d="M940 1240 Q927 1147 946 1054" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="6">
+                <animateTransform attributeName="transform" begin="-2.4s" dur="4.6s" repeatCount="indefinite" type="rotate" values="-4 940 1240;4 940 1240;-4 940 1240"/>
+              </path>
+              <path d="M960 1240 Q935 1139 926 1037" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="4">
+                <animateTransform attributeName="transform" begin="-2.2s" dur="3.2s" repeatCount="indefinite" type="rotate" values="-4 960 1240;4 960 1240;-4 960 1240"/>
+              </path>
+              <path d="M980 1240 Q973 1146 937 1052" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="4">
+                <animateTransform attributeName="transform" begin="-0.9s" dur="3.3s" repeatCount="indefinite" type="rotate" values="-4 980 1240;4 980 1240;-4 980 1240"/>
+              </path>
+              <path d="M1000 1240 Q989 1147 970 1053" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="5">
+                <animateTransform attributeName="transform" begin="-3.0s" dur="3.0s" repeatCount="indefinite" type="rotate" values="-4 1000 1240;4 1000 1240;-4 1000 1240"/>
+              </path>
+              <path d="M1020 1240 Q1008 1164 980 1087" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="5">
+                <animateTransform attributeName="transform" begin="-4.8s" dur="5.1s" repeatCount="indefinite" type="rotate" values="-4 1020 1240;4 1020 1240;-4 1020 1240"/>
+              </path>
+              <path d="M1040 1240 Q1016 1174 1018 1108" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="5">
+                <animateTransform attributeName="transform" begin="-3.6s" dur="5.8s" repeatCount="indefinite" type="rotate" values="-4 1040 1240;4 1040 1240;-4 1040 1240"/>
+              </path>
+              <path d="M1060 1240 Q1087 1123 1079 1006" fill="none" stroke="#3f9b3a" stroke-linecap="round" stroke-width="5">
+                <animateTransform attributeName="transform" begin="-1.2s" dur="3.5s" repeatCount="indefinite" type="rotate" values="-4 1060 1240;4 1060 1240;-4 1060 1240"/>
+              </path>
+              <path d="M1080 1240 Q1034 1176 1036 1111" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="6">
+                <animateTransform attributeName="transform" begin="-2.9s" dur="5.2s" repeatCount="indefinite" type="rotate" values="-4 1080 1240;4 1080 1240;-4 1080 1240"/>
+              </path>
+              <path d="M1100 1240 Q1096 1120 1086 999" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="6">
+                <animateTransform attributeName="transform" begin="-2.7s" dur="3.3s" repeatCount="indefinite" type="rotate" values="-4 1100 1240;4 1100 1240;-4 1100 1240"/>
+              </path>
+              <path d="M1120 1240 Q1132 1117 1144 994" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="4">
+                <animateTransform attributeName="transform" begin="-1.8s" dur="5.9s" repeatCount="indefinite" type="rotate" values="-4 1120 1240;4 1120 1240;-4 1120 1240"/>
+              </path>
+              <path d="M1140 1240 Q1150 1137 1120 1033" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="4">
+                <animateTransform attributeName="transform" begin="-0.7s" dur="5.2s" repeatCount="indefinite" type="rotate" values="-4 1140 1240;4 1140 1240;-4 1140 1240"/>
+              </path>
+              <path d="M1160 1240 Q1117 1164 1116 1087" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="4">
+                <animateTransform attributeName="transform" begin="-4.3s" dur="4.9s" repeatCount="indefinite" type="rotate" values="-4 1160 1240;4 1160 1240;-4 1160 1240"/>
+              </path>
+              <path d="M1180 1240 Q1179 1173 1145 1106" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="6">
+                <animateTransform attributeName="transform" begin="-4.8s" dur="5.5s" repeatCount="indefinite" type="rotate" values="-4 1180 1240;4 1180 1240;-4 1180 1240"/>
+              </path>
+              <path d="M1200 1240 Q1214 1149 1243 1058" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="5">
+                <animateTransform attributeName="transform" begin="-0.6s" dur="3.1s" repeatCount="indefinite" type="rotate" values="-4 1200 1240;4 1200 1240;-4 1200 1240"/>
+              </path>
+              <path d="M1220 1240 Q1212 1180 1208 1120" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="4">
+                <animateTransform attributeName="transform" begin="-5.7s" dur="5.9s" repeatCount="indefinite" type="rotate" values="-4 1220 1240;4 1220 1240;-4 1220 1240"/>
+              </path>
+              <path d="M1240 1240 Q1225 1176 1234 1112" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="4">
+                <animateTransform attributeName="transform" begin="-0.0s" dur="4.1s" repeatCount="indefinite" type="rotate" values="-4 1240 1240;4 1240 1240;-4 1240 1240"/>
+              </path>
+              <path d="M1260 1240 Q1262 1120 1250 999" fill="none" stroke="#3f9b3a" stroke-linecap="round" stroke-width="4">
+                <animateTransform attributeName="transform" begin="-1.2s" dur="5.0s" repeatCount="indefinite" type="rotate" values="-4 1260 1240;4 1260 1240;-4 1260 1240"/>
+              </path>
+              <path d="M1280 1240 Q1247 1147 1246 1053" fill="none" stroke="#3f9b3a" stroke-linecap="round" stroke-width="5">
+                <animateTransform attributeName="transform" begin="-0.2s" dur="4.2s" repeatCount="indefinite" type="rotate" values="-4 1280 1240;4 1280 1240;-4 1280 1240"/>
+              </path>
+              <path d="M1300 1240 Q1306 1142 1335 1043" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="6">
+                <animateTransform attributeName="transform" begin="-3.2s" dur="3.3s" repeatCount="indefinite" type="rotate" values="-4 1300 1240;4 1300 1240;-4 1300 1240"/>
+              </path>
+              <path d="M1320 1240 Q1339 1131 1316 1021" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="4">
+                <animateTransform attributeName="transform" begin="-0.9s" dur="6.0s" repeatCount="indefinite" type="rotate" values="-4 1320 1240;4 1320 1240;-4 1320 1240"/>
+              </path>
+              <path d="M1340 1240 Q1369 1126 1384 1011" fill="none" stroke="#3f9b3a" stroke-linecap="round" stroke-width="6">
+                <animateTransform attributeName="transform" begin="-1.8s" dur="3.4s" repeatCount="indefinite" type="rotate" values="-4 1340 1240;4 1340 1240;-4 1340 1240"/>
+              </path>
+              <path d="M1360 1240 Q1318 1151 1325 1062" fill="none" stroke="#3f9b3a" stroke-linecap="round" stroke-width="5">
+                <animateTransform attributeName="transform" begin="-2.0s" dur="3.1s" repeatCount="indefinite" type="rotate" values="-4 1360 1240;4 1360 1240;-4 1360 1240"/>
+              </path>
+              <path d="M1380 1240 Q1371 1123 1406 1005" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="5">
+                <animateTransform attributeName="transform" begin="-3.1s" dur="4.9s" repeatCount="indefinite" type="rotate" values="-4 1380 1240;4 1380 1240;-4 1380 1240"/>
+              </path>
+              <path d="M1400 1240 Q1381 1147 1355 1053" fill="none" stroke="#3f9b3a" stroke-linecap="round" stroke-width="6">
+                <animateTransform attributeName="transform" begin="-4.0s" dur="5.4s" repeatCount="indefinite" type="rotate" values="-4 1400 1240;4 1400 1240;-4 1400 1240"/>
+              </path>
+              <path d="M1420 1240 Q1418 1172 1435 1104" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="6">
+                <animateTransform attributeName="transform" begin="-4.6s" dur="5.4s" repeatCount="indefinite" type="rotate" values="-4 1420 1240;4 1420 1240;-4 1420 1240"/>
+              </path>
+              <path d="M1440 1240 Q1454 1154 1424 1068" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="4">
+                <animateTransform attributeName="transform" begin="-2.3s" dur="4.9s" repeatCount="indefinite" type="rotate" values="-4 1440 1240;4 1440 1240;-4 1440 1240"/>
+              </path>
+              <path d="M1460 1240 Q1474 1119 1502 998" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="4">
+                <animateTransform attributeName="transform" begin="-3.3s" dur="5.3s" repeatCount="indefinite" type="rotate" values="-4 1460 1240;4 1460 1240;-4 1460 1240"/>
+              </path>
+              <path d="M1480 1240 Q1469 1162 1477 1083" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="4">
+                <animateTransform attributeName="transform" begin="-3.5s" dur="5.0s" repeatCount="indefinite" type="rotate" values="-4 1480 1240;4 1480 1240;-4 1480 1240"/>
+              </path>
+              <path d="M1500 1240 Q1487 1119 1462 997" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="6">
+                <animateTransform attributeName="transform" begin="-2.6s" dur="3.8s" repeatCount="indefinite" type="rotate" values="-4 1500 1240;4 1500 1240;-4 1500 1240"/>
+              </path>
+              <path d="M1520 1240 Q1536 1118 1512 995" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="4">
+                <animateTransform attributeName="transform" begin="-2.1s" dur="4.5s" repeatCount="indefinite" type="rotate" values="-4 1520 1240;4 1520 1240;-4 1520 1240"/>
+              </path>
+              <path d="M1540 1240 Q1517 1155 1534 1069" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="4">
+                <animateTransform attributeName="transform" begin="-0.1s" dur="5.8s" repeatCount="indefinite" type="rotate" values="-4 1540 1240;4 1540 1240;-4 1540 1240"/>
+              </path>
+              <path d="M1560 1240 Q1558 1116 1572 991" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="4">
+                <animateTransform attributeName="transform" begin="-3.8s" dur="4.2s" repeatCount="indefinite" type="rotate" values="-4 1560 1240;4 1560 1240;-4 1560 1240"/>
+              </path>
+              <path d="M1580 1240 Q1588 1169 1553 1097" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="6">
+                <animateTransform attributeName="transform" begin="-4.4s" dur="4.6s" repeatCount="indefinite" type="rotate" values="-4 1580 1240;4 1580 1240;-4 1580 1240"/>
+              </path>
+              <path d="M1600 1240 Q1577 1115 1590 990" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="5">
+                <animateTransform attributeName="transform" begin="-1.2s" dur="5.1s" repeatCount="indefinite" type="rotate" values="-4 1600 1240;4 1600 1240;-4 1600 1240"/>
+              </path>
+              <path d="M1620 1240 Q1582 1177 1595 1114" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="5">
+                <animateTransform attributeName="transform" begin="-4.0s" dur="5.8s" repeatCount="indefinite" type="rotate" values="-4 1620 1240;4 1620 1240;-4 1620 1240"/>
+              </path>
+              <path d="M1640 1240 Q1641 1162 1648 1084" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="4">
+                <animateTransform attributeName="transform" begin="-0.5s" dur="4.1s" repeatCount="indefinite" type="rotate" values="-4 1640 1240;4 1640 1240;-4 1640 1240"/>
+              </path>
+              <path d="M1660 1240 Q1659 1139 1658 1037" fill="none" stroke="#3f9b3a" stroke-linecap="round" stroke-width="6">
+                <animateTransform attributeName="transform" begin="-3.1s" dur="3.4s" repeatCount="indefinite" type="rotate" values="-4 1660 1240;4 1660 1240;-4 1660 1240"/>
+              </path>
+              <path d="M1680 1240 Q1671 1143 1667 1046" fill="none" stroke="#3f9b3a" stroke-linecap="round" stroke-width="5">
+                <animateTransform attributeName="transform" begin="-1.2s" dur="3.2s" repeatCount="indefinite" type="rotate" values="-4 1680 1240;4 1680 1240;-4 1680 1240"/>
+              </path>
+              <path d="M1700 1240 Q1673 1126 1690 1011" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="6">
+                <animateTransform attributeName="transform" begin="-0.2s" dur="3.8s" repeatCount="indefinite" type="rotate" values="-4 1700 1240;4 1700 1240;-4 1700 1240"/>
+              </path>
+              <path d="M1720 1240 Q1705 1161 1706 1082" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="5">
+                <animateTransform attributeName="transform" begin="-1.4s" dur="4.3s" repeatCount="indefinite" type="rotate" values="-4 1720 1240;4 1720 1240;-4 1720 1240"/>
+              </path>
+              <path d="M1740 1240 Q1757 1177 1775 1113" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="6">
+                <animateTransform attributeName="transform" begin="-5.4s" dur="5.7s" repeatCount="indefinite" type="rotate" values="-4 1740 1240;4 1740 1240;-4 1740 1240"/>
+              </path>
+              <path d="M1760 1240 Q1761 1170 1721 1100" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="6">
+                <animateTransform attributeName="transform" begin="-2.6s" dur="4.2s" repeatCount="indefinite" type="rotate" values="-4 1760 1240;4 1760 1240;-4 1760 1240"/>
+              </path>
+              <path d="M1780 1240 Q1766 1144 1797 1047" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="5">
+                <animateTransform attributeName="transform" begin="-3.1s" dur="5.7s" repeatCount="indefinite" type="rotate" values="-4 1780 1240;4 1780 1240;-4 1780 1240"/>
+              </path>
+              <path d="M1800 1240 Q1792 1127 1798 1014" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="5">
+                <animateTransform attributeName="transform" begin="-2.9s" dur="3.9s" repeatCount="indefinite" type="rotate" values="-4 1800 1240;4 1800 1240;-4 1800 1240"/>
+              </path>
+              <path d="M1820 1240 Q1821 1150 1813 1059" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="6">
+                <animateTransform attributeName="transform" begin="-1.9s" dur="4.7s" repeatCount="indefinite" type="rotate" values="-4 1820 1240;4 1820 1240;-4 1820 1240"/>
+              </path>
+              <path d="M1840 1240 Q1810 1160 1804 1079" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="5">
+                <animateTransform attributeName="transform" begin="-3.7s" dur="4.5s" repeatCount="indefinite" type="rotate" values="-4 1840 1240;4 1840 1240;-4 1840 1240"/>
+              </path>
+              <path d="M1860 1240 Q1868 1138 1872 1035" fill="none" stroke="#3f9b3a" stroke-linecap="round" stroke-width="4">
+                <animateTransform attributeName="transform" begin="-0.7s" dur="3.4s" repeatCount="indefinite" type="rotate" values="-4 1860 1240;4 1860 1240;-4 1860 1240"/>
+              </path>
+              <path d="M1880 1240 Q1873 1137 1906 1033" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="4">
+                <animateTransform attributeName="transform" begin="-1.5s" dur="4.0s" repeatCount="indefinite" type="rotate" values="-4 1880 1240;4 1880 1240;-4 1880 1240"/>
+              </path>
+              <path d="M1900 1240 Q1903 1128 1904 1015" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="5">
+                <animateTransform attributeName="transform" begin="-1.1s" dur="5.2s" repeatCount="indefinite" type="rotate" values="-4 1900 1240;4 1900 1240;-4 1900 1240"/>
+              </path>
+              <path d="M1920 1240 Q1921 1173 1938 1105" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="4">
+                <animateTransform attributeName="transform" begin="-1.7s" dur="4.7s" repeatCount="indefinite" type="rotate" values="-4 1920 1240;4 1920 1240;-4 1920 1240"/>
+              </path>
+              <path d="M1940 1240 Q1932 1146 1926 1051" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="4">
+                <animateTransform attributeName="transform" begin="-1.9s" dur="4.2s" repeatCount="indefinite" type="rotate" values="-4 1940 1240;4 1940 1240;-4 1940 1240"/>
+              </path>
+              <path d="M1960 1240 Q1941 1164 1919 1088" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="6">
+                <animateTransform attributeName="transform" begin="-4.6s" dur="5.1s" repeatCount="indefinite" type="rotate" values="-4 1960 1240;4 1960 1240;-4 1960 1240"/>
+              </path>
+              <path d="M1980 1240 Q1936 1118 1935 995" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="5">
+                <animateTransform attributeName="transform" begin="-3.9s" dur="4.2s" repeatCount="indefinite" type="rotate" values="-4 1980 1240;4 1980 1240;-4 1980 1240"/>
+              </path>
+              <path d="M2000 1240 Q1973 1149 1968 1057" fill="none" stroke="#3f9b3a" stroke-linecap="round" stroke-width="6">
+                <animateTransform attributeName="transform" begin="-1.8s" dur="3.5s" repeatCount="indefinite" type="rotate" values="-4 2000 1240;4 2000 1240;-4 2000 1240"/>
+              </path>
+              <path d="M2020 1240 Q2012 1122 1985 1003" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="4">
+                <animateTransform attributeName="transform" begin="-0.0s" dur="5.3s" repeatCount="indefinite" type="rotate" values="-4 2020 1240;4 2020 1240;-4 2020 1240"/>
+              </path>
+              <path d="M2040 1240 Q2078 1176 2077 1111" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="6">
+                <animateTransform attributeName="transform" begin="-0.5s" dur="3.9s" repeatCount="indefinite" type="rotate" values="-4 2040 1240;4 2040 1240;-4 2040 1240"/>
+              </path>
+              <path d="M2060 1240 Q2105 1125 2104 1009" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="5">
+                <animateTransform attributeName="transform" begin="-0.2s" dur="3.3s" repeatCount="indefinite" type="rotate" values="-4 2060 1240;4 2060 1240;-4 2060 1240"/>
+              </path>
+              <path d="M2080 1240 Q2096 1147 2063 1054" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="5">
+                <animateTransform attributeName="transform" begin="-0.1s" dur="4.8s" repeatCount="indefinite" type="rotate" values="-4 2080 1240;4 2080 1240;-4 2080 1240"/>
+              </path>
+              <g data-role="sonnenblumen-vorn">
+                <g transform="translate(505.2 1084.6) scale(0.718)">
+                  <g>
+                    <animateTransform attributeName="transform" begin="-2.9s" dur="7.4s" repeatCount="indefinite" type="rotate" values="-2.4 0 0;2.4 0 0;-2.4 0 0"/>
+                    <use href="#ss-sonnenblume"/>
+                  </g>
+                </g>
+                <g transform="translate(2033.1 1079.5) scale(0.722)">
+                  <g>
+                    <animateTransform attributeName="transform" begin="-1.6s" dur="4.8s" repeatCount="indefinite" type="rotate" values="-2.4 0 0;2.4 0 0;-2.4 0 0"/>
+                    <use href="#ss-sonnenblume"/>
+                  </g>
+                </g>
+                <g transform="translate(1050.8 1088.1) scale(0.764)">
+                  <g>
+                    <animateTransform attributeName="transform" begin="-3.5s" dur="8.7s" repeatCount="indefinite" type="rotate" values="-2.4 0 0;2.4 0 0;-2.4 0 0"/>
+                    <use href="#ss-sonnenblume"/>
+                  </g>
+                </g>
+                <g transform="translate(1212.5 1108.4) scale(0.788)">
+                  <g>
+                    <animateTransform attributeName="transform" begin="-4.2s" dur="8.8s" repeatCount="indefinite" type="rotate" values="-2.3 0 0;2.3 0 0;-2.3 0 0"/>
+                    <use href="#ss-sonnenblume"/>
+                  </g>
+                </g>
+                <g transform="translate(1646.4 1107.1) scale(0.819)">
+                  <g>
+                    <animateTransform attributeName="transform" begin="-2.6s" dur="8.8s" repeatCount="indefinite" type="rotate" values="-2.3 0 0;2.3 0 0;-2.3 0 0"/>
+                    <use href="#ss-sonnenblume"/>
+                  </g>
+                </g>
+                <g transform="translate(466.4 1149.4) scale(0.931)">
+                  <g>
+                    <animateTransform attributeName="transform" begin="-0.9s" dur="8.1s" repeatCount="indefinite" type="rotate" values="-2.1 0 0;2.1 0 0;-2.1 0 0"/>
+                    <use href="#ss-sonnenblume"/>
+                  </g>
+                </g>
+                <g transform="translate(1145.8 1179.3) scale(0.945)">
+                  <g>
+                    <animateTransform attributeName="transform" begin="-2.2s" dur="8.4s" repeatCount="indefinite" type="rotate" values="-2.1 0 0;2.1 0 0;-2.1 0 0"/>
+                    <use href="#ss-sonnenblume"/>
+                  </g>
+                </g>
+                <g transform="translate(4.6 1226.9) scale(1.041)">
+                  <g>
+                    <animateTransform attributeName="transform" begin="-3.6s" dur="4.9s" repeatCount="indefinite" type="rotate" values="-2 0 0;2 0 0;-2 0 0"/>
+                    <use href="#ss-sonnenblume"/>
+                  </g>
+                </g>
+                <g transform="translate(1545.6 1232.1) scale(1.098)">
+                  <g>
+                    <animateTransform attributeName="transform" begin="-7.1s" dur="8.1s" repeatCount="indefinite" type="rotate" values="-1.9 0 0;1.9 0 0;-1.9 0 0"/>
+                    <use href="#ss-sonnenblume"/>
+                  </g>
+                </g>
+                <g transform="translate(105.3 1247.8) scale(1.105)">
+                  <g>
+                    <animateTransform attributeName="transform" begin="-6.3s" dur="8.1s" repeatCount="indefinite" type="rotate" values="-1.9 0 0;1.9 0 0;-1.9 0 0"/>
+                    <use href="#ss-sonnenblume"/>
+                  </g>
+                </g>
+                <g transform="translate(1529.7 1253.1) scale(1.124)">
+                  <g>
+                    <animateTransform attributeName="transform" begin="-1.1s" dur="6.9s" repeatCount="indefinite" type="rotate" values="-1.9 0 0;1.9 0 0;-1.9 0 0"/>
+                    <use href="#ss-sonnenblume"/>
+                  </g>
+                </g>
+                <g transform="translate(1791.6 1255.3) scale(1.151)">
+                  <g>
+                    <animateTransform attributeName="transform" begin="-3.9s" dur="5.9s" repeatCount="indefinite" type="rotate" values="-1.8 0 0;1.8 0 0;-1.8 0 0"/>
+                    <use href="#ss-sonnenblume"/>
+                  </g>
+                </g>
+                <g transform="translate(1283.6 1284.2) scale(1.191)">
+                  <g>
+                    <animateTransform attributeName="transform" begin="-3s" dur="7.4s" repeatCount="indefinite" type="rotate" values="-1.8 0 0;1.8 0 0;-1.8 0 0"/>
+                    <use href="#ss-sonnenblume"/>
+                  </g>
+                </g>
+                <g transform="translate(587.6 1283.4) scale(1.214)">
+                  <g>
+                    <animateTransform attributeName="transform" begin="-2.1s" dur="7.8s" repeatCount="indefinite" type="rotate" values="-1.7 0 0;1.7 0 0;-1.7 0 0"/>
+                    <use href="#ss-sonnenblume"/>
+                  </g>
+                </g>
+              </g>
+              <g data-role="schmetterlinge">
+                <g>
+                  <animateMotion begin="-24s" dur="26.3s" path="M-180 973.3 Q-36.1 940.3 107.8 961.8 Q237.8 974.5 367.8 966.2 Q513.4 892.9 658.9 940.6 Q826.6 977.4 994.3 953.5 Q1149.5 1039.5 1304.8 983.6 Q1456.6 946.3 1608.4 970.5 Q1760.1 1042.1 1911.8 995.6 Q2038.1 965.1 2164.5 984.9" repeatCount="indefinite"/>
+                  <g color="#ff9a3c" transform="scale(0.56)">
+                    <g>
+                      <animateTransform attributeName="transform" dur="3.2s" repeatCount="indefinite" type="rotate" values="-14;13;-14"/>
+                      <use href="#ss-schmetterling"/>
+                    </g>
+                  </g>
+                </g>
+                <g>
+                  <animateMotion begin="-7.4s" calcMode="linear" dur="19.9s" keyPoints="1;0" keyTimes="0;1" path="M-180 957.6 Q-25.8 1016.3 128.4 978.1 Q260.8 1033.9 393.2 997.6 Q510.2 1055.3 627.2 1017.8 Q788.1 954.5 949.1 995.6 Q1098.8 1087.8 1248.5 1027.9 Q1392.7 937.7 1536.9 996.3 Q1693.7 1054.6 1850.5 1016.7 Q2013 1098.3 2175.5 1045.3" repeatCount="indefinite"/>
+                  <g color="#ffd34e" transform="scale(0.53)">
+                    <g>
+                      <animateTransform attributeName="transform" dur="4.6s" repeatCount="indefinite" type="rotate" values="-14;13;-14"/>
+                      <use href="#ss-schmetterling"/>
+                    </g>
+                  </g>
+                </g>
+                <g>
+                  <animateMotion begin="-19.7s" dur="20.9s" path="M-180 904.9 Q-50.2 829.9 79.6 878.7 Q248.6 959.4 417.6 906.9 Q532.7 950.9 647.7 922.3 Q781.1 1007.4 914.5 952.1 Q1049.8 857.9 1185.1 919.1 Q1339.4 980.5 1493.8 940.6 Q1658.7 1011.7 1823.6 965.5 Q1981.3 907.6 2139 945.2" repeatCount="indefinite"/>
+                  <g color="#e8615f" transform="scale(0.44)">
+                    <g>
+                      <animateTransform attributeName="transform" dur="3.8s" repeatCount="indefinite" type="rotate" values="-14;13;-14"/>
+                      <use href="#ss-schmetterling"/>
+                    </g>
+                  </g>
+                </g>
+                <g>
+                  <animateMotion begin="-16.9s" calcMode="linear" dur="26.8s" keyPoints="1;0" keyTimes="0;1" path="M-180 968.7 Q-18.2 971.1 143.5 969.6 Q305 978.1 466.5 972.6 Q602.9 924.7 739.3 955.8 Q882.7 918 1026.2 942.6 Q1169.9 894.1 1313.7 925.6 Q1474.8 980.1 1635.9 944.7 Q1770.2 933.8 1904.5 940.9 Q2035.6 914 2166.7 931.5" repeatCount="indefinite"/>
+                  <g color="#c07ce0" transform="scale(0.55)">
+                    <g>
+                      <animateTransform attributeName="transform" dur="4.5s" repeatCount="indefinite" type="rotate" values="-14;13;-14"/>
+                      <use href="#ss-schmetterling"/>
+                    </g>
+                  </g>
+                </g>
+                <g>
+                  <animateMotion begin="-3s" dur="32.7s" path="M-180 933.2 Q-44.2 895.4 91.6 920 Q218.8 836.5 346.1 890.7 Q484.2 876.8 622.3 885.8 Q737.5 911.6 852.7 894.9 Q982.6 925.2 1112.4 905.5 Q1262.3 962.4 1412.2 925.4 Q1570.7 830.9 1729.2 892.3 Q1851.8 818 1974.5 866.3 Q2139.5 867.4 2304.6 866.7" repeatCount="indefinite"/>
+                  <g color="#78c8f0" transform="scale(0.49)">
+                    <g>
+                      <animateTransform attributeName="transform" dur="4.2s" repeatCount="indefinite" type="rotate" values="-14;13;-14"/>
+                      <use href="#ss-schmetterling"/>
+                    </g>
+                  </g>
+                </g>
+                <g>
+                  <animateMotion begin="-11.1s" calcMode="linear" dur="19.6s" keyPoints="1;0" keyTimes="0;1" path="M-180 855.9 Q-34 791.7 112.1 833.4 Q268.4 748.1 424.6 803.5 Q545.5 883.9 666.3 831.7 Q816.3 881.4 966.2 849.1 Q1098.8 808.9 1231.5 835 Q1395.9 796.4 1560.3 821.5 Q1677.5 816.2 1794.8 819.6 Q1921.6 898 2048.4 847.1 Q2198.8 876.5 2349.2 857.4" repeatCount="indefinite"/>
+                  <g color="#f7a8c8" transform="scale(0.36)">
+                    <g>
+                      <animateTransform attributeName="transform" dur="3s" repeatCount="indefinite" type="rotate" values="-14;13;-14"/>
+                      <use href="#ss-schmetterling"/>
+                    </g>
+                  </g>
+                </g>
+                <g>
+                  <animateMotion begin="-13.2s" dur="22.6s" path="M-180 878 Q-22.6 822.6 134.8 858.6 Q285.9 855.7 437.1 857.6 Q573.7 797.2 710.4 836.5 Q825.7 884 941 853.1 Q1085.9 842.2 1230.9 849.3 Q1354.4 874.3 1477.8 858 Q1629.3 766.5 1780.7 826 Q1934.9 845.3 2089.1 832.7 Q2252.9 752.1 2416.8 804.5" repeatCount="indefinite"/>
+                  <g color="#ffb347" transform="scale(0.39)">
+                    <g>
+                      <animateTransform attributeName="transform" dur="3.8s" repeatCount="indefinite" type="rotate" values="-14;13;-14"/>
+                      <use href="#ss-schmetterling"/>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+        <g hearth:layer="actions" hearth:layer-name="Actions" id="d86def5a-33f4-4261-bbf7-7e862c26c373"/>
+      </svg>
+    </g>
+    <g hearth:layer="actions" hearth:layer-name="Actions" id="0fe9384a-e431-42dc-94e4-05092a59c160"/>
+    <g hearth:layer="edit" hearth:layer-name="Edit" id="47075379-258e-4d41-b1cc-4ae4c7916ed3"/>
+    <script type="text/javascript">// Generated by hearth-symbols — do not edit by hand.
+class extends HearthSymbol {
+  static observed = [];
+  onInit() {
+  }
+  onAttr(name, v) {
+  }
+}
+</script>
+  </svg>
 </symbol>
-
