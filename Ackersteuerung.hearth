@@ -939,434 +939,779 @@ class extends HearthSymbol {
 }</script>
     </svg>
    </symbol>
-   <symbol author="ForgeIEC" category="screensaver" description="Sonnige Wiese mit wehendem Gras und ziehenden Wolken." name="Sommerwiese" uuid="6b1d7d4e-2b6a-4a3b-9c0f-1e4d7a2c5f01" version="0.2.0">
-    <svg hearth:element="hearth-screensaver" hearth:format-version="1.0" hearth:visible="true" preserveAspectRatio="xMidYMid slice" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg" xmlns:hearth="https://forgeiec.io/hearth/1.0">
-     <metadata>
-      <hearth:widget>
-       <hearth:name>Sommerwiese</hearth:name>
-       <hearth:version>0.2.0</hearth:version>
-       <hearth:category>screensaver</hearth:category>
-       <hearth:description>Sonnige Wiese mit wehendem Gras und ziehenden Wolken.</hearth:description>
-       <hearth:location-type>software</hearth:location-type>
-      </hearth:widget>
-     </metadata>
-     <g hearth:layer="background" hearth:layer-name="Background" hearth:locked="true" id="b73768db-081f-4198-8929-38e6ebc442f8"/>
-     <g hearth:layer="content" hearth:layer-name="Content" id="de5593d1-fc56-4642-bedb-ba64847a0a6e">
-      <g>
-       <animateTransform attributeName="transform" dur="47s" repeatCount="indefinite" type="translate" values="-80 0;80 0;-80 0"/>
-       <g>
-        <animateTransform attributeName="transform" dur="37s" repeatCount="indefinite" type="translate" values="0 -56;0 56;0 -56"/>
-        <defs>
-         <linearGradient id="sky" x1="0" x2="0" y1="0" y2="1">
-          <stop offset="0%" stop-color="#79c4ee"/>
-          <stop offset="65%" stop-color="#cdeeff"/>
-          <stop offset="100%" stop-color="#e9f8df"/>
-         </linearGradient>
-         <linearGradient id="grd" x1="0" x2="0" y1="0" y2="1">
-          <stop offset="0%" stop-color="#74c24f"/>
-          <stop offset="100%" stop-color="#327f25"/>
-         </linearGradient>
-        </defs>
-        <rect fill="url(#sky)" height="1400" width="2240" x="-160" y="-160"/>
-        <g>
-         <animateTransform attributeName="transform" dur="90s" repeatCount="indefinite" type="translate" values="-140 40;140 -40;-140 40"/>
-         <circle cx="1500" cy="235" fill="#fff6c2" opacity="0.35" r="185">
-          <animate attributeName="r" dur="8s" repeatCount="indefinite" values="185;205;185"/>
-         </circle>
-         <circle cx="1500" cy="235" fill="#fff3a8" r="110"/>
-        </g>
-        <g>
-         <animateTransform attributeName="transform" begin="-3.0s" dur="62.8s" repeatCount="indefinite" type="translate" values="-420 0;2340 0"/>
-         <g fill="#ffffff" opacity="0.92" transform="translate(0 235) scale(1.45)">
-          <ellipse cx="0" cy="0" rx="90" ry="46"/>
-          <ellipse cx="70" cy="14" rx="70" ry="40"/>
-          <ellipse cx="-70" cy="16" rx="64" ry="34"/>
-          <ellipse cx="10" cy="-30" rx="60" ry="40"/>
-         </g>
-        </g>
-        <g>
-         <animateTransform attributeName="transform" begin="-64.8s" dur="71.2s" repeatCount="indefinite" type="translate" values="-420 0;2340 0"/>
-         <g fill="#ffffff" opacity="0.92" transform="translate(0 344) scale(0.68)">
-          <ellipse cx="0" cy="0" rx="90" ry="46"/>
-          <ellipse cx="70" cy="14" rx="70" ry="40"/>
-          <ellipse cx="-70" cy="16" rx="64" ry="34"/>
-          <ellipse cx="10" cy="-30" rx="60" ry="40"/>
-         </g>
-        </g>
-        <g>
-         <animateTransform attributeName="transform" begin="-4.5s" dur="64.5s" repeatCount="indefinite" type="translate" values="-420 0;2340 0"/>
-         <g fill="#ffffff" opacity="0.92" transform="translate(0 179) scale(0.63)">
-          <ellipse cx="0" cy="0" rx="90" ry="46"/>
-          <ellipse cx="70" cy="14" rx="70" ry="40"/>
-          <ellipse cx="-70" cy="16" rx="64" ry="34"/>
-          <ellipse cx="10" cy="-30" rx="60" ry="40"/>
-         </g>
-        </g>
-        <g>
-         <animateTransform attributeName="transform" begin="-27.0s" dur="47.7s" repeatCount="indefinite" type="translate" values="-420 0;2340 0"/>
-         <g fill="#ffffff" opacity="0.92" transform="translate(0 116) scale(1.1)">
-          <ellipse cx="0" cy="0" rx="90" ry="46"/>
-          <ellipse cx="70" cy="14" rx="70" ry="40"/>
-          <ellipse cx="-70" cy="16" rx="64" ry="34"/>
-          <ellipse cx="10" cy="-30" rx="60" ry="40"/>
-         </g>
-        </g>
-        <g>
-         <animateTransform attributeName="transform" begin="-4.4s" dur="71.2s" repeatCount="indefinite" type="translate" values="-420 0;2340 0"/>
-         <g fill="#ffffff" opacity="0.92" transform="translate(0 184) scale(1.17)">
-          <ellipse cx="0" cy="0" rx="90" ry="46"/>
-          <ellipse cx="70" cy="14" rx="70" ry="40"/>
-          <ellipse cx="-70" cy="16" rx="64" ry="34"/>
-          <ellipse cx="10" cy="-30" rx="60" ry="40"/>
-         </g>
-        </g>
-        <rect fill="url(#grd)" height="585" width="2240" x="-160" y="815"/>
-        <path d="M-160 1240 Q-191 1130 -199 1019" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="5">
-         <animateTransform attributeName="transform" begin="-2.7s" dur="3.1s" repeatCount="indefinite" type="rotate" values="-4 -160 1240;4 -160 1240;-4 -160 1240"/>
-        </path>
-        <path d="M-140 1240 Q-146 1162 -116 1084" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="4">
-         <animateTransform attributeName="transform" begin="-2.6s" dur="4.7s" repeatCount="indefinite" type="rotate" values="-4 -140 1240;4 -140 1240;-4 -140 1240"/>
-        </path>
-        <path d="M-120 1240 Q-138 1156 -118 1072" fill="none" stroke="#3f9b3a" stroke-linecap="round" stroke-width="6">
-         <animateTransform attributeName="transform" begin="-0.3s" dur="4.6s" repeatCount="indefinite" type="rotate" values="-4 -120 1240;4 -120 1240;-4 -120 1240"/>
-        </path>
-        <path d="M-100 1240 Q-73 1154 -82 1068" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="6">
-         <animateTransform attributeName="transform" begin="-3.6s" dur="4.6s" repeatCount="indefinite" type="rotate" values="-4 -100 1240;4 -100 1240;-4 -100 1240"/>
-        </path>
-        <path d="M-80 1240 Q-86 1122 -79 1004" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="4">
-         <animateTransform attributeName="transform" begin="-0.7s" dur="3.7s" repeatCount="indefinite" type="rotate" values="-4 -80 1240;4 -80 1240;-4 -80 1240"/>
-        </path>
-        <path d="M-60 1240 Q-43 1142 -38 1044" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="6">
-         <animateTransform attributeName="transform" begin="-4.1s" dur="5.6s" repeatCount="indefinite" type="rotate" values="-4 -60 1240;4 -60 1240;-4 -60 1240"/>
-        </path>
-        <path d="M-40 1240 Q-48 1171 -70 1102" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="5">
-         <animateTransform attributeName="transform" begin="-3.3s" dur="4.3s" repeatCount="indefinite" type="rotate" values="-4 -40 1240;4 -40 1240;-4 -40 1240"/>
-        </path>
-        <path d="M-20 1240 Q-23 1127 -60 1013" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="5">
-         <animateTransform attributeName="transform" begin="-1.8s" dur="3.2s" repeatCount="indefinite" type="rotate" values="-4 -20 1240;4 -20 1240;-4 -20 1240"/>
-        </path>
-        <path d="M0 1240 Q21 1136 31 1031" fill="none" stroke="#3f9b3a" stroke-linecap="round" stroke-width="5">
-         <animateTransform attributeName="transform" begin="-2.1s" dur="4.7s" repeatCount="indefinite" type="rotate" values="-4 0 1240;4 0 1240;-4 0 1240"/>
-        </path>
-        <path d="M20 1240 Q59 1120 64 999" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="6">
-         <animateTransform attributeName="transform" begin="-2.3s" dur="3.2s" repeatCount="indefinite" type="rotate" values="-4 20 1240;4 20 1240;-4 20 1240"/>
-        </path>
-        <path d="M40 1240 Q55 1123 31 1006" fill="none" stroke="#3f9b3a" stroke-linecap="round" stroke-width="5">
-         <animateTransform attributeName="transform" begin="-2.8s" dur="4.2s" repeatCount="indefinite" type="rotate" values="-4 40 1240;4 40 1240;-4 40 1240"/>
-        </path>
-        <path d="M60 1240 Q62 1135 36 1030" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="4">
-         <animateTransform attributeName="transform" begin="-0.2s" dur="3.4s" repeatCount="indefinite" type="rotate" values="-4 60 1240;4 60 1240;-4 60 1240"/>
-        </path>
-        <path d="M80 1240 Q82 1149 85 1057" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="5">
-         <animateTransform attributeName="transform" begin="-2.9s" dur="5.8s" repeatCount="indefinite" type="rotate" values="-4 80 1240;4 80 1240;-4 80 1240"/>
-        </path>
-        <path d="M100 1240 Q104 1129 125 1018" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="6">
-         <animateTransform attributeName="transform" begin="-4.7s" dur="5.7s" repeatCount="indefinite" type="rotate" values="-4 100 1240;4 100 1240;-4 100 1240"/>
-        </path>
-        <path d="M120 1240 Q138 1127 120 1014" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="4">
-         <animateTransform attributeName="transform" begin="-5.5s" dur="5.7s" repeatCount="indefinite" type="rotate" values="-4 120 1240;4 120 1240;-4 120 1240"/>
-        </path>
-        <path d="M140 1240 Q116 1158 114 1075" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="5">
-         <animateTransform attributeName="transform" begin="-0.1s" dur="5.0s" repeatCount="indefinite" type="rotate" values="-4 140 1240;4 140 1240;-4 140 1240"/>
-        </path>
-        <path d="M160 1240 Q121 1144 115 1048" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="4">
-         <animateTransform attributeName="transform" begin="-1.6s" dur="4.3s" repeatCount="indefinite" type="rotate" values="-4 160 1240;4 160 1240;-4 160 1240"/>
-        </path>
-        <path d="M180 1240 Q210 1174 193 1107" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="5">
-         <animateTransform attributeName="transform" begin="-4.0s" dur="5.9s" repeatCount="indefinite" type="rotate" values="-4 180 1240;4 180 1240;-4 180 1240"/>
-        </path>
-        <path d="M200 1240 Q183 1129 205 1018" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="4">
-         <animateTransform attributeName="transform" begin="-1.8s" dur="4.4s" repeatCount="indefinite" type="rotate" values="-4 200 1240;4 200 1240;-4 200 1240"/>
-        </path>
-        <path d="M220 1240 Q210 1154 231 1067" fill="none" stroke="#3f9b3a" stroke-linecap="round" stroke-width="4">
-         <animateTransform attributeName="transform" begin="-2.0s" dur="3.3s" repeatCount="indefinite" type="rotate" values="-4 220 1240;4 220 1240;-4 220 1240"/>
-        </path>
-        <path d="M240 1240 Q232 1161 263 1082" fill="none" stroke="#3f9b3a" stroke-linecap="round" stroke-width="4">
-         <animateTransform attributeName="transform" begin="-3.6s" dur="5.8s" repeatCount="indefinite" type="rotate" values="-4 240 1240;4 240 1240;-4 240 1240"/>
-        </path>
-        <path d="M260 1240 Q262 1132 234 1024" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="5">
-         <animateTransform attributeName="transform" begin="-1.3s" dur="3.8s" repeatCount="indefinite" type="rotate" values="-4 260 1240;4 260 1240;-4 260 1240"/>
-        </path>
-        <path d="M280 1240 Q270 1165 249 1089" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="5">
-         <animateTransform attributeName="transform" begin="-2.8s" dur="6.0s" repeatCount="indefinite" type="rotate" values="-4 280 1240;4 280 1240;-4 280 1240"/>
-        </path>
-        <path d="M300 1240 Q267 1170 273 1099" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="6">
-         <animateTransform attributeName="transform" begin="-3.8s" dur="5.2s" repeatCount="indefinite" type="rotate" values="-4 300 1240;4 300 1240;-4 300 1240"/>
-        </path>
-        <path d="M320 1240 Q306 1160 341 1079" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="4">
-         <animateTransform attributeName="transform" begin="-3.4s" dur="3.6s" repeatCount="indefinite" type="rotate" values="-4 320 1240;4 320 1240;-4 320 1240"/>
-        </path>
-        <path d="M340 1240 Q345 1177 362 1114" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="6">
-         <animateTransform attributeName="transform" begin="-5.1s" dur="5.9s" repeatCount="indefinite" type="rotate" values="-4 340 1240;4 340 1240;-4 340 1240"/>
-        </path>
-        <path d="M360 1240 Q345 1134 336 1027" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="6">
-         <animateTransform attributeName="transform" begin="-2.8s" dur="5.3s" repeatCount="indefinite" type="rotate" values="-4 360 1240;4 360 1240;-4 360 1240"/>
-        </path>
-        <path d="M380 1240 Q421 1152 413 1063" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="5">
-         <animateTransform attributeName="transform" begin="-5.1s" dur="6.0s" repeatCount="indefinite" type="rotate" values="-4 380 1240;4 380 1240;-4 380 1240"/>
-        </path>
-        <path d="M400 1240 Q398 1151 380 1062" fill="none" stroke="#3f9b3a" stroke-linecap="round" stroke-width="5">
-         <animateTransform attributeName="transform" begin="-3.3s" dur="4.5s" repeatCount="indefinite" type="rotate" values="-4 400 1240;4 400 1240;-4 400 1240"/>
-        </path>
-        <path d="M420 1240 Q401 1120 408 1000" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="6">
-         <animateTransform attributeName="transform" begin="-4.9s" dur="5.1s" repeatCount="indefinite" type="rotate" values="-4 420 1240;4 420 1240;-4 420 1240"/>
-        </path>
-        <path d="M440 1240 Q420 1136 441 1031" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="5">
-         <animateTransform attributeName="transform" begin="-0.8s" dur="3.7s" repeatCount="indefinite" type="rotate" values="-4 440 1240;4 440 1240;-4 440 1240"/>
-        </path>
-        <path d="M460 1240 Q482 1154 476 1068" fill="none" stroke="#3f9b3a" stroke-linecap="round" stroke-width="5">
-         <animateTransform attributeName="transform" begin="-3.7s" dur="6.0s" repeatCount="indefinite" type="rotate" values="-4 460 1240;4 460 1240;-4 460 1240"/>
-        </path>
-        <path d="M480 1240 Q478 1136 517 1032" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="6">
-         <animateTransform attributeName="transform" begin="-0.7s" dur="5.5s" repeatCount="indefinite" type="rotate" values="-4 480 1240;4 480 1240;-4 480 1240"/>
-        </path>
-        <path d="M500 1240 Q494 1155 516 1069" fill="none" stroke="#3f9b3a" stroke-linecap="round" stroke-width="6">
-         <animateTransform attributeName="transform" begin="-2.7s" dur="4.3s" repeatCount="indefinite" type="rotate" values="-4 500 1240;4 500 1240;-4 500 1240"/>
-        </path>
-        <path d="M520 1240 Q527 1130 534 1019" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="4">
-         <animateTransform attributeName="transform" begin="-0.4s" dur="5.2s" repeatCount="indefinite" type="rotate" values="-4 520 1240;4 520 1240;-4 520 1240"/>
-        </path>
-        <path d="M540 1240 Q503 1164 498 1088" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="6">
-         <animateTransform attributeName="transform" begin="-2.2s" dur="4.8s" repeatCount="indefinite" type="rotate" values="-4 540 1240;4 540 1240;-4 540 1240"/>
-        </path>
-        <path d="M560 1240 Q576 1120 599 999" fill="none" stroke="#3f9b3a" stroke-linecap="round" stroke-width="4">
-         <animateTransform attributeName="transform" begin="-1.9s" dur="3.5s" repeatCount="indefinite" type="rotate" values="-4 560 1240;4 560 1240;-4 560 1240"/>
-        </path>
-        <path d="M580 1240 Q613 1167 602 1094" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="4">
-         <animateTransform attributeName="transform" begin="-2.5s" dur="5.8s" repeatCount="indefinite" type="rotate" values="-4 580 1240;4 580 1240;-4 580 1240"/>
-        </path>
-        <path d="M600 1240 Q581 1177 587 1113" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="5">
-         <animateTransform attributeName="transform" begin="-0.9s" dur="3.9s" repeatCount="indefinite" type="rotate" values="-4 600 1240;4 600 1240;-4 600 1240"/>
-        </path>
-        <path d="M620 1240 Q583 1127 591 1013" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="6">
-         <animateTransform attributeName="transform" begin="-2.0s" dur="5.7s" repeatCount="indefinite" type="rotate" values="-4 620 1240;4 620 1240;-4 620 1240"/>
-        </path>
-        <path d="M640 1240 Q632 1127 659 1013" fill="none" stroke="#3f9b3a" stroke-linecap="round" stroke-width="5">
-         <animateTransform attributeName="transform" begin="-2.4s" dur="4.6s" repeatCount="indefinite" type="rotate" values="-4 640 1240;4 640 1240;-4 640 1240"/>
-        </path>
-        <path d="M660 1240 Q651 1157 692 1074" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="5">
-         <animateTransform attributeName="transform" begin="-0.8s" dur="5.3s" repeatCount="indefinite" type="rotate" values="-4 660 1240;4 660 1240;-4 660 1240"/>
-        </path>
-        <path d="M680 1240 Q671 1165 706 1090" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="4">
-         <animateTransform attributeName="transform" begin="-2.1s" dur="4.0s" repeatCount="indefinite" type="rotate" values="-4 680 1240;4 680 1240;-4 680 1240"/>
-        </path>
-        <path d="M700 1240 Q680 1173 686 1106" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="6">
-         <animateTransform attributeName="transform" begin="-2.9s" dur="3.8s" repeatCount="indefinite" type="rotate" values="-4 700 1240;4 700 1240;-4 700 1240"/>
-        </path>
-        <path d="M720 1240 Q704 1177 683 1113" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="6">
-         <animateTransform attributeName="transform" begin="-3.9s" dur="4.0s" repeatCount="indefinite" type="rotate" values="-4 720 1240;4 720 1240;-4 720 1240"/>
-        </path>
-        <path d="M740 1240 Q753 1145 752 1050" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="6">
-         <animateTransform attributeName="transform" begin="-2.2s" dur="4.6s" repeatCount="indefinite" type="rotate" values="-4 740 1240;4 740 1240;-4 740 1240"/>
-        </path>
-        <path d="M760 1240 Q760 1147 786 1054" fill="none" stroke="#3f9b3a" stroke-linecap="round" stroke-width="5">
-         <animateTransform attributeName="transform" begin="-0.8s" dur="5.5s" repeatCount="indefinite" type="rotate" values="-4 760 1240;4 760 1240;-4 760 1240"/>
-        </path>
-        <path d="M780 1240 Q756 1124 775 1007" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="6">
-         <animateTransform attributeName="transform" begin="-2.1s" dur="5.0s" repeatCount="indefinite" type="rotate" values="-4 780 1240;4 780 1240;-4 780 1240"/>
-        </path>
-        <path d="M800 1240 Q809 1142 770 1043" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="4">
-         <animateTransform attributeName="transform" begin="-2.5s" dur="3.5s" repeatCount="indefinite" type="rotate" values="-4 800 1240;4 800 1240;-4 800 1240"/>
-        </path>
-        <path d="M820 1240 Q810 1148 792 1056" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="5">
-         <animateTransform attributeName="transform" begin="-3.5s" dur="3.7s" repeatCount="indefinite" type="rotate" values="-4 820 1240;4 820 1240;-4 820 1240"/>
-        </path>
-        <path d="M840 1240 Q849 1160 880 1079" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="5">
-         <animateTransform attributeName="transform" begin="-1.5s" dur="3.5s" repeatCount="indefinite" type="rotate" values="-4 840 1240;4 840 1240;-4 840 1240"/>
-        </path>
-        <path d="M860 1240 Q847 1127 840 1013" fill="none" stroke="#3f9b3a" stroke-linecap="round" stroke-width="5">
-         <animateTransform attributeName="transform" begin="-2.9s" dur="4.0s" repeatCount="indefinite" type="rotate" values="-4 860 1240;4 860 1240;-4 860 1240"/>
-        </path>
-        <path d="M880 1240 Q905 1122 891 1003" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="6">
-         <animateTransform attributeName="transform" begin="-1.0s" dur="3.1s" repeatCount="indefinite" type="rotate" values="-4 880 1240;4 880 1240;-4 880 1240"/>
-        </path>
-        <path d="M900 1240 Q909 1172 869 1104" fill="none" stroke="#3f9b3a" stroke-linecap="round" stroke-width="5">
-         <animateTransform attributeName="transform" begin="-3.2s" dur="3.7s" repeatCount="indefinite" type="rotate" values="-4 900 1240;4 900 1240;-4 900 1240"/>
-        </path>
-        <path d="M920 1240 Q924 1146 880 1051" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="6">
-         <animateTransform attributeName="transform" begin="-2.6s" dur="3.5s" repeatCount="indefinite" type="rotate" values="-4 920 1240;4 920 1240;-4 920 1240"/>
-        </path>
-        <path d="M940 1240 Q927 1147 946 1054" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="6">
-         <animateTransform attributeName="transform" begin="-2.4s" dur="4.6s" repeatCount="indefinite" type="rotate" values="-4 940 1240;4 940 1240;-4 940 1240"/>
-        </path>
-        <path d="M960 1240 Q935 1139 926 1037" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="4">
-         <animateTransform attributeName="transform" begin="-2.2s" dur="3.2s" repeatCount="indefinite" type="rotate" values="-4 960 1240;4 960 1240;-4 960 1240"/>
-        </path>
-        <path d="M980 1240 Q973 1146 937 1052" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="4">
-         <animateTransform attributeName="transform" begin="-0.9s" dur="3.3s" repeatCount="indefinite" type="rotate" values="-4 980 1240;4 980 1240;-4 980 1240"/>
-        </path>
-        <path d="M1000 1240 Q989 1147 970 1053" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="5">
-         <animateTransform attributeName="transform" begin="-3.0s" dur="3.0s" repeatCount="indefinite" type="rotate" values="-4 1000 1240;4 1000 1240;-4 1000 1240"/>
-        </path>
-        <path d="M1020 1240 Q1008 1164 980 1087" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="5">
-         <animateTransform attributeName="transform" begin="-4.8s" dur="5.1s" repeatCount="indefinite" type="rotate" values="-4 1020 1240;4 1020 1240;-4 1020 1240"/>
-        </path>
-        <path d="M1040 1240 Q1016 1174 1018 1108" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="5">
-         <animateTransform attributeName="transform" begin="-3.6s" dur="5.8s" repeatCount="indefinite" type="rotate" values="-4 1040 1240;4 1040 1240;-4 1040 1240"/>
-        </path>
-        <path d="M1060 1240 Q1087 1123 1079 1006" fill="none" stroke="#3f9b3a" stroke-linecap="round" stroke-width="5">
-         <animateTransform attributeName="transform" begin="-1.2s" dur="3.5s" repeatCount="indefinite" type="rotate" values="-4 1060 1240;4 1060 1240;-4 1060 1240"/>
-        </path>
-        <path d="M1080 1240 Q1034 1176 1036 1111" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="6">
-         <animateTransform attributeName="transform" begin="-2.9s" dur="5.2s" repeatCount="indefinite" type="rotate" values="-4 1080 1240;4 1080 1240;-4 1080 1240"/>
-        </path>
-        <path d="M1100 1240 Q1096 1120 1086 999" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="6">
-         <animateTransform attributeName="transform" begin="-2.7s" dur="3.3s" repeatCount="indefinite" type="rotate" values="-4 1100 1240;4 1100 1240;-4 1100 1240"/>
-        </path>
-        <path d="M1120 1240 Q1132 1117 1144 994" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="4">
-         <animateTransform attributeName="transform" begin="-1.8s" dur="5.9s" repeatCount="indefinite" type="rotate" values="-4 1120 1240;4 1120 1240;-4 1120 1240"/>
-        </path>
-        <path d="M1140 1240 Q1150 1137 1120 1033" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="4">
-         <animateTransform attributeName="transform" begin="-0.7s" dur="5.2s" repeatCount="indefinite" type="rotate" values="-4 1140 1240;4 1140 1240;-4 1140 1240"/>
-        </path>
-        <path d="M1160 1240 Q1117 1164 1116 1087" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="4">
-         <animateTransform attributeName="transform" begin="-4.3s" dur="4.9s" repeatCount="indefinite" type="rotate" values="-4 1160 1240;4 1160 1240;-4 1160 1240"/>
-        </path>
-        <path d="M1180 1240 Q1179 1173 1145 1106" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="6">
-         <animateTransform attributeName="transform" begin="-4.8s" dur="5.5s" repeatCount="indefinite" type="rotate" values="-4 1180 1240;4 1180 1240;-4 1180 1240"/>
-        </path>
-        <path d="M1200 1240 Q1214 1149 1243 1058" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="5">
-         <animateTransform attributeName="transform" begin="-0.6s" dur="3.1s" repeatCount="indefinite" type="rotate" values="-4 1200 1240;4 1200 1240;-4 1200 1240"/>
-        </path>
-        <path d="M1220 1240 Q1212 1180 1208 1120" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="4">
-         <animateTransform attributeName="transform" begin="-5.7s" dur="5.9s" repeatCount="indefinite" type="rotate" values="-4 1220 1240;4 1220 1240;-4 1220 1240"/>
-        </path>
-        <path d="M1240 1240 Q1225 1176 1234 1112" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="4">
-         <animateTransform attributeName="transform" begin="-0.0s" dur="4.1s" repeatCount="indefinite" type="rotate" values="-4 1240 1240;4 1240 1240;-4 1240 1240"/>
-        </path>
-        <path d="M1260 1240 Q1262 1120 1250 999" fill="none" stroke="#3f9b3a" stroke-linecap="round" stroke-width="4">
-         <animateTransform attributeName="transform" begin="-1.2s" dur="5.0s" repeatCount="indefinite" type="rotate" values="-4 1260 1240;4 1260 1240;-4 1260 1240"/>
-        </path>
-        <path d="M1280 1240 Q1247 1147 1246 1053" fill="none" stroke="#3f9b3a" stroke-linecap="round" stroke-width="5">
-         <animateTransform attributeName="transform" begin="-0.2s" dur="4.2s" repeatCount="indefinite" type="rotate" values="-4 1280 1240;4 1280 1240;-4 1280 1240"/>
-        </path>
-        <path d="M1300 1240 Q1306 1142 1335 1043" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="6">
-         <animateTransform attributeName="transform" begin="-3.2s" dur="3.3s" repeatCount="indefinite" type="rotate" values="-4 1300 1240;4 1300 1240;-4 1300 1240"/>
-        </path>
-        <path d="M1320 1240 Q1339 1131 1316 1021" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="4">
-         <animateTransform attributeName="transform" begin="-0.9s" dur="6.0s" repeatCount="indefinite" type="rotate" values="-4 1320 1240;4 1320 1240;-4 1320 1240"/>
-        </path>
-        <path d="M1340 1240 Q1369 1126 1384 1011" fill="none" stroke="#3f9b3a" stroke-linecap="round" stroke-width="6">
-         <animateTransform attributeName="transform" begin="-1.8s" dur="3.4s" repeatCount="indefinite" type="rotate" values="-4 1340 1240;4 1340 1240;-4 1340 1240"/>
-        </path>
-        <path d="M1360 1240 Q1318 1151 1325 1062" fill="none" stroke="#3f9b3a" stroke-linecap="round" stroke-width="5">
-         <animateTransform attributeName="transform" begin="-2.0s" dur="3.1s" repeatCount="indefinite" type="rotate" values="-4 1360 1240;4 1360 1240;-4 1360 1240"/>
-        </path>
-        <path d="M1380 1240 Q1371 1123 1406 1005" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="5">
-         <animateTransform attributeName="transform" begin="-3.1s" dur="4.9s" repeatCount="indefinite" type="rotate" values="-4 1380 1240;4 1380 1240;-4 1380 1240"/>
-        </path>
-        <path d="M1400 1240 Q1381 1147 1355 1053" fill="none" stroke="#3f9b3a" stroke-linecap="round" stroke-width="6">
-         <animateTransform attributeName="transform" begin="-4.0s" dur="5.4s" repeatCount="indefinite" type="rotate" values="-4 1400 1240;4 1400 1240;-4 1400 1240"/>
-        </path>
-        <path d="M1420 1240 Q1418 1172 1435 1104" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="6">
-         <animateTransform attributeName="transform" begin="-4.6s" dur="5.4s" repeatCount="indefinite" type="rotate" values="-4 1420 1240;4 1420 1240;-4 1420 1240"/>
-        </path>
-        <path d="M1440 1240 Q1454 1154 1424 1068" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="4">
-         <animateTransform attributeName="transform" begin="-2.3s" dur="4.9s" repeatCount="indefinite" type="rotate" values="-4 1440 1240;4 1440 1240;-4 1440 1240"/>
-        </path>
-        <path d="M1460 1240 Q1474 1119 1502 998" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="4">
-         <animateTransform attributeName="transform" begin="-3.3s" dur="5.3s" repeatCount="indefinite" type="rotate" values="-4 1460 1240;4 1460 1240;-4 1460 1240"/>
-        </path>
-        <path d="M1480 1240 Q1469 1162 1477 1083" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="4">
-         <animateTransform attributeName="transform" begin="-3.5s" dur="5.0s" repeatCount="indefinite" type="rotate" values="-4 1480 1240;4 1480 1240;-4 1480 1240"/>
-        </path>
-        <path d="M1500 1240 Q1487 1119 1462 997" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="6">
-         <animateTransform attributeName="transform" begin="-2.6s" dur="3.8s" repeatCount="indefinite" type="rotate" values="-4 1500 1240;4 1500 1240;-4 1500 1240"/>
-        </path>
-        <path d="M1520 1240 Q1536 1118 1512 995" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="4">
-         <animateTransform attributeName="transform" begin="-2.1s" dur="4.5s" repeatCount="indefinite" type="rotate" values="-4 1520 1240;4 1520 1240;-4 1520 1240"/>
-        </path>
-        <path d="M1540 1240 Q1517 1155 1534 1069" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="4">
-         <animateTransform attributeName="transform" begin="-0.1s" dur="5.8s" repeatCount="indefinite" type="rotate" values="-4 1540 1240;4 1540 1240;-4 1540 1240"/>
-        </path>
-        <path d="M1560 1240 Q1558 1116 1572 991" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="4">
-         <animateTransform attributeName="transform" begin="-3.8s" dur="4.2s" repeatCount="indefinite" type="rotate" values="-4 1560 1240;4 1560 1240;-4 1560 1240"/>
-        </path>
-        <path d="M1580 1240 Q1588 1169 1553 1097" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="6">
-         <animateTransform attributeName="transform" begin="-4.4s" dur="4.6s" repeatCount="indefinite" type="rotate" values="-4 1580 1240;4 1580 1240;-4 1580 1240"/>
-        </path>
-        <path d="M1600 1240 Q1577 1115 1590 990" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="5">
-         <animateTransform attributeName="transform" begin="-1.2s" dur="5.1s" repeatCount="indefinite" type="rotate" values="-4 1600 1240;4 1600 1240;-4 1600 1240"/>
-        </path>
-        <path d="M1620 1240 Q1582 1177 1595 1114" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="5">
-         <animateTransform attributeName="transform" begin="-4.0s" dur="5.8s" repeatCount="indefinite" type="rotate" values="-4 1620 1240;4 1620 1240;-4 1620 1240"/>
-        </path>
-        <path d="M1640 1240 Q1641 1162 1648 1084" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="4">
-         <animateTransform attributeName="transform" begin="-0.5s" dur="4.1s" repeatCount="indefinite" type="rotate" values="-4 1640 1240;4 1640 1240;-4 1640 1240"/>
-        </path>
-        <path d="M1660 1240 Q1659 1139 1658 1037" fill="none" stroke="#3f9b3a" stroke-linecap="round" stroke-width="6">
-         <animateTransform attributeName="transform" begin="-3.1s" dur="3.4s" repeatCount="indefinite" type="rotate" values="-4 1660 1240;4 1660 1240;-4 1660 1240"/>
-        </path>
-        <path d="M1680 1240 Q1671 1143 1667 1046" fill="none" stroke="#3f9b3a" stroke-linecap="round" stroke-width="5">
-         <animateTransform attributeName="transform" begin="-1.2s" dur="3.2s" repeatCount="indefinite" type="rotate" values="-4 1680 1240;4 1680 1240;-4 1680 1240"/>
-        </path>
-        <path d="M1700 1240 Q1673 1126 1690 1011" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="6">
-         <animateTransform attributeName="transform" begin="-0.2s" dur="3.8s" repeatCount="indefinite" type="rotate" values="-4 1700 1240;4 1700 1240;-4 1700 1240"/>
-        </path>
-        <path d="M1720 1240 Q1705 1161 1706 1082" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="5">
-         <animateTransform attributeName="transform" begin="-1.4s" dur="4.3s" repeatCount="indefinite" type="rotate" values="-4 1720 1240;4 1720 1240;-4 1720 1240"/>
-        </path>
-        <path d="M1740 1240 Q1757 1177 1775 1113" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="6">
-         <animateTransform attributeName="transform" begin="-5.4s" dur="5.7s" repeatCount="indefinite" type="rotate" values="-4 1740 1240;4 1740 1240;-4 1740 1240"/>
-        </path>
-        <path d="M1760 1240 Q1761 1170 1721 1100" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="6">
-         <animateTransform attributeName="transform" begin="-2.6s" dur="4.2s" repeatCount="indefinite" type="rotate" values="-4 1760 1240;4 1760 1240;-4 1760 1240"/>
-        </path>
-        <path d="M1780 1240 Q1766 1144 1797 1047" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="5">
-         <animateTransform attributeName="transform" begin="-3.1s" dur="5.7s" repeatCount="indefinite" type="rotate" values="-4 1780 1240;4 1780 1240;-4 1780 1240"/>
-        </path>
-        <path d="M1800 1240 Q1792 1127 1798 1014" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="5">
-         <animateTransform attributeName="transform" begin="-2.9s" dur="3.9s" repeatCount="indefinite" type="rotate" values="-4 1800 1240;4 1800 1240;-4 1800 1240"/>
-        </path>
-        <path d="M1820 1240 Q1821 1150 1813 1059" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="6">
-         <animateTransform attributeName="transform" begin="-1.9s" dur="4.7s" repeatCount="indefinite" type="rotate" values="-4 1820 1240;4 1820 1240;-4 1820 1240"/>
-        </path>
-        <path d="M1840 1240 Q1810 1160 1804 1079" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="5">
-         <animateTransform attributeName="transform" begin="-3.7s" dur="4.5s" repeatCount="indefinite" type="rotate" values="-4 1840 1240;4 1840 1240;-4 1840 1240"/>
-        </path>
-        <path d="M1860 1240 Q1868 1138 1872 1035" fill="none" stroke="#3f9b3a" stroke-linecap="round" stroke-width="4">
-         <animateTransform attributeName="transform" begin="-0.7s" dur="3.4s" repeatCount="indefinite" type="rotate" values="-4 1860 1240;4 1860 1240;-4 1860 1240"/>
-        </path>
-        <path d="M1880 1240 Q1873 1137 1906 1033" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="4">
-         <animateTransform attributeName="transform" begin="-1.5s" dur="4.0s" repeatCount="indefinite" type="rotate" values="-4 1880 1240;4 1880 1240;-4 1880 1240"/>
-        </path>
-        <path d="M1900 1240 Q1903 1128 1904 1015" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="5">
-         <animateTransform attributeName="transform" begin="-1.1s" dur="5.2s" repeatCount="indefinite" type="rotate" values="-4 1900 1240;4 1900 1240;-4 1900 1240"/>
-        </path>
-        <path d="M1920 1240 Q1921 1173 1938 1105" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="4">
-         <animateTransform attributeName="transform" begin="-1.7s" dur="4.7s" repeatCount="indefinite" type="rotate" values="-4 1920 1240;4 1920 1240;-4 1920 1240"/>
-        </path>
-        <path d="M1940 1240 Q1932 1146 1926 1051" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="4">
-         <animateTransform attributeName="transform" begin="-1.9s" dur="4.2s" repeatCount="indefinite" type="rotate" values="-4 1940 1240;4 1940 1240;-4 1940 1240"/>
-        </path>
-        <path d="M1960 1240 Q1941 1164 1919 1088" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="6">
-         <animateTransform attributeName="transform" begin="-4.6s" dur="5.1s" repeatCount="indefinite" type="rotate" values="-4 1960 1240;4 1960 1240;-4 1960 1240"/>
-        </path>
-        <path d="M1980 1240 Q1936 1118 1935 995" fill="none" stroke="#56b84a" stroke-linecap="round" stroke-width="5">
-         <animateTransform attributeName="transform" begin="-3.9s" dur="4.2s" repeatCount="indefinite" type="rotate" values="-4 1980 1240;4 1980 1240;-4 1980 1240"/>
-        </path>
-        <path d="M2000 1240 Q1973 1149 1968 1057" fill="none" stroke="#3f9b3a" stroke-linecap="round" stroke-width="6">
-         <animateTransform attributeName="transform" begin="-1.8s" dur="3.5s" repeatCount="indefinite" type="rotate" values="-4 2000 1240;4 2000 1240;-4 2000 1240"/>
-        </path>
-        <path d="M2020 1240 Q2012 1122 1985 1003" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="4">
-         <animateTransform attributeName="transform" begin="-0.0s" dur="5.3s" repeatCount="indefinite" type="rotate" values="-4 2020 1240;4 2020 1240;-4 2020 1240"/>
-        </path>
-        <path d="M2040 1240 Q2078 1176 2077 1111" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="6">
-         <animateTransform attributeName="transform" begin="-0.5s" dur="3.9s" repeatCount="indefinite" type="rotate" values="-4 2040 1240;4 2040 1240;-4 2040 1240"/>
-        </path>
-        <path d="M2060 1240 Q2105 1125 2104 1009" fill="none" stroke="#4aa83f" stroke-linecap="round" stroke-width="5">
-         <animateTransform attributeName="transform" begin="-0.2s" dur="3.3s" repeatCount="indefinite" type="rotate" values="-4 2060 1240;4 2060 1240;-4 2060 1240"/>
-        </path>
-        <path d="M2080 1240 Q2096 1147 2063 1054" fill="none" stroke="#358a30" stroke-linecap="round" stroke-width="5">
-         <animateTransform attributeName="transform" begin="-0.1s" dur="4.8s" repeatCount="indefinite" type="rotate" values="-4 2080 1240;4 2080 1240;-4 2080 1240"/>
-        </path>
-       </g>
-      </g>
+   <symbol category="screensaver" location-type="field" name="Sommerwiese" norm-standard="IEC 62424" uuid="6b1d7d4e-2b6a-4a3b-9c0f-1e4d7a2c5f01" version="0.4.5">
+    <hearth:properties xmlns:hearth="https://forgeiec.io/hearth/1.0">
+     <hearth:property key="hour" label="Stunde festhalten (leer = echte Uhr)" type="string" xmlns:hearth="https://forgeiec.io/hearth/1.0"/>
+     <hearth:property default="34" key="flowers" label="Sonnenblumen" type="number" xmlns:hearth="https://forgeiec.io/hearth/1.0"/>
+     <hearth:property default="9" key="butterflies" label="Schmetterlinge" type="number" xmlns:hearth="https://forgeiec.io/hearth/1.0"/>
+     <hearth:property default="9" key="birds" label="Voegel" type="number" xmlns:hearth="https://forgeiec.io/hearth/1.0"/>
+     <hearth:property default="1" key="wind" label="Windstaerke (1 = normal)" type="number" xmlns:hearth="https://forgeiec.io/hearth/1.0"/>
+     <hearth:property default="330" key="grass" label="Halme" type="number" xmlns:hearth="https://forgeiec.io/hearth/1.0"/>
+    </hearth:properties>
+    <svg hearth:element="hearth-sommerwiese" hearth:format-version="1.0" hearth:visible="true" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg" xmlns:hearth="https://forgeiec.io/hearth/1.0">
+     <g hearth:layer="background" hearth:layer-name="Background" hearth:locked="true" id="0e8dc0ba-8f36-4f01-94de-dd6b8becfe4a"/>
+     <g hearth:layer="content" hearth:layer-name="Content" id="202cc87a-056e-4ef7-9f5e-7f3474bbc485">
+      <rect data-role="sky" fill="#9fd6f5" height="872" id="3da4c467-005a-4175-93b3-fef8a0445fec" stroke="none" width="2040" x="-60" y="-60"/>
+      <rect data-role="ground" fill="#4fa83c" height="408" id="b8b706b8-e7b0-4f5f-b2ac-b6617fb69ca5" stroke="none" width="2040" x="-60" y="792"/>
      </g>
-     <g hearth:layer="actions" hearth:layer-name="Actions" id="d86def5a-33f4-4261-bbf7-7e862c26c373"/>
+     <g hearth:layer="actions" hearth:layer-name="Actions" id="0fe9384a-e431-42dc-94e4-05092a59c160"/>
+     <g hearth:layer="edit" hearth:layer-name="Edit" id="47075379-258e-4d41-b1cc-4ae4c7916ed3"/>
+     <script type="text/javascript">class extends HearthSymbol {
+
+  // ── EINE WIESE, DIE RECHNET ────────────────────────────────────────────────
+  //
+  // Die erste Fassung war SMIL: 182 vorgezeichnete Bahnen. Das reicht, solange
+  // jedes Ding fuer sich schwingt — aber eine Wiese sieht man nicht an den
+  // einzelnen Halmen, sondern an der BOE, die als Welle darueber laeuft und
+  // jeden Halm, jede Blume und jeden Falter erwischt, den sie unterwegs
+  // antrifft. Eine Welle ueber hundertfuenfzig Dingen laesst sich nicht
+  // vorzeichnen.
+  //
+  // Also rechnet diese Klasse je Bild. Der Halm ist eine Feder: er folgt dem
+  // Wind verzoegert und schwingt nach, wenn die Boe durch ist. Der Falter
+  // sucht sich eine Bluete, setzt sich und wiegt mit ihr. Der Vogel haelt
+  // Abstand zu seinem Nachbarn. Und die Sonne steht, wo sie zur Stunde steht.
+  //
+  // Das SVG selbst traegt nur zwei Rechtecke — Himmel und Wiese —, damit die
+  // Kachel der Bibliothek nicht luegt. Alles andere entsteht hier.
+
+  onInit() {
+    const NS = 'http://www.w3.org/2000/svg';
+    this.mkEl = (tag, attrs, parent) => {
+      const el = document.createElementNS(NS, tag);
+      for (const k in attrs) el.setAttribute(k, attrs[k]);
+      (parent || this.root).appendChild(el);
+      return el;
+    };
+
+    this.W = 1920; this.H = 1080; this.HY = 792;
+    this.uid = 'sw' + Math.floor(Math.random() * 1e9).toString(36);
+
+    const num = (key, dflt, lo, hi) => {
+      const v = parseFloat(this.prop(key));
+      return isFinite(v) ? Math.min(hi, Math.max(lo, v)) : dflt;
+    };
+    this.flowerCount = num('flowers', 34, 0, 120);
+    this.grassCount  = num('grass', 330, 0, 900);
+    this.mothCount   = num('butterflies', 9, 0, 40);
+    this.birdCount   = num('birds', 9, 0, 40);
+    this.windScale   = num('wind', 1, 0, 4);
+    const h = parseFloat(this.prop('hour'));
+    this.hourForced = isFinite(h) ? ((h % 24) + 24) % 24 : null;
+
+    this.buildStage();
+    this.buildHills();
+    this.buildClouds();
+    this.buildGrass();
+    this.buildFlowers();
+    this.buildMoths();
+    this.buildBirds();
+    this.buildMotes();
+
+    this.time = 0; this.raf = 0; this.running = false;
+    // VORGEWAERMT: die Federn sollen im ersten Bild schon stehen, nicht erst
+    // einschwingen — sonst zuckt die Wiese in der Sekunde los, in der jemand
+    // hinsieht.
+    for (let i = 0; i &lt; 200; i++) this.advance(1 / 50);
+
+    // ── ER LAEUFT NUR, WENN ER ZU SEHEN IST ────────────────────────────────
+    //
+    // Im Kompilat haengt das Bild versteckt im Screen (`[data-ss-art]`) und
+    // wird erst bei Untaetigkeit ins Overlay gehoben. Ein &lt;script> im SVG
+    // laeuft aber schon beim Parsen — ohne diese Klammer rechnete das Panel
+    // rund um die Uhr an einem Bild, das niemand sieht.
+    this.gate = setInterval(() => this.checkStage(), 500);
+    this.onVisible = () => this.checkStage();
+    document.addEventListener('visibilitychange', this.onVisible);
+    this.checkStage();
+  }
+
+  onDestroy() {
+    this.halt();
+    if (this.gate) { clearInterval(this.gate); this.gate = 0; }
+    if (this.onVisible) document.removeEventListener('visibilitychange', this.onVisible);
+  }
+
+  // ── Werkzeug ───────────────────────────────────────────────────────────────
+
+  hexToRgb(h) {
+    return [parseInt(h.slice(1, 3), 16), parseInt(h.slice(3, 5), 16), parseInt(h.slice(5, 7), 16)];
+  }
+  rgbToHex(c) {
+    const p = (v) => ('0' + Math.max(0, Math.min(255, Math.round(v))).toString(16)).slice(-2);
+    return '#' + p(c[0]) + p(c[1]) + p(c[2]);
+  }
+  blend(a, b, t) {
+    const x = this.hexToRgb(a), y = this.hexToRgb(b);
+    return this.rgbToHex([x[0] + (y[0] - x[0]) * t, x[1] + (y[1] - x[1]) * t, x[2] + (y[2] - x[2]) * t]);
+  }
+  rnd(a, b) { return a + Math.random() * (b - a); }
+  clamp(v, a, b) { return v &lt; a ? a : (v > b ? b : v); }
+  smooth(a, b, x) {
+    if (b === a) return x &lt; a ? 0 : 1;
+    const t = this.clamp((x - a) / (b - a), 0, 1);
+    return t * t * (3 - 2 * t);
+  }
+
+  // ── Die Buehne: Himmel, Sonne, Mond, Sterne, Boden ─────────────────────────
+
+  buildStage() {
+    const defs = this.mkEl('defs', {});
+    this.defs = defs;
+
+    // Der Himmel: drei Stopps, die mit der Stunde wandern. Das vorhandene
+    // Rechteck der Datei traegt die Fuellung — so zeichnet die Kachel auch
+    // ohne Skript etwas Richtiges.
+    const skyGrad = this.mkEl('linearGradient',
+      { id: this.uid + '-sky', x1: '0', y1: '0', x2: '0', y2: '1' }, defs);
+    this.skyStops = [
+      this.mkEl('stop', { offset: '0%',   'stop-color': '#4FA8E8' }, skyGrad),
+      this.mkEl('stop', { offset: '62%',  'stop-color': '#9FD6F5' }, skyGrad),
+      this.mkEl('stop', { offset: '100%', 'stop-color': '#DCF1F7' }, skyGrad)
+    ];
+    const gndGrad = this.mkEl('linearGradient',
+      { id: this.uid + '-gnd', x1: '0', y1: '0', x2: '0', y2: '1' }, defs);
+    this.gndStops = [
+      this.mkEl('stop', { offset: '0%',   'stop-color': '#78C450' }, gndGrad),
+      this.mkEl('stop', { offset: '100%', 'stop-color': '#2C7723' }, gndGrad)
+    ];
+
+    this.skyEl = this.role('sky') || this.mkEl('rect',
+      { x: -60, y: -60, width: this.W + 120, height: this.HY + 80 });
+    this.skyEl.setAttribute('fill', 'url(#' + this.uid + '-sky)');
+
+    this.starHost = this.mkEl('g', { 'data-role': 'stars', opacity: 0 });
+    for (let i = 0; i &lt; 90; i++) {
+      const y = Math.pow(Math.random(), 1.5) * (this.HY - 120);
+      this.mkEl('circle', {
+        cx: this.rnd(0, this.W).toFixed(1), cy: y.toFixed(1),
+        r: this.rnd(.9, 2.4).toFixed(2), fill: '#ffffff',
+        opacity: this.rnd(.35, 1).toFixed(2)
+      }, this.starHost);
+    }
+
+    this.moonHost = this.mkEl('g', { 'data-role': 'moon', opacity: 0 });
+    this.mkEl('circle', { r: 96, fill: '#e8eefc', opacity: .16 }, this.moonHost);
+    this.mkEl('circle', { r: 52, fill: '#f4f6ff' }, this.moonHost);
+    this.mkEl('circle', { cx: -18, cy: -12, r: 9,  fill: '#dfe4f2' }, this.moonHost);
+    this.mkEl('circle', { cx: 14,  cy: 16,  r: 12, fill: '#dfe4f2' }, this.moonHost);
+    this.mkEl('circle', { cx: 20,  cy: -20, r: 6,  fill: '#dfe4f2' }, this.moonHost);
+
+    const halo = this.mkEl('radialGradient', { id: this.uid + '-halo' }, defs);
+    this.haloStops = [
+      this.mkEl('stop', { offset: '0%',   'stop-color': '#fff6c2', 'stop-opacity': .85 }, halo),
+      this.mkEl('stop', { offset: '38%',  'stop-color': '#fff6c2', 'stop-opacity': .34 }, halo),
+      this.mkEl('stop', { offset: '100%', 'stop-color': '#fff6c2', 'stop-opacity': 0 }, halo)
+    ];
+    this.sunHost = this.mkEl('g', { 'data-role': 'sun' });
+    this.sunGlow = this.mkEl('circle', { r: 300, fill: 'url(#' + this.uid + '-halo)' }, this.sunHost);
+    this.sunDisc = this.mkEl('circle', { r: 104, fill: '#fff3a8' }, this.sunHost);
+
+    this.hillHost  = this.mkEl('g', { 'data-role': 'hills' });
+    this.cloudHost = this.mkEl('g', { 'data-role': 'clouds' });
+    // Die Voegel gehoeren in den HIMMEL — also vor die Wiese gezeichnet, nicht
+    // dahinter, und unter den Abendschleier, der sie mit abdunkelt.
+    this.birdHost  = this.mkEl('g', { 'data-role': 'birds' });
+
+    this.gndEl = this.role('ground') || this.mkEl('rect',
+      { x: -60, y: this.HY, width: this.W + 120, height: this.H - this.HY + 120 });
+    this.gndEl.setAttribute('fill', 'url(#' + this.uid + '-gnd)');
+    // Der Saum: wo Wiese und Himmel sich treffen, steht kein Lineal.
+    this.hemEl = this.mkEl('path', { fill: '#7FCB55', opacity: .9 });
+    // Dunst: die Ferne ist heller als die Naehe. Ohne ihn klebt die Wiese
+    // mit voller Farbe an einem Horizont, der Kilometer weit weg sein soll.
+    const hazeGrad = this.mkEl('linearGradient',
+      { id: this.uid + '-haze', x1: '0', y1: '0', x2: '0', y2: '1' }, defs);
+    this.hazeStops = [
+      this.mkEl('stop', { offset: '0%',   'stop-color': '#DCF1F7', 'stop-opacity': .62 }, hazeGrad),
+      this.mkEl('stop', { offset: '100%', 'stop-color': '#DCF1F7', 'stop-opacity': 0 }, hazeGrad)
+    ];
+    this.hazeEl = this.mkEl('rect', { x: -60, y: this.HY - 30,
+      width: this.W + 120, height: 190, fill: 'url(#' + this.uid + '-haze)' });
+
+    this.grassHost  = this.mkEl('g', { 'data-role': 'grass' });
+    this.flowerHost = this.mkEl('g', { 'data-role': 'flowers' });
+    this.mothHost   = this.mkEl('g', { 'data-role': 'butterflies' });
+    // Die Abenddaemmerung legt sich ueber ALLES — ausser ueber die
+    // Gluehwuermchen. Die leuchten, und was leuchtet, wird nicht abgedunkelt.
+    this.veilEl = this.mkEl('rect',
+      { x: -60, y: -60, width: this.W + 120, height: this.H + 120,
+        fill: '#0C1A33', opacity: 0, 'pointer-events': 'none' });
+    this.moteHost   = this.mkEl('g', { 'data-role': 'motes' });
+  }
+
+  // Ein weicher Huegelzug hinter dem Horizont — er gibt der Wiese Tiefe.
+  buildHills() {
+    const bands = [
+      { y: this.HY - 54, amp: 26, col: '#93C97C', op: .55, k: 0.0024 },
+      { y: this.HY - 26, amp: 18, col: '#7BBB5E', op: .75, k: 0.0037 }
+    ];
+    this.hills = [];
+    for (const b of bands) {
+      let d = 'M-60 ' + (this.HY + 40);
+      for (let x = -60; x &lt;= this.W + 60; x += 40)
+        d += ' L' + x + ' ' + (b.y - b.amp * Math.sin(x * b.k) - b.amp * .4 * Math.sin(x * b.k * 2.7 + 1.3)).toFixed(1);
+      d += ' L' + (this.W + 60) + ' ' + (this.HY + 40) + 'Z';
+      this.hills.push({ el: this.mkEl('path', { d: d, fill: b.col,
+        'fill-opacity': b.op }, this.hillHost), col: b.col });
+    }
+  }
+
+  buildClouds() {
+    this.clouds = [];
+    const puffs = [[0, 0, 92, 47], [72, 14, 70, 40], [-72, 16, 64, 34], [10, -30, 61, 41]];
+    for (let i = 0; i &lt; 7; i++) {
+      const g = this.mkEl('g', { fill: '#ffffff' }, this.cloudHost);
+      const s = this.rnd(.55, 1.5);
+      for (const p of puffs)
+        this.mkEl('ellipse', { cx: p[0], cy: p[1], rx: p[2], ry: p[3] }, g);
+      this.clouds.push({
+        el: g, x: this.rnd(-300, this.W + 300), y: this.rnd(90, 380),
+        s: s, v: this.rnd(7, 19) / s, op: this.rnd(.72, .95),
+        // Jede Wolke atmet ein wenig — sonst sind es sieben Schablonen.
+        br: this.rnd(.02, .05), bp: this.rnd(0, 6.283)
+      });
+    }
+  }
+
+  // ── Halme: eine Feder je Halm ──────────────────────────────────────────────
+  //
+  // Der Halm ist ein Bogen von der Wurzel zur Spitze. Gebogen wird er nicht
+  // durch eine Drehung, sondern durch den Kontrollpunkt — so knickt er wie
+  // Gras und dreht sich nicht wie ein Brett.
+
+  buildGrass() {
+    this.grass = [];
+    const tints = ['#3E9B36', '#4FB141', '#5CC04B', '#368C30', '#68C95A'];
+    for (let i = 0; i &lt; this.grassCount; i++) {
+      const x = this.rnd(-70, this.W + 70);
+      // Weiter hinten: kuerzer, matter, duenner — das ist die ganze Perspektive.
+      const depth = Math.pow(Math.random(), .8);
+      const y = this.HY + 6 + depth * (this.H - this.HY + 130);
+      const len = 44 + depth * 168;
+      this.grass.push({
+        el: this.mkEl('path', {
+          stroke: tints[(Math.random() * tints.length) | 0],
+          'stroke-width': (1.6 + depth * 4.4).toFixed(1),
+          fill: 'none', 'stroke-linecap': 'round',
+          'stroke-opacity': (.55 + depth * .45).toFixed(2)
+        }, this.grassHost),
+        x: x, y: y, len: len,
+        sens: (.55 + depth * .85) * this.rnd(.8, 1.25),
+        lean: this.rnd(-.12, .12), a: 0, v: 0,
+        k: this.rnd(9, 15), damp: this.rnd(3.4, 5.2),
+        ph: this.rnd(0, 6.283), tip: null
+      });
+    }
+    // Wiesenblumen: ein Punkt auf der Spitze eines Halms. Sie kosten zwei
+    // Schreibungen und machen aus der gruenen Flaeche eine WIESE.
+    const petals = ['#FFFFFF', '#FFF2A8', '#F5A9C0', '#E8E4F5', '#FFD9A0'];
+    for (const b of this.grass) {
+      if (Math.random() > .26) continue;
+      b.tip = this.mkEl('circle', {
+        r: (2.4 + b.sens * 3.4).toFixed(1),
+        fill: petals[(Math.random() * petals.length) | 0]
+      }, this.grassHost);
+      b.tipCol = b.tip.getAttribute('fill');
+    }
+  }
+
+  // ── Sonnenblumen ───────────────────────────────────────────────────────────
+
+  flowerShape() {
+    const g = this.mkEl('g', { id: this.uid + '-sf' }, this.defs);
+    for (let k = 0; k &lt; 16; k++)
+      this.mkEl('ellipse', { cx: 0, cy: -64, rx: 14, ry: 36, fill: '#DFA412',
+                             transform: 'rotate(' + (k * 22.5 + 11.25) + ')' }, g);
+    for (let k = 0; k &lt; 16; k++)
+      this.mkEl('ellipse', { cx: 0, cy: -58, rx: 16, ry: 33, fill: '#F8C726',
+                             transform: 'rotate(' + (k * 22.5) + ')' }, g);
+    this.mkEl('circle', { r: 38, fill: '#7A5122' }, g);
+    this.mkEl('circle', { r: 29, fill: '#5D3C19' }, g);
+    for (let k = 0; k &lt; 11; k++) {
+      const a = k * 32.7 * Math.PI / 180;
+      this.mkEl('circle', { cx: (Math.cos(a) * 18).toFixed(1),
+                            cy: (Math.sin(a) * 18).toFixed(1), r: 3.4, fill: '#3D2610' }, g);
+    }
+    return g;
+  }
+
+  buildFlowers() {
+    this.flowerShape();
+    this.flowers = [];
+    for (let i = 0; i &lt; this.flowerCount; i++) {
+      // Tiefe entscheidet ALLES: Stand, Groesse, Bestaendigkeit gegen den Wind.
+      // Gross und weit hinten gibt es nicht.
+      const d = Math.pow(Math.random(), 1.35);
+      const g = this.mkEl('g', {}, this.flowerHost);
+      const stem = this.mkEl('path', {
+        stroke: this.blend('#3D8A33', '#69B95A', 1 - d),
+        'stroke-width': (5 + d * 8).toFixed(1), fill: 'none', 'stroke-linecap': 'round'
+      }, g);
+      const leaf = this.mkEl('path', { fill: this.blend('#4AA83F', '#7FC96F', 1 - d) }, g);
+      const head = this.mkEl('g', {}, g);
+      this.mkEl('use', { href: '#' + this.uid + '-sf' }, head);
+      this.flowers.push({
+        stem: stem, leaf: leaf, head: head,
+        x: this.rnd(-140, this.W + 140), y: 866 + d * 470 + this.rnd(-14, 14),
+        len: (120 + d * 138), s: .15 + d * 1.02, d: d,
+        sens: (1.15 - d * .55) * this.rnd(.85, 1.2),
+        a: 0, v: 0, k: this.rnd(5.5, 8.5), damp: this.rnd(2.6, 3.8),
+        ph: this.rnd(0, 6.283), tx: 0, ty: 0
+      });
+    }
+    // Von hinten nach vorn — die grossen sollen die kleinen verdecken.
+    this.flowers.sort((a, b) => a.d - b.d);
+    for (const f of this.flowers) {
+      this.flowerHost.appendChild(f.stem.parentNode);
+    }
+  }
+
+  // ── Falter ─────────────────────────────────────────────────────────────────
+
+  buildMoths() {
+    this.moths = [];
+    const cols = ['#FF9A3C', '#FFD34E', '#E8615F', '#C07CE0', '#78C8F0',
+                  '#F7A8C8', '#FFB347', '#B7E36A', '#F06292'];
+    const wingR = 'M0 0 C20 -30 48 -26 46 -4 C60 8 46 30 24 24 C9 20 2 11 0 0Z';
+    const wingL = 'M0 0 C-20 -30 -48 -26 -46 -4 C-60 8 -46 30 -24 24 C-9 20 -2 11 0 0Z';
+    for (let i = 0; i &lt; this.mothCount; i++) {
+      const g = this.mkEl('g', {}, this.mothHost);
+      const body = this.mkEl('g', {}, g);
+      const col = cols[i % cols.length];
+      const wr = this.mkEl('path', { d: wingR, fill: col, stroke: '#4A3520', 'stroke-width': 1.6 }, body);
+      const wl = this.mkEl('path', { d: wingL, fill: col, stroke: '#4A3520', 'stroke-width': 1.6 }, body);
+      this.mkEl('ellipse', { cx: 0, cy: 5, rx: 3.6, ry: 16, fill: '#3A2A1C' }, body);
+      this.mkEl('path', { d: 'M-1 -9 Q-9 -20 -14 -22M1 -9 Q9 -20 14 -22',
+                          stroke: '#3A2A1C', 'stroke-width': 1.8, fill: 'none',
+                          'stroke-linecap': 'round' }, body);
+      this.moths.push({
+        el: g, body: body, wr: wr, wl: wl,
+        x: this.rnd(0, this.W), y: this.rnd(this.HY + 10, this.H - 40),
+        vx: this.rnd(-70, 70), vy: this.rnd(-40, 40),
+        s: this.rnd(.34, .68), flap: this.rnd(0, 6.283), tilt: 0,
+        target: null, rest: 0, wander: this.rnd(0, 6.283)
+      });
+    }
+  }
+
+  // ── EIN VOGEL VON DER SEITE ───────────────────────────────────────────────
+  //
+  // Vorher waren es zwei gespiegelte Striche — ein Vogel von UNTEN, wie man
+  // ihn ueber sich sieht. Der Schwarm hier zieht aber quer durchs Bild, also
+  // sieht man ihn von der SEITE: Kopf und Schnabel vorn, Schwanz hinten, und
+  // zwei Fluegel in Tiefe — der nahe hell, der ferne dunkel und eine Spur
+  // versetzt. Erst das macht aus dem Haekchen einen Vogel.
+  buildBirds() {
+    this.birds = [];
+    const WING = 'M2 -4 C-4 -24 -24 -41 -49 -36 C-36 -17 -15 -3 2 -4 Z';
+    const BODY = 'M-26 3 C-20 -7 2 -11 16 -6 C24 -3 26 0 22 3 C12 8 -8 10 -26 3 Z';
+    const TAIL = 'M-22 1 L-46 -7 L-43 7 Z';
+    for (let i = 0; i &lt; this.birdCount; i++) {
+      const g = this.mkEl('g', {}, this.birdHost);
+      const inner = this.mkEl('g', { opacity: .82 }, g);
+      // Der FERNE Fluegel zuerst — er liegt hinter dem Rumpf.
+      const wl = this.mkEl('path', { d: WING, fill: '#2C3A46' }, inner);
+      this.mkEl('path', { d: TAIL, fill: '#364553' }, inner);
+      this.mkEl('path', { d: BODY, fill: '#3A4A58' }, inner);
+      this.mkEl('circle', { cx: 19, cy: -5, r: 6.4, fill: '#3A4A58' }, inner);
+      this.mkEl('path', { d: 'M25 -6 L38 -3.5 L25 -1 Z', fill: '#C8792E' }, inner);
+      // und der NAHE darueber, heller.
+      const wr = this.mkEl('path', { d: WING, fill: '#4C6075' }, inner);
+      this.birds.push({
+        el: g, inner: inner, wr: wr, wl: wl,
+        x: this.rnd(-200, this.W + 200), y: this.rnd(90, 420),
+        vx: this.rnd(60, 130), vy: this.rnd(-8, 8),
+        s: this.rnd(.55, 1.15), flap: this.rnd(0, 6.283),
+        rate: this.rnd(4.2, 6.4), ph: this.rnd(0, 6.283)
+      });
+    }
+    this.flockDir = Math.random() &lt; .5 ? -1 : 1;
+    for (const b of this.birds) b.vx = Math.abs(b.vx) * this.flockDir;
+  }
+
+  // Pollen und Muecken: winzige Punkte, die im Licht stehen. Nachts werden
+  // Gluehwuermchen daraus — dieselben Punkte, nur dass sie blinken.
+  buildMotes() {
+    this.motes = [];
+    for (let i = 0; i &lt; 54; i++) {
+      this.motes.push({
+        el: this.mkEl('circle', { r: this.rnd(1.6, 4.2).toFixed(1), fill: '#fff6c8' }, this.moteHost),
+        x: this.rnd(0, this.W), y: this.rnd(this.HY - 90, this.H),
+        ph: this.rnd(0, 6.283), sp: this.rnd(.5, 1.6),
+        drift: this.rnd(.2, .8), blink: this.rnd(.6, 1.8)
+      });
+    }
+  }
+
+  // ── Tageszeit ──────────────────────────────────────────────────────────────
+
+  daylight() {
+    const now = new Date();
+    const h = this.hourForced !== null
+      ? this.hourForced
+      : now.getHours() + now.getMinutes() / 60 + now.getSeconds() / 3600;
+    this.hourNow = h;
+    // Tag, Daemmerung, Nacht als drei weiche Anteile — sie ueberlagern sich.
+    const day   = this.smooth(6.4, 8.6, h) * (1 - this.smooth(17.4, 19.4, h));
+    const dusk  = this.smooth(16.8, 18.6, h) * (1 - this.smooth(19.6, 21.0, h))
+                + this.smooth(4.6, 6.2, h)  * (1 - this.smooth(7.0, 8.4, h));
+    const night = 1 - this.smooth(4.6, 6.4, h) + this.smooth(19.4, 21.2, h);
+    this.dayF   = this.clamp(day, 0, 1);
+    this.duskF  = this.clamp(dusk, 0, 1);
+    this.nightF = this.clamp(night, 0, 1);
+  }
+
+  // Die Bahn der Sonne (und, zwoelf Stunden versetzt, die des Mondes).
+  sunArc(h) {
+    const rise = 6.2, set = 19.8;
+    const t = (h - rise) / (set - rise);
+    const x = -240 + t * (this.W + 480);
+    const y = this.HY - 90 - Math.sin(this.clamp(t, 0, 1) * Math.PI) * (this.HY - 230);
+    return { x: x, y: y, up: t > 0 &amp;&amp; t &lt; 1 };
+  }
+
+  // ── Wind: eine Grundstroemung und Boen, die durchlaufen ────────────────────
+  //
+  // Die Boe ist eine WELLE ueber x. Dass sie wandert, ist der ganze Trick:
+  // man sieht sie kommen, sieht die Halme umlegen und sieht sie weiterziehen.
+
+  windAt(x) {
+    const t = this.time;
+    const base = this.baseWind;
+    let gust = 0;
+    for (const w of this.gusts) {
+      const dx = x - w.pos;
+      if (dx > -w.width &amp;&amp; dx &lt; w.width) {
+        const f = Math.cos(dx / w.width * Math.PI * .5);
+        gust += w.amp * f * f;
+      }
+    }
+    // Ein feines Zittern darueber, damit nichts je ganz still steht.
+    const jitter = 14 * Math.sin(x * .012 + t * 2.3) * Math.sin(t * .77 + x * .0037);
+    return (base + gust + jitter) * this.windScale;
+  }
+
+  checkStage() {
+    const gated = this.root.hasAttribute('data-ss-art') || !!this.root.closest('[data-ss-art]');
+    const shown = gated ? !!this.root.closest('[data-ss-buehne]') : true;
+    if (shown &amp;&amp; !document.hidden) this.run(); else this.halt();
+  }
+  run() {
+    if (this.running) return;
+    this.running = true;
+    this.last = (typeof performance !== 'undefined' ? performance.now() : Date.now());
+    const tick = (now) => {
+      if (!this.running) return;
+      const dt = Math.min(.05, (now - this.last) / 1000);
+      this.last = now;
+      this.advance(dt);
+      this.paint(dt);
+      this.raf = requestAnimationFrame(tick);
+    };
+    this.raf = requestAnimationFrame(tick);
+  }
+  halt() {
+    this.running = false;
+    if (this.raf) { cancelAnimationFrame(this.raf); this.raf = 0; }
+  }
+
+  // ── Die Physik ─────────────────────────────────────────────────────────────
+
+  advance(dt) {
+    this.time += dt;
+    const t = this.time;
+
+    if (!this.gusts) {
+      this.gusts = [];
+      this.gustClock = 2.5;
+    }
+    // Die Grundstroemung atmet ueber Minuten.
+    this.baseWind = 26 + 20 * Math.sin(t / 37) + 12 * Math.sin(t / 11.3 + 1.7);
+
+    // Neue Boen von links nach rechts. Sie sind das Ereignis der Wiese.
+    this.gustClock -= dt;
+    if (this.gustClock &lt;= 0) {
+      this.gustClock = this.rnd(3.5, 11);
+      this.gusts.push({
+        pos: -420, width: this.rnd(360, 780),
+        amp: this.rnd(70, 235), v: this.rnd(230, 460)
+      });
+    }
+    for (let i = this.gusts.length - 1; i >= 0; i--) {
+      const g = this.gusts[i];
+      g.pos += g.v * dt;
+      if (g.pos - g.width > this.W + 200) this.gusts.splice(i, 1);
+    }
+
+    this.daylight();
+
+    // Halme: Feder gegen den Wind.
+    for (const b of this.grass) {
+      const target = this.windAt(b.x) * b.sens * .0026 + b.lean
+                   + .035 * Math.sin(t * 1.6 + b.ph);
+      b.v += ((target - b.a) * b.k - b.v * b.damp) * dt;
+      b.a += b.v * dt;
+    }
+    // Blumen: traeger, mit mehr Nachschwingen — sie sind schwer oben.
+    for (const f of this.flowers) {
+      const target = this.windAt(f.x) * f.sens * .0034
+                   + .05 * Math.sin(t * 1.1 + f.ph);
+      f.v += ((target - f.a) * f.k - f.v * f.damp) * dt;
+      f.a += f.v * dt;
+      const a = f.a;
+      f.tx = f.x + Math.sin(a) * f.len;
+      f.ty = f.y - Math.cos(a) * f.len;
+    }
+
+    this.advanceMoths(dt);
+    this.advanceBirds(dt);
+
+    for (const c of this.clouds) {
+      c.x += (c.v + this.baseWind * .12) * dt;
+      if (c.x > this.W + 360) { c.x = -360; c.y = this.rnd(80, 380); }
+    }
+    for (const m of this.motes) {
+      m.x += (this.windAt(m.x) * .08 * m.drift + 6 * Math.sin(t * m.sp + m.ph)) * dt;
+      m.y += (-9 * m.drift + 11 * Math.sin(t * m.sp * .7 + m.ph * 2)) * dt;
+      if (m.y &lt; this.HY - 120) { m.y = this.H + 20; m.x = this.rnd(0, this.W); }
+      if (m.x > this.W + 40) m.x = -40; else if (m.x &lt; -40) m.x = this.W + 40;
+    }
+  }
+
+  // Ein Falter sucht sich eine Bluete, setzt sich darauf und wiegt mit ihr.
+  // Das ist der Unterschied zur vorgezeichneten Bahn: er HAT ein Ziel.
+  advanceMoths(dt) {
+    const nightly = this.nightF > .55;
+    for (const m of this.moths) {
+      if (m.rest > 0) {
+        m.rest -= dt;
+        const f = m.target;
+        if (f) {                       // mit der Bluete wiegen
+          m.x = f.tx + Math.sin(m.wander) * 22 * f.s;
+          m.y = f.ty - 46 * f.s;
+          m.tilt = f.a * 32;
+        }
+        m.vx *= .9; m.vy *= .9;
+        if (m.rest &lt;= 0) {
+          m.target = null;
+          m.vy = -this.rnd(40, 90);
+          m.vx = this.rnd(-60, 60);
+        }
+        m.flap += dt * 4.5;            // sitzend faechelt er nur
+        continue;
+      }
+
+      // Ziel waehlen: eine Bluete, nicht zu weit weg.
+      if (!m.target &amp;&amp; this.flowers.length &amp;&amp; Math.random() &lt; dt * .5) {
+        const f = this.flowers[(Math.random() * this.flowers.length) | 0];
+        if (f.d > .12) m.target = f;
+      }
+      m.wander += dt * this.rnd(1.2, 3.4);
+      let ax = Math.cos(m.wander * 1.7) * 46;
+      let ay = Math.sin(m.wander * 2.3) * 38;
+      if (m.target) {
+        const dx = m.target.tx - m.x, dy = (m.target.ty - 46 * m.target.s) - m.y;
+        const dist = Math.hypot(dx, dy) || 1;
+        ax += dx / dist * 150; ay += dy / dist * 150;
+        if (dist &lt; 26) { m.rest = this.rnd(2.5, 7); }
+      } else {
+        // Ohne Ziel in der Bahn ueber der Wiese bleiben.
+        if (m.y &lt; this.HY + 20) ay += 90;
+        if (m.y > this.H - 30) ay -= 90;
+      }
+      ax += this.windAt(m.x) * .55;
+      m.vx += ax * dt; m.vy += ay * dt;
+      const sp = Math.hypot(m.vx, m.vy);
+      const max = nightly ? 70 : 145;
+      if (sp > max) { m.vx = m.vx / sp * max; m.vy = m.vy / sp * max; }
+      m.vx *= (1 - 1.1 * dt); m.vy *= (1 - 1.1 * dt);
+      m.x += m.vx * dt; m.y += m.vy * dt;
+      if (m.x &lt; -60) m.x = this.W + 50; else if (m.x > this.W + 60) m.x = -50;
+      m.y = this.clamp(m.y, this.HY - 60, this.H + 10);
+      // Der Schlag wird schneller, je mehr er arbeitet.
+      m.flap += dt * (11 + sp * .075);
+      m.tilt = this.clamp(m.vx * .12, -26, 26);
+    }
+  }
+
+  // Voegel halten Abstand und ziehen zur Mitte — mehr braucht ein Schwarm nicht.
+  advanceBirds(dt) {
+    let cx = 0, cy = 0;
+    for (const b of this.birds) { cx += b.x; cy += b.y; }
+    cx /= (this.birds.length || 1); cy /= (this.birds.length || 1);
+    for (const b of this.birds) {
+      let ax = (cx - b.x) * .06, ay = (cy - b.y) * .12;
+      for (const o of this.birds) {
+        if (o === b) continue;
+        const dx = b.x - o.x, dy = b.y - o.y;
+        const d2 = dx * dx + dy * dy;
+        if (d2 &lt; 9000 &amp;&amp; d2 > .01) {
+          const f = 120 / d2;
+          ax += dx * f * 14; ay += dy * f * 14;
+        }
+      }
+      ay += Math.sin(this.time * .6 + b.ph) * 9;
+      ax += this.flockDir * 28;
+      b.vx += ax * dt; b.vy += ay * dt;
+      b.vx = this.clamp(b.vx, -190, 190);
+      b.vy = this.clamp(b.vy, -55, 55);
+      b.x += b.vx * dt; b.y += b.vy * dt;
+      if (b.y &lt; 60) { b.y = 60; b.vy = Math.abs(b.vy); }
+      if (b.y > this.HY - 140) { b.y = this.HY - 140; b.vy = -Math.abs(b.vy); }
+      if (this.flockDir > 0 &amp;&amp; b.x > this.W + 260) { b.x = -260; }
+      if (this.flockDir &lt; 0 &amp;&amp; b.x &lt; -260) { b.x = this.W + 260; }
+      // Steigt er, schlaegt er schneller; gleitet er, steht der Fluegel.
+      const work = this.clamp(.35 - b.vy * .012, .1, 1.6);
+      b.flap += dt * b.rate * work;
+      b.work = work;
+    }
+  }
+
+  // ── Das Bild ───────────────────────────────────────────────────────────────
+
+  paint(dt) {
+    const t = this.time;
+    const day = this.dayF, dusk = this.duskF, night = this.nightF;
+
+    // Himmel und Boden gehoeren zum selben Tag. Stuende der Boden fest, waere
+    // er nachts ein leuchtendes Band unter einem dunklen Himmel.
+    const sky = [
+      this.blend(this.blend('#0B1630', '#B4441F', dusk), '#4FA8E8', day),
+      this.blend(this.blend('#152244', '#EE8C3A', dusk), '#9FD6F5', day),
+      this.blend(this.blend('#1E2B4E', '#FFD27A', dusk), '#DCF1F7', day)
+    ];
+    for (let i = 0; i &lt; 3; i++) this.skyStops[i].setAttribute('stop-color', sky[i]);
+    const gnd = [
+      this.blend(this.blend('#16301C', '#5A7F38', dusk), '#78C450', day),
+      this.blend(this.blend('#091509', '#22391A', dusk), '#2C7723', day)
+    ];
+    for (let i = 0; i &lt; 2; i++) this.gndStops[i].setAttribute('stop-color', gnd[i]);
+    this.hemEl.setAttribute('fill', this.blend(gnd[0], '#ffffff', .14));
+    for (const st of this.hazeStops) st.setAttribute('stop-color', sky[2]);
+    // Der Schleier ist abends WARM und nachts kalt — dasselbe Tuch, zwei
+    // Farben. Ein blauer Schleier ueber einem orangenen Himmel gab Grau.
+    this.veilEl.setAttribute('fill', this.blend('#0C1A33', '#6B2E0E',
+      this.clamp(dusk - night, 0, 1)));
+    this.veilEl.setAttribute('opacity', (night * .52 + dusk * .16).toFixed(3));
+    for (const h of this.hills)
+      h.el.setAttribute('fill', this.blend(this.blend('#24402A', '#8E9A5A', dusk), h.col, day));
+
+    // Der Saum wellt sich langsam — er ist die Grenze zweier Flaechen, die
+    // atmen, nicht ein Strich.
+    let hem = 'M-60 ' + (this.HY + 70);
+    for (let x = -60; x &lt;= this.W + 60; x += 60)
+      hem += ' L' + x + ' ' + (this.HY + 3 * Math.sin(x * .006 + t * .17)
+                                     + 5 * Math.sin(x * .0021 - t * .11)).toFixed(1);
+    hem += ' L' + (this.W + 60) + ' ' + (this.HY + 70) + 'Z';
+    this.hemEl.setAttribute('d', hem);
+
+    const s = this.sunArc(this.hourNow);
+    this.sunHost.setAttribute('transform', 'translate(' + s.x.toFixed(1) + ' ' + s.y.toFixed(1) + ')');
+    this.sunHost.setAttribute('opacity', (this.clamp(day + dusk * .8, 0, 1)).toFixed(3));
+    this.sunGlow.setAttribute('r', (300 + 22 * Math.sin(t * .8)).toFixed(1));
+    this.sunDisc.setAttribute('fill', this.blend('#FF9A4A', '#fff3a8', day));
+    const haloCol = this.blend('#FFB36A', '#fff6c2', day);
+    for (const st of this.haloStops) st.setAttribute('stop-color', haloCol);
+
+    const m = this.sunArc((this.hourNow + 12) % 24);
+    this.moonHost.setAttribute('transform', 'translate(' + m.x.toFixed(1) + ' ' + m.y.toFixed(1) + ')');
+    this.moonHost.setAttribute('opacity', (night * .95).toFixed(3));
+    this.starHost.setAttribute('opacity', (night * .9).toFixed(3));
+
+    for (const c of this.clouds) {
+      const br = 1 + c.br * Math.sin(t * .5 + c.bp);
+      c.el.setAttribute('transform',
+        'translate(' + c.x.toFixed(1) + ' ' + c.y.toFixed(1) + ') scale(' +
+        (c.s * br).toFixed(3) + ' ' + (c.s / br).toFixed(3) + ')');
+      c.el.setAttribute('fill', this.blend(this.blend('#2A3550', '#F6C99A', dusk), '#ffffff', day));
+      c.el.setAttribute('opacity', (c.op * (.35 + .65 * this.clamp(day + dusk, 0, 1))).toFixed(2));
+    }
+
+    for (const b of this.grass) {
+      const sa = Math.sin(b.a), ca = Math.cos(b.a);
+      const tx = b.x + sa * b.len, ty = b.y - ca * b.len;
+      // Der Kontrollpunkt sitzt auf halber Hoehe und weicht dem Wind aus —
+      // daher der Bogen statt des Knicks.
+      const cx = b.x + sa * b.len * .22, cy = b.y - b.len * .62;
+      b.el.setAttribute('d', 'M' + b.x.toFixed(1) + ' ' + b.y.toFixed(1) +
+        ' Q' + cx.toFixed(1) + ' ' + cy.toFixed(1) +
+        ' ' + tx.toFixed(1) + ' ' + ty.toFixed(1));
+      if (b.tip) {
+        b.tip.setAttribute('cx', tx.toFixed(1));
+        b.tip.setAttribute('cy', ty.toFixed(1));
+      }
+    }
+
+    for (const f of this.flowers) {
+      const sa = Math.sin(f.a);
+      const cx = f.x + sa * f.len * .28, cy = f.y - f.len * .58;
+      f.stem.setAttribute('d', 'M' + f.x.toFixed(1) + ' ' + f.y.toFixed(1) +
+        ' Q' + cx.toFixed(1) + ' ' + cy.toFixed(1) +
+        ' ' + f.tx.toFixed(1) + ' ' + f.ty.toFixed(1));
+      const lx = f.x + sa * f.len * .16, ly = f.y - f.len * .42;
+      const w = 60 * f.s, hgt = 26 * f.s;
+      f.leaf.setAttribute('d',
+        'M' + lx.toFixed(1) + ' ' + ly.toFixed(1) +
+        ' C' + (lx - w).toFixed(1) + ' ' + (ly - hgt).toFixed(1) +
+        ' ' + (lx - w * 1.3).toFixed(1) + ' ' + (ly + hgt * .6).toFixed(1) +
+        ' ' + (lx - w * .5).toFixed(1) + ' ' + (ly + hgt).toFixed(1) +
+        ' C' + (lx - w * .2).toFixed(1) + ' ' + (ly + hgt * .5).toFixed(1) +
+        ' ' + lx.toFixed(1) + ' ' + (ly + hgt * .2).toFixed(1) +
+        ' ' + lx.toFixed(1) + ' ' + ly.toFixed(1) + 'Z');
+      // Nachts senkt die Bluete den Kopf.
+      const droop = this.nightF * 26;
+      f.head.setAttribute('transform',
+        'translate(' + f.tx.toFixed(1) + ' ' + f.ty.toFixed(1) + ') rotate(' +
+        (f.a * 46 + droop).toFixed(1) + ') scale(' + f.s.toFixed(3) + ')');
+      // NICHT ueber die Deckkraft: eine durchscheinende Bluete zeigte nachts
+      // das Gras durch ihren Kopf. Dunkel wird sie vom Schleier.
+    }
+
+    for (const b of this.birds) {
+      // Beide Fluegel schlagen GLEICHSINNIG — von der Seite gesehen gehen sie
+      // zusammen hoch und runter; der ferne hinkt eine Spur nach, das gibt die
+      // Tiefe. Gegensinnig sah es aus, als wuerde der Vogel rudern.
+      const amp = 24 + 46 * this.clamp(b.work, 0, 1.4);
+      const ang = Math.sin(b.flap) * amp;
+      const angFar = Math.sin(b.flap - .38) * amp * .88;
+      // Der Rumpf neigt sich in die Richtung, in die er zieht.
+      const pitch = this.clamp(b.vy * .16, -16, 16);
+      b.el.setAttribute('transform',
+        'translate(' + b.x.toFixed(1) + ' ' + b.y.toFixed(1) + ') scale(' +
+        (b.s * (this.flockDir > 0 ? 1 : -1)).toFixed(3) + ' ' + b.s.toFixed(3) +
+        ') rotate(' + pitch.toFixed(1) + ')');
+      b.wr.setAttribute('transform', 'rotate(' + ang.toFixed(1) + ' 2 -4)');
+      b.wl.setAttribute('transform', 'rotate(' + angFar.toFixed(1) + ' 2 -4) translate(4 6)');
+      b.inner.setAttribute('opacity', (.82 * (.4 + .6 * this.clamp(day + dusk, 0, 1))).toFixed(2));
+    }
+
+    for (const m2 of this.moths) {
+      // Der Fluegelschlag ist eine Verjuengung in x — von vorn gesehen klappt
+      // der Fluegel zu. Zwei Schreibungen statt einer neuen Kurve.
+      const open = .18 + .82 * (.5 + .5 * Math.cos(m2.flap));
+      m2.el.setAttribute('transform',
+        'translate(' + m2.x.toFixed(1) + ' ' + m2.y.toFixed(1) + ') rotate(' +
+        m2.tilt.toFixed(1) + ') scale(' + m2.s.toFixed(3) + ')');
+      m2.wr.setAttribute('transform', 'scale(' + open.toFixed(3) + ' 1)');
+      m2.wl.setAttribute('transform', 'scale(' + open.toFixed(3) + ' 1)');
+      m2.el.setAttribute('opacity', (1 - this.nightF * .8).toFixed(2));
+    }
+
+    for (const mo of this.motes) {
+      mo.el.setAttribute('cx', mo.x.toFixed(1));
+      mo.el.setAttribute('cy', mo.y.toFixed(1));
+      // Tags Pollen im Gegenlicht, nachts Gluehwuermchen.
+      const glow = .5 + .5 * Math.sin(t * mo.blink * 2.4 + mo.ph);
+      mo.el.setAttribute('fill', this.blend('#B8FF7A', '#fff6c8', this.dayF));
+      mo.el.setAttribute('opacity',
+        (this.dayF * .5 + this.nightF * glow * glow * .95 + this.duskF * .35).toFixed(3));
+    }
+  }
+}</script>
     </svg>
    </symbol>
-   <symbol author="ForgeIEC" category="screensaver" description="Ahorn, Buche, Eiche, Kastanie, Birke und Linde fallen im wechselnden Herbstwetter — Windstille, Boeen, Sturm, Landregen und Gewitter." name="Herbstlaub" uuid="4f1c8ad2-7e63-4b09-9d51-2a6c0f83be74" version="0.1.0">
+   <symbol author="ForgeIEC" category="screensaver" description="Ahorn, Buche, Eiche, Kastanie, Birke und Linde fallen im wechselnden Herbstwetter — Windstille, Boeen, Sturm, Landregen und Gewitter." name="Herbstlaub" uuid="4f1c8ad2-7e63-4b09-9d51-2a6c0f83be74" version="0.2.0">
     <svg hearth:element="hearth-screensaver" hearth:format-version="1.0" hearth:visible="true" preserveAspectRatio="xMidYMid slice" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg" xmlns:hearth="https://forgeiec.io/hearth/1.0" xmlns:xlink="http://www.w3.org/1999/xlink">
      <metadata>
       <hearth:widget>
@@ -1440,6 +1785,33 @@ class extends HearthSymbol {
        <circle cx="1512" cy="326" data-role="sun" fill="url(#hb-sun)" r="230"/>
        <g data-role="trees-far" fill="#39414F" fill-opacity="0.58">
         <path d="M-60 956L-60 703.3Q20.8 644.2 101.6 714.3Q179.5 663.1 257.4 727Q335.6 660.7 413.7 708.4Q468.9 679 524.1 731.1Q618.6 657.2 713.2 730.7Q817.2 642 921.2 706.7Q1005.1 687.2 1088.9 733.3Q1168 692.7 1247 730.5Q1310.3 694.3 1373.7 726.2Q1447.9 648.8 1522.1 713.5Q1607.3 668 1692.5 714.6Q1767.7 680.4 1842.8 711Q1947.6 648.9 2052.4 707L2052.4 956 Z"/>
+       </g>
+       <g data-role="village" fill="#2C333F" fill-opacity="0.72">
+        <path d="M846 770L846 733L878 712L910 733L910 770Z"/>
+        <path d="M926 770L926 736L952 717L978 736L978 770Z"/>
+        <path d="M994 770L994 731L1024 709L1054 731L1054 770Z"/>
+        <path d="M1058 770L1058 676L1086 676L1086 770Z"/>
+        <path d="M1054 676L1072 636L1090 676Z"/>
+        <path d="M1071 636L1073 636L1073 620L1071 620Z"/>
+        <path d="M1066 626L1078 626L1078 628L1066 628Z"/>
+        <path d="M1102 770L1102 738L1126 720L1150 738L1150 770Z"/>
+        <path d="M1166 770L1166 742L1188 726L1210 742L1210 770Z"/>
+        <path d="M1226 770L1226 745L1252 727L1278 745L1278 770Z"/>
+       </g>
+       <g data-role="village-lights" fill="#F4C87A" opacity="0">
+        <rect height="9" width="7" x="864" y="742"/>
+        <rect height="9" width="7" x="884" y="742"/>
+        <rect height="9" width="6" x="941" y="745"/>
+        <rect height="9" width="6" x="957" y="745"/>
+        <rect height="10" width="6" x="1012" y="742"/>
+        <rect height="10" width="6" x="1030" y="742"/>
+        <rect height="11" width="8" x="1068" y="700"/>
+        <rect height="9" width="7" x="1114" y="748"/>
+        <rect height="9" width="7" x="1132" y="748"/>
+        <rect height="8" width="6" x="1176" y="752"/>
+        <rect height="8" width="6" x="1194" y="752"/>
+        <rect height="8" width="7" x="1240" y="754"/>
+        <rect height="8" width="7" x="1260" y="754"/>
        </g>
        <rect data-role="haze" fill="url(#hb-haze)" fill-opacity="0.06" height="360" width="1920" x="0" y="440"/>
        <g data-role="trees-mid" fill="none" stroke="#1C212A" stroke-linecap="round">
@@ -1601,6 +1973,8 @@ class extends HearthSymbol {
     this.hazeEl     = this.role('haze');
     this.driftEl    = this.role('drift');
     this.sunEl      = this.role('sun');
+    this.villageEl  = this.role('village');
+    this.lightsEl   = this.role('village-lights');
     this.starHost   = this.role('stars');
     this.moonHost   = this.role('moon');
     this.farEl      = this.role('trees-far');
@@ -1732,7 +2106,36 @@ class extends HearthSymbol {
     const rise = 7.75, set = 18.25, tw = 1.3;
     const up   = this.smooth(rise - tw, rise + tw, h);
     const down = 1 - this.smooth(set - tw, set + tw, h);
+    // Die STUNDE bleibt stehen — die Sonnenbahn braucht sie, und zweimal
+    // dieselbe Uhr zu lesen hiesse, zwei Zeiten im selben Bild zu haben.
+    this.hourNow = h;
     return Math.min(up, down);
+  }
+
+  // ── DIE SONNE WANDERT ───────────────────────────────────────────────────
+  //
+  // Sie stand fest bei (1512|326) und wurde nur auf- und abgeblendet: der
+  // Horizont war damit zu jeder Tageszeit an derselben Stelle hell. Eine
+  // Sonne, die sich nicht bewegt, nimmt dem Bild die Zeit — man sieht, DASS
+  // es Tag ist, aber nicht WANN.
+  //
+  // Jetzt laeuft sie den Tag ab: Aufgang im Osten (links), Mittag hoch in der
+  // Mitte, Untergang im Westen (rechts). Der Bogen ist ein Sinus ueber dem
+  // Horizont — zur Daemmerung steht sie darauf, mittags am hoechsten.
+  //
+  // Der MOND laeuft gegenlaeufig auf derselben Bahn: er steht, wo die Sonne
+  // nicht ist. Das ist astronomisch grob und optisch richtig — beide zugleich
+  // am selben Fleck waere schlimmer als beide zu weit auseinander.
+  sunArc(h, tag) {
+    const rise = 7.75, set = 18.25;
+    // 0 bei Aufgang, 1 bei Untergang; darueber hinaus laeuft sie weiter, damit
+    // sie zur Daemmerung nicht springt.
+    const t = (h - rise) / (set - rise);
+    const x = -180 + t * (this.W + 360);
+    // Die Hoehe: am Horizont zur Daemmerung, mittags bei einem Drittel der
+    // Bildhoehe. `Math.sin` ueber [0,pi] gibt genau diesen Bogen.
+    const y = this.HY - 40 - Math.sin(Math.max(0, Math.min(1, t)) * Math.PI) * (this.HY - 190);
+    return { x, y };
   }
   smooth(a, b, x) {
     const t = this.clamp((x - a) / (b - a), 0, 1);
@@ -2094,7 +2497,26 @@ class extends HearthSymbol {
       const nacht = this.clamp((0.30 - this.dayF) / 0.30, 0, 1);
       if (this.starHost) this.starHost.setAttribute('opacity', (nacht * this.clear).toFixed(3));
       if (this.moonHost) this.moonHost.setAttribute('opacity', (nacht * this.clear * .92).toFixed(3));
-      if (this.sunEl)    this.sunEl.setAttribute('opacity', this.clamp(this.dayF * 1.6 - .2, 0, 1).toFixed(3));
+      if (this.sunEl) {
+        this.sunEl.setAttribute('opacity', this.clamp(this.dayF * 1.6 - .2, 0, 1).toFixed(3));
+        const b = this.sunArc(this.hourNow, this.dayF);
+        this.sunEl.setAttribute('cx', b.x.toFixed(1));
+        this.sunEl.setAttribute('cy', b.y.toFixed(1));
+      }
+      // Der Mond auf derselben Bahn, um zwoelf Stunden versetzt.
+      if (this.moonHost) {
+        const b = this.sunArc((this.hourNow + 12) % 24, 1 - this.dayF);
+        this.moonHost.setAttribute('transform',
+          'translate(' + (b.x - 1512).toFixed(1) + ',' + (b.y - 326).toFixed(1) + ')');
+      }
+      // ── DAS DORF ──────────────────────────────────────────────────────
+      // Es steht in derselben Ferne wie die Waldkante und verhaelt sich auch
+      // so: am Tag Dunst, nachts fast schwarz. Die FENSTER laufen gegen den
+      // Tag — sie gehen an, wenn es dunkel wird.
+      if (this.villageEl)
+        this.villageEl.setAttribute('fill-opacity', (0.72 * (.46 + .54 * this.dayF)).toFixed(3));
+      if (this.lightsEl)
+        this.lightsEl.setAttribute('opacity', (nacht * this.clear * .85).toFixed(3));
       // Die ferne Waldkante ist am Tag Dunst und nachts fast schwarz.
       if (this.farEl)
         this.farEl.setAttribute('fill-opacity', (this.farBase * (.42 + .58 * this.dayF)).toFixed(3));

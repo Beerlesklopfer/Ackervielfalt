@@ -4,13 +4,28 @@ Fünf Symbole der Kategorie `screensaver`. Ein Schirm nennt einen davon per
 Kennung (`screensaver="<uuid>"`); der Compiler holt das Bild beim Deploy aus
 der Registratur des Projekts.
 
-| Datei | Fassung | Kennung |
-|---|---|---|
-| `Esse-Glut.hearth_symbol` | 0.2.0 | 6b1d7d4e-…5f02 |
-| `Herbstlaub.hearth_symbol` | 0.2.0 | 4f1c8ad2-7e63-4b09-9d51-2a6c0f83be74 |
-| `Schwarz.hearth_symbol` | 0.2.0 | 6b1d7d4e-…5f04 |
-| `Sommerwiese.hearth_symbol` | 0.3.2 | 6b1d7d4e-…5f01 |
-| `Winterstimmung.hearth_symbol` | 0.2.0 | 6b1d7d4e-…5f03 |
+| Datei | Fassung | Art | Kennung |
+|---|---|---|---|
+| `Esse-Glut.hearth_symbol` | 0.2.0 | SMIL | 6b1d7d4e-…5f02 |
+| `Herbstlaub.hearth_symbol` | 0.2.0 | **rechnet** | 4f1c8ad2-7e63-4b09-9d51-2a6c0f83be74 |
+| `Schwarz.hearth_symbol` | 0.2.0 | — | 6b1d7d4e-…5f04 |
+| `Sommerwiese.hearth_symbol` | 0.4.5 | **rechnet** | 6b1d7d4e-…5f01 |
+| `Winterstimmung.hearth_symbol` | 0.3.2 | **rechnet** | 6b1d7d4e-…5f03 |
+
+## ACHTUNG: es gibt eine ZWEITE Stelle, und sie gewinnt beim Start
+
+`hearth-studio/resources/symbols/screensaver/` liefert dieselben fünf Schoner
+im Paket mit. Beim Öffnen der Bibliothek gleicht `FStore::ensureBuiltinSymbols()`
+sie **nach Namen** ab und schreibt bei abweichendem Inhalt die mitgelieferte
+Fassung über die des Anwenders — still, ohne Meldung.
+
+Gemessen am 12.09.2026: nach einem Studio-Neustart stand die Sommerwiese wieder
+auf 0.2.0, und der nächste Deploy schob den alten Stand bis auf die Anlage.
+Das ist hearth-studio#48.
+
+**Bis das behoben ist gilt:** wer hier eine Fassung ändert, muss sie in
+`hearth-studio/resources/symbols/screensaver/` mitziehen und Studio neu bauen.
+Sonst hält die Änderung bis zum nächsten Start.
 
 ## Die Bibliothek führt, die Dateien sind die Ausfuhr
 
