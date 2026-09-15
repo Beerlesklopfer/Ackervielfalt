@@ -10,7 +10,7 @@ Bewässerungssteuerung des Gemeinschaftsackers der SoLaWi Ackervielfalt
 
 ## Anlage
 
-Sechs Modbus-TCP-Feldboxen (Amsamotion ETH-MODBUS-IO8R-A und IO5R) an zwei
+Sechs Modbus-TCP-Feldboxen (Amsamotion ETH-MODBUS-IO8R-A) an zwei
 Segmenten, ein Weidmüller-UR20-Koppler im Schaltschrank. 24 Ventile, je Beet
 Taster und Status-LED; ein Arbiter begrenzt die gleichzeitig offenen Ventile.
 

@@ -33,7 +33,7 @@ Sechs Feldboxen (Amsamotion Modbus-TCP) und ein Weidmüller-UR20-Koppler, zwei S
 | Stachelbeere | ETH-MODBUS-IO8R-A | .28 | MODBUS-SUED | 5–8 |
 | Maulbeere | ETH-MODBUS-IO8R-A | .29 | MODBUS-SUED | 9–12 |
 | Felsenbirne | ETH-MODBUS-IO8R-A | .27 | MODBUS-SUED | 13–16 |
-| Maibeere | ETH-MODBUS-IO5R | .25 | MODBUS_NORD | 17–20 |
+| Maibeere | ETH-MODBUS-IO8R-A | .25 | MODBUS_NORD | 17–20 |
 | Johannisbeere | ETH-MODBUS-IO8R-A | .24 | MODBUS_NORD | 21–24 |
 | Schaltschrank | Weidmüller UR20-FBC-MOD-TCP (8 DI / 8 DO) | .229 | MODBUS_NORD | — |
 
@@ -42,9 +42,8 @@ Netz 192.168.24.x. Ventilnummer = Index in `Bellows.Zeitplan.aValveJobs`; intern
 
 ## 2. Ein- und Ausgänge je Feldbox
 
-IO8R-A: `xT_1..4` Beet-Taster · `xT_5..8` frei · `xV_1..4` Ventile · `xV_5..8` Status-LEDs der
+IO8R-A (alle sechs Feldboxen): `xT_1..4` Beet-Taster · `xT_5..8` frei · `xV_1..4` Ventile · `xV_5..8` Status-LEDs der
 Ventile 1..4 · `wAI_Voltage_1..3`, `wAI_Current_1..3` Analogeingänge · `wAO_1..2` Analogausgänge.
-IO5R (Maibeere): `xT_1..4` Taster · `xV_1..4` Ventile · `xV_5` Sammel-LED für alle vier.
 
 ## 3. Betriebsarten (`Bellows.Betrieb`)
 
@@ -65,7 +64,6 @@ Die bestätigte Betriebsart steht in `Bellows.Betrieb.uModeActive`.
 - **Wartende Ventile (Manuell, One-Shot, wiederkehrend):** angefordert, aber vom Arbiter noch
   nicht freigegeben → Blinken im Takt `Bellows.Betrieb.rBlinkHz` (Startwert 0.1 Hz = 5 s an /
   5 s aus, begrenzt auf 0.01..10 Hz). Ein Blinkgenerator für alle drei Betriebsarten.
-- Maibeere: `xV_5` ist die Sammelanzeige aller vier Ventile.
 - Warterang je Ventil: `Bellows.Schrittkette.auQueue` (1 = als nächstes).
 
 ## 5. Persistente Einstellungen
@@ -2389,7 +2387,7 @@ Liefert den Pflanzenkoeffizienten Kc für den Kultur-Tag `iDay_crop` aus der Kur
           </data>
         </addData>
         <documentation>
-          <xhtml xmlns="http://www.w3.org/1999/xhtml">Feldbox Maibeere (Amsamotion ETH-MODBUS-IO5R, 192.168.24.25, Segment MODBUS_NORD), Ventile 17-20 der Job-Liste. xT_1..4 Beet-Taster, xT_5 frei; xV_1..4 Ventile (= Arbiter-Freigabe); xV_5 Sammel-LED fuer alle vier Ventile. Anvil.* ist die Hardware-Sicht, Bellows.* die HMI-Sicht.</xhtml>
+          <xhtml xmlns="http://www.w3.org/1999/xhtml">Feldbox Maibeere (Amsamotion ETH-MODBUS-IO8R-A, 192.168.24.25, Segment MODBUS_NORD), Ventile 17-20 der Job-Liste. xT_1..4 Beet-Taster, xT_5..8 frei; xV_1..4 Ventile (= Arbiter-Freigabe); xV_5..8 Status-LEDs der Ventile 1..4; wAI_Voltage_1..3 und wAI_Current_1..3 Analogeingaenge; wAO_1..2 Analogausgaenge. Anvil.* ist die Hardware-Sicht, Bellows.* die HMI-Sicht derselben Variablen.</xhtml>
         </documentation>
       </pou>
       <pou name="Johannisbeere" pouType="program">
@@ -5927,8 +5925,8 @@ Bellows.Diag.sSummary    := mon.sBmSummary;
               <FddBinding busAddress="5" signalRef="analog_inputs_current/ai_c3" variable="1523b46e-acda-4550-9de2-91791f06d31b"/>
             </FddModule>
             <FddModule name="Analog Outputs" id="e74b918f-7747-47f9-8d2f-d8a0d585f01f" catalogRef="analog_outputs" slot="5">
-              <FddBinding busAddress="0" signalRef="analog_outputs/wAO_1" variable="2ed5a60e-81b9-4d5e-a411-7a7a3d992a91"/>
-              <FddBinding busAddress="1" signalRef="analog_outputs/wAO_2" variable="74064f09-4a92-4aca-b11a-a12de90c217e"/>
+              <FddBinding busAddress="6" signalRef="analog_outputs/ao_1" variable="2ed5a60e-81b9-4d5e-a411-7a7a3d992a91"/>
+              <FddBinding busAddress="7" signalRef="analog_outputs/ao_2" variable="74064f09-4a92-4aca-b11a-a12de90c217e"/>
             </FddModule>
           </FddDevice>
           <FddDevice id="02e972e7-8c76-45ab-8bb9-368cf539fac2" anvilGroup="Maibeere" catalogRef="Amsamotion/ETH-MODBUS-IO8R-A" deviceRef="a7e8a748-dfe2-4fe7-a7e8-a99dc719fe32" displayOrder="4" hostname="Maibeere" ipAddress="192.168.24.25">
@@ -5968,25 +5966,26 @@ Bellows.Diag.sSummary    := mon.sBmSummary;
             </FddModule>
           </FddDevice>
           <FddDevice id="0e2a24bc-447b-4106-9643-ce70c6c2b435" anvilGroup="Schaltschrank" catalogRef="Weidmueller/UR20-FBC-MOD-TCP" displayOrder="6" hostname="Schaltschrank" ipAddress="192.168.24.229">
-            <FddModule name="Digital Inputs" id="f4566ca1-7ce2-47eb-ae22-eb0f20be7d22" catalogRef="di" slot="1"/>
-            <FddModule name="Digital Outputs" id="10e95c13-368c-432f-8f1b-b58f9e952736" catalogRef="do" slot="2">
-              <FddBinding busAddress="0" signalRef="do/DI_0" variable="16cc1ae6-ea90-438f-b617-885a486ce2d0"/>
-              <FddBinding busAddress="1" signalRef="do/DI_1" variable="ef35fe56-a00d-467e-b960-4f20e90e9d5e"/>
-              <FddBinding busAddress="2" signalRef="do/DI_2" variable="90d97fd1-3db7-45c9-a18e-354102075aec"/>
-              <FddBinding busAddress="3" signalRef="do/DI_3" variable="7cfeb678-58f3-4524-83fa-6fc0df976595"/>
-              <FddBinding busAddress="4" signalRef="do/DI_4" variable="bc486d18-1e92-4214-ab0d-99dd1f5ab720"/>
-              <FddBinding busAddress="5" signalRef="do/DI_5" variable="fe5419aa-ee79-4988-ad6a-bfe34f229b22"/>
-              <FddBinding busAddress="6" signalRef="do/DI_6" variable="c2d20196-e21a-410d-9c5b-c1ccd21190a6"/>
-              <FddBinding busAddress="7" signalRef="do/DI_7" variable="b6a8b444-0960-4723-9a35-b0d1f9dead5e"/>
+            <FddModule name="Digital Inputs" id="f4566ca1-7ce2-47eb-ae22-eb0f20be7d22" catalogRef="di" slot="1">
+              <FddBinding busAddress="0" signalRef="di/di_0" variable="16cc1ae6-ea90-438f-b617-885a486ce2d0"/>
+              <FddBinding busAddress="1" signalRef="di/di_1" variable="ef35fe56-a00d-467e-b960-4f20e90e9d5e"/>
+              <FddBinding busAddress="2" signalRef="di/di_2" variable="90d97fd1-3db7-45c9-a18e-354102075aec"/>
+              <FddBinding busAddress="3" signalRef="di/di_3" variable="7cfeb678-58f3-4524-83fa-6fc0df976595"/>
+              <FddBinding busAddress="4" signalRef="di/di_4" variable="bc486d18-1e92-4214-ab0d-99dd1f5ab720"/>
+              <FddBinding busAddress="5" signalRef="di/di_5" variable="fe5419aa-ee79-4988-ad6a-bfe34f229b22"/>
+              <FddBinding busAddress="6" signalRef="di/di_6" variable="c2d20196-e21a-410d-9c5b-c1ccd21190a6"/>
+              <FddBinding busAddress="7" signalRef="di/di_7" variable="b6a8b444-0960-4723-9a35-b0d1f9dead5e"/>
             </FddModule>
-            <FddBinding busAddress="0" signalRef="DO_0" variable="4d1e9a9a-8385-42df-b4b6-65f3394362c7"/>
-            <FddBinding busAddress="1" signalRef="DO_1" variable="db298820-ae58-4dfe-b2f9-21b4c54dd1de"/>
-            <FddBinding busAddress="2" signalRef="DO_2" variable="cea0e403-2b28-4c1e-9747-738c07a05f5d"/>
-            <FddBinding busAddress="3" signalRef="DO_3" variable="a1fad6be-23d0-42b0-9fb4-f3b7fb4b1dad"/>
-            <FddBinding busAddress="4" signalRef="DO_4" variable="898946df-0375-48b8-9bc1-d1c01db50a9c"/>
-            <FddBinding busAddress="5" signalRef="DO_5" variable="549e8a95-e128-480c-956c-590d04de2b18"/>
-            <FddBinding busAddress="6" signalRef="DO_6" variable="9a68f1ba-3af2-4f27-9889-ad70060991f5"/>
-            <FddBinding busAddress="7" signalRef="DO_7" variable="44194077-a3a4-4c0f-b1f6-5d3d457a9d90"/>
+            <FddModule name="Digital Outputs" id="10e95c13-368c-432f-8f1b-b58f9e952736" catalogRef="do" slot="2">
+              <FddBinding busAddress="0" signalRef="do/do_0" variable="4d1e9a9a-8385-42df-b4b6-65f3394362c7"/>
+              <FddBinding busAddress="1" signalRef="do/do_1" variable="db298820-ae58-4dfe-b2f9-21b4c54dd1de"/>
+              <FddBinding busAddress="2" signalRef="do/do_2" variable="cea0e403-2b28-4c1e-9747-738c07a05f5d"/>
+              <FddBinding busAddress="3" signalRef="do/do_3" variable="a1fad6be-23d0-42b0-9fb4-f3b7fb4b1dad"/>
+              <FddBinding busAddress="4" signalRef="do/do_4" variable="898946df-0375-48b8-9bc1-d1c01db50a9c"/>
+              <FddBinding busAddress="5" signalRef="do/do_5" variable="549e8a95-e128-480c-956c-590d04de2b18"/>
+              <FddBinding busAddress="6" signalRef="do/do_6" variable="9a68f1ba-3af2-4f27-9889-ad70060991f5"/>
+              <FddBinding busAddress="7" signalRef="do/do_7" variable="44194077-a3a4-4c0f-b1f6-5d3d457a9d90"/>
+            </FddModule>
           </FddDevice>
         </FddSegment>
         <FddSegment name="MODBUS-SUED" id="8d657b7b-8ab4-44f1-acdd-3da2814c3c1b" enabled="true" interface="end0" protocol="modbustcp">
@@ -6024,8 +6023,8 @@ Bellows.Diag.sSummary    := mon.sBmSummary;
               <FddBinding busAddress="5" signalRef="analog_inputs_current/ai_c3" variable="36935ea0-92d9-4b8e-9678-cb371892947a"/>
             </FddModule>
             <FddModule name="Analog Outputs" id="b4d4fdc4-e6d5-43ae-a73c-8adbc75b86ad" catalogRef="analog_outputs" slot="5">
-              <FddBinding busAddress="0" signalRef="analog_outputs/wAO_1" variable="c0efb0fa-e6e9-44e8-816a-1bcc55eee8c3"/>
-              <FddBinding busAddress="1" signalRef="analog_outputs/wAO_2" variable="a0b9d42e-2a53-4b68-ac53-8bfdfefcd912"/>
+              <FddBinding busAddress="6" signalRef="analog_outputs/ao_1" variable="c0efb0fa-e6e9-44e8-816a-1bcc55eee8c3"/>
+              <FddBinding busAddress="7" signalRef="analog_outputs/ao_2" variable="a0b9d42e-2a53-4b68-ac53-8bfdfefcd912"/>
             </FddModule>
           </FddDevice>
           <FddDevice id="c1b2af75-cfe2-406c-811c-071b39528c9c" anvilGroup="Felsenbirne" catalogRef="Amsamotion/ETH-MODBUS-IO8R-A" displayOrder="3" hostname="Felsenbirne" ipAddress="192.168.24.27">
@@ -6060,8 +6059,8 @@ Bellows.Diag.sSummary    := mon.sBmSummary;
               <FddBinding busAddress="5" signalRef="analog_inputs_current/ai_c3" variable="5a692216-5c4f-44e4-b946-7ee8501c6ceb"/>
             </FddModule>
             <FddModule name="Analog Outputs" id="4af5c20a-5803-4efd-a83b-2f91557be6ba" catalogRef="analog_outputs" slot="5">
-              <FddBinding busAddress="0" signalRef="analog_outputs/wAO_1" variable="a244ede1-e5eb-4d85-a2c3-541d1b48f808"/>
-              <FddBinding busAddress="1" signalRef="analog_outputs/wAO_2" variable="de0d69cc-063a-4e4d-9d1e-a974d3ae6225"/>
+              <FddBinding busAddress="6" signalRef="analog_outputs/ao_1" variable="a244ede1-e5eb-4d85-a2c3-541d1b48f808"/>
+              <FddBinding busAddress="7" signalRef="analog_outputs/ao_2" variable="de0d69cc-063a-4e4d-9d1e-a974d3ae6225"/>
             </FddModule>
           </FddDevice>
           <FddDevice id="10cf6628-54b2-4259-a2d3-60a16b34765d" anvilGroup="Stachelbeere" catalogRef="Amsamotion/ETH-MODBUS-IO8R-A" displayOrder="1" hostname="Stachelbeere" ipAddress="192.168.24.28">
@@ -6096,8 +6095,8 @@ Bellows.Diag.sSummary    := mon.sBmSummary;
               <FddBinding busAddress="5" signalRef="analog_inputs_current/ai_c3" variable="ec4ad5d0-6a48-46fe-8f45-12bb49d6bdeb"/>
             </FddModule>
             <FddModule name="Analog Outputs" id="d30048c3-fc2a-4899-acdd-8e469993ea8f" catalogRef="analog_outputs" slot="5">
-              <FddBinding busAddress="0" signalRef="analog_outputs/wAO_1" variable="fa43f4b8-4902-4400-9579-66203537b445"/>
-              <FddBinding busAddress="1" signalRef="analog_outputs/wAO_2" variable="d47026af-be69-483e-ba45-a13bd18f59e6"/>
+              <FddBinding busAddress="6" signalRef="analog_outputs/ao_1" variable="fa43f4b8-4902-4400-9579-66203537b445"/>
+              <FddBinding busAddress="7" signalRef="analog_outputs/ao_2" variable="d47026af-be69-483e-ba45-a13bd18f59e6"/>
             </FddModule>
           </FddDevice>
           <FddDevice id="2e4e48b7-dd60-431c-a6c4-e6c4614cc60a" anvilGroup="Maulbeere" catalogRef="Amsamotion/ETH-MODBUS-IO8R-A" displayOrder="2" hostname="Maulbeere" ipAddress="192.168.24.29">
@@ -6132,8 +6131,8 @@ Bellows.Diag.sSummary    := mon.sBmSummary;
               <FddBinding busAddress="5" signalRef="analog_inputs_current/ai_c3" variable="308edaa6-6512-4a3c-8b20-907b58e5f005"/>
             </FddModule>
             <FddModule name="Analog Outputs" id="88cf8b28-6190-4779-9367-084dd658ae7a" catalogRef="analog_outputs" slot="5">
-              <FddBinding busAddress="0" signalRef="analog_outputs/wAO_1" variable="68e1dc09-ed44-46c8-a18e-75fdbd97e59a"/>
-              <FddBinding busAddress="1" signalRef="analog_outputs/wAO_2" variable="199be5c8-e908-49a2-9a4d-821472783956"/>
+              <FddBinding busAddress="6" signalRef="analog_outputs/ao_1" variable="68e1dc09-ed44-46c8-a18e-75fdbd97e59a"/>
+              <FddBinding busAddress="7" signalRef="analog_outputs/ao_2" variable="199be5c8-e908-49a2-9a4d-821472783956"/>
             </FddModule>
           </FddDevice>
         </FddSegment>
@@ -6641,194 +6640,6 @@ WHAT IS MISSING IS ONE LINK, not three: nothing carries a DeviceStatusEvent into
 DO NOT BUILD A SECOND PATH FOR IT. A tool that writes a value straight into the drawing would prove that the tool works and nothing else — the producer, the stream and the join would all be skipped. The way in is the one the properties panel already uses.
 
 Tracked as issue #101 in forgeiec-studio, with the measurement.</Note>
-            </Notes>
-          </DeviceDescription>
-          <DeviceDescription xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="721f7517-0e34-487d-9e50-4e26285c08b7" catalogRef="Amsamotion/ETH-MODBUS-IO5R" version="1.0" xsi:schemaLocation="https://forgeiec.io/v2/fdd forgeiec-v2-fdd.xsd">
-            <DeviceIdentity>
-              <VendorName>Amsamotion</VendorName>
-              <ProductName>ETH-MODBUS-IO5R</ProductName>
-              <ProductId>ETH-MODBUS-IO5R</ProductId>
-              <Description>5DI 5DO Relay Modbus TCP/RTU IO module, DIN rail, opto-isolated inputs (DC 20-28V), relay outputs (2A/point, 10A total)</Description>
-              <DeviceFamily>IO Module</DeviceFamily>
-              <Series>ETH-Modbus</Series>
-            </DeviceIdentity>
-            <CommProfiles>
-              <CommProfile protocol="modbustcp">
-                <DefaultSlaveId>1</DefaultSlaveId>
-                <DefaultPort>502</DefaultPort>
-                <ByteOrder>big-endian</ByteOrder>
-                <WordOrder>big-endian</WordOrder>
-              </CommProfile>
-              <CommProfile protocol="modbusrtu">
-                <DefaultSlaveId>1</DefaultSlaveId>
-                <ByteOrder>big-endian</ByteOrder>
-                <WordOrder>big-endian</WordOrder>
-              </CommProfile>
-            </CommProfiles>
-            <Modules>
-              <Module name="Digital Inputs" id="digital_inputs">
-                <PoolVariable name="T_1" id="di_1" description="Digital input 1 (opto-isolated, DC 20-28V)" direction="in" function="DI" iecType="BOOL">
-                  <BusMapping address="0" count="1" functionCode="2" registerType="discrete"/>
-                </PoolVariable>
-                <PoolVariable name="T_2" id="di_2" description="Digital input 2 (opto-isolated, DC 20-28V)" direction="in" function="DI" iecType="BOOL">
-                  <BusMapping address="1" count="1" functionCode="2" registerType="discrete"/>
-                </PoolVariable>
-                <PoolVariable name="T_3" id="di_3" description="Digital input 3 (opto-isolated, DC 20-28V)" direction="in" function="DI" iecType="BOOL">
-                  <BusMapping address="2" count="1" functionCode="2" registerType="discrete"/>
-                </PoolVariable>
-                <PoolVariable name="T_4" id="di_4" description="Digital input 4 (opto-isolated, DC 20-28V)" direction="in" function="DI" iecType="BOOL">
-                  <BusMapping address="3" count="1" functionCode="2" registerType="discrete"/>
-                </PoolVariable>
-                <PoolVariable name="T_5" id="di_5" description="Digital input 5 (opto-isolated, DC 20-28V)" direction="in" function="DI" iecType="BOOL">
-                  <BusMapping address="4" count="1" functionCode="2" registerType="discrete"/>
-                </PoolVariable>
-              </Module>
-              <Module name="Relay Outputs" id="relay_outputs">
-                <PoolVariable name="V_1" id="do_1" description="Relay output 1 (2A max per point)" direction="out" function="DI" iecType="BOOL">
-                  <BusMapping address="0" count="1" functionCode="5" registerType="coil"/>
-                </PoolVariable>
-                <PoolVariable name="V_2" id="do_2" description="Relay output 2 (2A max per point)" direction="out" function="DI" iecType="BOOL">
-                  <BusMapping address="1" count="1" functionCode="5" registerType="coil"/>
-                </PoolVariable>
-                <PoolVariable name="V_3" id="do_3" description="Relay output 3 (2A max per point)" direction="out" function="DI" iecType="BOOL">
-                  <BusMapping address="2" count="1" functionCode="5" registerType="coil"/>
-                </PoolVariable>
-                <PoolVariable name="V_4" id="do_4" description="Relay output 4 (2A max per point)" direction="out" function="DI" iecType="BOOL">
-                  <BusMapping address="3" count="1" functionCode="5" registerType="coil"/>
-                </PoolVariable>
-                <PoolVariable name="V_5" id="do_5" description="Relay output 5 (2A max per point)" direction="out" function="DI" iecType="BOOL">
-                  <BusMapping address="4" count="1" functionCode="5" registerType="coil"/>
-                </PoolVariable>
-              </Module>
-              <!-- Relay readback removed: coil status is implicitly read by the bridge -->
-            </Modules>
-            <ServiceParameters>
-              <ServiceParameter name="SlaveId" id="slave_id" accessRights="rw" description="Modbus station number" iecType="UINT">
-                <DefaultValue>1</DefaultValue>
-                <Range max="247" min="1"/>
-              </ServiceParameter>
-              <ServiceParameter name="BaudRate" id="baud_rate" accessRights="rw" description="Serial baud rate (RTU mode)" iecType="UDINT">
-                <DefaultValue>115200</DefaultValue>
-                <EnumValues>[{&quot;value&quot;:9600,&quot;label&quot;:&quot;9600&quot;},{&quot;value&quot;:19200,&quot;label&quot;:&quot;19200&quot;},{&quot;value&quot;:38400,&quot;label&quot;:&quot;38400&quot;},{&quot;value&quot;:57600,&quot;label&quot;:&quot;57600&quot;},{&quot;value&quot;:115200,&quot;label&quot;:&quot;115200&quot;}]</EnumValues>
-              </ServiceParameter>
-            </ServiceParameters>
-            <StatusVariables>
-              <StatusVariable name="wModbusRetries" description="Number of Modbus frame retransmissions since tongs started." iecType="UINT"/>
-              <StatusVariable name="wModbusExceptionCount" description="Number of Modbus exception responses (illegal function / data / ...)." iecType="UINT"/>
-              <StatusVariable name="xPwr" description="PWR as the bridge sees it: the device answered on Modbus within the timeout. NOT the mains lamp on the front — no register of this device reports its own LEDs (manual chapter 5 lists no such register)." iecType="BOOL"/>
-              <StatusVariable name="xSys" description="SYS as the bridge sees it: the DeviceState the connector publishes, 0 to 9, the ordinals of tongs-core's DeviceState enum. On the device SYS blinks at 0.5 s while the system is healthy (manual 3.2) — that blink is NOT what this variable carries." iecType="USINT"/>
-            </StatusVariables>
-            <Drawing unit="mm">
-              <svg xmlns="http://www.w3.org/2000/svg" height="80" viewBox="0 0 72 80" width="72">
-                <rect id="body" fill="#3f4448" height="80" rx="1.5" stroke="#23272a" stroke-width="0.5" width="72" x="0" y="0"/>
-                <rect id="terminals-top" fill="#d8d4c8" height="6.30" rx="0.4" stroke="#23272a" stroke-width="0.25" width="32.70" x="9.40" y="1.00"/>
-                <circle cx="12.12" cy="4.15" data-assignable="false" fill="none" r="2.0" stroke="#8f959a" stroke-width="0.25"/>
-                <text id="t-top-1" data-assignable="false" data-h="2.40" data-w="5.45" dominant-baseline="middle" fill="#cfd3d6" font-size="1.7" text-anchor="middle" x="12.12" y="10.55">1L</text>
-                <circle cx="17.58" cy="4.15" data-assignable="false" fill="none" r="2.0" stroke="#8f959a" stroke-width="0.25"/>
-                <text id="t-top-2" data-assignable="false" data-h="2.40" data-w="5.45" dominant-baseline="middle" fill="#cfd3d6" font-size="1.7" text-anchor="middle" x="17.58" y="10.55">0.0</text>
-                <circle cx="23.02" cy="4.15" data-assignable="false" fill="none" r="2.0" stroke="#8f959a" stroke-width="0.25"/>
-                <text id="t-top-3" data-assignable="false" data-h="2.40" data-w="5.45" dominant-baseline="middle" fill="#cfd3d6" font-size="1.7" text-anchor="middle" x="23.02" y="10.55">0.1</text>
-                <circle cx="28.48" cy="4.15" data-assignable="false" fill="none" r="2.0" stroke="#8f959a" stroke-width="0.25"/>
-                <text id="t-top-4" data-assignable="false" data-h="2.40" data-w="5.45" dominant-baseline="middle" fill="#cfd3d6" font-size="1.7" text-anchor="middle" x="28.48" y="10.55">0.2</text>
-                <circle cx="33.93" cy="4.15" data-assignable="false" fill="none" r="2.0" stroke="#8f959a" stroke-width="0.25"/>
-                <text id="t-top-5" data-assignable="false" data-h="2.40" data-w="5.45" dominant-baseline="middle" fill="#cfd3d6" font-size="1.7" text-anchor="middle" x="33.93" y="10.55">0.3</text>
-                <circle cx="39.38" cy="4.15" data-assignable="false" fill="none" r="2.0" stroke="#8f959a" stroke-width="0.25"/>
-                <text id="t-top-6" data-assignable="false" data-h="2.40" data-w="5.45" dominant-baseline="middle" fill="#cfd3d6" font-size="1.7" text-anchor="middle" x="39.38" y="10.55">0.4</text>
-                <text id="txt-do-group" data-assignable="false" data-h="2.50" data-w="32.70" dominant-baseline="middle" fill="#8ab4d8" font-size="1.8" text-anchor="middle" x="25.75" y="13.80">Relay outputs</text>
-                <rect id="eth-rj45" fill="#2b2f33" height="16.00" rx="1" stroke="#23272a" stroke-width="0.4" width="16.06" x="54.94" y="1.00"/>
-                <rect id="led-eth-link" fill="#f5a623" height="3.20" rx="0.2" stroke="#23272a" stroke-width="0.15" width="2.60" x="56.40" y="2.00"/>
-                <rect id="led-eth-act" fill="#8bc34a" height="3.20" rx="0.2" stroke="#23272a" stroke-width="0.15" width="2.60" x="66.90" y="2.00"/>
-                <text id="txt-rj45" data-assignable="false" data-h="3.00" data-w="16.06" dominant-baseline="middle" fill="#8ab4d8" font-size="2.2" text-anchor="middle" x="62.97" y="19.60">Ethernet</text>
-                <text id="txt-q0" data-assignable="false" data-h="2.70" data-w="4.40" dominant-baseline="middle" fill="#cfd3d6" font-size="2.0" text-anchor="end" x="5.30" y="24.20">Q0</text>
-                <rect id="led-q0-0" fill="#9aa0a6" height="2.25" rx="0.3" stroke="#23272a" stroke-width="0.15" width="1.84" x="5.91" y="23.08"/>
-                <text id="txt-q0-0" data-assignable="false" data-h="2.10" data-w="3.20" dominant-baseline="middle" fill="#cfd3d6" font-size="1.5" text-anchor="middle" x="6.83" y="27.60">.0</text>
-                <rect id="led-q0-1" fill="#9aa0a6" height="2.25" rx="0.3" stroke="#23272a" stroke-width="0.15" width="1.84" x="9.96" y="23.08"/>
-                <text id="txt-q0-1" data-assignable="false" data-h="2.10" data-w="3.20" dominant-baseline="middle" fill="#cfd3d6" font-size="1.5" text-anchor="middle" x="10.88" y="27.60">.1</text>
-                <rect id="led-q0-2" fill="#9aa0a6" height="2.25" rx="0.3" stroke="#23272a" stroke-width="0.15" width="1.84" x="14.01" y="23.08"/>
-                <text id="txt-q0-2" data-assignable="false" data-h="2.10" data-w="3.20" dominant-baseline="middle" fill="#cfd3d6" font-size="1.5" text-anchor="middle" x="14.93" y="27.60">.2</text>
-                <rect id="led-q0-3" fill="#9aa0a6" height="2.25" rx="0.3" stroke="#23272a" stroke-width="0.15" width="1.84" x="18.06" y="23.08"/>
-                <text id="txt-q0-3" data-assignable="false" data-h="2.10" data-w="3.20" dominant-baseline="middle" fill="#cfd3d6" font-size="1.5" text-anchor="middle" x="18.98" y="27.60">.3</text>
-                <rect id="led-q0-4" fill="#9aa0a6" height="2.25" rx="0.3" stroke="#23272a" stroke-width="0.15" width="1.84" x="22.11" y="23.08"/>
-                <text id="txt-q0-4" data-assignable="false" data-h="2.10" data-w="3.20" dominant-baseline="middle" fill="#cfd3d6" font-size="1.5" text-anchor="middle" x="23.03" y="27.60">.4</text>
-                <rect id="reset" fill="#b8bcc0" height="6.70" rx="0.5" stroke="#23272a" stroke-width="0.3" width="2.60" x="66.20" y="32.80"/>
-                <text id="txt-reset" data-assignable="false" data-h="2.40" data-w="9.00" dominant-baseline="middle" fill="#cfd3d6" font-size="1.7" text-anchor="end" x="65.00" y="36.15">Reset</text>
-                <text id="txt-i0" data-assignable="false" data-h="2.70" data-w="4.40" dominant-baseline="middle" fill="#cfd3d6" font-size="2.0" text-anchor="end" x="5.20" y="56.55">I0</text>
-                <rect id="led-i0-0" fill="#9aa0a6" height="2.35" rx="0.3" stroke="#23272a" stroke-width="0.15" width="1.92" x="5.83" y="55.38"/>
-                <text id="txt-i0-0" data-assignable="false" data-h="2.10" data-w="3.20" dominant-baseline="middle" fill="#cfd3d6" font-size="1.5" text-anchor="middle" x="6.79" y="53.10">.0</text>
-                <rect id="led-i0-1" fill="#9aa0a6" height="2.35" rx="0.3" stroke="#23272a" stroke-width="0.15" width="1.92" x="9.88" y="55.38"/>
-                <text id="txt-i0-1" data-assignable="false" data-h="2.10" data-w="3.20" dominant-baseline="middle" fill="#cfd3d6" font-size="1.5" text-anchor="middle" x="10.84" y="53.10">.1</text>
-                <rect id="led-i0-2" fill="#9aa0a6" height="2.35" rx="0.3" stroke="#23272a" stroke-width="0.15" width="1.92" x="13.93" y="55.38"/>
-                <text id="txt-i0-2" data-assignable="false" data-h="2.10" data-w="3.20" dominant-baseline="middle" fill="#cfd3d6" font-size="1.5" text-anchor="middle" x="14.89" y="53.10">.2</text>
-                <rect id="led-i0-3" fill="#9aa0a6" height="2.35" rx="0.3" stroke="#23272a" stroke-width="0.15" width="1.92" x="17.98" y="55.38"/>
-                <text id="txt-i0-3" data-assignable="false" data-h="2.10" data-w="3.20" dominant-baseline="middle" fill="#cfd3d6" font-size="1.5" text-anchor="middle" x="18.94" y="53.10">.3</text>
-                <rect id="led-i0-4" fill="#9aa0a6" height="2.35" rx="0.3" stroke="#23272a" stroke-width="0.15" width="1.92" x="22.03" y="55.38"/>
-                <text id="txt-i0-4" data-assignable="false" data-h="2.10" data-w="3.20" dominant-baseline="middle" fill="#cfd3d6" font-size="1.5" text-anchor="middle" x="22.99" y="53.10">.4</text>
-                <rect id="led-sys" fill="#9aa0a6" height="2.35" rx="0.3" stroke="#23272a" stroke-width="0.15" width="1.92" x="26.08" y="55.38"/>
-                <text id="txt-sys" data-assignable="false" data-h="1.90" data-w="4.20" dominant-baseline="middle" fill="#cfd3d6" font-size="1.3" text-anchor="middle" transform="rotate(-90 27.04 52.60)" x="27.04" y="52.60">SYS</text>
-                <rect id="led-pwr" fill="#9aa0a6" height="2.35" rx="0.3" stroke="#23272a" stroke-width="0.15" width="1.92" x="30.13" y="55.38"/>
-                <text id="txt-pwr" data-assignable="false" data-h="1.90" data-w="4.20" dominant-baseline="middle" fill="#cfd3d6" font-size="1.3" text-anchor="middle" transform="rotate(-90 31.09 52.60)" x="31.09" y="52.60">PWR</text>
-                <text id="txt-vendor" data-assignable="false" data-h="3.80" data-w="26.00" dominant-baseline="middle" fill="#8f959a" font-size="2.8" text-anchor="end" x="70.00" y="54.20">AMSAMOTION</text>
-                <text id="txt-typ" data-assignable="false" data-h="3.00" data-w="26.00" dominant-baseline="middle" fill="#8f959a" font-size="2.2" text-anchor="end" x="70.00" y="58.40">ETH-MODBUS-IO5R</text>
-                <rect id="terminals-bottom" fill="#d8d4c8" height="7.20" rx="0.4" stroke="#23272a" stroke-width="0.25" width="69.80" x="1.1" y="71.80"/>
-                <circle cx="3.78" cy="75.40" data-assignable="false" fill="none" r="2.0" stroke="#8f959a" stroke-width="0.25"/>
-                <text id="t-bot-1" data-assignable="false" data-h="1.90" data-w="5.37" dominant-baseline="middle" fill="#cfd3d6" font-size="1.35" text-anchor="middle" x="3.78" y="68.90">1M</text>
-                <circle cx="9.15" cy="75.40" data-assignable="false" fill="none" r="2.0" stroke="#8f959a" stroke-width="0.25"/>
-                <text id="t-bot-2" data-assignable="false" data-h="1.90" data-w="5.37" dominant-baseline="middle" fill="#cfd3d6" font-size="1.35" text-anchor="middle" x="9.15" y="68.90">0.0</text>
-                <circle cx="14.52" cy="75.40" data-assignable="false" fill="none" r="2.0" stroke="#8f959a" stroke-width="0.25"/>
-                <text id="t-bot-3" data-assignable="false" data-h="1.90" data-w="5.37" dominant-baseline="middle" fill="#cfd3d6" font-size="1.35" text-anchor="middle" x="14.52" y="68.90">0.1</text>
-                <circle cx="19.89" cy="75.40" data-assignable="false" fill="none" r="2.0" stroke="#8f959a" stroke-width="0.25"/>
-                <text id="t-bot-4" data-assignable="false" data-h="1.90" data-w="5.37" dominant-baseline="middle" fill="#cfd3d6" font-size="1.35" text-anchor="middle" x="19.89" y="68.90">0.2</text>
-                <circle cx="25.26" cy="75.40" data-assignable="false" fill="none" r="2.0" stroke="#8f959a" stroke-width="0.25"/>
-                <text id="t-bot-5" data-assignable="false" data-h="1.90" data-w="5.37" dominant-baseline="middle" fill="#cfd3d6" font-size="1.35" text-anchor="middle" x="25.26" y="68.90">0.3</text>
-                <circle cx="30.63" cy="75.40" data-assignable="false" fill="none" r="2.0" stroke="#8f959a" stroke-width="0.25"/>
-                <text id="t-bot-6" data-assignable="false" data-h="1.90" data-w="5.37" dominant-baseline="middle" fill="#cfd3d6" font-size="1.35" text-anchor="middle" x="30.63" y="68.90">0.4</text>
-                <circle cx="36.00" cy="75.40" data-assignable="false" fill="none" r="2.0" stroke="#8f959a" stroke-width="0.25"/>
-                <text id="t-bot-7" data-assignable="false" data-h="1.90" data-w="5.37" dominant-baseline="middle" fill="#cfd3d6" font-size="1.35" text-anchor="middle" x="36.00" y="68.90">TX</text>
-                <circle cx="41.37" cy="75.40" data-assignable="false" fill="none" r="2.0" stroke="#8f959a" stroke-width="0.25"/>
-                <text id="t-bot-8" data-assignable="false" data-h="1.90" data-w="5.37" dominant-baseline="middle" fill="#cfd3d6" font-size="1.35" text-anchor="middle" x="41.37" y="68.90">RX</text>
-                <circle cx="46.74" cy="75.40" data-assignable="false" fill="none" r="2.0" stroke="#8f959a" stroke-width="0.25"/>
-                <text id="t-bot-9" data-assignable="false" data-h="1.90" data-w="5.37" dominant-baseline="middle" fill="#cfd3d6" font-size="1.35" text-anchor="middle" x="46.74" y="68.90">GND</text>
-                <circle cx="52.11" cy="75.40" data-assignable="false" fill="none" r="2.0" stroke="#8f959a" stroke-width="0.25"/>
-                <text id="t-bot-10" data-assignable="false" data-h="1.90" data-w="5.37" dominant-baseline="middle" fill="#cfd3d6" font-size="1.35" text-anchor="middle" x="52.11" y="68.90">A+</text>
-                <circle cx="57.48" cy="75.40" data-assignable="false" fill="none" r="2.0" stroke="#8f959a" stroke-width="0.25"/>
-                <text id="t-bot-11" data-assignable="false" data-h="1.90" data-w="5.37" dominant-baseline="middle" fill="#cfd3d6" font-size="1.35" text-anchor="middle" x="57.48" y="68.90">B-</text>
-                <circle cx="62.85" cy="75.40" data-assignable="false" fill="none" r="2.0" stroke="#8f959a" stroke-width="0.25"/>
-                <text id="t-bot-12" data-assignable="false" data-h="1.90" data-w="5.37" dominant-baseline="middle" fill="#cfd3d6" font-size="1.35" text-anchor="middle" x="62.85" y="68.90">GND</text>
-                <circle cx="68.22" cy="75.40" data-assignable="false" fill="none" r="2.0" stroke="#8f959a" stroke-width="0.25"/>
-                <text id="t-bot-13" data-assignable="false" data-h="1.90" data-w="5.37" dominant-baseline="middle" fill="#cfd3d6" font-size="1.35" text-anchor="middle" x="68.22" y="68.90">24V+</text>
-                <text data-assignable="false" data-h="2.20" data-w="32.22" dominant-baseline="middle" fill="#8ab4d8" font-size="1.6" text-anchor="middle" x="17.21" y="65.20">Digital inputs</text>
-                <text data-assignable="false" data-h="2.20" data-w="16.11" dominant-baseline="middle" fill="#8ab4d8" font-size="1.6" text-anchor="middle" x="41.37" y="65.20">RS232</text>
-                <text data-assignable="false" data-h="2.20" data-w="10.74" dominant-baseline="middle" fill="#8ab4d8" font-size="1.6" text-anchor="middle" x="54.79" y="65.20">RS485</text>
-                <text data-assignable="false" data-h="2.20" data-w="10.74" dominant-baseline="middle" fill="#8ab4d8" font-size="1.6" text-anchor="middle" x="65.53" y="65.20">Power</text>
-              </svg>
-              <Led id="led-q0-0" elementId="led-q0-0" ref="relay_outputs/do_1" source="poolVariable"/>
-              <Led id="led-q0-1" elementId="led-q0-1" ref="relay_outputs/do_2" source="poolVariable"/>
-              <Led id="led-q0-2" elementId="led-q0-2" ref="relay_outputs/do_3" source="poolVariable"/>
-              <Led id="led-q0-3" elementId="led-q0-3" ref="relay_outputs/do_4" source="poolVariable"/>
-              <Led id="led-q0-4" elementId="led-q0-4" ref="relay_outputs/do_5" source="poolVariable"/>
-              <Led id="led-i0-0" elementId="led-i0-0" ref="digital_inputs/di_1" source="poolVariable"/>
-              <Led id="led-i0-1" elementId="led-i0-1" ref="digital_inputs/di_2" source="poolVariable"/>
-              <Led id="led-i0-2" elementId="led-i0-2" ref="digital_inputs/di_3" source="poolVariable"/>
-              <Led id="led-i0-3" elementId="led-i0-3" ref="digital_inputs/di_4" source="poolVariable"/>
-              <Led id="led-i0-4" elementId="led-i0-4" ref="digital_inputs/di_5" source="poolVariable"/>
-              <Led id="led-pwr" description="Power indicator. On the device: steady once supplied (manual 3.2: power indicator, steady when powered / 电源指示灯，上电常亮)." elementId="led-pwr" ref="xPwr" source="statusVariable"/>
-              <Led id="led-sys" description="System indicator. On the device: blinks at 0.5 s while the system is normal (manual 3.2: system indicator, blinking at 0.5 s means the system is normal / 系统指示灯，以 0.5S 频率闪烁时系统正常). This device has NO COMM lamp." elementId="led-sys" ref="xSys" source="statusVariable"/>
-            </Drawing>
-            <Documents>
-              <Document id="manual-zh-v12" description="Vendor manual, Chinese, version 1.2, 28 pages. The only source carrying the dimensioned front view (3.1, page 4), the terminal table and LED table (3.2), the input signal notes (3.3), the register addresses (chapter 5) and the parameter-change commands (6.9-6.12). Authoritative where translations differ." filename="ETH-MODBUS-IO5R_Handbuch_Ver1.2_zh.pdf" mime="application/pdf" type="manual" url="https://oss.amsamotion.com/uploads/ETH-MODBUS-IO5R产品手册_Ver1.2.pdf"/>
-              <Document id="manual-es-v11" description="Machine translation into Spanish, and one version OLDER than the Chinese original (V1.1 against V1.2). Useful for reading, NOT authoritative: where it differs from the Chinese, the original holds." filename="ETH-MODBUS-IO5R_Manual_V1.1_ES.pdf" mime="application/pdf" type="manual" url="https://www.amsamotion.es/wp-content/uploads/2026/05/ETH-MODBUS-IO5R-Module-Product-Manual-V1.1.pdf"/>
-            </Documents>
-            <Notes>
-              <Note about="Drawing" date="2026-09-07" kind="warning" source="table of contents; sections 6.9, 6.10, 6.11, 6.12" sourceDoc="manual-zh-v12">THIS DEVICE HAS NO CODING SWITCHES. Counted in the manual text: the word for DIP switch (bo ma / 拨码) appears ZERO times here, against 16 times in the IO8R-A manual. There is no counterpart to the IO8R-A's sections 6.2.3 (station address) and 6.2.4 (COM2 baud rate). Station address and serial parameters are set OVER THE BUS instead: 6.9 changes the RS485 parameters, 6.10 the RS232 parameters, 6.11 the slave address, 6.12 the bus-error hold. Anyone porting the IO8R-A faceplate must not carry the two switch blocks across — they would be hardware that does not exist.</Note>
-              <Note about="Drawing" date="2026-09-07" kind="info" source="section 3.2 &quot;Terminal function description&quot; (端子功能说明)" sourceDoc="manual-zh-v12">The lamps of this device, from the manual's own table: I0.0 to I0.4 are the five digital input channels, Q0.0 to Q0.4 the five relay output channels. PWR is the power lamp, steady once supplied. SYS is the system lamp, blinking at 0.5 s means the system is normal. The RJ45 carries an orange and a green lamp (橙灯 / 绿灯) for link and activity. THERE IS NO COMM LAMP — the IO8R-A's three-lamp group PWR/RUN/COMM becomes PWR/SYS here, and the two are not the same lamp under another name.</Note>
-              <Note about="Drawing" date="2026-09-07" kind="info" source="section 3.2, terminal table" sourceDoc="manual-zh-v12">Terminal order as drawn, left to right. Top strip, six terminals, relay outputs: 1L 0.0 0.1 0.2 0.3 0.4, where 1L is the common pole of all five relay contacts. Bottom strip, thirteen terminals in four groups: digital inputs 1M 0.0 0.1 0.2 0.3 0.4 (1M is the common pole of all five inputs), then RS232 TX RX GND, then RS485 A+ B-, then power GND 24V+. Note that both strips label their channels 0.0 to 0.4 — the strip they sit on is what tells inputs from outputs, not the number.</Note>
-              <Note about="Drawing" date="2026-09-07" kind="measurement" source="section 3.1 &quot;Mounting dimensions&quot; (安装尺寸), page 4" sourceDoc="manual-zh-v12">THE MANUAL'S FRONT VIEW IS NOT TO SCALE, and the drawing here corrects for it. Measured on a 300 dpi render of page 4: the housing outline spans 1760 px across for a dimensioned 72 mm (24.44 px/mm) but only 1600 px down for a dimensioned 80 mm (20.00 px/mm) — the picture is stretched sideways by 22 %. Every internal position in this SVG was therefore normalised PER AXIS, not by one common factor. Cross-check that this is right: the two group dividers of the bottom strip were computed from thirteen equal terminals between 1.10 and 70.90 mm, giving 33.31 and 60.16 mm; measured on the render they sit at 33.36 and 60.07 mm. Anyone reading positions straight off the picture with a single scale will place everything wrong, and it will look plausible.</Note>
-              <Note about="Drawing" date="2026-09-07" kind="measurement" source="section 3.1, page 4" sourceDoc="manual-zh-v12">Measured lamp geometry, in millimetres on the 72 x 80 face. Both rows share one pitch of 4.05 mm. Q0 row: y 23.08 to 25.33, first lamp starting at x 5.91, five lamps. I0 row: y 55.38 to 57.73, first lamp starting at x 5.83, SEVEN boxes — the five channels, then SYS, then PWR in the same row. That is the arrangement of this device: the IO8R-A stacks its three status lamps vertically in the middle of the face, this one puts its two at the end of the input row.</Note>
-              <Note about="DeviceIdentity" date="2026-09-07" kind="warning" source="section 3.1 (dimensioned drawing) against chapter 2 (product parameters)" sourceDoc="manual-zh-v12">THE MANUAL CONTRADICTS ITSELF ON THE OUTER DIMENSIONS. The dimensioned front view on page 4 gives 72 mm wide by 80 mm high, with mounting lugs of 8 by 7 at top left and bottom right. The data sheet gives 72 x 94 x 62 (L x W x H). None of the three data-sheet figures is 80. This is NOT resolved here — the drawing's own dimension arrows were taken, because they are the ones that carry the internal layout with them. Whoever needs the depth for a cabinet layout must measure a real part, not pick one of these two.</Note>
-              <Note about="CommProfiles" date="2026-09-07" kind="info" source="chapter 2 (product parameters); section 6.12 (factory reset)" sourceDoc="manual-zh-v12">Serial parameters from the manual: RS485 4800 to 115200 baud, Modbus RTU, 8 data bits, 1 stop bit, no parity, configurable, 1200 m range. RS232 1200 to 115200 baud, three wires (TXD, RXD, GND), same frame format. Ethernet is RJ45, 10/100M full duplex auto-negotiating, one Modbus TCP connection plus one transparent TCP connection. The factory settings, reachable by the reset procedure: 9600 baud, 8 data bits, no parity, 1 stop bit, station number 1.</Note>
-              <Note about="ServiceParameters/ServiceParameter" date="2026-09-07" kind="question" source="chapter 2 (地址范围 2~254) against section 6.12 (factory reset)" sourceDoc="manual-zh-v12">UNRESOLVED, AND IT DECIDES WHETHER A FRESH DEVICE ANSWERS. Chapter 2 states the address range as 2 to 254. Section 6.12 states that the factory reset sets the station number to 1 — which is outside that range. So either the range is written wrong, or a factory-fresh device sits at an address the manual calls illegal. The SlaveId parameter here carries no Range element for exactly this reason: a range that excludes the delivered value would reject the one address a new device actually answers on. Resolve against a real device before adding one.</Note>
-              <Note about="Modules/Module[1]" date="2026-09-07" kind="warning">THE RELAY OUTPUTS CARRY function=&quot;DI&quot; — all five of them, do_1 to do_5, while their direction attribute correctly says &quot;out&quot;. This is wrong in this file and predates today's work; it was found while binding the lamps and is recorded rather than quietly corrected, because whatever consumes `function` may already have been built around the wrong value. Check the consumers before changing it, then change it in one go.</Note>
-              <Note about="StatusVariables" date="2026-09-07" kind="warning">TWO VALIDATORS OF THIS TOOL DISAGREE, measured today. The StatusVariables already in this file carry an `offset` attribute, and fdd_validate calls the file valid. But fdd_describe lists no `offset` on StatusVariable, and fdd_batch refuses to write one: &quot;attribute 'offset' is not allowed&quot;. So the two status variables added today, xPwr and xSys, have NO offset while the two older ones do — an inconsistency inside one file that nobody chose. Until it is settled, the position of xPwr and xSys in the status payload is undeclared. Settle which of the two validators speaks for the schema, then make all four consistent.</Note>
             </Notes>
           </DeviceDescription>
         </Vendor>
