@@ -8,6 +8,10 @@ Ackersteuerung-kopie-*.forge
 Ackersteuerung-Panel-*.hearth
 Ackersteuerung_descriptor.toml
 *.jpg
+
+# Exportierte ST Dateien
+st/
+
 # SQLite-Nebenlaeufer der Symbolbibliothek (WAL-Modus) — entstehen beim Oeffnen im Editor
 *.hearth_library-wal
 *.hearth_library-shm

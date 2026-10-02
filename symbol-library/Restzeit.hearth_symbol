@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" hearth:element="hearth-restzeit" hearth:format-version="1.0" hearth:visible="true" viewBox="0 0 233 90" xmlns:hearth="https://forgeiec.io/hearth/1.0">
+  <metadata>
+    <hearth:widget xmlns:hearth="https://forgeiec.io/hearth/1.0">
+      <hearth:name xmlns:hearth="https://forgeiec.io/hearth/1.0">Restzeit</hearth:name>
+      <hearth:version xmlns:hearth="https://forgeiec.io/hearth/1.0">0.1.78</hearth:version>
+      <hearth:category xmlns:hearth="https://forgeiec.io/hearth/1.0">Landwirtschaft/Kulturen-Beete</hearth:category>
+      <hearth:location-type xmlns:hearth="https://forgeiec.io/hearth/1.0">field</hearth:location-type>
+      <hearth:norm-reference xmlns:hearth="https://forgeiec.io/hearth/1.0" standard="IEC 62424"/>
+      <hearth:params>
+        <hearth:param description="Restzeit dieses Beetes in Nanosekunden (TIME auf dem Draht). 0 zeigt nichts." direction="in" name="remaining" type="time"/>
+        <hearth:param description="Bitmuster der aktiven Wochentage (Byte): Bit 0 = Montag … Bit 6 = Sonntag. Nicht angeschlossen: die Kürzel werden ausgeblendet." direction="in" name="days" type="byte"/>
+      </hearth:params>
+      <hearth:properties xmlns:hearth="https://forgeiec.io/hearth/1.0">
+        <hearth:property xmlns:hearth="https://forgeiec.io/hearth/1.0" default="#f6d32d" key="ledcolor" label="Rahmenfarbe (gedrückt)" type="color"/>
+        <hearth:property xmlns:hearth="https://forgeiec.io/hearth/1.0" key="opens" label="Dialog, den ein Klick öffnet" type="string"/>
+        <hearth:property xmlns:hearth="https://forgeiec.io/hearth/1.0" default="#3584e4" key="dayoncolor" label="Timerfarbe (gewählter Tag)" type="color"/>
+        <hearth:property xmlns:hearth="https://forgeiec.io/hearth/1.0" default="#9a9996" key="dayoffcolor" label="Tagfarbe (nicht gewählt)" type="color"/>
+      </hearth:properties>
+      <hearth:connectors xmlns:hearth="https://forgeiec.io/hearth/1.0">
+        <hearth:connector xmlns:hearth="https://forgeiec.io/hearth/1.0" dir="in" length="13" name="remaining" role="remaining" type="time"/>
+        <hearth:connector xmlns:hearth="https://forgeiec.io/hearth/1.0" dir="in" length="13" name="days" type="byte"/>
+      </hearth:connectors>
+    </hearth:widget>
+  </metadata>
+  <style>
+:root {
+  --ledcolor: #f6d32d;
+  --dayoncolor: #3584e4;
+  --dayoffcolor: #9a9996;
+}
+</style>
+  <g hearth:layer="background" hearth:layer-name="Background" hearth:locked="true" id="70290051-7130-4ec9-9713-62436e598a7b"/>
+  <g hearth:layer="content" hearth:layer-name="Content" id="faa7339e-44de-4efe-852a-46ee42e902b2">
+    <rect fill="#f5f7fa" fill-opacity="0.9333" height="74" id="59e3afc0-0f04-40d7-9d2d-689489c9fda6" stroke="#333333" stroke-width="2" width="218" x="14" y="1"/>
+  </g>
+  <g hearth:layer="actions" hearth:layer-name="Actions" id="0c1096a3-99b2-443d-be33-ceb7d0ce05c0">
+    <g xmlns="http://www.w3.org/2000/svg" class="hearth-connector" hearth:connector="remaining" hearth:dir="in" hearth:editor-only="true" id="139d0a43-907d-4bdd-a2d2-595e50fdc43e">
+      <line stroke="#5a5a5a" stroke-width="1.5" x1="0" x2="13" y1="28" y2="28"/>
+      <circle cx="0" cy="28" fill="#3498db" r="3" stroke="#ffffff" stroke-width="1"/>
+    </g>
+    <g xmlns="http://www.w3.org/2000/svg" class="hearth-connector" hearth:connector="days" hearth:dir="in" hearth:editor-only="true" id="d4dfc32c-56f2-49da-bfcd-737de9b07876">
+      <line stroke="#5a5a5a" stroke-width="1.5" x1="0" x2="13" y1="52" y2="52"/>
+      <circle cx="0" cy="52" fill="#3498db" r="3" stroke="#ffffff" stroke-width="1"/>
+    </g>
+    <text data-h="18" data-role="d0" data-w="31.14" dominant-baseline="middle" fill="var(--dayoffcolor)" font-size="15" id="06fef024-2cce-448d-8f74-57934ead6384" text-anchor="middle" x="29.57" y="11">Mo</text>
+    <text data-h="18" data-role="d1" data-w="31.14" dominant-baseline="middle" fill="var(--dayoffcolor)" font-size="15" id="fb43620a-1a98-48f3-a8ae-6500164aeb46" text-anchor="middle" x="60.71" y="11">Di</text>
+    <text data-h="18" data-role="d2" data-w="31.14" dominant-baseline="middle" fill="var(--dayoffcolor)" font-size="15" id="9044a5fb-a7bf-4d58-be79-ac5b712f61ac" text-anchor="middle" x="91.85" y="11">Mi</text>
+    <text data-h="18" data-role="d3" data-w="31.14" dominant-baseline="middle" fill="var(--dayoffcolor)" font-size="15" id="92bae09f-9eda-4991-a215-5c96d95ff542" text-anchor="middle" x="122.99" y="11">Do</text>
+    <text data-h="18" data-role="d4" data-w="31.14" dominant-baseline="middle" fill="var(--dayoffcolor)" font-size="15" id="00c2b182-86d8-45c1-965b-84b4f6889cd9" text-anchor="middle" x="154.14" y="11">Fr</text>
+    <text data-h="18" data-role="d5" data-w="31.14" dominant-baseline="middle" fill="var(--dayoffcolor)" font-size="15" id="682420bd-e45e-4eb1-9920-aa8e69ef0a3c" text-anchor="middle" x="185.28" y="11">Sa</text>
+    <text data-h="18" data-role="d6" data-w="31.14" dominant-baseline="middle" fill="var(--dayoffcolor)" font-size="15" id="5dcd1cd5-fe86-4097-acc8-95d97df99bad" text-anchor="middle" x="216.42" y="11">So</text>
+    <rect data-role="druck" fill="none" height="74" id="edd1f8ba-345e-4c74-abcf-1897a438ef4f" stroke="var(--ledcolor)" stroke-width="4" width="218" x="14" y="1"/>
+    <text data-h="52" data-role="remaining" data-w="204" dominant-baseline="text-before-edge" fill="#241f31" font-size="48" id="813bdf78-3722-4947-8ffb-082a676122ac" text-anchor="end" x="225" y="22">00:00:00</text>
+  </g>
+  <g hearth:layer="edit" hearth:layer-name="Edit" id="2f950467-b7c5-4bf6-83a4-6e6225f1f706">
+    <rect data-role="flaeche" fill="#000000" fill-opacity="0" height="74" id="a571a109-9ef9-401a-8c39-09511eb83bc9" stroke="none" width="218" x="14" y="1"/>
+  </g>
+  <script type="text/javascript">// Restzeit — wie lange DIESES Beet noch laeuft, als hh:mm:ss, plus eine Zeile
+// mit den Wochentagen, an denen es bewaessert wird. Und ein Klick auf die
+// Platte oeffnet die Zeit-Eingabe (Dialog aus dem Merkmal `opens`).
+//
+// ── DIE WOCHENTAGE (22.09.2026) ─────────────────────────────────────────────
+//
+// Der Eingang `days` ist ein BYTE als Bitmuster: Bit 0 = Montag … Bit 6 =
+// Sonntag (Bit 7 frei). Je Bit faerbt sich das Kuerzel — gesetzt in der
+// Timerfarbe (`dayoncolor`), frei in Grau (`dayoffcolor`); beide sind
+// Eigenschaften, damit eine Anlage die Farben an EINER Stelle festlegt. Die
+// Ruhefarbe steht auch in der Zeichnung (`fill=var(--dayoffcolor)`), damit die
+// Kuerzel schon im Entwurf grau sind und die Eigenschaft nachweislich wirkt.
+//
+// UNANGESCHLOSSEN HEISST AUS. Ist `days` nicht verdrahtet, kommt nie ein
+// `onAttr('days', …)`, und die Kuerzel bleiben ausgeblendet (in `onInit`
+// versteckt) — genau wie die Restzeit bei `0` NICHTS zeigt. Ein Beet auf dem
+// Handbildschirm, das keine Wochenschaltung hat, traegt so auch keine Tage.
+// Ist `days` verdrahtet und der Wert 0, sind die Kuerzel SICHTBAR und alle
+// grau: „angeschlossen, aber kein Tag" ist etwas anderes als „kein Plan".
+//
+// Die Kuerzel sind sprachabhaengig (de MDMDFSS, en MTWTFSS, es LMXJVSD, fr
+// LMMJVSD). Sie stehen als Woerter Mo…So in der Uebersetzungstabelle; der
+// Compiler setzt je Sprache den Einzelbuchstaben ein. Das Skript faerbt und
+// blendet nur — es kennt die Buchstaben nicht.
+//
+// ── Die Restzeit-Einheit ist NANOSEKUNDEN ───────────────────────────────────
+//
+// So kommt TIME auf dem Draht an (crate-contract/codec). `0` zeigt NICHTS,
+// nicht `00:00:00`. Daneben werden `9:05`, `1:09:05` und die IEC-Literale
+// `T#1h2m30s` / `TIME#500ms` verstanden. Was sich keiner dieser Formen fuegt,
+// wird UNVERAENDERT gezeigt — ein unbekannter Wert soll auffallen.
+//
+// ── LEER RAEUMEN GILT NUR AUF DER ANLAGE ────────────────────────────────────
+//
+// `this.designTime` unterscheidet Anlage und Zeichenflaeche: auf der Anlage
+// bleibt ein Beet ohne Bindung leer (Restzeit und Kuerzel), im Entwurf bleiben
+// die gezeichneten Ziffern und Kuerzel stehen, sonst arbeitet der Entwerfer an
+// einem leeren Kasten.
+//
+// ── DER KLICK, UND WAS ER OEFFNET ───────────────────────────────────────────
+//
+// Ein Klick auf die Platte oeffnet den Dialog, den das Merkmal `opens` nennt
+// (`wireDialog`); der Kontext (`bed`, jeder `hearth-param` der Platzierung)
+// reist im `dataset` mit. Der frueher nach aussen gemeldete `taster`-Ausgang
+// ist entfallen — er ist durch `opens` ersetzt. Der Druckrahmen (`druck`,
+// Farbe `ledcolor`) bleibt als LOKALE Klick-Rueckmeldung: er kommt aus dem
+// Druck auf die Platte (`wireMomentary` → internes Signal), nicht aus einem
+// Port; ein zweiter Horcher waere derselbe Druck ein zweites Mal.
+class extends HearthSymbol {
+  static observed = ['remaining', 'days'];
+  onInit() {
+    // Leer/aus nur auf der ANLAGE — im Entwurf bleibt das Gezeichnete stehen.
+    if (!this.designTime) {
+      this.setText('remaining', '');
+      for (let i = 0; i &lt; 7; i++) { const role = 'd' + i; this.setVisible(role, 0); }
+    }
+    this.setVisible('druck', 0);           // kein Rahmen, bis jemand drueckt
+    this.wireMomentary('flaeche', 'taster'); // interner Druck → nur der Rahmen
+    // Ein Klick oeffnet den Dialog, den `opens` nennt. Steht dort nichts,
+    // geschieht nichts — dann ist es nur eine Anzeige.
+    this.wireDialog('flaeche');
+  }
+  onAttr(name, val) {
+    if (name === 'remaining') this.setText('remaining', this._remainingText(val));
+    else if (name === 'days') this._applyDays(val);
+  }
+  /// Der Druck, den dieses Symbol meldet, IST der Rahmen, den es zeigt — ein
+  /// Signal, ein Ort. `taster` ist kein Port mehr, nur der interne Druck.
+  emit(name, value) {
+    super.emit(name, value);
+    if (name === 'taster') this.setVisible('druck', this.truthy(value));
+  }
+
+  /// Byte-Bitmuster → sieben Tage. Angeschlossen: die Kuerzel werden SICHTBAR
+  /// und je Bit gefaerbt (gesetzt: Timerfarbe, frei: grau). Bit i gehoert zu
+  /// Tag i (0 = Montag). Unbrauchbarer Wert: nichts anfassen.
+  _applyDays(val) {
+    const n = Number(String(val === null || val === undefined ? '' : val).trim());
+    if (!isFinite(n)) return;
+    const bits = Math.trunc(n) &amp; 0xff;
+    for (let i = 0; i &lt; 7; i++) {
+      const role = 'd' + i;
+      const on = (bits >> i) &amp; 1;
+      this.setVisible(role, 1);
+      this.setColor(role, on, 'dayoncolor', 'dayoffcolor');
+    }
+  }
+
+  /// Nanoseconds → hh:mm:ss. Nothing to do (0, empty) shows nothing.
+  _remainingText(v) {
+    const s = String(v === null || v === undefined ? '' : v).trim();
+    if (s === '') return '';
+    // Eine blosse Zahl IST hier eine Zeit — dieser Anschluss kennt keinen Rang.
+    if (/^[+-]?\d+(?:\.\d+)?$/.test(s)) {
+      const ns = Number(s);
+      if (!isFinite(ns) || ns &lt;= 0) return '';   // nichts mehr vor: leer lassen
+      return this._hms(ns / 1e9);
+    }
+    return this._clock(s);
+  }
+  /// Any time-ish notation → hh:mm:ss. Unknown text comes back unchanged.
+  _clock(s) {
+    const teile = s.split(':');
+    if (teile.length >= 2 &amp;&amp; teile.every((t) => /^\d+$/.test(t.trim()))) {
+      const z = teile.map((t) => Number(t));
+      while (z.length &lt; 3) z.unshift(0);
+      return this._hms(z[0] * 3600 + z[1] * 60 + z[2]);
+    }
+    // IEC-Literal: T#1h2m30s, TIME#500ms. `ms` steht vor `m`, sonst bliebe das
+    // `s` stehen und die Millisekunden waeren Minuten.
+    const iec = s.match(/^(?:TIME|T)#(.+)$/i);
+    if (iec) {
+      const faktor = { d: 86400, h: 3600, m: 60, s: 1, ms: 0.001 };
+      let sek = 0, getroffen = false;
+      for (const m of iec[1].matchAll(/(\d+(?:\.\d+)?)\s*(ms|d|h|m|s)/gi)) {
+        sek += Number(m[1]) * faktor[m[2].toLowerCase()];
+        getroffen = true;
+      }
+      if (getroffen) return this._hms(sek);
+    }
+    const n = Number(s);
+    return isFinite(n) ? this._hms(n) : s;
+  }
+  /// Seconds → hh:mm:ss, two digits each.
+  _hms(sekunden) {
+    const g = Math.max(0, Math.round(Number(sekunden) || 0));
+    const p = (x) => String(x).padStart(2, '0');
+    return p(Math.floor(g / 3600)) + ':' + p(Math.floor(g / 60) % 60) + ':' + p(g % 60);
+  }
+}
+</script>
+</svg>
